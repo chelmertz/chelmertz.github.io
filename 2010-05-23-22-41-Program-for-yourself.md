@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Program for yourself"
-permalink: "/untitled-13"
+permalink: "/program-for-yourself"
 categories: [thoughts]
 ---
 

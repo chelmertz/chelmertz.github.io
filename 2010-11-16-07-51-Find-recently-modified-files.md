@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Find recently modified files"
-permalink: "/untitled-3"
+permalink: "/find-recently-modified-files"
 categories: [bash]
 ---
 

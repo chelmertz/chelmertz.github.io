@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "University website"
-permalink: "/untitled-7"
+permalink: "/university-website"
 categories: [usability]
 ---
 

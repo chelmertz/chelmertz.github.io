@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Netbeans autocompletion for javascript is pretty amazing"
-permalink: "/untitled-5"
+permalink: "/netbeans-autocompletion-javascript-amazing"
 categories: [netbeans, usability]
 ---
 

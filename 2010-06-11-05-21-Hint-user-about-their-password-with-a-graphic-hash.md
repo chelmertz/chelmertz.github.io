@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hint user about their password with a graphic hash"
-permalink: "/untitled-10"
+title: "Hint user about their password with a graphed hash"
+permalink: "/password-hash-graphed"
 categories: [javascript, usability, visual]
 ---
 

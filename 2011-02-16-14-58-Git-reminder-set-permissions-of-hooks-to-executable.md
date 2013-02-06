@@ -9,4 +9,4 @@ When you’ve written a git hook, don’t forget to make it executable. Git will
 
 Solution:
 
-    chmod +x .git/hooks/*
+    chmod ug+x .git/hooks/*

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Font face's comeback"
-permalink: "/untitled-14"
+permalink: "/font-face-comeback"
 categories: [css]
 ---
 

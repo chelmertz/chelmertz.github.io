@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Good UI gets better through instruction video"
-permalink: "/untitled-6"
+permalink: "/good-ui-gets-better-through-instruction-video"
 categories: [thoughts]
 ---
 

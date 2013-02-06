@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Designing with progressive enhancement"
-permalink: "/untitled-9"
+permalink: "/designing-with-progressive-enhancement"
 categories: [html, javascript, usability, visual]
 ---
 
