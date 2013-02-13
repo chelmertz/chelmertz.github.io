@@ -23,6 +23,7 @@ while :; do
                 -p|--pass-option)
                         shift
                         echo "You set option to $1"
+                        option="$1"
                         shift
                         ;;
                 -*)
