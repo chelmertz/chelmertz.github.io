@@ -19,7 +19,7 @@ Jenkins is a [CI server](https://en.wikipedia.org/wiki/Continuous_integration#Pr
 
 When changes are detected, the project is built and the test suite is executed. If any step fails, the CI server tells you that it did.
 
-## Make Jenkins use virtualenv
+## Setup Jenkins, and make it use virtualenv
 
 Jenkins needs some massaging before it handles the hijacked environment of virtualenv. This is how I did it for my local git repository:
 
@@ -50,13 +50,13 @@ and
 python test_app.py
 {% endcodeblock %}
 
- - Add a git hook that triggers a Jenkins build:
+## Trigger Jenkins through git hook
+
+You need to add a git hook which triggers a Jenkins build:
 {% codeblock lang:bash %}
 echo "curl http://localhost:8080/git/notifyCommit?url=/Users/you/Sites/asdf" >> .git/hooks/post-commit
 chmod +x !$
 {% endcodeblock %}
-
-## Trigger Jenkins through git hook
 
 Add an erroneous test, this will do:
 {% codeblock lang:python %}
@@ -68,3 +68,5 @@ You should see a new build being queued up in Jenkins within a minute. If that d
 {% codeblock lang:bash %}
 ./git/hooks/post-commit
 {% endcodeblock %}
+
+Now, Jenkins should try to test your project but fail, and report the failure through the GUI. Tada.
