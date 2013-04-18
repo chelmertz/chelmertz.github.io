@@ -3,6 +3,7 @@ layout: post
 title: "Making Jenkins work with python's virtualenv"
 date: 2013-03-31 19:08
 categories: ci python
+comments: true
 ---
 
 If you use [virtualenv](http://www.virtualenv.org/en/latest/) to isolate your python project's environment, and want your code tested automatically -- read on!
