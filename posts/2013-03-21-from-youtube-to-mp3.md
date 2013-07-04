@@ -5,11 +5,10 @@ date: 2013-03-21 21:28
 categories: tools
 ---
 
-Because I always forget the exact commands:
+Because I always forget the exact command:
 
 {% codeblock lang:bash %}
-youtube-dl https://youtube.com/?v=id_here
-ffmpeg -i id_here.flv -acodec mp3 output.mp3
+youtube-dl -x https://youtube.com/?v=id_here
 {% endcodeblock %}
 
-On OS X, you'll find both youtube-dl and ffmpeg through homebrew.
+On OS X, you'll find youtube-dl through homebrew.
