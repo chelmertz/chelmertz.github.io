@@ -1,3 +1,4 @@
+- fix the symlink/organize posts where they belong
 - mimic urls
     - archive at http://iamnearlythere.com/blog/archives/
     - feed at http://iamnearlythere.com/atom.xml
@@ -11,3 +12,13 @@
 - double check code layout
 - port google analytics
 - port disqus
+- prepare rsync snippet and keep it locally somewhere
+- deploy to another path than iamnearlythere.com
+- expose "another path" (above) in nginx
+- backup current deployment of iamnearlythere.com
+- if all checks out, deploy from jekyll to iamnearlythere.com
+- remove "another path" nginx config
+- make sure google analytics records page hits
+
+.....
+- write new blog post about instagram backup
