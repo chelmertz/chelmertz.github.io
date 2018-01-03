@@ -2,7 +2,7 @@
 layout: post
 title: "site2pdf - save all pages from a domain as a single PDF"
 permalink: "/site2pdf-save-pages-domain-single-pdf"
-categories: [project, ruby]
+tags: [project, ruby]
 ---
 
 Point <strong>site2pdf</strong> to a domain you want and it will save all of its pages to a single PDF:

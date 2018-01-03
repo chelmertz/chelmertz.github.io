@@ -2,7 +2,7 @@
 layout: post
 title: "Updates in background processes are sweet"
 permalink: "/updates-in-background-processes-are-sweet"
-categories: [thoughts, usability]
+tags: [thoughts, usability]
 ---
 
 I’ve fallen in love with Google Chrome in most ways. Not that Chrome’s anything extra, it’s rather that it’s not.

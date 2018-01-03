@@ -2,7 +2,7 @@
 layout: post
 title: "Put a tail on that error log"
 permalink: "/put-a-tail-on-that-error-log"
-categories: [server]
+tags: [server]
 ---
 
 Place the following in a file called <strong>/usr/local/bin/tail_log</strong>:

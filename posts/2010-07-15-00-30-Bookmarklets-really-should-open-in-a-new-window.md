@@ -2,7 +2,7 @@
 layout: post
 title: "Bookmarklets really should open in a new window"
 permalink: "/bookmarklet-really-should-be-in-a-new-window"
-categories: [bookmarklet, javascript, thoughts, usability]
+tags: [bookmarklet, javascript, thoughts, usability]
 ---
 
 Until today (actually, tomorrow) I’ve made bookmarklets as alert/confirm-boxes with plain JS. Why on earth did I not use <code>window.open</code>?

@@ -2,7 +2,7 @@
 layout: post
 title: "Open file: cmd + down; navigate upwards: cmd + up"
 permalink: "/open-file-cmd-down-navigate-upwards-cmd-up"
-categories: [mac]
+tags: [mac]
 ---
 
 When navigating a finder window (a directory) you go up one level with <code>cmd + up</code> and <strong>open a file with <code>cmd + down</code></strong>.

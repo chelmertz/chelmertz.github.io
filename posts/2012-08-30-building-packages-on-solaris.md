@@ -4,7 +4,7 @@ title: "Building packages on Solaris"
 date: 2012-08-30 22:44
 comments: true
 published: false
-categories: 
+tags: 
 ---
 
 This post will act as a rough guide for how you get your package building going on Solaris, from the perspective of someone who is used to Linux and has built an RPM or two.

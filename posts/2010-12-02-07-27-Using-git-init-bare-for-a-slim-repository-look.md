@@ -2,7 +2,7 @@
 layout: post
 title: "Using git init --bare for a slim repository look"
 permalink: "/using-git-init-bare-for-a-slim-repository-look"
-categories: [git, server]
+tags: [git, server]
 ---
 
 Until now, I’ve mainly worked alone with my git repositories. Sometime pushing to <a href="https://github.com/chelmertz">my github-account</a>, but always using the service as a kind of backup solution. Until now. At work, we’re setting up our new environment with git and I’m lucky enough to learn it while doing it.

@@ -2,7 +2,7 @@
 layout: post
 title: "sed quickie, search and replace in files"
 permalink: "/sed-quickie-search-replace-files"
-categories: [bash]
+tags: [bash]
 ---
 
 There are many recipes for search and replacing via the command line but this one caught my attention because you can easily att more options to <strong>find</strong>.

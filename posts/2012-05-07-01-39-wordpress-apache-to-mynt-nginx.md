@@ -2,7 +2,7 @@
 layout: post
 title: "From Wordpress on Apache to mynt on nginx"
 permalink: "/wordpress-apache-to-mynt-nginx"
-categories: "project"
+tags: "project"
 ---
 
 Going from Wordpress to [mynt](http://mynt.mirroredwhite.com/).

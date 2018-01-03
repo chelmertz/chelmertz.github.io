@@ -2,7 +2,7 @@
 layout: post
 title: "From Youtube to mp3"
 date: 2013-03-21 21:28
-categories: tools
+tags: tools
 ---
 
 Because I always forget the exact command:

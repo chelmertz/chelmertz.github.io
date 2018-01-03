@@ -2,7 +2,7 @@
 layout: post
 title: "Global code is bad code - PHP's sessions included"
 permalink: "/global-code-is-bad-code-phps-sessions-included"
-categories: [php, thoughts]
+tags: [php, thoughts]
 ---
 
 If you rely on sessions in your application, just one call to <code>session_destroy()</code>, like that without any arguments, all your storage is reset. Doesn’t matter if it’s a shopping cart, logged in user’s surfing session, message alert, et cetera.

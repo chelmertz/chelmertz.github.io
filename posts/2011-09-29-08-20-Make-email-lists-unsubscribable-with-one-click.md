@@ -2,7 +2,7 @@
 layout: post
 title: "Make email lists unsubscribable with one click"
 permalink: "/email-lists-unsubscribable-oneclick"
-categories: [thoughts, usability]
+tags: [thoughts, usability]
 ---
 
 The options I have as a recipient of emails is to mark an unwanted one as spam and never receive it again, or being nice trying to find and follow the link "Unsubscribe here" in the emails body.

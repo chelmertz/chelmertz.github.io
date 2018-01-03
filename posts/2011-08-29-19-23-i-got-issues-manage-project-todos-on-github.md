@@ -2,7 +2,7 @@
 layout: post
 title: "i-got-issues: manage project todos on github"
 permalink: "/i-got-issues-manage-project-todos-github"
-categories: [github, php, project]
+tags: [github, php, project]
 ---
 
 If you want to know which issues you opened yourself in your own github, now you can.

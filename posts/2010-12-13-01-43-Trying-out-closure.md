@@ -2,7 +2,7 @@
 layout: post
 title: "Trying out closure"
 permalink: "/trying-out-closure"
-categories: [javascript, server]
+tags: [javascript, server]
 ---
 
 Very easy way of minimizing a few bytes of every request using Google’s <em>Closure Compiler</em> which is a java program for compressing javascript.

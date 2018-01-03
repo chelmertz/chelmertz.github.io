@@ -2,7 +2,7 @@
 layout: post
 title: "Installing vim with python and ruby support through homebrew"
 permalink: "/installing-vim-python-ruby-support-homebrew"
-categories: [mac, vim]
+tags: [mac, vim]
 ---
 
 <h2>Background</h2>

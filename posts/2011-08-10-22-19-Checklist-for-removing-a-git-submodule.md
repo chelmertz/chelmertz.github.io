@@ -2,7 +2,7 @@
 layout: post
 title: "Checklist for removing a git submodule"
 permalink: "/checklist-removing-git-submodule"
-categories: [git]
+tags: [git]
 ---
 
 <blockquote cite="https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial">

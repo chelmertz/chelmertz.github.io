@@ -2,7 +2,7 @@
 layout: post
 title: "Less makes wonders for front end development"
 permalink: "/less-makes-wonders-front-development"
-categories: [css, javascript]
+tags: [css, javascript]
 ---
 
 <a href="http://lesscss.org/">Less</a> is an extended variant of CSS. Its accompanying website, <a href="http://lesscss.org/">lesscss.org</a>, really says it all very concise and I only want to add a +1 to the whole idea of mixins for CSS and hope something like this will inspire those writing the CSS specifications.

@@ -2,7 +2,7 @@
 layout: post
 title: "Video showing NetBeans 6.9 tackling ZF"
 permalink: "/video-showing-netbeans-6-9-tackling-zf"
-categories: [netbeans, zend-framework]
+tags: [netbeans, zend-framework]
 ---
 
 <a href="http://netbeans.org/kb/docs/php/zend-framework-screencast.html">http://netbeans.org/kb/docs/php/zend-framework-screencast.html</a>

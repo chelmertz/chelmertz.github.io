@@ -2,7 +2,7 @@
 layout: post
 title: "Linux: Change Directory or CD to the Previous Directory / Last Path"
 permalink: "/linux-change-directory-or-cd-to-the-previous-directory-last-path"
-categories: [bash]
+tags: [bash]
 ---
 
 <a href="http://www.kavoir.com/2009/09/linux-change-directory-or-cd-to-the-previous-directory-last-path.html">http://www.kavoir.com/2009/09/linux-change-directory-or-cd-to-the-previous-di...</a>

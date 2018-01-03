@@ -2,7 +2,7 @@
 layout: post
 title: "Timing attacks"
 permalink: "/timing-attacks"
-categories: [security]
+tags: [security]
 ---
 
 <a href="http://devzone.zend.com/article/12654-Zend-Framework-1.11.0BETA1-Released">http://devzone.zend.com/article/12654-Zend-Framework-1.11.0BETA1-Released</a>

@@ -3,7 +3,7 @@ layout: post
 title: "getopt in bash"
 date: 2012-09-30 23:18
 comments: true
-categories: bash
+tags: bash
 ---
 
 How to properly read command line arguments for a bash script and do it well even without getopt:

@@ -2,7 +2,7 @@
 layout: post
 title: "curl -O is wget on mac"
 permalink: "/curl-o-is-wget-on-mac"
-categories: [bash, mac]
+tags: [bash, mac]
 ---
 
 If you want to download a file:

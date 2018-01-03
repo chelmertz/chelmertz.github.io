@@ -2,7 +2,7 @@
 layout: post
 title: "Automatically insert acronyms with Hz_Filter_Acronym"
 permalink: "/automatically-insert-acronyms-with-hz_filter_acronym"
-categories: [php, project, zend-framework]
+tags: [php, project, zend-framework]
 ---
 
 I hope this demo speaks for itself:

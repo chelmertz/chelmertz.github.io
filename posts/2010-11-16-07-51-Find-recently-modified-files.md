@@ -2,7 +2,7 @@
 layout: post
 title: "Find recently modified files"
 permalink: "/find-recently-modified-files"
-categories: [bash]
+tags: [bash]
 ---
 
     sudo find / -type f -ctime 0 | more

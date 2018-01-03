@@ -2,7 +2,7 @@
 layout: post
 title: "Mac's got a native FTP client - very easy to use"
 permalink: "/macs-got-a-native-ftp-client-very-easy-to-use"
-categories: [mac]
+tags: [mac]
 ---
 
 While finder is active (select the desktop), press ⌘+k (cmd+k) and type <code>ftp://your_host.com</code>.

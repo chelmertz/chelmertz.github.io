@@ -2,7 +2,7 @@
 layout: post
 title: "How to design form buttons in one breath"
 permalink: "/how-to-design-form-buttons-in-one-breath"
-categories: [thoughts, usability, visual]
+tags: [thoughts, usability, visual]
 ---
 
 <ul>

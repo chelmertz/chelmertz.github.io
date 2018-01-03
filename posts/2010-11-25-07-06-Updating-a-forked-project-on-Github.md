@@ -2,7 +2,7 @@
 layout: post
 title: "Updating a forked project on Github"
 permalink: "/updating-a-forked-project-on-github"
-categories: [git]
+tags: [git]
 ---
 
 Ok, just noticed that a forked repository of mine wasn’t actually automatically updated by Github. Luckily enough, <a href="http://help.github.com/forking/">http://help.github.com/forking/</a> made the process pretty painless:

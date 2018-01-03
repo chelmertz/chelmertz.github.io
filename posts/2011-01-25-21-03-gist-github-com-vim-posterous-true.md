@@ -2,7 +2,7 @@
 layout: post
 title: "gist.github.com + vim + posterous = true"
 permalink: "/gist-github-com-vim-posterous-true"
-categories: [vim]
+tags: [vim]
 ---
 
 Trying out a couple of features at once. I'm posting <strong>https : //gist.github.com / 795682</strong> (without the spaces) on its own row in the posterous editor. Since it's showing a gist, it means the blog post <a href="http://blog.posterous.com/posterous-now-supports-traileraddict-embeds-a">http://blog.posterous.com/posterous-now-supports-traileraddict-embeds-a</a> did not lie. That's a good thing. Now read the gist :)

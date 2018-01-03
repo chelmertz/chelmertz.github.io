@@ -2,7 +2,7 @@
 layout: post
 title: "PHP Sadness - showcase of PHP's shortcomings"
 permalink: "/php-sadness-showcase-phps-shortcomings"
-categories: [php, thoughts]
+tags: [php, thoughts]
 ---
 
 <a href="http://phpsadness.com/">PHP Sadness</a> is a listing of PHP's roughest edges - things that could have been clearer, weird implementations and plain errors in design. I agree with most of the list's items, especially the ones concerning inconsistent behavior/signatures of native functions. Most of those annoyances would be impossible to get wrong if everything was an object and functions were instead methods (yes, I'm jealously looking at Ruby). For example:

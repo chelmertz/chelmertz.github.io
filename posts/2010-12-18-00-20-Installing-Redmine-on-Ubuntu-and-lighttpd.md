@@ -2,7 +2,7 @@
 layout: post
 title: "Installing Redmine on Ubuntu and lighttpd"
 permalink: "/installing-redmine-on-ubuntu-and-lighttpd"
-categories: [server]
+tags: [server]
 ---
 
 I just finished the installation of the project tool <a href="http://www.redmine.org/">Redmine</a> and will be enjoying using it soon.

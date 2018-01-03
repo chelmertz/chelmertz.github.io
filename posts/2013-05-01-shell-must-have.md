@@ -2,7 +2,7 @@
 layout: post
 title: "A shell's must-have features"
 date: 2013-05-01 20:28
-categories: bash
+tags: bash
 comments: true
 published: true
 ---

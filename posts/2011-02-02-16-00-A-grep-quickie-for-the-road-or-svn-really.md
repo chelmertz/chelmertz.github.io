@@ -2,7 +2,7 @@
 layout: post
 title: "A grep-quickie for the road (or svn, really)"
 permalink: "/a-grep-quickie-for-the-road-or-svn-really"
-categories: [bash, svn]
+tags: [bash, svn]
 ---
 
 This post is outdated, you should read <a title="use ack instead of grep" href="http://iamnearlythere.com/sed-quickie-search-replace-files">"sed quickie, search and replace in files"</a> instead!

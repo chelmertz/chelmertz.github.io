@@ -2,7 +2,7 @@
 layout: post
 title: "Mini project: placeholder image generator in PHP"
 permalink: "/mini-project-placeholder-image-generator-php"
-categories: [php, project]
+tags: [php, project]
 ---
 
 Just finished a very simple utility: display a placeholder image when you are doing the "gridding" part of your layout.

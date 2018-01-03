@@ -2,7 +2,7 @@
 layout: post
 title: "Visor is a system-wide terminal accessible via a hot-key"
 permalink: "/visor-is-a-system-wide-terminal-accessible-via-a-hot-key"
-categories: [mac]
+tags: [mac]
 ---
 
 via <a href="http://visor.binaryage.com/">visor.binaryage.com</a>

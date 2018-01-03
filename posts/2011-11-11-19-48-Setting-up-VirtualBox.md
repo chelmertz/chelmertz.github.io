@@ -2,7 +2,7 @@
 layout: post
 title: "Setting up VirtualBox"
 permalink: "/setting-up-virtualbox"
-categories: [virtualbox]
+tags: [virtualbox]
 ---
 
 In order to access the virtual machine, select your machine's settings, pick network and use Bridged network. Also, don't forget to plugin the cable.

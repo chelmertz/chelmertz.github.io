@@ -2,7 +2,7 @@
 layout: post
 title: "Adding `alias`-commands on the fly"
 permalink: "/adding-alias-commands-on-the-fly"
-categories: [bash]
+tags: [bash]
 ---
 
 <code>/etc/profile</code> system-wide configuration file for the bash and sh shells

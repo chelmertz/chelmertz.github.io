@@ -2,7 +2,7 @@
 layout: post
 title: "say-what.rb - trying out Ruby"
 permalink: "/say-what-rb-ruby"
-categories: [project]
+tags: [project]
 ---
 
 Today I tried out ruby for the first time. The outcome is a helper for crossword like puzzles: <strong>say-what.rb</strong>. Usage:

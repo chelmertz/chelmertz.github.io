@@ -2,7 +2,7 @@
 layout: post
 title: "vsftpd - enabling FTP access on your Ubuntu server"
 permalink: "/vsftpd-enabling-ftp-access-ubuntu-server"
-categories: [server]
+tags: [server]
 ---
 
 I found a great but old guide to installing <a title="vsftpd" href="https://help.ubuntu.com/6.06/ubuntu/serverguide/C/ftp-server.html">FTP on Ubuntu</a>, which I've never done before.

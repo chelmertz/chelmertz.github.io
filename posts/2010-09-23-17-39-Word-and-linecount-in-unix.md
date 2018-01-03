@@ -2,7 +2,7 @@
 layout: post
 title: "Word- and linecount in unix"
 permalink: "/word-and-linecount-in-unix"
-categories: [bash]
+tags: [bash]
 ---
 
 <a href="http://www.ee.surrey.ac.uk/Teaching/Unix/unix2.html">http://www.ee.surrey.ac.uk/Teaching/Unix/unix2.html</a>

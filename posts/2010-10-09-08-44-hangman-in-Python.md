@@ -2,7 +2,7 @@
 layout: post
 title: "hangman in Python"
 permalink: "/hangman-in-python"
-categories: [project]
+tags: [project]
 ---
 
 <a href="http://github.com/chelmertz/hangman/">http://github.com/chelmertz/hangman/</a>

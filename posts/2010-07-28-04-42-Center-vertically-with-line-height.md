@@ -2,7 +2,7 @@
 layout: post
 title: "Center vertically with `line-height`"
 permalink: "/center-vertically-with-line-height"
-categories: [css]
+tags: [css]
 ---
 
 For an <code>a</code>-element:

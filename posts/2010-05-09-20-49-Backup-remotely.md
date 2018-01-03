@@ -2,7 +2,7 @@
 layout: post
 title: "Backup remotely"
 permalink: "/backup-remotely"
-categories: [bash]
+tags: [bash]
 ---
 
 <a href="https://help.ubuntu.com/community/BackupYourSystem/TAR">https://help.ubuntu.com/community/BackupYourSystem/TAR</a>

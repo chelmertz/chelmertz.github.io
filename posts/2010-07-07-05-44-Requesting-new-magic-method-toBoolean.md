@@ -2,7 +2,7 @@
 layout: post
 title: "Requesting new magic method: `__toBoolean()`"
 permalink: "/requesting-new-magic-method-__toboolean"
-categories: [php]
+tags: [php]
 ---
 
 What if you only want to display your active users in a very simple way? Consider the following:

@@ -2,7 +2,7 @@
 layout: post
 title: "Remap caps-lock to esc in OS X Lion"
 permalink: "/map-esc-caps-lock-os-lion"
-categories: [mac]
+tags: [mac]
 ---
 
 The reason for removing caps-lock is mainly about being faster in vim at exiting entered modes, but also since I never use it and it's always in the way. Instead of just removing the key, we could make it usable though, and bind it to escape. The process is fairly easy.

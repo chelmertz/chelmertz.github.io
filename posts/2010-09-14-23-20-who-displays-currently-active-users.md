@@ -2,7 +2,7 @@
 layout: post
 title: "who displays currently active users"
 permalink: "/who-displays-currently-active-users"
-categories: [bash]
+tags: [bash]
 ---
 
 <code>who</code> displays all users together with time of last login, and which IP address they came from.

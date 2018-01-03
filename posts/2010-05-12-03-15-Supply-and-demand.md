@@ -2,7 +2,7 @@
 layout: post
 title: "Supply and demand"
 permalink: "/supply-and-demand"
-categories: [thoughts]
+tags: [thoughts]
 ---
 
 Everybody knows how to backup but the important thing is to <a href="http://www.joelonsoftware.com/items/2009/12/14.html">know how to restore from that backup</a>.

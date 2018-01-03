@@ -2,7 +2,7 @@
 layout: post
 title: "vim \"bug\" while saving git commit message"
 permalink: "/vim-bug-while-saving-git-commit-message"
-categories: [git, mac, vim]
+tags: [git, mac, vim]
 ---
 
 Reminder for the issue <pre><code lang=""bash"">error: There was a problem with the editor 'vi'</code></pre> while trying to save a commit message.

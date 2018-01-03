@@ -2,7 +2,7 @@
 layout: post
 title: "Javascript regex 101: String.test()"
 permalink: "/javascript-regex-101-string-test"
-categories: [javascript]
+tags: [javascript]
 ---
 
 <code>

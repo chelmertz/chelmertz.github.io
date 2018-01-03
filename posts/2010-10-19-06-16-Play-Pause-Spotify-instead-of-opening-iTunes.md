@@ -2,7 +2,7 @@
 layout: post
 title: "Play/Pause Spotify instead of opening iTunes"
 permalink: "/playpause-spotify-instead-of-opening-itunes"
-categories: [mac]
+tags: [mac]
 ---
 
 <a href="http://superuser.com/questions/31925/stop-play-pause-button-opening-itunes-in-snow-leopard">http://superuser.com/questions/31925/stop-play-pause-button-opening-itunes-in...</a>

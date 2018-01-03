@@ -2,7 +2,7 @@
 layout: post
 title: "Add sftp-capabilities to cURL"
 permalink: "/add-sftp-capabilities-to-curl"
-categories: [server]
+tags: [server]
 ---
 
 I just ran into a problem while importing some cronjobs to a new server - apparently the sftp protocol is not supported by a newly installed cURL's default settings, which in turn made the cronjob pretty useless. The good thing was the error message, cURL is usually really good at helping users get going again:

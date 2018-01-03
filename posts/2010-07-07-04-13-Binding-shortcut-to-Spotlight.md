@@ -2,7 +2,7 @@
 layout: post
 title: "Binding shortcut to Spotlight"
 permalink: "/binding-shortcut-to-spotlight"
-categories: [mac]
+tags: [mac]
 ---
 
 I just set the keyboard shortcut for Spotlight to <code>cmd + space</code>, which makes it really unnecessary to really have any icons in the dock:

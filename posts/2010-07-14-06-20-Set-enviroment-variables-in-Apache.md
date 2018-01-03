@@ -2,7 +2,7 @@
 layout: post
 title: "Set enviroment variables in Apache"
 permalink: "/set-enviroment-variables-in-apache"
-categories: [server, zend-framework]
+tags: [server, zend-framework]
 ---
 
 In .htaccess:

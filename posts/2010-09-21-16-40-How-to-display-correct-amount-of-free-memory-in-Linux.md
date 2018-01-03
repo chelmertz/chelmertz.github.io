@@ -2,7 +2,7 @@
 layout: post
 title: "How to display correct amount of free memory in Linux"
 permalink: "/how-to-display-correct-amount-of-free-memory-in-linux"
-categories: [bash]
+tags: [bash]
 ---
 
 <a href="http://www.linuxatemyram.com/">http://www.linuxatemyram.com/</a>

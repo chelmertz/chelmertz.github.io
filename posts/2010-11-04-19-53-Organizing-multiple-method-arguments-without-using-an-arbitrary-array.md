@@ -2,7 +2,7 @@
 layout: post
 title: "Organizing multiple method arguments without using an arbitrary array"
 permalink: "/organizing-multiple-method-arguments-without-using-an-arbitrary-array"
-categories: [php]
+tags: [php]
 ---
 
 <a href="http://css.dzone.com/articles/primitive-obsession">http://css.dzone.com/articles/primitive-obsession</a>

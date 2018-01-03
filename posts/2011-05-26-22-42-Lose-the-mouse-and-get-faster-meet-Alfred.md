@@ -2,7 +2,7 @@
 layout: post
 title: "Lose the mouse and get faster - meet Alfred"
 permalink: "/lose-mouse-get-faster-meet-alfred"
-categories: [mac]
+tags: [mac]
 ---
 
 I'd recommend everybody to try out <a href="http://www.alfredapp.com/">Alfred</a>, an app that looks like this:

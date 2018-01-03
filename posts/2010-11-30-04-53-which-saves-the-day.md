@@ -2,7 +2,7 @@
 layout: post
 title: "which - saves the day"
 permalink: "/which-saves-the-day"
-categories: [bash]
+tags: [bash]
 ---
 
 <code>which</code> tell you where a program is located.

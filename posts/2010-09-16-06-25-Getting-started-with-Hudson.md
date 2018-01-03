@@ -2,7 +2,7 @@
 layout: post
 title: "Getting started with Hudson"
 permalink: "/getting-started-with-hudson-hints-and-kinks"
-categories: [server]
+tags: [server]
 ---
 
 <a href="http://matthew.mceachen.us/blog/getting-started-with-hudson-117.html">http://matthew.mceachen.us/blog/getting-started-with-hudson-117.html</a>

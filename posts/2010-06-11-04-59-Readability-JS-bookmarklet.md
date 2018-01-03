@@ -2,7 +2,7 @@
 layout: post
 title: "Readability - JS bookmarklet"
 permalink: "/readability-js-bookmarklet"
-categories: [bookmarklet, javascript, usability]
+tags: [bookmarklet, javascript, usability]
 ---
 
 <a href="http://lab.arc90.com/experiments/readability/">http://lab.arc90.com/experiments/readability/</a>

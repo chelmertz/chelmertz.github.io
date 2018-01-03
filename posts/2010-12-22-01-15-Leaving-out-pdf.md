@@ -2,7 +2,7 @@
 layout: post
 title: "Leaving out (pdf)"
 permalink: "/leaving-out-pdf"
-categories: [thoughts]
+tags: [thoughts]
 ---
 
 … or rather - welcome in, pdf!

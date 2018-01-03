@@ -2,7 +2,7 @@
 layout: post
 title: "Installing Vim = discovering Mac's internals"
 permalink: "/installing-vim-discovering-macs-internals"
-categories: [mac, vim]
+tags: [mac, vim]
 ---
 
 <blockquote>Installation should be easy:  just drag Vim.app to where you want to keep it.  I put it in /Applications/ .

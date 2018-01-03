@@ -2,7 +2,7 @@
 layout: post
 title: "search with ack - \"better than grep\""
 permalink: "/search-ack-better-grep"
-categories: [bash]
+tags: [bash]
 ---
 
 <a title="ack" href="http://betterthangrep.com/">ack</a> is a convenient alternative to searching with <strong>grep</strong>. It feels faster and has the stuff you use most often, searching recursively as a default, for example. And leaving out .svn-folders. For example:

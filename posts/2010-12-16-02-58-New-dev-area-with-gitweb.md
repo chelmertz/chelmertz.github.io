@@ -2,7 +2,7 @@
 layout: post
 title: "New dev area with gitweb"
 permalink: "/new-dev-area-with-gitweb"
-categories: [git, server]
+tags: [git, server]
 ---
 
 I’m currently setting up a new dev server at work. This includes hands-on work such as writing PHP organized in namespaces, but at a more technical level, modifying lighttpd and installing lots of packages on a Ubuntu server.

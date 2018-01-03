@@ -2,7 +2,7 @@
 layout: post
 title: "Googles style guides"
 permalink: "/googles-style-guides"
-categories: [organized]
+tags: [organized]
 ---
 
 <a href="http://google-styleguide.googlecode.com/svn/trunk/pyguide.html">Google Python Style Guide</a> and <a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google JavaScript Style Guide</a> are really good reads.

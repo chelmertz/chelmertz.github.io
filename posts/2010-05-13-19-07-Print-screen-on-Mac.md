@@ -2,7 +2,7 @@
 layout: post
 title: "Print screen on Mac"
 permalink: "/print-screen-on-mac"
-categories: [mac]
+tags: [mac]
 ---
 
 <a href="http://osxdaily.com/2010/05/13/print-screen-mac/">http://osxdaily.com/2010/05/13/print-screen-mac/</a>

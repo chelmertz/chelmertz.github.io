@@ -2,7 +2,7 @@
 layout: post
 title: "Make your terminal start faster"
 permalink: "/terminal-start-faster"
-categories: [mac]
+tags: [mac]
 ---
 
 <pre><code lang="bash">sudo rm -f /private/var/log/asl/*.asl</code></pre> cleans out a bunch of log files of previous terminal activities (I guess).

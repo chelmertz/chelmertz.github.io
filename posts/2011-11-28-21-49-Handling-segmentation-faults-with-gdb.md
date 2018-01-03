@@ -2,7 +2,7 @@
 layout: post
 title: "Handling segmentation faults with gdb"
 permalink: "/handling-segmentation-faults-gdb"
-categories: [c, usability]
+tags: [c, usability]
 ---
 
 As a C newbie, I've never gotten a segfault until tonight (yes, my homework's due in a couple of hours..).

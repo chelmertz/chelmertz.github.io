@@ -2,7 +2,7 @@
 layout: post
 title: "Simple Desktops"
 permalink: "/simple-desktops"
-categories: [visual]
+tags: [visual]
 ---
 
 <a href="http://simpledesktops.com/">http://simpledesktops.com/</a>

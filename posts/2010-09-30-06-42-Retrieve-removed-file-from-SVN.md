@@ -2,7 +2,7 @@
 layout: post
 title: "Retrieve removed file from SVN"
 permalink: "/retrieve-removed-file-from-svn"
-categories: [svn]
+tags: [svn]
 ---
 
 <code>svn copy -r &lt;revision&gt; http://&lt;repos&gt;/&lt;file&gt; .</code>

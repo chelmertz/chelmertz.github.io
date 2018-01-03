@@ -2,7 +2,7 @@
 layout: post
 title: "iTunes Genius - not so much"
 permalink: "/itunes-genius-not-so-much"
-categories: [mac, usability]
+tags: [mac, usability]
 ---
 
 „, at least not the UI.

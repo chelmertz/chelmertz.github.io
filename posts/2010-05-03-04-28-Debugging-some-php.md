@@ -2,7 +2,7 @@
 layout: post
 title: "Debugging some php.."
 permalink: "/debugging-some-php"
-categories: [php, server]
+tags: [php, server]
 ---
 
 <code>apt-get install php5-dev</code>

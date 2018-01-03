@@ -2,7 +2,7 @@
 layout: post
 title: "How to Add Search Shortcuts to Google Chrome."
 permalink: "/how-to-add-search-shortcuts-to-google-chrome"
-categories: [chrome]
+tags: [chrome]
 ---
 
 <a href="http://www.wolf-howl.com/google/how-to-add-search-shortcuts-to-google-chrome/">http://www.wolf-howl.com/google/how-to-add-search-shortcuts-to-google-chrome/</a>

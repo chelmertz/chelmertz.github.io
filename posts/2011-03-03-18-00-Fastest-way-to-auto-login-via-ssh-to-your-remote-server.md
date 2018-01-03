@@ -2,7 +2,7 @@
 layout: post
 title: "Fastest way to auto-login via ssh to your remote server"
 permalink: "/fastest-auto-login-ssh-remote-server"
-categories: [bash, server]
+tags: [bash, server]
 ---
 
 Via <a href="http://topecoders.blogspot.com/2010/04/remote-deployment-with-ant-and-rsync.html">Remote Deployment with Ant and Rsync</a>:

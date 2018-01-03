@@ -2,7 +2,7 @@
 layout: post
 title: "Read headers with curl"
 permalink: "/read-headers-with-curl"
-categories: [server]
+tags: [server]
 ---
 
 cURL is great for zooming in on a host, example:

@@ -2,7 +2,7 @@
 layout: post
 title: "Redmine and lighttpd got into a brawl, came out as friends"
 permalink: "/redmine-and-lighttpd-got-into-a-brawl-came-out-as-friends"
-categories: [server]
+tags: [server]
 ---
 
 So much for the <a href="http://iamnearlythere.tumblr.com/post/2348721123/installing-redmine-on-ubuntu-and-lighttpd">easy setup of Redmine</a>, our server gazed at me with a 500 Internal Server error the following monday morning.

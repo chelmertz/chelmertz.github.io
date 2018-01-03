@@ -2,7 +2,7 @@
 layout: post
 title: "Open source project owners: control yourselves!"
 permalink: "/open-source-project-owners-control-yourselves"
-categories: [thoughts]
+tags: [thoughts]
 ---
 
 I’m trying to follow the development of an open source CMS called <a href="http://pimcore.org">Pimcore</a> but having a hard time following its development process, the same thing goes for my favorite PHP framework, ZF.

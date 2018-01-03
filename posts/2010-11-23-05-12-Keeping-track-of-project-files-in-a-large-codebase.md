@@ -2,7 +2,7 @@
 layout: post
 title: "Keeping track of project files in a large codebase"
 permalink: "/keeping-track-of-project-files-in-a-large-codebase"
-categories: [thoughts]
+tags: [thoughts]
 ---
 
 Insight: symlinks should really be abused!

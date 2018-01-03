@@ -2,7 +2,7 @@
 layout: post
 title: "Import legacy PHP app into ZF with ease"
 permalink: "/import-legacy-php-app-into-zf-with-ease"
-categories: [php, zend-framework]
+tags: [php, zend-framework]
 ---
 
 <a href="http://www.chrisabernethy.com/zend-framework-legacy-scripts/">Migrating to Zend Framework: Legacy Scripts : Chris Abernethy . com</a>

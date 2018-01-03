@@ -2,7 +2,7 @@
 layout: post
 title: "Command + tab = love"
 permalink: "/command-tab-love"
-categories: [mac]
+tags: [mac]
 ---
 
 <a href="http://osxdaily.com/2009/11/17/secrets-of-the-command-tab-mac-application-switcher/">http://osxdaily.com/2009/11/17/secrets-of-the-command-tab-mac-application-swi...</a>

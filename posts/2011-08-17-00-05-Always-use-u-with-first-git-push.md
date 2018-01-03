@@ -2,7 +2,7 @@
 layout: post
 title: "Always use -u with first git push"
 permalink: "/use-u-with-first-git-push"
-categories: [git]
+tags: [git]
 ---
 
 Sometimes (erhm? sorry for being vague) the default upstream branch is not being tracked by default when you <code lang=""bash"">git clone</code> a repository.

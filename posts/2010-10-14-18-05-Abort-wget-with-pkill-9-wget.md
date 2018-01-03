@@ -2,7 +2,7 @@
 layout: post
 title: "Abort wget with pkill -9 wget"
 permalink: "/abort-wget-with-pkill-9-wget"
-categories: [bash]
+tags: [bash]
 ---
 
 <a href="http://stackoverflow.com/questions/3410730">http://stackoverflow.com/questions/3410730</a>

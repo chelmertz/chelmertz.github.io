@@ -3,7 +3,7 @@ layout: post
 title: "Gitweb on OSX"
 date: 2012-07-12 15:10
 comments: true
-categories: git mac
+tags: git mac
 ---
 
 I have all my code stored in ~/Sites and every sub folder represents a project. Each folder is also a git repository. This means there's history attached to it, which could be much more easily navigated than through the finder or a terminal. Some of the projects are mirrored on [github](https://github.com/chelmertz) but it's too messy to keep them all there, although -- that kind of overview is nice to have.

@@ -2,7 +2,7 @@
 layout: post
 title: "Scrolling in less"
 permalink: "/scrolling-in-less"
-categories: [bash]
+tags: [bash]
 ---
 
 <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?less">http://unixhelp.ed.ac.uk/CGI/man-cgi?less</a>

@@ -2,7 +2,7 @@
 layout: post
 title: "Handling forgotten passwords"
 permalink: "/handling-forgotten-passwords"
-categories: [thoughts]
+tags: [thoughts]
 ---
 
 This is how I would let a user login again, after she lost her password:

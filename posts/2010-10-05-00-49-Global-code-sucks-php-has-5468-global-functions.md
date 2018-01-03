@@ -2,7 +2,7 @@
 layout: post
 title: "Global code sucks - php has 5468 global functions"
 permalink: "/global-code-sucks-php-has-5468-global-functions"
-categories: [php, thoughts]
+tags: [php, thoughts]
 ---
 
 <em>Background: I’m thinking of studying for a Zend Certified Engineer (ZCE) exam, for php. A lot of it seems to understand and remember many different types of functions and their parameters (and their order).</em>

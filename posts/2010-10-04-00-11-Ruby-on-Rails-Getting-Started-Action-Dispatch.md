@@ -2,7 +2,7 @@
 layout: post
 title: "Ruby on Rails: Getting Started & Action Dispatch"
 permalink: "/ruby-on-rails-getting-started-action-dispatch"
-categories: [thoughts]
+tags: [thoughts]
 ---
 
 <a href="http://rubyonrails.org/screencasts/rails3/getting-started-action-dispatch">http://rubyonrails.org/screencasts/rails3/getting-started-action-dispatch</a>

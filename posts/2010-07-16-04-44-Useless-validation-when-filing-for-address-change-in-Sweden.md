@@ -2,7 +2,7 @@
 layout: post
 title: "Useless validation when filing for address change in Sweden"
 permalink: "/useless-validation-when-filing-for-address-change-in-sweden"
-categories: [thoughts, usability]
+tags: [thoughts, usability]
 ---
 
 The official channel of confirming that you’re relocating in Sweden, <a href="http://adressandring.se">http://adressandring.se</a>, wants you to validate your birth data yourself - by placing the separator <em>-</em> on the right place.

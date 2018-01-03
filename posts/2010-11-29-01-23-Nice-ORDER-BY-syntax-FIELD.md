@@ -2,7 +2,7 @@
 layout: post
 title: "Nice ORDER BY-syntax: FIELD()"
 permalink: "/nice-order-by-syntax-field"
-categories: [mysql]
+tags: [mysql]
 ---
 
 SELECT

@@ -2,7 +2,7 @@
 layout: post
 title: "Roadmap of PHP development - follow it"
 permalink: "/roadmap-of-php-development-follow-it"
-categories: [php]
+tags: [php]
 ---
 
 I just discovered an interesting wiki part of php.net, <a href="http://wiki.php.net/rfc"></a><a href="http://wiki.php.net/rfc">http://wiki.php.net/rfc</a>.

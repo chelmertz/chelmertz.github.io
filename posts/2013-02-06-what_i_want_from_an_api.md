@@ -2,7 +2,7 @@
 layout: post
 title: "What I want from an interface"
 date: 2013-02-06 21:27
-categories: thoughts
+tags: thoughts
 ---
 
 Consider this a checklist for your API, it should work for REST, CLI or source code.

@@ -2,7 +2,7 @@
 layout: post
 title: "Nielsen: Alphabetical Sorting Must (Mostly) Die"
 permalink: "/nielsen-alphabetical-sorting-must-mostly-die"
-categories: [usability]
+tags: [usability]
 ---
 
 <a href="http://www.useit.com/alertbox/alpha-sorting.html">http://www.useit.com/alertbox/alpha-sorting.html</a>
