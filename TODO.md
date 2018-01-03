@@ -1,0 +1,13 @@
+- mimic urls
+    - archive at http://iamnearlythere.com/blog/archives/
+    - feed at http://iamnearlythere.com/atom.xml
+    - go through access log/google analytics and make sure the top posts are at the same url
+    - tags like http://iamnearlythere.com/blog/categories/bash/
+- do something smart at the front page
+- link to helmertz.com instead of an about page
+- show tags in the template for each post
+- remove most css/redundant html, make page small & really snappy (danluu style, almost)
+- double check mobile layout
+- double check code layout
+- port google analytics
+- port disqus
