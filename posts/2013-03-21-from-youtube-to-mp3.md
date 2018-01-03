@@ -7,8 +7,8 @@ categories: tools
 
 Because I always forget the exact command:
 
-{% codeblock lang:bash %}
+{% highlight bash %}
 youtube-dl -x https://youtube.com/?v=id_here
-{% endcodeblock %}
+{% endhighlight %}
 
 On OS X, you'll find youtube-dl through homebrew.

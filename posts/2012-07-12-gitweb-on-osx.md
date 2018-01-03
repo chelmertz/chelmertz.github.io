@@ -14,14 +14,14 @@ My solution to getting an overview was to setup gitweb locally, which makes for 
 
 - Grab the gitweb cgi, copy it to where your local Apache server can find it:
 
-{% codeblock lang:bash %}
+{% highlight bash %}
 # cp /usr/local/Cellar/git/1.7.11.1/share/gitweb/gitweb.cgi /Library/WebServer/CGI-Executables
 # cp /usr/local/Cellar/git/1.7.11.1/share/gitweb/static /Library/WebServer/Documents/gitweb
-{% endcodeblock %}
+{% endhighlight %}
 
 - Modify gitweb.cgi to let it find the static files, to find the git projects and to not choke on really large directories that I'm sure does not contain anything git' anyway:
 
-{% codeblock lang:diff %}
+{% highlight diff %}
 --- /usr/local/Cellar/git/1.7.11.1/share/gitweb/gitweb.cgi	2012-07-11 20:23:10.000000000 +0200
 +++ /Library/WebServer/CGI-Executables/gitweb.cgi	2012-07-11 20:50:36.000000000 +0200
 @@ -71,11 +71,11 @@
@@ -58,6 +58,6 @@ My solution to getting an overview was to setup gitweb locally, which makes for 
  
  # URI and label (title) of GIT logo link
  #our $logo_url = "http://www.kernel.org/pub/software/scm/git/docs/";
-{% endcodeblock %}
+{% endhighlight %}
 
 Now, visit & bookmark http://localhost/cgi-bin/gitweb.cgi in your browser and you should be good to go.

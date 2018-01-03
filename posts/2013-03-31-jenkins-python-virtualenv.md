@@ -33,7 +33,7 @@ Jenkins needs some massaging before it handles the hijacked environment of virtu
       - you're too lazy to build manually; and
       - you can not trigger builds with a git post-commit hook otherwise
     - Build > Execute shell. I've used two steps, one for setting up the environment and one for the actual tests:
-{% codeblock lang:bash %}
+{% highlight bash %}
 # Setup a proper path, I call my virtualenv dir "venv" and
 # I've got the virtualenv command installed in /usr/local/bin
 PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
@@ -42,32 +42,32 @@ if [ ! -d "venv" ]; then
 fi
 . venv/bin/activate
 pip install -r requirements.txt --download-cache=/tmp/$JOB_NAME
-{% endcodeblock %}
+{% endhighlight %}
         
 and
         
-{% codeblock lang:bash %}
+{% highlight bash %}
 . venv/bin/activate
 python test_app.py
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Trigger Jenkins through git hook
 
 You need to add a git hook which triggers a Jenkins build:
-{% codeblock lang:bash %}
+{% highlight bash %}
 echo "curl http://localhost:8080/git/notifyCommit?url=/Users/you/Sites/asdf" >> .git/hooks/post-commit
 chmod +x !$
-{% endcodeblock %}
+{% endhighlight %}
 
 Add an erroneous test, this will do:
-{% codeblock lang:python %}
+{% highlight python %}
 def test_bad(self):
     assert False
-{% endcodeblock %}
+{% endhighlight %}
 
 You should see a new build being queued up in Jenkins within a minute. If that doesn't work, execute the hook and watch the output for error messages:
-{% codeblock lang:bash %}
+{% highlight bash %}
 ./git/hooks/post-commit
-{% endcodeblock %}
+{% endhighlight %}
 
 Now, Jenkins should try to test your project but fail, and report the failure through the GUI. Tada.

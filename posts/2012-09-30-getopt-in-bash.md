@@ -8,7 +8,7 @@ categories: bash
 
 How to properly read command line arguments for a bash script and do it well even without getopt:
 
-{% codeblock lang:bash %}
+{% highlight bash %}
 while :; do
         case "$1" in
                 -h|--help)
@@ -34,6 +34,6 @@ while :; do
                         break
                         ;;
 done
-{% endcodeblock %}
+{% endhighlight %}
 
 I think the syntax is much cleaner than that of getopt's as well -- that is, if you've even got a bash version supporting getopt.
