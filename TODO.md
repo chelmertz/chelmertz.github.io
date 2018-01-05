@@ -1,4 +1,3 @@
-- fix the symlink/organize posts where they belong
 - mimic urls
     - archive at http://iamnearlythere.com/blog/archives/
     - feed at http://iamnearlythere.com/atom.xml
