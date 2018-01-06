@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Open file: cmd + down; navigate upwards: cmd + up"
-permalink: "/open-file-cmd-down-navigate-upwards-cmd-up"
+permalink: "/open-file-cmd-down-navigate-upwards-cmd-up/"
 tags: [mac]
 ---
 

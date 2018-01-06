@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PHP Sadness - showcase of PHP's shortcomings"
-permalink: "/php-sadness-showcase-phps-shortcomings"
+permalink: "/php-sadness-showcase-phps-shortcomings/"
 tags: [php, thoughts]
 ---
 

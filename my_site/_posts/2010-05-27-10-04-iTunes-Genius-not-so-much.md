@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "iTunes Genius - not so much"
-permalink: "/itunes-genius-not-so-much"
+permalink: "/itunes-genius-not-so-much/"
 tags: [mac, usability]
 ---
 

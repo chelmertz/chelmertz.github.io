@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Video on the Web - Dive Into HTML5"
-permalink: "/video-on-the-web-dive-into-html5"
+permalink: "/video-on-the-web-dive-into-html5/"
 tags: [html]
 ---
 

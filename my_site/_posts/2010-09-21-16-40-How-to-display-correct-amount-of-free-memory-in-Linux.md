@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to display correct amount of free memory in Linux"
-permalink: "/how-to-display-correct-amount-of-free-memory-in-linux"
+permalink: "/how-to-display-correct-amount-of-free-memory-in-linux/"
 tags: [bash]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Properly display MySQL result in console"
-permalink: "/properly-display-mysql-result-console"
+permalink: "/properly-display-mysql-result-console/"
 tags: [mysql]
 ---
 

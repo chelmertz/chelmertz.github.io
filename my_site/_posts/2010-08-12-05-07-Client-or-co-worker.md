@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Client - or co-worker?"
-permalink: "/client-or-co-worker"
+permalink: "/client-or-co-worker/"
 tags: [thoughts]
 ---
 

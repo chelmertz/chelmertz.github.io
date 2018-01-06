@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Googles style guides"
-permalink: "/googles-style-guides"
+permalink: "/googles-style-guides/"
 tags: [organized]
 ---
 

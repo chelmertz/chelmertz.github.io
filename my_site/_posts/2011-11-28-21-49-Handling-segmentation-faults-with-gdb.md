@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Handling segmentation faults with gdb"
-permalink: "/handling-segmentation-faults-gdb"
+permalink: "/handling-segmentation-faults-gdb/"
 tags: [c, usability]
 ---
 

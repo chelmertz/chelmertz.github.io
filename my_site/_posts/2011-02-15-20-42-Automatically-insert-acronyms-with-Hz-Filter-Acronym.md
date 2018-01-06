@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Automatically insert acronyms with Hz_Filter_Acronym"
-permalink: "/automatically-insert-acronyms-with-hz_filter_acronym"
+permalink: "/automatically-insert-acronyms-with-hz_filter_acronym/"
 tags: [php, project, zend-framework]
 ---
 

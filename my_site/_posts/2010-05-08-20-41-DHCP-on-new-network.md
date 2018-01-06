@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DHCP on new network"
-permalink: "/dhcp-on-new-network"
+permalink: "/dhcp-on-new-network/"
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Report Bugs Effectively"
-permalink: "/how-to-report-bugs-effectively"
+permalink: "/how-to-report-bugs-effectively/"
 tags: [thoughts]
 ---
 

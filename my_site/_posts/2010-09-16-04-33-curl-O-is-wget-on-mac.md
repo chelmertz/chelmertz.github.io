@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "curl -O is wget on mac"
-permalink: "/curl-o-is-wget-on-mac"
+permalink: "/curl-o-is-wget-on-mac/"
 tags: [bash, mac]
 ---
 

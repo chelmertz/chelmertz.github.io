@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Plain English explanation of Big O - Stack Overflow"
-permalink: "/plain-english-explanation-of-big-o-stack-overflow"
+permalink: "/plain-english-explanation-of-big-o-stack-overflow/"
 
 ---
 

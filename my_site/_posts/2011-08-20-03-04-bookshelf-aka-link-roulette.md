@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "bookshelf, aka link roulette"
-permalink: "/bookshelf-aka-link-roulette"
+permalink: "/bookshelf-aka-link-roulette/"
 tags: [php, project]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Adding `alias`-commands on the fly"
-permalink: "/adding-alias-commands-on-the-fly"
+permalink: "/adding-alias-commands-on-the-fly/"
 tags: [bash]
 ---
 

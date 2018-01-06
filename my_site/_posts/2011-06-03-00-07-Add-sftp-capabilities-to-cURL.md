@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Add sftp-capabilities to cURL"
-permalink: "/add-sftp-capabilities-to-curl"
+permalink: "/add-sftp-capabilities-to-curl/"
 tags: [server]
 ---
 

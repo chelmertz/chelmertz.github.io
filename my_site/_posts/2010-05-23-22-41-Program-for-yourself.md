@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Program for yourself"
-permalink: "/program-for-yourself"
+permalink: "/program-for-yourself/"
 tags: [thoughts]
 ---
 

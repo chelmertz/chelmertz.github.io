@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "University website"
-permalink: "/university-website"
+permalink: "/university-website/"
 tags: [usability]
 ---
 

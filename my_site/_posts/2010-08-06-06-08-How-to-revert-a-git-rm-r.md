@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to revert a \"git rm -r .\"?"
-permalink: "/how-to-revert-a-git-rm-r"
+permalink: "/how-to-revert-a-git-rm-r/"
 tags: [git]
 ---
 

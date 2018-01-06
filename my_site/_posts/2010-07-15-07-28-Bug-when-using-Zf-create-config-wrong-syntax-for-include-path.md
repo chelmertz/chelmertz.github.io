@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bug when using `Zf create config`, wrong syntax for include path"
-permalink: "/bug-when-using-zf-create-config-wrong-syntax-for-include-path"
+permalink: "/bug-when-using-zf-create-config-wrong-syntax-for-include-path/"
 tags: [netbeans, zend-framework]
 ---
 

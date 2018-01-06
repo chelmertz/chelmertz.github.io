@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nielsen: Alphabetical Sorting Must (Mostly) Die"
-permalink: "/nielsen-alphabetical-sorting-must-mostly-die"
+permalink: "/nielsen-alphabetical-sorting-must-mostly-die/"
 tags: [usability]
 ---
 

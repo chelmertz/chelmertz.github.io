@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installing Redmine on Ubuntu and lighttpd"
-permalink: "/installing-redmine-on-ubuntu-and-lighttpd"
+permalink: "/installing-redmine-on-ubuntu-and-lighttpd/"
 tags: [server]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Git reminder: set permissions of hooks to executable"
-permalink: "/git-reminder-set-permissions-of-hooks-to-executable"
+permalink: "/git-reminder-set-permissions-of-hooks-to-executable/"
 tags: [bash, git]
 ---
 

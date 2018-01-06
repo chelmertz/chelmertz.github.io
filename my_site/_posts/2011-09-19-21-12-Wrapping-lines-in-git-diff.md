@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wrapping lines in git diff"
-permalink: "/wrapping-lines-git-diff"
+permalink: "/wrapping-lines-git-diff/"
 tags: [git]
 ---
 

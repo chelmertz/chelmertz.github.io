@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Arrange icons in a folder, and keep them in a grid"
-permalink: "/arrange-icons-in-a-folder-and-keep-them-in-a-grid-9"
+permalink: "/arrange-icons-in-a-folder-and-keep-them-in-a-grid-9/"
 tags: [mac]
 ---
 

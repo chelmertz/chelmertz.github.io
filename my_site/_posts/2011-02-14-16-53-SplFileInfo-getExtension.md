@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SplFileInfo::getExtension()"
-permalink: "/splfileinfogetextension"
+permalink: "/splfileinfogetextension/"
 tags: [php]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Debugging some php.."
-permalink: "/debugging-some-php"
+permalink: "/debugging-some-php/"
 tags: [php, server]
 ---
 

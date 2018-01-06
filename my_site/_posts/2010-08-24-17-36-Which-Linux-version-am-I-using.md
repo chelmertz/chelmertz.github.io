@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Which Linux version am I using?"
-permalink: "/which-linux-version-am-i-using"
+permalink: "/which-linux-version-am-i-using/"
 tags: [bash, server]
 ---
 

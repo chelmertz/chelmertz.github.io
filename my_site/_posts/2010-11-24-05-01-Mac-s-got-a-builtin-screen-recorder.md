@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mac's got a builtin screen recorder"
-permalink: "/macs-got-a-builtin-screen-recorder"
+permalink: "/macs-got-a-builtin-screen-recorder/"
 tags: [mac]
 ---
 

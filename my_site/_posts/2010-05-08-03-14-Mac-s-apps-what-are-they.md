@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mac's apps, what are they?"
-permalink: "/macs-apps-what-are-they"
+permalink: "/macs-apps-what-are-they/"
 tags: [mac]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Make your Mac sing songs"
-permalink: "/make-your-mac-sing-songs"
+permalink: "/make-your-mac-sing-songs/"
 tags: [mac]
 ---
 

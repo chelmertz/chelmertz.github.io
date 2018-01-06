@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "hangman in Python"
-permalink: "/hangman-in-python"
+permalink: "/hangman-in-python/"
 tags: [project]
 ---
 

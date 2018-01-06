@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Print screen on Mac"
-permalink: "/print-screen-on-mac"
+permalink: "/print-screen-on-mac/"
 tags: [mac]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Handling forgotten passwords"
-permalink: "/handling-forgotten-passwords"
+permalink: "/handling-forgotten-passwords/"
 tags: [thoughts]
 ---
 

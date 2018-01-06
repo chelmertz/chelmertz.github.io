@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OSXFUSE instead of MacFuse on Lion"
-permalink: "/osxfuse-macfuse-lion"
+permalink: "/osxfuse-macfuse-lion/"
 tags: [mac]
 ---
 

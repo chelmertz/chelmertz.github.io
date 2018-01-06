@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Center vertically with `line-height`"
-permalink: "/center-vertically-with-line-height"
+permalink: "/center-vertically-with-line-height/"
 tags: [css]
 ---
 

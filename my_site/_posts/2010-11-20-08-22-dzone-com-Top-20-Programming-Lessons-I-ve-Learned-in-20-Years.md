@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "dzone.com - Top 20 Programming Lessons I've Learned in 20 Years"
-permalink: "/dzone-com-top-20-programming-lessons-ive-learned-in-20-years"
+permalink: "/dzone-com-top-20-programming-lessons-ive-learned-in-20-years/"
 tags: [organized]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Retrieve removed file from SVN"
-permalink: "/retrieve-removed-file-from-svn"
+permalink: "/retrieve-removed-file-from-svn/"
 tags: [svn]
 ---
 

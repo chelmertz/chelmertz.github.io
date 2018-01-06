@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Roadmap of PHP development - follow it"
-permalink: "/roadmap-of-php-development-follow-it"
+permalink: "/roadmap-of-php-development-follow-it/"
 tags: [php]
 ---
 

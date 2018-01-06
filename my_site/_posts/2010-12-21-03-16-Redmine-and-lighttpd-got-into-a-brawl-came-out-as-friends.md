@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Redmine and lighttpd got into a brawl, came out as friends"
-permalink: "/redmine-and-lighttpd-got-into-a-brawl-came-out-as-friends"
+permalink: "/redmine-and-lighttpd-got-into-a-brawl-came-out-as-friends/"
 tags: [server]
 ---
 

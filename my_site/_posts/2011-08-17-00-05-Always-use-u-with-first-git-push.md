@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Always use -u with first git push"
-permalink: "/use-u-with-first-git-push"
+permalink: "/use-u-with-first-git-push/"
 tags: [git]
 ---
 

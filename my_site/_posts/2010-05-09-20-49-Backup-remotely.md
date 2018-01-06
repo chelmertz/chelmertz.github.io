@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Backup remotely"
-permalink: "/backup-remotely"
+permalink: "/backup-remotely/"
 tags: [bash]
 ---
 

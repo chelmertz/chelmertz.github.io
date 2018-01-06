@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Move vi/vim editor temporary swap and backup files to another directory | devdaily.com"
-permalink: "/move-vivim-editor-temporary-swap-and-backup-files-to-another-directory-devdaily-com"
+permalink: "/move-vivim-editor-temporary-swap-and-backup-files-to-another-directory-devdaily-com/"
 tags: [vim]
 ---
 

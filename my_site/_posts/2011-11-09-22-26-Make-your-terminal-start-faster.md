@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Make your terminal start faster"
-permalink: "/terminal-start-faster"
+permalink: "/terminal-start-faster/"
 tags: [mac]
 ---
 

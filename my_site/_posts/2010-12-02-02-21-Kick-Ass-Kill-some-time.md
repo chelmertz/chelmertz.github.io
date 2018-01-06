@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kick Ass: Kill some time"
-permalink: "/kick-ass-kill-some-time"
+permalink: "/kick-ass-kill-some-time/"
 tags: [bookmarklet, javascript]
 ---
 

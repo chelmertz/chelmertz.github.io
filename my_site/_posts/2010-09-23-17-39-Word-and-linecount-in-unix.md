@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Word- and linecount in unix"
-permalink: "/word-and-linecount-in-unix"
+permalink: "/word-and-linecount-in-unix/"
 tags: [bash]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to design form buttons in one breath"
-permalink: "/how-to-design-form-buttons-in-one-breath"
+permalink: "/how-to-design-form-buttons-in-one-breath/"
 tags: [thoughts, usability, visual]
 ---
 

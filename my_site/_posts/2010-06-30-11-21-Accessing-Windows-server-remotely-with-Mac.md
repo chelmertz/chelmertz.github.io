@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Accessing Windows server remotely with Mac"
-permalink: "/accessing-windows-server-remotely-with-mac"
+permalink: "/accessing-windows-server-remotely-with-mac/"
 tags: [mac, windows]
 ---
 

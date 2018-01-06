@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installing vim with python and ruby support through homebrew"
-permalink: "/installing-vim-python-ruby-support-homebrew"
+permalink: "/installing-vim-python-ruby-support-homebrew/"
 tags: [mac, vim]
 ---
 

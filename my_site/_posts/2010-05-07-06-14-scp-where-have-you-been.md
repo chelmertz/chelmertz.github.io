@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "scp - where have you been?"
-permalink: "/scp-where-have-you-been"
+permalink: "/scp-where-have-you-been/"
 tags: [bash, server]
 ---
 

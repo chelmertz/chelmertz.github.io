@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "search with ack - \"better than grep\""
-permalink: "/search-ack-better-grep"
+permalink: "/search-ack-better-grep/"
 tags: [bash]
 ---
 

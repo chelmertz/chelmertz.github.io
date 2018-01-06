@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "vsftpd - enabling FTP access on your Ubuntu server"
-permalink: "/vsftpd-enabling-ftp-access-ubuntu-server"
+permalink: "/vsftpd-enabling-ftp-access-ubuntu-server/"
 tags: [server]
 ---
 

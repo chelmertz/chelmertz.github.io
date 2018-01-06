@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Retaliation - feedback at its finest"
-permalink: "/retaliation-feedback-finest"
+permalink: "/retaliation-feedback-finest/"
 tags: [fun]
 ---
 

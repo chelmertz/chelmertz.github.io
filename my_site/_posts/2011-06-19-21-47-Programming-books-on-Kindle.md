@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Programming books on Kindle"
-permalink: "/programming-books-on-kindle"
+permalink: "/programming-books-on-kindle/"
 tags: [kindle]
 ---
 

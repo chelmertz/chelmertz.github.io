@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Timing attacks"
-permalink: "/timing-attacks"
+permalink: "/timing-attacks/"
 tags: [security]
 ---
 

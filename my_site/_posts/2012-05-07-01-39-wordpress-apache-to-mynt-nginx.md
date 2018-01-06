@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From Wordpress on Apache to mynt on nginx"
-permalink: "/wordpress-apache-to-mynt-nginx"
+permalink: "/wordpress-apache-to-mynt-nginx/"
 tags: "project"
 ---
 

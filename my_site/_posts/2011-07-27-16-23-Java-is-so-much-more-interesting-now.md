@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Java is so much more interesting now"
-permalink: "/java-is-so-much-more-interesting-now"
+permalink: "/java-is-so-much-more-interesting-now/"
 tags: [fun]
 ---
 

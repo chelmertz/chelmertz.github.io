@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Linux: Change Directory or CD to the Previous Directory / Last Path"
-permalink: "/linux-change-directory-or-cd-to-the-previous-directory-last-path"
+permalink: "/linux-change-directory-or-cd-to-the-previous-directory-last-path/"
 tags: [bash]
 ---
 
