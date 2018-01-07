@@ -1,2 +1,2 @@
 #!/bin/sh
-exec sh j.sh jekyll serve -s my_site
+pushd _site && python -mSimpleHTTPServer; popd
