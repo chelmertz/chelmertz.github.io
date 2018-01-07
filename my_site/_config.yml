@@ -21,6 +21,9 @@ github_username: chelmertz
 
 permalink: /:title/
 
+feed:
+  path: atom.xml
+
 # Build settings
 markdown: kramdown
 plugins:
