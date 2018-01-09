@@ -18,6 +18,7 @@ email: helmertz@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://iamnearlythere.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: chelmertz
+google_analytics: UA-23163966-1
 
 permalink: /:title/
 
