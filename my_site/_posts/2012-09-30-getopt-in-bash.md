@@ -33,7 +33,10 @@ while :; do
                         # No more args to read
                         break
                         ;;
+        esac
 done
 {% endhighlight %}
 
 I think the syntax is much cleaner than that of getopt's as well -- that is, if you've even got a bash version supporting getopt.
+
+<ins>Edit: Thanks Willem D'Haese for pointing out the missing `esac`.</ins>
