@@ -21,6 +21,7 @@ github_username: chelmertz
 google_analytics: UA-23163966-1
 
 permalink: /:title/
+future: true
 
 feed:
   path: atom.xml
