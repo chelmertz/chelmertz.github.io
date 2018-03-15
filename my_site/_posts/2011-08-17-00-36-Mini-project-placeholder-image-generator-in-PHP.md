@@ -7,7 +7,7 @@ tags: [php, project]
 
 Just finished a very simple utility: display a placeholder image when you are doing the "gridding" part of your layout.
 
-Call <span class="Apple-style-span" style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px; white-space: pre;"><code lang=""html""><img src="picture-this.php?w=500&h=200&bg=ebd&fg=f00" alt="placeholder" /></code> </span>and have it display this baby:
+Call `<img src="picture-this.php?w=500&h=200&bg=ebd&fg=f00" alt="placeholder" />` and have it display this baby:
 
 <img class="alignnone" title="Placeholder example" src="https://github.com/chelmertz/picture-this/raw/master/picture-this-example-1.png" alt="" width="500" height="200" />
 

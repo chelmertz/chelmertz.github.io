@@ -7,7 +7,7 @@ tags: [project, ruby]
 
 Point <strong>site2pdf</strong> to a domain you want and it will save all of its pages to a single PDF:
 
-<pre><code lang=""bash"">ruby site2pdf http://12factor.net</code></pre>
+    ruby site2pdf http://12factor.net
 
 This detects all "internal links" (links to pages on the same domain), crawls these and joins them together. The target for my development process was <a href="http://12factor.net">12factor.net</a> which is well written checklist and guide for your development and deployment.
 
