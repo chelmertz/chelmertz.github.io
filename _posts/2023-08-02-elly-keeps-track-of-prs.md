@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "elly"
+title: "elly - PRs you can act on"
 date: 2023-08-02 16:34
 
 tags: project, go
