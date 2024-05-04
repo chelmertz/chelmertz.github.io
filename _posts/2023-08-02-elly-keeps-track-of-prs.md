@@ -25,6 +25,10 @@ This is what it looks like:
 
 ![about](/assets/elly_about.png)
 
+## System design
+
+![architecture](/assets/elly_architecture.png)
+
 ## A small retrospective
 
 - [Go fuzz testing](https://go.dev/security/fuzz/)
