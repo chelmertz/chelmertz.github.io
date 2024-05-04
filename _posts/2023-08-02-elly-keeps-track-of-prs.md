@@ -11,8 +11,21 @@ published: true
 [elly](https://github.com/chelmertz/elly) shows you all of the pull requests you
 can take action on, by periodically pulling data from Github.
 
-elly was written during the holidays, it will probably get fixes/features after
-some real world usage. A small retrospective:
+**You should deal with the PRs in order, they're ranked by actionability.**
+
+For example, if a PR gets approved, _elly_ shows the PR in the top - just merge it.
+
+If there's a new comment, _elly_ bumps that PR up.
+
+If you just responded to someone's comment, but kept the comment thread open instead of resolving it, _elly_ knows you're waiting for a reply and places the PR lower in the list.
+
+This is what it looks like:
+
+![gui](/assets/elly_gui.png)
+
+![about](/assets/elly_about.png)
+
+## A small retrospective
 
 - [Go fuzz testing](https://go.dev/security/fuzz/)
   - A [single test found 3 bugs](https://github.com/chelmertz/elly/commit/4bd771bb32ded27cd048d168034d860ae2bf77ba)
