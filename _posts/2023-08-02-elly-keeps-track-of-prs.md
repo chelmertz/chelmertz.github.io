@@ -25,6 +25,10 @@ This is what it looks like:
 
 ![about](/assets/elly_about.png)
 
+## Installation instructions
+
+You'll find up to date [installation instructions in the project's README](https://github.com/chelmertz/elly).
+
 ## System design
 
 ![architecture](/assets/elly_architecture.png)
