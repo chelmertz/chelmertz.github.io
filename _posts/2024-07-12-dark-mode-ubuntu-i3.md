@@ -64,9 +64,9 @@ Software that can be configured to adapt to the system wide settings:
 - Firefox
 - [gnome-console](https://gitlab.gnome.org/GNOME/console)
   - The default terminal, gnome-terminal, doesn't support listening in on the system wide color scheme.
-    - The apt package is called `gnome-console` but the terminal's program is called `kgx`.
-      - After installing it, do a `sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kgx 1` and `sudo update-alternatives --set x-terminal-emulator /usr/bin/kgx`, to make it the default terminal.
-      - Also: since I'm using i3 and it doesn't have kgx in its allowlist in /usr/bin/i3-sensible-terminal, I also `export TERMINAL=kgx` in my .zshrc
+  - The apt package is called `gnome-console` but the terminal's program is called `kgx`.
+  - After installing it, do a `sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kgx 1` and `sudo update-alternatives --set x-terminal-emulator /usr/bin/kgx`, to make it the default terminal.
+  - Also: since I'm using i3 and it doesn't have kgx in its allowlist in /usr/bin/i3-sensible-terminal, I also `export TERMINAL=kgx` in my .zshrc
 - [bat](https://github.com/sharkdp/bat)
   - Use the `base16` or `ansi` theme (either in a configuration file, or `alias bat="bat --theme=base16"`)
 
