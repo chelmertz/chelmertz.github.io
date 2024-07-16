@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: iamnearlythere.com
 email: helmertz@gmail.com
+author: Carl Helmertz
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://iamnearlythere.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: chelmertz
