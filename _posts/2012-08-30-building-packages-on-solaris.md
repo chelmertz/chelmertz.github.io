@@ -3,7 +3,7 @@ layout: post
 title: "Building packages on Solaris"
 date: 2012-08-30 22:44
 comments: true
-published: false
+published: true
 tags: 
 ---
 
@@ -30,31 +30,35 @@ Create a folder in your project to hold our metadata. I'll call it just that, "m
 
 ## Defining your project's dependencies
 
-Since your program might rely on other packages presence, you'd want to know how to specify them. We will start by finding out the relation between the newly created pkginfo-file and the [pkginfo command](http://heirloom.sourceforge.net/pkgtools/pkginfo.1.html). Try typing pkginfo -l [package name] to see an already installed package's properties, or add the -d flag: pkginfo -l -d [path to pkg file] if you want to check the properties of a local copy of a package.
+Since your program might rely on other packages presence, you'd want to know how to specify them. We will start by finding out the relation between the newly created pkginfo-file and the [pkginfo command](http://heirloom.sourceforge.net/pkgtools/pkginfo.1.html). Try typing `pkginfo -l [package name]` to see an already installed package's properties, or add the -d flag: `pkginfo -l -d [path to pkg file]` if you want to check the properties of a local copy of a package.
 
 In the metadata folder
 
 
 ### Finding packages
 
-In order to manage the dependencies, you will have to bundle in a [single, large, pkg-file](http://www.opencsw.org/manual/for-administrators/getting-started.html#creating-a-pkg-file-for-a-host-without-an-internet-connection). The dependencies must either be installed locally or found in any of your mirrors defined in /etc/opt/csw/pkgutil.conf (much like apt-get's /etc/apt/sources.list or yum's /etc/yum.repos.d/*.repo-files).
+In order to manage the dependencies, you will have to bundle in a [single, large, pkg-file](http://www.opencsw.org/manual/for-administrators/getting-started.html#creating-a-pkg-file-for-a-host-without-an-internet-connection). The dependencies must either be installed locally or found in any of your mirrors defined in `/etc/opt/csw/pkgutil.conf` (much like apt-get's `/etc/apt/sources.list` or yum's `/etc/yum.repos.d/*.repo`-files).
 
 
 ## Decide what the installation will look like
 
-You can help users install your package by providing an [administration file](http://www.opensolarisforum.org/man/man4/admin.html). This file 
-
-
+You can help users install your package by providing an [administration file](http://www.opensolarisforum.org/man/man4/admin.html).
 
 
 pkgadd
+
 pkginfo
+
 pkgproto
+
 pkgtrans
-bldcat
---stream
+
+bldcat --stream
+
 chkcat
+
 prototype
+
 administration file
 
 Further reading:
