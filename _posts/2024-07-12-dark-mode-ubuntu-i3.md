@@ -70,8 +70,8 @@ Software that can be configured to adapt to the system wide settings:
 - [bat](https://github.com/sharkdp/bat)
   - Use the `base16` or `ansi` theme (either in a configuration file, or `alias bat="bat --theme=base16"`)
 - [doom emacs](https://github.com/doomemacs/doomemacs)
-  - Using the [auto-dark-emacs mode](https://github.com/LionyxML/auto-dark-emacs), configured with a few lines: [doom: Add dark auto-dark-mode to match file system · chelmertz/dotfiles@21944...](https://github.com/chelmertz/dotfiles/commit/21944f4daa5fb185e5724020748f20b5e7d1b603)
-
+  - Using the [auto-dark-emacs](https://github.com/LionyxML/auto-dark-emacs) plugin, [configured with a few lines](https://github.com/chelmertz/dotfiles/commit/21944f4daa5fb185e5724020748f20b5e7d1b603)
+- Slack
 
 Left to fix:
 
