@@ -79,6 +79,7 @@ Left to fix:
   - It has a "Use system color scheme" but toggling the system scheme doesn't make dark reader toggle the plugin's status
 - VS Code
   - Not supported yet on Linux
+  - I've found that using monochrome themes makes me skip less of the code when reading it. So far, [No happiness in Colors](https://vscodethemes.com/e/notoroszbig.theme-nohappinessincolors/no-happiness-in-colors-theme) is a great dark theme, and [Subtle Monochrome (light)](https://github.com/anotherglitchinthematrix/monochrome/) is great as a light theme.
 - Cursor
   - Same as VS Code, I guess
 - IDEA
