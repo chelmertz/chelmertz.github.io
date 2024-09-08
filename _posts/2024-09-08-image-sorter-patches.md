@@ -32,7 +32,7 @@ friendly and accepted them:
 - [chore: Decorate errors with useful information](https://github.com/jgalat/image-sorter/commit/1ac60977a2a1444d66c439766dfb723398fc6318)
 - [fix(filetype): infer after checking file ext](https://github.com/jgalat/image-sorter/commit/1532584003acce3d30f4f6f8034bb6debae60c03)
 
-Besides some very small contributions at work, this is the first patches I've
+Besides some very small contributions at work, these are the first patches I've
 written in Rust. Last time I tried writing rust with vscode-out-of-the-box
 settings, the process was very slow (auto completion and type checking took
 very much time, not ideal when coding). For this size of project, the tooling
