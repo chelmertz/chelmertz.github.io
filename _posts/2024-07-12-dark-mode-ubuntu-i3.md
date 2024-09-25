@@ -73,6 +73,7 @@ Software that can be configured to adapt to the system wide settings:
   - Using the [auto-dark-emacs](https://github.com/LionyxML/auto-dark-emacs) plugin, [configured with a few lines](https://github.com/chelmertz/dotfiles/commit/21944f4daa5fb185e5724020748f20b5e7d1b603)
 - Slack
 - [element](https://element.io/), a matrix chat client
+- [elly](https://github.com/chelmertz/elly), my tool for keeping track of Github pull requests (yes, this is a shameless plug; no, it doesn't need to be configured, because media queries)
 
 Left to fix:
 
