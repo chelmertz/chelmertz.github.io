@@ -86,6 +86,7 @@ Left to fix:
   - Same as VS Code, I guess
 - IDEA
   - [Not supported yet on Linux](https://youtrack.jetbrains.com/issue/IJPL-54591/Implement-IDE-theme-sync-with-OS-on-Linux) and the linked plugin doesn't do it for me
+    - [kant](https://github.com/abrookins/kant) is one of few monochromatic color schemes available
 
 
 ## Previous attempt: "signal-lamp"
