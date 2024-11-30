@@ -8,6 +8,7 @@ import (
 
 const docs = "docs"
 
+// hardcoded, idempotent, blunt error handling, not incremental
 func main() {
 	// github  pages wants to serve either / or docs/, let's go with docs/
 	must(os.RemoveAll(docs))
