@@ -98,6 +98,7 @@ func main() {
 
 			decodedFrontMatter.Permalink = strings.TrimSuffix(decodedFrontMatter.Permalink, ".md")
 		} else {
+			// rather than formatting permalink as a "slug", it's actually a relative path to a directory
 			decodedFrontMatter.Permalink = strings.ReplaceAll(decodedFrontMatter.Permalink, "/", "")
 		}
 
