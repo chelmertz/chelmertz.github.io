@@ -128,6 +128,8 @@ func main() {
 		return 0
 	})
 	must(indexTemplate.Execute(indexOutFile, indexHtmlData))
+
+	// TODO crawl to verify that all links work, both posts and assets
 }
 
 type IndexHtmlData struct {
