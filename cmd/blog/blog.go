@@ -48,7 +48,6 @@ func main() {
 		goldmark.WithExtensions(&frontmatter.Extender{}),
 	)
 
-	posts := make([]Post, 0)
 	indexHtmlData := IndexHtmlData{}
 	filepath.WalkDir("_posts", func(path string, d os.DirEntry, err error) error {
 		if path == "_posts" {
@@ -65,7 +64,7 @@ func main() {
 			panic(fmt.Sprintf("no frontmatter found in %s\n", path))
 		}
 
-		var decodedFrontMatter Post
+		var decodedFrontMatter PostMeta
 		must(postsFrontMatter.Decode(&decodedFrontMatter))
 
 		var publishedAt time.Time
@@ -102,13 +101,16 @@ func main() {
 			decodedFrontMatter.Permalink = strings.ReplaceAll(decodedFrontMatter.Permalink, "/", "")
 		}
 
-		posts = append(posts, decodedFrontMatter)
 		indexHtmlData.Posts = append(indexHtmlData.Posts, IndexPost{
 			Title:       decodedFrontMatter.Title,
 			Permalink:   decodedFrontMatter.Permalink,
 			PublishedAt: publishedAt.Format("Jan 2, 2006"),
 			timestamp:   int(publishedAt.Unix()),
 		})
+
+		must(os.Mkdir(filepath.Join(docs, decodedFrontMatter.Permalink), 0775))
+		must(os.WriteFile(filepath.Join(docs, decodedFrontMatter.Permalink, "index.html"), outputHtml.Bytes(), 0664))
+
 		return nil
 	})
 
@@ -138,9 +140,8 @@ type IndexPost struct {
 	timestamp   int // for sorting reasons only
 }
 
-type Post struct {
+type PostMeta struct {
 	Title       string
-	Body        string
 	PublishedAt time.Time
 	Date        string
 	Published   bool
