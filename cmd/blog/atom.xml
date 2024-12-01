@@ -13,7 +13,8 @@
   <link href="https://iamnearlythere.com/{{.Permalink}}/" rel="alternate" type="text/html" title="{{.Title}}" />
   <published>{{.PublishedAt | rfc3339}}</published>
   <updated>{{.PublishedAt | rfc3339}}</updated>
-  <id>https://iamnearlythere.com/{{.Permalink}}</id>
+  <id>https://iamnearlythere.com/{{.Permalink}}</id>{{with .Summary}}
+  <summary>{{.}}</summary>{{end}}
   <content type="html" xml:base="https://iamnearlythere.com/{{.Permalink}}/">
   <![CDATA[{{.Content}}]]>
   </content>

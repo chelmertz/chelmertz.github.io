@@ -180,6 +180,7 @@ type Post struct {
 	Date              string
 	Published         bool
 	Permalink         string
+	Summary           string
 }
 
 func must(err error) {
