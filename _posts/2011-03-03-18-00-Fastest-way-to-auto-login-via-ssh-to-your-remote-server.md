@@ -1,4 +1,5 @@
 ---
+date: "2011-03-03 18:00"
 layout: post
 title: "Fastest way to auto-login via ssh to your remote server"
 permalink: "fastest-auto-login-ssh-remote-server"

@@ -1,4 +1,5 @@
 ---
+date: "2011-01-23 23:41"
 layout: post
 title: "Visor is a system-wide terminal accessible via a hot-key"
 permalink: "visor-is-a-system-wide-terminal-accessible-via-a-hot-key"

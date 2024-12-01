@@ -1,4 +1,5 @@
 ---
+date: "2010-05-08 03:14"
 layout: post
 title: "Mac's apps, what are they?"
 permalink: "macs-apps-what-are-they"

@@ -1,4 +1,5 @@
 ---
+date: "2010-07-14 06:20"
 layout: post
 title: "Set enviroment variables in Apache"
 permalink: "set-enviroment-variables-in-apache"

@@ -1,4 +1,5 @@
 ---
+date: "2010-11-25 07:06"
 layout: post
 title: "Updating a forked project on Github"
 permalink: "updating-a-forked-project-on-github"

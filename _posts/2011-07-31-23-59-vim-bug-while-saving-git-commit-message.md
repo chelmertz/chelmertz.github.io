@@ -1,4 +1,5 @@
 ---
+date: "2011-07-31 23:59"
 layout: post
 title: "vim \"bug\" while saving git commit message"
 permalink: "vim-bug-while-saving-git-commit-message"

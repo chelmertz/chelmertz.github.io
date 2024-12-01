@@ -1,4 +1,5 @@
 ---
+date: "2010-06-10 02:31"
 layout: post
 title: "Javascript regex 101: String.test()"
 permalink: "javascript-regex-101-string-test"

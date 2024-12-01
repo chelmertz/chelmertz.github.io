@@ -1,4 +1,5 @@
 ---
+date: "2011-08-29 19:23"
 layout: post
 title: "i-got-issues: manage project todos on github"
 permalink: "i-got-issues-manage-project-todos-github"

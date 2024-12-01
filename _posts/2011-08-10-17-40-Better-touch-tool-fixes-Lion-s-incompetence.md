@@ -1,4 +1,5 @@
 ---
+date: "2011-08-10 17:40"
 layout: post
 title: "Better touch tool fixes Lion's incompetence"
 permalink: "touch-tool-fixes-lions-incompetence"

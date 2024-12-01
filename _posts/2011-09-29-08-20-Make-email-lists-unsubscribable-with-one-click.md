@@ -1,4 +1,5 @@
 ---
+date: "2011-09-29 08:20"
 layout: post
 title: "Make email lists unsubscribable with one click"
 permalink: "email-lists-unsubscribable-oneclick"

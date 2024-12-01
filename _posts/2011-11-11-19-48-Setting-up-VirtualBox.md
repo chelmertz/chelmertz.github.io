@@ -1,4 +1,5 @@
 ---
+date: "2011-11-11 19:48"
 layout: post
 title: "Setting up VirtualBox"
 permalink: "setting-up-virtualbox"

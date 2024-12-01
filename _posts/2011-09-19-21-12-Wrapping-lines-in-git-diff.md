@@ -1,4 +1,5 @@
 ---
+date: "2011-09-19 21:12"
 layout: post
 title: "Wrapping lines in git diff"
 permalink: "wrapping-lines-git-diff"

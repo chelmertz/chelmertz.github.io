@@ -1,4 +1,5 @@
 ---
+date: "2010-10-14 18:05"
 layout: post
 title: "Abort wget with pkill -9 wget"
 permalink: "abort-wget-with-pkill-9-wget"

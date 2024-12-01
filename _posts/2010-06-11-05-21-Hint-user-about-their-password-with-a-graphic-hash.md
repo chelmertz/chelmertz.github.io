@@ -1,4 +1,5 @@
 ---
+date: "2010-06-11 05:21"
 layout: post
 title: "Hint user about their password with a graphed hash"
 permalink: "password-hash-graphed"

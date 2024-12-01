@@ -1,4 +1,5 @@
 ---
+date: "2011-02-07 21:22"
 layout: post
 title: "Mac's got a native FTP client - very easy to use"
 permalink: "macs-got-a-native-ftp-client-very-easy-to-use"

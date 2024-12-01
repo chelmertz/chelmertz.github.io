@@ -1,4 +1,5 @@
 ---
+date: "2010-05-03 04:28"
 layout: post
 title: "Debugging some php.."
 permalink: "debugging-some-php"

@@ -1,4 +1,5 @@
 ---
+date: "2010-06-30 11:21"
 layout: post
 title: "Accessing Windows server remotely with Mac"
 permalink: "accessing-windows-server-remotely-with-mac"

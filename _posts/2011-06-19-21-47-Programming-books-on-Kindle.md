@@ -1,4 +1,5 @@
 ---
+date: "2011-06-19 21:47"
 layout: post
 title: "Programming books on Kindle"
 permalink: "programming-books-on-kindle"

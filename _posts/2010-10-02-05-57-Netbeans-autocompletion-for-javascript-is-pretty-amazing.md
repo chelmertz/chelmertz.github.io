@@ -1,4 +1,5 @@
 ---
+date: "2010-10-02 05:57"
 layout: post
 title: "Netbeans autocompletion for javascript is pretty amazing"
 permalink: "netbeans-autocompletion-javascript-amazing"

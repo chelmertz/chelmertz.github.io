@@ -1,4 +1,5 @@
 ---
+date: "2010-07-15 02:13"
 layout: post
 title: "How do I edit an incorrect commit message in git - Stack Overflow"
 permalink: "how-do-i-edit-an-incorrect-commit-message-in-git-stack-overflow"

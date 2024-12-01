@@ -1,4 +1,5 @@
 ---
+date: "2010-09-30 06:42"
 layout: post
 title: "Retrieve removed file from SVN"
 permalink: "retrieve-removed-file-from-svn"

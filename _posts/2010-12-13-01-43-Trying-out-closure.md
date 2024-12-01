@@ -1,4 +1,5 @@
 ---
+date: "2010-12-13 01:43"
 layout: post
 title: "Trying out closure"
 permalink: "trying-out-closure"

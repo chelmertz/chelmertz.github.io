@@ -1,4 +1,5 @@
 ---
+date: "2011-11-28 21:49"
 layout: post
 title: "Handling segmentation faults with gdb"
 permalink: "handling-segmentation-faults-gdb"

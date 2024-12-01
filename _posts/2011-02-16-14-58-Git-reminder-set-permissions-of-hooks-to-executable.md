@@ -1,4 +1,5 @@
 ---
+date: "2011-02-16 14:58"
 layout: post
 title: "Git reminder: set permissions of hooks to executable"
 permalink: "git-reminder-set-permissions-of-hooks-to-executable"

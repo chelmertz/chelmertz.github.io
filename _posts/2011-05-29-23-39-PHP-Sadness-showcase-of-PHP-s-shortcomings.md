@@ -1,4 +1,5 @@
 ---
+date: "2011-05-29 23:39"
 layout: post
 title: "PHP Sadness - showcase of PHP's shortcomings"
 permalink: "php-sadness-showcase-phps-shortcomings"

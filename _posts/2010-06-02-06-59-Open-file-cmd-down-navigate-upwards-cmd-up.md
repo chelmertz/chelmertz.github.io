@@ -1,4 +1,5 @@
 ---
+date: "2010-06-02 06:59"
 layout: post
 title: "Open file: cmd + down; navigate upwards: cmd + up"
 permalink: "open-file-cmd-down-navigate-upwards-cmd-up"

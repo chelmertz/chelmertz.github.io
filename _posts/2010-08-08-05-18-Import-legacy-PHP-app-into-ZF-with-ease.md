@@ -1,4 +1,5 @@
 ---
+date: "2010-08-08 05:18"
 layout: post
 title: "Import legacy PHP app into ZF with ease"
 permalink: "import-legacy-php-app-into-zf-with-ease"

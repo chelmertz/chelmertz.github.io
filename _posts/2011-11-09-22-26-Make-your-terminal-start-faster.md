@@ -1,4 +1,5 @@
 ---
+date: "2011-11-09 22:26"
 layout: post
 title: "Make your terminal start faster"
 permalink: "terminal-start-faster"

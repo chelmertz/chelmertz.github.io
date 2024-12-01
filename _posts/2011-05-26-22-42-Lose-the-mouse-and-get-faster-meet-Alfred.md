@@ -1,4 +1,5 @@
 ---
+date: "2011-05-26 22:42"
 layout: post
 title: "Lose the mouse and get faster - meet Alfred"
 permalink: "lose-mouse-get-faster-meet-alfred"

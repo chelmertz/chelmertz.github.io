@@ -1,4 +1,5 @@
 ---
+date: "2010-06-11 04:59"
 layout: post
 title: "Readability - JS bookmarklet"
 permalink: "readability-js-bookmarklet"

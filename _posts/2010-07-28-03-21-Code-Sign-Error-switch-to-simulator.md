@@ -1,4 +1,5 @@
 ---
+date: "2010-07-28 03:21"
 layout: post
 title: "Code Sign Error - switch to simulator"
 permalink: "code-sign-error-switch-to-simulator"

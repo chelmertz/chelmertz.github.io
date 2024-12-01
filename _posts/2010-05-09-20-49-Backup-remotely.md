@@ -1,4 +1,5 @@
 ---
+date: "2010-05-09 20:49"
 layout: post
 title: "Backup remotely"
 permalink: "backup-remotely"

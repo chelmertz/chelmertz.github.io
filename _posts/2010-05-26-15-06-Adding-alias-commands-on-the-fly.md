@@ -1,4 +1,5 @@
 ---
+date: "2010-05-26 15:06"
 layout: post
 title: "Adding `alias`-commands on the fly"
 permalink: "adding-alias-commands-on-the-fly"

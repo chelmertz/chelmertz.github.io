@@ -1,4 +1,5 @@
 ---
+date: "2011-02-14 16:53"
 layout: post
 title: "SplFileInfo::getExtension()"
 permalink: "splfileinfogetextension"

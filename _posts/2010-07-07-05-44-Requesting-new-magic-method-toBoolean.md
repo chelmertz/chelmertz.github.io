@@ -1,4 +1,5 @@
 ---
+date: "2010-07-07 05:44"
 layout: post
 title: "Requesting new magic method: `__toBoolean()`"
 permalink: "requesting-new-magic-method-__toboolean"

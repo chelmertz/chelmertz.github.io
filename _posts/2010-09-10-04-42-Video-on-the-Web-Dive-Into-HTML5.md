@@ -1,4 +1,5 @@
 ---
+date: "2010-09-10 04:42"
 layout: post
 title: "Video on the Web - Dive Into HTML5"
 permalink: "video-on-the-web-dive-into-html5"

@@ -1,4 +1,5 @@
 ---
+date: "2010-12-16 02:58"
 layout: post
 title: "New dev area with gitweb"
 permalink: "new-dev-area-with-gitweb"

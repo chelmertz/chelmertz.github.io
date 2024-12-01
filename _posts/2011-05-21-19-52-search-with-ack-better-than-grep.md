@@ -1,4 +1,5 @@
 ---
+date: "2011-05-21 19:52"
 layout: post
 title: "search with ack - \"better than grep\""
 permalink: "search-ack-better-grep"

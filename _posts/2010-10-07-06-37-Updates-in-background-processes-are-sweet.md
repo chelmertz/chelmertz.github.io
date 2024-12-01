@@ -1,4 +1,5 @@
 ---
+date: "2010-10-07 06:37"
 layout: post
 title: "Updates in background processes are sweet"
 permalink: "updates-in-background-processes-are-sweet"

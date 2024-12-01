@@ -1,4 +1,5 @@
 ---
+date: "2010-05-27 10:04"
 layout: post
 title: "iTunes Genius - not so much"
 permalink: "itunes-genius-not-so-much"

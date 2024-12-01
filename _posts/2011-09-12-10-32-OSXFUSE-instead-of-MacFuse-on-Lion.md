@@ -1,4 +1,5 @@
 ---
+date: "2011-09-12 10:32"
 layout: post
 title: "OSXFUSE instead of MacFuse on Lion"
 permalink: "osxfuse-macfuse-lion"

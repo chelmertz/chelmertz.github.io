@@ -1,4 +1,5 @@
 ---
+date: "2010-11-23 05:12"
 layout: post
 title: "Keeping track of project files in a large codebase"
 permalink: "keeping-track-of-project-files-in-a-large-codebase"

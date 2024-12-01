@@ -1,4 +1,5 @@
 ---
+date: "2010-09-29 19:59"
 layout: post
 title: "Put a tail on that error log"
 permalink: "put-a-tail-on-that-error-log"

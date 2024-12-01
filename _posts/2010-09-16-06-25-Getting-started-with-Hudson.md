@@ -1,4 +1,5 @@
 ---
+date: "2010-09-16 06:25"
 layout: post
 title: "Getting started with Hudson"
 permalink: "getting-started-with-hudson-hints-and-kinks"

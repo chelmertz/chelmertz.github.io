@@ -1,4 +1,5 @@
 ---
+date: "2011-01-25 21:03"
 layout: post
 title: "gist.github.com + vim + posterous = true"
 permalink: "gist-github-com-vim-posterous-true"

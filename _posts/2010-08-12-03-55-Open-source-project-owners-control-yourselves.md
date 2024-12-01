@@ -1,4 +1,5 @@
 ---
+date: "2010-08-12 03:55"
 layout: post
 title: "Open source project owners: control yourselves!"
 permalink: "open-source-project-owners-control-yourselves"

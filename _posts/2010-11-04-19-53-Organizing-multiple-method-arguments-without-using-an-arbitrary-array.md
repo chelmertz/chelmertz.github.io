@@ -1,4 +1,5 @@
 ---
+date: "2010-11-04 19:53"
 layout: post
 title: "Organizing multiple method arguments without using an arbitrary array"
 permalink: "organizing-multiple-method-arguments-without-using-an-arbitrary-array"

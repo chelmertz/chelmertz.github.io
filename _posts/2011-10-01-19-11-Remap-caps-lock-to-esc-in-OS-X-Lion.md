@@ -1,4 +1,5 @@
 ---
+date: "2011-10-01 19:11"
 layout: post
 title: "Remap caps-lock to esc in OS X Lion"
 permalink: "map-esc-caps-lock-os-lion"

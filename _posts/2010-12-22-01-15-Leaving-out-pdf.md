@@ -1,4 +1,5 @@
 ---
+date: "2010-12-22 01:15"
 layout: post
 title: "Leaving out (pdf)"
 permalink: "leaving-out-pdf"

@@ -1,4 +1,5 @@
 ---
+date: "2010-05-21 06:02"
 layout: post
 title: "Font face's comeback"
 permalink: "font-face-comeback"

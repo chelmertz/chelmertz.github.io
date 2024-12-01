@@ -1,4 +1,5 @@
 ---
+date: "2010-12-02 07:27"
 layout: post
 title: "Using git init --bare for a slim repository look"
 permalink: "using-git-init-bare-for-a-slim-repository-look"

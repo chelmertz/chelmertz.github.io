@@ -1,4 +1,5 @@
 ---
+date: "2010-06-08 00:26"
 layout: post
 title: "Command + tab = love"
 permalink: "command-tab-love"

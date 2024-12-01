@@ -1,4 +1,5 @@
 ---
+date: "2010-09-25 20:02"
 layout: post
 title: "Google Geo Developers Blog: MarkerClusterer: A Solution to the Too Many Markers Problem"
 permalink: "google-geo-developers-blog-markerclusterer-a-solution-to-the-too-many-markers-problem"

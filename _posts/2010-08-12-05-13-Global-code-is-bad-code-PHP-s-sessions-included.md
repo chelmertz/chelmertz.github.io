@@ -1,4 +1,5 @@
 ---
+date: "2010-08-12 05:13"
 layout: post
 title: "Global code is bad code - PHP's sessions included"
 permalink: "global-code-is-bad-code-phps-sessions-included"

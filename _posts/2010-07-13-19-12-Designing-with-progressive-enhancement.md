@@ -1,4 +1,5 @@
 ---
+date: "2010-07-13 19:12"
 layout: post
 title: "Designing with progressive enhancement"
 permalink: "designing-with-progressive-enhancement"

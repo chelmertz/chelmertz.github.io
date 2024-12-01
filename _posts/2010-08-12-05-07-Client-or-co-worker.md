@@ -1,4 +1,5 @@
 ---
+date: "2010-08-12 05:07"
 layout: post
 title: "Client - or co-worker?"
 permalink: "client-or-co-worker"

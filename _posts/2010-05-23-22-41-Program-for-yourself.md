@@ -1,4 +1,5 @@
 ---
+date: "2010-05-23 22:41"
 layout: post
 title: "Program for yourself"
 permalink: "program-for-yourself"
