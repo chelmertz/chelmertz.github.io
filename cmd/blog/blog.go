@@ -10,7 +10,6 @@ import (
 	"path/filepath"
 	"regexp"
 	"slices"
-	"strings"
 	textTemplate "text/template"
 	"time"
 
@@ -79,27 +78,15 @@ func main() {
 		must(postsFrontMatter.Decode(&post))
 		post.Content = template.HTML(outputHtml.String())
 
-		var publishedAt time.Time
 		if post.Date == "" {
-			// this is stupid, jekyll was bc-safe: date could be in the filename rather than frontmatter
-			// this should be a one-time pass to migrate the old posts.. later?
-			match := dateTimeInFilename.Find([]byte(d.Name()))
-			if match == nil {
-				panic(fmt.Sprintf("error parsing date from filename %s for path %s\n", d.Name(), path))
-			}
-			timeParts := bytes.Split(match, []byte{'-'})
-			publishedAt = must1(time.Parse(time.DateTime, fmt.Sprintf("%s-%s-%s %s:%s:00", timeParts[0], timeParts[1], timeParts[2], timeParts[3], timeParts[4])))
-			// TODO write down to files and remove this block
-			must(os.WriteFile(path, []byte(strings.Replace(string(markdownFile), "---", fmt.Sprintf("---\ndate: %q", fmt.Sprintf("%s-%s-%s %s:%s", timeParts[0], timeParts[1], timeParts[2], timeParts[3], timeParts[4])), 1)), 0664))
-		} else {
-			// the frontmatter's "date" granularity is in minutes, i.e. "2024-12-31 23:59"
-			publishedAt, err = time.Parse(time.DateTime, post.Date+":00")
-			if err != nil {
-				panic(fmt.Sprintf("error parsing date from frontmatter for path %s: %v\n", path, err))
-			}
+			panic(fmt.Sprintf("date not found in frontmatter for path %s\n", path))
 		}
+
+		// the frontmatter's "date" granularity is in minutes, i.e. "2024-12-31 23:59"
+		publishedAt := must1(time.Parse(time.DateTime, post.Date+":00"))
 		post.PublishedAt = publishedAt
 		post.PublishedFriendly = publishedAt.Format("Jan 2, 2006")
+
 		if post.Permalink == "" {
 			panic(fmt.Sprintf("permalink not found in frontmatter for path %s\n", path))
 		}
