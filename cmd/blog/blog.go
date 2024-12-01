@@ -110,6 +110,8 @@ func main() {
 			post.Permalink = strings.TrimPrefix(post.Permalink, "-")
 
 			post.Permalink = strings.TrimSuffix(post.Permalink, ".md")
+
+			must(os.WriteFile(path, []byte(strings.Replace(string(markdownFile), "---", fmt.Sprintf("---\npermalink: %q", post.Permalink), 1)), 0664))
 		}
 
 		allPosts = append(allPosts, post)
