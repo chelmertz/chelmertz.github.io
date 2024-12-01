@@ -38,10 +38,8 @@
           {{range .Posts}}
             <li>
               <a class="post-link" href="/{{.Permalink}}/">{{.Title}}</a>
-              
               <span class="post-meta">{{.PublishedFriendly}}</span>
-            </li>
-          {{end}}
+            </li>{{end}}
         </ul>
         <p class="rss-subscribe">subscribe <a href="/atom.xml">to Atom feed</a></p>
       </div>
