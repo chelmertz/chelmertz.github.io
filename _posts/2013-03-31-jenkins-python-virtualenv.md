@@ -2,7 +2,7 @@
 permalink: "jenkins-python-virtualenv"
 layout: post
 title: "Making Jenkins work with python's virtualenv"
-date: 2013-03-31 19:08
+date: "2013-03-31 19:08"
 tags: ci python
 comments: true
 ---

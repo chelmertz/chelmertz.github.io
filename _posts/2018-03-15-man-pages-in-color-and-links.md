@@ -2,7 +2,7 @@
 permalink: "man-pages-in-color-and-links"
 layout: post
 title: "Man pages in color, with links"
-date: 2018-03-15 00:24
+date: "2018-03-15 00:24"
 tags: bash
 comments: true
 published: true

@@ -2,7 +2,7 @@
 permalink: "yanking-in-vim"
 layout: post
 title: "Yanking in vim"
-date: 2012-06-13 20:26
+date: "2012-06-13 20:26"
 comments: true
 tags: vim
 ---

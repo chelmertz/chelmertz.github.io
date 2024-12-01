@@ -2,7 +2,7 @@
 permalink: "shell-must-have"
 layout: post
 title: "A shell's must-have features"
-date: 2013-05-01 20:28
+date: "2013-05-01 20:28"
 tags: bash
 comments: true
 published: true

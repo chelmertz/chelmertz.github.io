@@ -2,7 +2,7 @@
 permalink: "dark-mode-ubuntu-i3"
 layout: post
 title: "Toggling light/dark color scheme for i3 on Ubuntu"
-date: 2024-07-16 00:30
+date: "2024-07-16 00:30"
 
 tags: project
 comments: true
