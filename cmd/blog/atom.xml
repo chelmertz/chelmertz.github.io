@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml" /><link href="https://iamnearlythere.com/" rel="alternate" type="text/html" /><updated>2024-11-28T16:04:11+00:00</updated><id>https://iamnearlythere.com/atom.xml</id><title type="html">iamnearlythere.com</title><subtitle>raw markdown source of iamnearlythere.com</subtitle><author><name>Carl Helmertz</name></author><entry><title type="html">image-sorter patches</title><link href="https://iamnearlythere.com/image-sorter-patches/" rel="alternate" type="text/html" title="image-sorter patches" /><published>2024-09-08T15:37:00+00:00</published><updated>2024-09-08T15:37:00+00:00</updated><id>https://iamnearlythere.com/image-sorter-patches</id><content type="html" xml:base="https://iamnearlythere.com/image-sorter-patches/"><![CDATA[<p><a href="https://github.com/jgalat/image-sorter/">image-sorter</a> is a smart program that
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" >
+<link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml" />
+<link href="https://iamnearlythere.com/" rel="alternate" type="text/html" />
+<updated>2024-11-28T16:04:11+00:00</updated>
+<id>https://iamnearlythere.com/atom.xml</id>
+<title type="html">iamnearlythere.com</title>
+<subtitle>raw markdown source of iamnearlythere.com</subtitle>
+<author><name>Carl Helmertz</name></author>
+<entry><title type="html">image-sorter patches</title>
+<link href="https://iamnearlythere.com/image-sorter-patches/" rel="alternate" type="text/html" title="image-sorter patches" />
+<published>2024-09-08T15:37:00+00:00</published>
+<updated>2024-09-08T15:37:00+00:00</updated>
+<id>https://iamnearlythere.com/image-sorter-patches</id>
+<content type="html" xml:base="https://iamnearlythere.com/image-sorter-patches/">
+<![CDATA[<p><a href="https://github.com/jgalat/image-sorter/">image-sorter</a> is a smart program that
 lets you organize your images.</p>
 
 <p>You give it a couple of directories to look for images in, and some alternative
@@ -61,7 +76,13 @@ file tree. One of those node_modules contained an invalid image file
 dependency in node means importing the whole repository.</li>
   <li>The TUI library code swallowed error messages, in order to control what’s
 rendered by the client.</li>
-</ol>]]></content><author><name>Carl Helmertz</name></author><category term="rust" /><summary type="html"><![CDATA[image-sorter is a smart program that lets you organize your images.]]></summary></entry><entry><title type="html">Pokeshadow - a Pokémon guessing game</title><link href="https://iamnearlythere.com/pokeshadow/" rel="alternate" type="text/html" title="Pokeshadow - a Pokémon guessing game" /><published>2024-07-31T23:00:00+00:00</published><updated>2024-07-31T23:00:00+00:00</updated><id>https://iamnearlythere.com/pokeshadow</id><content type="html" xml:base="https://iamnearlythere.com/pokeshadow/"><![CDATA[<p><em>Pokeshadow</em> is a small guessing game. You identify random Pokémon by their silhouette.</p>
+</ol>]]>
+</content>
+<author><name>Carl Helmertz</name></author>
+<category term="rust" />
+<summary type="html"><![CDATA[image-sorter is a smart program that lets you organize your images.]]></summary>
+</entry>
+<entry><title type="html">Pokeshadow - a Pokémon guessing game</title><link href="https://iamnearlythere.com/pokeshadow/" rel="alternate" type="text/html" title="Pokeshadow - a Pokémon guessing game" /><published>2024-07-31T23:00:00+00:00</published><updated>2024-07-31T23:00:00+00:00</updated><id>https://iamnearlythere.com/pokeshadow</id><content type="html" xml:base="https://iamnearlythere.com/pokeshadow/"><![CDATA[<p><em>Pokeshadow</em> is a small guessing game. You identify random Pokémon by their silhouette.</p>
 
 <p>When starting a round game, it looks like this:</p>
 
