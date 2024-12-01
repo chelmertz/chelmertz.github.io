@@ -146,6 +146,7 @@ func main() {
 	})
 	must(indexTemplate.Execute(indexOutFile, indexHtmlData))
 
+	// TODO also before publishing: check that the feed's xml matches what's already deployed
 	// TODO crawl to verify that all links work, both posts and assets
 }
 
