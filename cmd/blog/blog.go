@@ -126,7 +126,6 @@ func main() {
 	})
 	must(indexTemplate.Execute(indexOutFile, indexHtmlData))
 
-	// atom feed: 10 entries
 	// docs/atom.xml
 	atomTemplate := textTemplate.Must(textTemplate.New("atom.xml").
 		Funcs(textTemplate.FuncMap{
