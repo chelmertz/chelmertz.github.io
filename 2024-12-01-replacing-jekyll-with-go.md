@@ -1,7 +1,8 @@
 ---
-permalink: "replacing-jekyll-with-200-lines-of-go"
+permalink: "replacing-jekyll-with-go"
 layout: post
-title: "Replacing jekyll with 200 lines of go"
+title: "Replacing jekyll with go"
+summary: "Jekyll was too annoying and now wouldn't start - replacing it all with Go and a couple of libraries took a couple of hours"
 date: "2024-12-01 11:58"
 ---
 
