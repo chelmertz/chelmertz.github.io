@@ -10,7 +10,6 @@ import (
 	"path/filepath"
 	"regexp"
 	"slices"
-	"strings"
 	textTemplate "text/template"
 	"time"
 
@@ -98,20 +97,8 @@ func main() {
 		}
 		post.PublishedAt = publishedAt
 		post.PublishedFriendly = publishedAt.Format("Jan 2, 2006")
-
 		if post.Permalink == "" {
-			// variant 1: 2011-12-31-23-59-59-hello-world.md
-			post.Permalink = dateTimeInFilename.ReplaceAllString(d.Name(), "")
-
-			// variant 2: 2011-12-31-hello-world.md
-			post.Permalink = dateInFilename.ReplaceAllString(d.Name(), "")
-
-			// there's a leading hyphen, bridging the date and the title
-			post.Permalink = strings.TrimPrefix(post.Permalink, "-")
-
-			post.Permalink = strings.TrimSuffix(post.Permalink, ".md")
-
-			must(os.WriteFile(path, []byte(strings.Replace(string(markdownFile), "---", fmt.Sprintf("---\npermalink: %q", post.Permalink), 1)), 0664))
+			panic(fmt.Sprintf("permalink not found in frontmatter for path %s\n", path))
 		}
 
 		allPosts = append(allPosts, post)
