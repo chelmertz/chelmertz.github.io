@@ -5,7 +5,6 @@ title: "image-sorter patches"
 date: "2024-09-08 15:37"
 
 tags: rust
-comments: true
 ---
 
 [image-sorter](https://github.com/jgalat/image-sorter/) is a smart program that

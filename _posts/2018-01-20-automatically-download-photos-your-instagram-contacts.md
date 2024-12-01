@@ -4,7 +4,6 @@ layout: post
 title: "Automatically download new photos from your Instagram contacts"
 date: "2018-01-20 21:24"
 tags: bash
-comments: true
 ---
 
 Let's say you want to downloaded the images uploaded to Instagram by you and your contacts, for backup reasons.

@@ -3,7 +3,6 @@ permalink: "gitweb-on-osx"
 layout: post
 title: "Gitweb on OSX"
 date: "2012-07-12 15:10"
-comments: true
 tags: git mac
 ---
 

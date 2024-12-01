@@ -5,7 +5,6 @@ title: "Toggling light/dark color scheme for i3 on Ubuntu"
 date: "2024-07-16 00:30"
 
 tags: project
-comments: true
 ---
 
 I didn't find an easy way to switch between light and dark mode in

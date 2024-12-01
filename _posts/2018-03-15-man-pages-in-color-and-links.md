@@ -4,7 +4,6 @@ layout: post
 title: "Man pages in color, with links"
 date: "2018-03-15 00:24"
 tags: bash
-comments: true
 ---
 
 [Neovim](https://neovim.io/) has builtin support for colorizing man pages, making them easier to read. It also lets you follow links to other man pages, by pressing <kbd>K</kbd> while hovering any term that has a man page.

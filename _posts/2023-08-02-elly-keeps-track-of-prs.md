@@ -5,7 +5,6 @@ title: "elly - PRs you can act on"
 date: "2023-08-02 16:34"
 
 tags: project, go
-comments: true
 ---
 
 [elly](https://github.com/chelmertz/elly) shows you all of the pull requests you
