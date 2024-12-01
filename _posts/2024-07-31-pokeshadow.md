@@ -3,7 +3,6 @@ permalink: "pokeshadow"
 layout: post
 title: "Pokeshadow - a Pokémon guessing game"
 date: "2024-07-31 23:00"
-
 tags: project
 ---
 

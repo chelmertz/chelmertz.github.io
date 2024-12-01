@@ -3,7 +3,6 @@ permalink: "elly-keeps-track-of-prs"
 layout: post
 title: "elly - PRs you can act on"
 date: "2023-08-02 16:34"
-
 tags: project, go
 ---
 

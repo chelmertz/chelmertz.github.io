@@ -3,7 +3,6 @@ permalink: "image-sorter-patches"
 layout: post
 title: "image-sorter patches"
 date: "2024-09-08 15:37"
-
 tags: rust
 ---
 

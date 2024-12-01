@@ -3,7 +3,6 @@ date: "2011-01-25 19:15"
 layout: post
 title: "Why I left tumblr for posterous"
 permalink: "why-i-left-tumblr-for-posterous"
-
 ---
 
 I gave Tumblr a go since it’s super duper easy but I guess it’s just a little bit too easy.
