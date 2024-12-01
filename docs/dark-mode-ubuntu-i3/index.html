@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Toggling light/dark color scheme for i3 on Ubuntu</title>
+
+  <link rel="canonical" href="https://iamnearlythere.com/dark-mode-ubuntu-i3/">
+  <link rel="alternate" type="application/rss+xml" title="iamnearlythere.com" href="/atom.xml">
+
+  <link rel="stylesheet" href="/assets/tufte.css" />
+  <style type="text/css">
+      .post-meta { font-style: italic }
+  </style>
+
+</head>
+<body>
+  <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">Toggling light/dark color scheme for i3 on Ubuntu</h1>
+            <p class="post-meta"><time datetime="2024-07-16T00:30:00Z" itemprop="datePublished">Jul 16, 2024</time></p>
+          </header>
+          <div class="post-content" itemprop="articleBody">
+            <section>
+              <p>I didn't find an easy way to switch between light and dark mode in
+<a href="https://i3wm.org">i3</a> on Ubuntu using Gnome.  I really prefer light schemes in
+a well-lit office, and a darker screen when sitting at night. On that note, I
+really appreciate <a href="https://github.com/jonls/redshift">redshift</a>.</p>
+<p>This is how I approached <strong>easily changing between light and dark mode</strong>:</p>
+<ul>
+<li>Figure out how to toggle the light/dark preference programmatically</li>
+<li>Make sure all software reacts to it
+<ul>
+<li>Preferably: supporting the system settings</li>
+<li>Fallback: hook into the toggling and adapt the specific programs one-by-one
+to change themes etc.</li>
+</ul>
+</li>
+</ul>
+<h2>Changing theme programmatically</h2>
+<p>Creating a clickable button in the
+<a href="https://github.com/vivien/i3blocks">i3blocks</a> menu is easy:</p>
+<pre><code># in ~/.i3blocks.conf
+
+[colorscheme]
+# font awesome sun (f185)
+full_text=
+command=~/bin/color-scheme&gt;/dev/null
+</code></pre>
+<p>A left click toggles between light and dark, here's the <a href="https://github.com/chelmertz/dotfiles/tree/master/bin/color-scheme"><code>~/bin/color-scheme</code> script</a>:</p>
+<pre><code class="language-sh">#!/bin/sh
+
+current=$(gsettings get org.gnome.desktop.interface color-scheme)
+if [ $? -ne 0 ]; then echo &quot;Could not fetch current color-scheme&quot; &gt;&amp;2; exit 1; fi
+echo &quot;Current color-scheme: $current&quot;
+
+case &quot;$current&quot; in
+	&quot;'prefer-dark'&quot;) new_color_scheme=&quot;prefer-light&quot; ;;
+	&quot;'prefer-light'&quot;|&quot;'default'&quot;) new_color_scheme=&quot;prefer-dark&quot; ;;
+esac
+
+echo &quot;New color-scheme: $new_color_scheme&quot;
+
+if ! $(gsettings set org.gnome.desktop.interface color-scheme &quot;$new_color_scheme&quot;); then
+	echo &quot;Could not set new color-scheme&quot; &gt;&amp;2
+	exit 1
+fi
+</code></pre>
+<h2>Make software react to the system setting</h2>
+<p>Software that can be configured to adapt to the system wide settings:</p>
+<ul>
+<li>Firefox</li>
+<li><a href="https://gitlab.gnome.org/GNOME/console">gnome-console</a>
+<ul>
+<li>The default terminal, gnome-terminal, doesn't support listening in on the system wide color scheme.</li>
+<li>The apt package is called <code>gnome-console</code> but the terminal's program is called <code>kgx</code>.</li>
+<li>After installing it, do a <code>sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kgx 1</code> and <code>sudo update-alternatives --set x-terminal-emulator /usr/bin/kgx</code>, to make it the default terminal.</li>
+<li>Also: since I'm using i3 and it doesn't have kgx in its allowlist in /usr/bin/i3-sensible-terminal, I also <code>export TERMINAL=kgx</code> in my .zshrc</li>
+</ul>
+</li>
+<li><a href="https://github.com/sharkdp/bat">bat</a>
+<ul>
+<li>Use the <code>base16</code> or <code>ansi</code> theme (either in a configuration file, or <code>alias bat=&quot;bat --theme=base16&quot;</code>)</li>
+</ul>
+</li>
+<li><a href="https://github.com/doomemacs/doomemacs">doom emacs</a>
+<ul>
+<li>Using the <a href="https://github.com/LionyxML/auto-dark-emacs">auto-dark-emacs</a> plugin, <a href="https://github.com/chelmertz/dotfiles/commit/21944f4daa5fb185e5724020748f20b5e7d1b603">configured with a few lines</a></li>
+</ul>
+</li>
+<li>Slack</li>
+<li><a href="https://element.io/">element</a>, a matrix chat client</li>
+<li><a href="https://github.com/chelmertz/elly">elly</a>, my tool for keeping track of Github pull requests (yes, this is a shameless plug; no, it doesn't need to be configured, because media queries)</li>
+<li>VS Code
+<ul>
+<li>Searching for &quot;preferred&quot; in settings, allows you to apply these settings (ends up in ~/.config/Code/User/settings.json):
+<pre><code>&quot;workbench.preferredDarkColorTheme&quot;: &quot;No Happiness in Colors Theme&quot;,
+&quot;workbench.preferredLightColorTheme&quot;: &quot;Subtle Monochrome (Light)&quot;,
+&quot;window.autoDetectColorScheme&quot;: true
+</code></pre>
+</li>
+<li>I've found that using monochrome themes makes me skip less of the code when reading it. So far, <a href="https://vscodethemes.com/e/notoroszbig.theme-nohappinessincolors/no-happiness-in-colors-theme">No happiness in Colors</a> is a great dark theme, and <a href="https://github.com/anotherglitchinthematrix/monochrome/">Subtle Monochrome (light)</a> is great as a light theme. Don't forget to also <a href="https://github.com/chelmertz/dotfiles/commit/cf68bf6163e9f8b639eba06e56f9175b4728fd0e">turn off rainbow bracket colors</a>.</li>
+</ul>
+</li>
+</ul>
+<p>Left to fix:</p>
+<ul>
+<li>Firefox' <a href="https://github.com/darkreader/darkreader">dark reader extension</a>
+<ul>
+<li>It has a &quot;Use system color scheme&quot; but toggling the system scheme doesn't make dark reader toggle the plugin's status</li>
+</ul>
+</li>
+<li>IDEA
+<ul>
+<li><a href="https://youtrack.jetbrains.com/issue/IJPL-54591/Implement-IDE-theme-sync-with-OS-on-Linux">Not supported yet on Linux</a> and the linked plugin doesn't do it for me
+<ul>
+<li><a href="https://github.com/abrookins/kant">kant</a> is one of few monochromatic color schemes available</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Previous attempt: &quot;signal-lamp&quot;</h2>
+<p>I tried, and failed, to solve this problem previously, in <a href="https://github.com/chelmertz/signal-lamp">https://github.com/chelmertz/signal-lamp</a>.</p>
+<p>I tried to take ownership of the current state/scheme myself, which would require hooks/APIs for every program I'd like to change.</p>
+<p>A particularly bad example: I never found a way to change the theme of all open gnome-terminal windows, so I used <a href="https://linux.die.net/man/1/wmctrl">wmctrl</a> and <a href="https://linux.die.net/man/1/wmctrl">xdotool</a> in a loop 🙈 It turned out super buggy and the code wasn't even pretty to read. A do-over was necessary.</p>
+<h2>Elsewhere: <code>darkman</code></h2>
+<p>I just found Darkman (<a href="https://whynothugo.nl/journal/2022/02/25/introducing-darkman-v1.0.0/">intro</a>, <a href="https://gitlab.com/WhyNotHugo/darkman">repo</a>) but it is a bit intrusive. I like the dbus parts but having a separate service for this, and the scripts for every application, is a bit like the &quot;signal-lamp&quot; attempt and rubs me the wrong way (configuration rabbit hole).</p>
+
+            </section>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <h2 class="footer-heading">iamnearlythere.com</h2>
+      <p> by Carl Helmertz
+      <a href="mailto:helmertz@gmail.com">helmertz@gmail.com</a>, <a href="https://helmertz.com">https://helmertz.com</a>
+      </p>
+      <p><a href="https://github.com/chelmertz"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+        </span><span class="username">chelmertz</span></a>
+      </p>
+    </footer>
+  </body>
+</html>

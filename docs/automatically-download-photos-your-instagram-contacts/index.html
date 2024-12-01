@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Automatically download new photos from your Instagram contacts</title>
+
+  <link rel="canonical" href="https://iamnearlythere.com/automatically-download-photos-your-instagram-contacts/">
+  <link rel="alternate" type="application/rss+xml" title="iamnearlythere.com" href="/atom.xml">
+
+  <link rel="stylesheet" href="/assets/tufte.css" />
+  <style type="text/css">
+      .post-meta { font-style: italic }
+  </style>
+
+</head>
+<body>
+  <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">Automatically download new photos from your Instagram contacts</h1>
+            <p class="post-meta"><time datetime="2018-01-20T21:24:00Z" itemprop="datePublished">Jan 20, 2018</time></p>
+          </header>
+          <div class="post-content" itemprop="articleBody">
+            <section>
+              <p>Let's say you want to downloaded the images uploaded to Instagram by you and your contacts, for backup reasons.</p>
+<p>You can login at the regular web application at <a href="https://instagram.com">https://instagram.com</a> and <a href="https://honeypotmarketing.com/save-a-photo-from-instagram/">right-click/inspect your way to the actual URI of the image file</a>. Manually downloading one photo at a time soon becomes boring though, let's look for other alternatives.</p>
+<p>There are a couple of sites that promote applications that does the job for you. The ones I saw wanted my username and password, which is out of the question.</p>
+<p>Let's try to do download the images ourselves instead, from an environment we control, our desktop.</p>
+<h2>Installing a scraper on your own computer to download photos</h2>
+<p><em>The rest of this blog post assumes that you are using <strong>Linux or macOS</strong> (for <code>cron</code> and regular CLI tools), and have <strong>python</strong> installed (for the scraping program).</em></p>
+<p>There's an easy to use <a href="https://en.wikipedia.org/wiki/Web_scraping">scraper</a> by Richard Arcega called <a href="https://github.com/rarcega/instagram-scraper/">Instagram Scraper</a> that we will use (version 1.5.18 at the time of writing). The scraper is available on <a href="https://pypi.python.org/pypi/instagram-scraper">pypi</a>, and you install it with:</p>
+<p>{% highlight bash %}
+sudo pip install instagram-scraper
+{% endhighlight %}</p>
+<p>The next thing we are going to do is to configure who you are and which profiles you want to download. You do that by creating a text file:</p>
+<p>{% highlight bash %}
+$ cat /home/ch/insta.txt
+-u=username
+-p=passwordinplaintext
+--latest
+--destination=/home/ch/Pictures/instagram
+--retain_username
+a_user_i_follow
+another_user_i_follow
+even_a_third_user_i_follow
+{% endhighlight %}</p>
+<p>Let's try it out:</p>
+<p>{% highlight bash %}
+$ instagram-scraper @/home/ch/insta.txt
+{% endhighlight %}</p>
+<p>If you've got image files in the folder referred to by <code>--destination</code>, you are home free.</p>
+<h2>Automating the scraping</h2>
+<p>To avoid executing the above command manually, we use <a href="https://en.wikipedia.org/wiki/Cron">cron</a> to fetch new images for us.</p>
+<p>This is what a my crontab looks like:</p>
+<p>{% highlight bash %}
+$ crontab -l
+1 * * * * /usr/bin/instagram-scraper -q @/home/ch/insta.txt
+{% endhighlight %}</p>
+<p>To edit your own crontab, use the command <code>crontab -e</code>.</p>
+<p>If you need to learn the syntax of cron, there's a handy form at <a href="https://crontab.guru/">https://crontab.guru/</a> that could help you.</p>
+<h2>Viewing newly downloaded images</h2>
+<p>I use a minimal image viewer called <a href="https://github.com/muennich/sxiv">sxiv</a> which is available in the default repos of, at least, Fedora.</p>
+<p>The following command let's you view all recently downloaded images:</p>
+<p>{% highlight bash %}
+$ sxiv $(find /home/ch/Pictures/instagram -mtime -10 -type f -name &quot;*jpg&quot;)
+{% endhighlight %}</p>
+<p>where the first argument to <code>find</code> is the value of <code>--destination</code> in your configuration, and <code>-10</code> let's you view images from the last ten days.</p>
+<h2>Caveats</h2>
+<h3>Notes about availability of images</h3>
+<p>All images uploaded to Instagram, even by those with their profiles set to private, are publicly accessible. Getting to know the URI is the only problem, that's why we use the scraping application, to find the correct URIs. Even though the URIs themselves do not require being authenticated to download, there may be rate limits or other counter measures against downloading images in bulk.</p>
+<h3>Shortcuts in the code</h3>
+<ul>
+<li>Feel free to <code>pip install --user</code> instead.</li>
+<li>Feel free to capture the stdout/stderr from the cronjob.</li>
+</ul>
+<p>*[URI]: Uniform Resource Identifier
+*[CDN]: Content delivery network</p>
+
+            </section>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <h2 class="footer-heading">iamnearlythere.com</h2>
+      <p> by Carl Helmertz
+      <a href="mailto:helmertz@gmail.com">helmertz@gmail.com</a>, <a href="https://helmertz.com">https://helmertz.com</a>
+      </p>
+      <p><a href="https://github.com/chelmertz"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+        </span><span class="username">chelmertz</span></a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>From Wordpress on Apache to mynt on nginx</title>
+
+  <link rel="canonical" href="https://iamnearlythere.com/wordpress-apache-to-mynt-nginx/">
+  <link rel="alternate" type="application/rss+xml" title="iamnearlythere.com" href="/atom.xml">
+
+  <link rel="stylesheet" href="/assets/tufte.css" />
+  <style type="text/css">
+      .post-meta { font-style: italic }
+  </style>
+
+</head>
+<body>
+  <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">From Wordpress on Apache to mynt on nginx</h1>
+            <p class="post-meta"><time datetime="2012-05-07T01:39:00Z" itemprop="datePublished">May 7, 2012</time></p>
+          </header>
+          <div class="post-content" itemprop="articleBody">
+            <section>
+              <p>Going from Wordpress to <a href="http://mynt.mirroredwhite.com/">mynt</a>.</p>
+<h2>Purpose:</h2>
+<ul>
+<li>smaller footprint, tune down vps (mysql &amp; apache + my bad tuning skills = ram gets eaten up)</li>
+<li>write posts in markdown</li>
+<li>use CLI for faster editing</li>
+<li>posts in git</li>
+<li>local preview for free</li>
+</ul>
+<h2>Bonuses:</h2>
+<ul>
+<li>getting to know a python project (mynt)</li>
+<li>trying out nginx which is recommended for static content
+<ul>
+<li>before: mysql &amp; apache processes hanging around, using 500 mb ram with near 0 load</li>
+<li>response time (with wordpress cache plugin) was 2.49 s for 100.55 KB split on 17 requests (front page)</li>
+<li>$ ab -n 1000 -c 5 <a href="http://iamnearlythere.com/">http://iamnearlythere.com/</a> crashes</li>
+</ul>
+</li>
+<li>take the opportunity to learn less for a redesign, fits with the pregeneration. also, include responsive design (octopress = good influence)</li>
+</ul>
+<h2>Good to have:</h2>
+<ul>
+<li>rsync for deploying</li>
+<li>log 404's</li>
+<li>nice source syntax (see examples on mynt's web)</li>
+</ul>
+<h2>Procedure:</h2>
+<ul>
+<li>Install mynt, requires xcode on osx (for &quot;watchdog&quot; -- an, in my eyes, unnecessary dependency)</li>
+<li>Export all posts from wordpress (I got an XML file out of 3.3.1)</li>
+<li>Run <code>$ ./wp2mynt.php export-file.xml</code> (<!-- raw HTML omitted -->wp2mynt.php is on github<!-- raw HTML omitted -->)</li>
+<li>Modify the theme a bit (far too many h1 used, for example)
+<ul>
+<li>Get a pattern from subtlepatterns.com</li>
+</ul>
+</li>
+<li>Upload it to a new /var/www/directory-here, add a virtual host section to apache's config with ServerName test.iamnearlythere.com. Forgot to register test.iamnearlythere.com as an A record at my DNS registrar, 30 min wasted.</li>
+<li>Install nginx and set the default mimetype to text/html since I was silly enough to use the URI form of url.com/post-title which made mynt generate posts as files without extensions which by default are served as application/octet-stream by nginx (&quot;want to download this?&quot;) and served as text/plain by apache.
+<ul>
+<li>The request dropped to 6 requests at 190 kb, totalling 1.47 s.</li>
+</ul>
+</li>
+<li>Since the machine now no longer needs apache or mysql:
+<ul>
+<li>Make sure apache doesn't start on reload: $ sudo update-rc.d -f apache2 remove</li>
+<li>Make sure mysqld doesn't start on boot: <a href="http://superuser.com/a/139059/9539">http://superuser.com/a/139059/9539</a></li>
+</ul>
+</li>
+<li>Make sure nginx does start on boot: <a href="http://articles.slicehost.com/2007/10/17/ubuntu-lts-adding-an-nginx-init-script">http://articles.slicehost.com/2007/10/17/ubuntu-lts-adding-an-nginx-init-script</a> (I had to replace the nginx path with /usr/local/nginx/sbin/nginx)</li>
+<li>Allright, I'm done.. ish. When using <code>$ tail -f /usr/local/nginx/logs/error.log</code> I notice a bunch of stuff I missed. Redirections here we go</li>
+<li>Also, <!-- raw HTML omitted -->create a Makefile<!-- raw HTML omitted --> for generating, testing and deploying the blog (mynt generate; rsync)
+<ul>
+<li>It contains <a href="http://stackoverflow.com/questions/649246/is-it-possible-to-create-a-multi-line-string-variable-in-a-makefile">multiline strings</a> and <a href="http://superuser.com/questions/421367/read-from-stdin-to-new-named-file-in-vim">feeding vim with input</a></li>
+</ul>
+</li>
+</ul>
+<h2>Result:</h2>
+<ul>
+<li>Memory on vps could be turned down from 768 MB to 128, without tweaking nginx. Currently using about 20%.</li>
+<li><code>$ ab -n 10000 -c 25</code> can be run without any problems what so ever</li>
+</ul>
+<h2>Conclusion:</h2>
+<p>I'm pretty sure I suck at micromanaging apache &amp; mysql. And that nginx is pretty fly with static files.</p>
+<p>Also, a hiccup: I issued a 301 redirect in one case, and it went badly -- my nginx non-ninja-config-skils made me issue a recursive redirect loop. 301 responses are heavily cached by browsers, I had to delete the cache after removing the direction out of the config file. Do not make this mistake during 'live hours' or with a heavily trafficked page.</p>
+
+            </section>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <h2 class="footer-heading">iamnearlythere.com</h2>
+      <p> by Carl Helmertz
+      <a href="mailto:helmertz@gmail.com">helmertz@gmail.com</a>, <a href="https://helmertz.com">https://helmertz.com</a>
+      </p>
+      <p><a href="https://github.com/chelmertz"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+        </span><span class="username">chelmertz</span></a>
+      </p>
+    </footer>
+  </body>
+</html>

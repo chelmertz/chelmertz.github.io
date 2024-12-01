@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" >
+<link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml" />
+<link href="https://iamnearlythere.com/" rel="alternate" type="text/html" />
+<updated>2024-09-08T15:37:00Z</updated>
+<id>https://iamnearlythere.com/atom.xml</id>
+<title type="html">iamnearlythere.com</title>
+<subtitle>iamnearlythere.com, a blog on software development</subtitle>
+<author><name>Carl Helmertz</name></author>
+
+<entry>
+  <title type="html">image-sorter patches</title>
+  <link href="https://iamnearlythere.com/image-sorter-patches/" rel="alternate" type="text/html" title="image-sorter patches" />
+  <published>2024-09-08T15:37:00Z</published>
+  <updated>2024-09-08T15:37:00Z</updated>
+  <id>https://iamnearlythere.com/image-sorter-patches</id>
+  <content type="html" xml:base="https://iamnearlythere.com/image-sorter-patches/">
+  <![CDATA[<p><a href="https://github.com/jgalat/image-sorter/">image-sorter</a> is a smart program that
+lets you organize your images.</p>
+<p>You give it a couple of directories to look for images in, and some alternative
+directories those images should move to. When viewing a &quot;to be moved&quot; image
+inside the program window, you press a shortcut for the best matching output
+directory, and move on to the next image.</p>
+<p>Besides having a smart way of configuring the bindings to the output
+directories, it also persists the &quot;move&quot; commands in a shell file, for you to
+inspect before executing it. This is <a href="https://en.wikipedia.org/wiki/Dry_run_(testing)">dry
+run</a> being builtin and the
+default, and it's so smart to me.</p>
+<p>I tried adding a couple of patches, and luckily for me, the author was very
+friendly and accepted them:</p>
+<ul>
+<li><a href="https://github.com/jgalat/image-sorter/commit/40ac1649abee3384c9149de8e694d8210c391ba2">fix: Guarantee key mapping sort order</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/0b79ab2051db057ff1433b87cce3c5c8e23ad972">fix(path): Expand ~ (tilde) in target paths</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/d72c98decb7b52f299d8ddd64980fe5f2b832c64">feat(delete): Delete an image with backspace</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/ccfb588400386fbde6a70bbd38f77ce23e55f579">feat: Recurse into target paths if -r is given</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/1ac60977a2a1444d66c439766dfb723398fc6318">chore: Decorate errors with useful information</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/1532584003acce3d30f4f6f8034bb6debae60c03">fix(filetype): infer after checking file ext</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/cbfb4033c787bbd19c38deaf74162e805f41f0f7">feat: Try to shorten directory to fit into preview</a></li>
+</ul>
+<p>Besides some very small contributions at work, these are the first patches I've
+written in Rust. Last time I tried writing rust with vscode-out-of-the-box
+settings, the process was very slow (auto completion and type checking took
+very much time, not ideal when coding). For this size of project, the tooling
+was super quick, so I could just enjoy the nice things about Rust.</p>
+<p>Some things to keep in mind for the next excursion with Rust:</p>
+<ul>
+<li>Don't overuse the catch-all <code>_</code> in pattern matching. When adding new (for
+example) enum cases, you want to get compiler errors to fix.</li>
+<li>Use linters. <code>cargo fmt --all -- --check</code> and <code>cargo clippy --all-targets --all-features -- -D warnings</code> were used in this project, and they offer good
+hints à la &quot;yes, your code compiles but <em>this</em> is more semantic&quot;.</li>
+<li><a href="https://docs.rs/structopt/latest/structopt/">structopt</a> was nice for CLI
+parsing, I'm sure <a href="https://docs.rs/clap/latest/clap/">clap</a> is good, too.</li>
+<li>The dependencies in rust are so many and so small (and I added more of them
+🙈).</li>
+</ul>
+<hr>
+<p>And also, a debugging experience:</p>
+<p>I wanted to add a feature for looking through folders recursively for images.
+Once the code was written, and I tested it, the program just died. This was due
+to the alignment of some nice error conditions:</p>
+<ol>
+<li>&quot;Is it an image or not&quot; was checked by file type and nothing else.</li>
+<li>The directory being looked through, contained node_modules somewhere in the
+file tree. One of those node_modules contained an invalid image file
+(basically <code>echo hello&gt;a.jpg</code>) as a test case. Because, of course, having a
+dependency in node means importing the whole repository.</li>
+<li>The TUI library code swallowed error messages, in order to control what's
+rendered by the client.</li>
+</ol>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
+
+<entry>
+  <title type="html">Pokeshadow - a Pokémon guessing game</title>
+  <link href="https://iamnearlythere.com/pokeshadow/" rel="alternate" type="text/html" title="Pokeshadow - a Pokémon guessing game" />
+  <published>2024-07-31T23:00:00Z</published>
+  <updated>2024-07-31T23:00:00Z</updated>
+  <id>https://iamnearlythere.com/pokeshadow</id>
+  <content type="html" xml:base="https://iamnearlythere.com/pokeshadow/">
+  <![CDATA[<p><em>Pokeshadow</em> is a small guessing game. You identify random Pokémon by their silhouette.</p>
+<p>When starting a round game, it looks like this:</p>
+<p><img src="/assets/pokeshadow-new-game.png" alt="pokeshadow"></p>
+<p>And when finished:</p>
+<p><img src="/assets/pokeshadow-guessed.png" alt="pokeshadow"></p>
+<p>There's a simple point system in place, which could be extended for giving out hints.</p>
+<p>The code is hosted at <a href="https://github.com/chelmertz/pokeshadow">https://github.com/chelmertz/pokeshadow</a>. Nothing notable, simple javascript without dependencies and a github action that deploys the game to itch: <a href="https://wonderwizard.itch.io/pokeshadow">https://wonderwizard.itch.io/pokeshadow</a> as an HTML5 artifact.</p>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
+
+<entry>
+  <title type="html">Toggling light/dark color scheme for i3 on Ubuntu</title>
+  <link href="https://iamnearlythere.com/dark-mode-ubuntu-i3/" rel="alternate" type="text/html" title="Toggling light/dark color scheme for i3 on Ubuntu" />
+  <published>2024-07-16T00:30:00Z</published>
+  <updated>2024-07-16T00:30:00Z</updated>
+  <id>https://iamnearlythere.com/dark-mode-ubuntu-i3</id>
+  <content type="html" xml:base="https://iamnearlythere.com/dark-mode-ubuntu-i3/">
+  <![CDATA[<p>I didn't find an easy way to switch between light and dark mode in
+<a href="https://i3wm.org">i3</a> on Ubuntu using Gnome.  I really prefer light schemes in
+a well-lit office, and a darker screen when sitting at night. On that note, I
+really appreciate <a href="https://github.com/jonls/redshift">redshift</a>.</p>
+<p>This is how I approached <strong>easily changing between light and dark mode</strong>:</p>
+<ul>
+<li>Figure out how to toggle the light/dark preference programmatically</li>
+<li>Make sure all software reacts to it
+<ul>
+<li>Preferably: supporting the system settings</li>
+<li>Fallback: hook into the toggling and adapt the specific programs one-by-one
+to change themes etc.</li>
+</ul>
+</li>
+</ul>
+<h2>Changing theme programmatically</h2>
+<p>Creating a clickable button in the
+<a href="https://github.com/vivien/i3blocks">i3blocks</a> menu is easy:</p>
+<pre><code># in ~/.i3blocks.conf
+
+[colorscheme]
+# font awesome sun (f185)
+full_text=
+command=~/bin/color-scheme&gt;/dev/null
+</code></pre>
+<p>A left click toggles between light and dark, here's the <a href="https://github.com/chelmertz/dotfiles/tree/master/bin/color-scheme"><code>~/bin/color-scheme</code> script</a>:</p>
+<pre><code class="language-sh">#!/bin/sh
+
+current=$(gsettings get org.gnome.desktop.interface color-scheme)
+if [ $? -ne 0 ]; then echo &quot;Could not fetch current color-scheme&quot; &gt;&amp;2; exit 1; fi
+echo &quot;Current color-scheme: $current&quot;
+
+case &quot;$current&quot; in
+	&quot;'prefer-dark'&quot;) new_color_scheme=&quot;prefer-light&quot; ;;
+	&quot;'prefer-light'&quot;|&quot;'default'&quot;) new_color_scheme=&quot;prefer-dark&quot; ;;
+esac
+
+echo &quot;New color-scheme: $new_color_scheme&quot;
+
+if ! $(gsettings set org.gnome.desktop.interface color-scheme &quot;$new_color_scheme&quot;); then
+	echo &quot;Could not set new color-scheme&quot; &gt;&amp;2
+	exit 1
+fi
+</code></pre>
+<h2>Make software react to the system setting</h2>
+<p>Software that can be configured to adapt to the system wide settings:</p>
+<ul>
+<li>Firefox</li>
+<li><a href="https://gitlab.gnome.org/GNOME/console">gnome-console</a>
+<ul>
+<li>The default terminal, gnome-terminal, doesn't support listening in on the system wide color scheme.</li>
+<li>The apt package is called <code>gnome-console</code> but the terminal's program is called <code>kgx</code>.</li>
+<li>After installing it, do a <code>sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kgx 1</code> and <code>sudo update-alternatives --set x-terminal-emulator /usr/bin/kgx</code>, to make it the default terminal.</li>
+<li>Also: since I'm using i3 and it doesn't have kgx in its allowlist in /usr/bin/i3-sensible-terminal, I also <code>export TERMINAL=kgx</code> in my .zshrc</li>
+</ul>
+</li>
+<li><a href="https://github.com/sharkdp/bat">bat</a>
+<ul>
+<li>Use the <code>base16</code> or <code>ansi</code> theme (either in a configuration file, or <code>alias bat=&quot;bat --theme=base16&quot;</code>)</li>
+</ul>
+</li>
+<li><a href="https://github.com/doomemacs/doomemacs">doom emacs</a>
+<ul>
+<li>Using the <a href="https://github.com/LionyxML/auto-dark-emacs">auto-dark-emacs</a> plugin, <a href="https://github.com/chelmertz/dotfiles/commit/21944f4daa5fb185e5724020748f20b5e7d1b603">configured with a few lines</a></li>
+</ul>
+</li>
+<li>Slack</li>
+<li><a href="https://element.io/">element</a>, a matrix chat client</li>
+<li><a href="https://github.com/chelmertz/elly">elly</a>, my tool for keeping track of Github pull requests (yes, this is a shameless plug; no, it doesn't need to be configured, because media queries)</li>
+<li>VS Code
+<ul>
+<li>Searching for &quot;preferred&quot; in settings, allows you to apply these settings (ends up in ~/.config/Code/User/settings.json):
+<pre><code>&quot;workbench.preferredDarkColorTheme&quot;: &quot;No Happiness in Colors Theme&quot;,
+&quot;workbench.preferredLightColorTheme&quot;: &quot;Subtle Monochrome (Light)&quot;,
+&quot;window.autoDetectColorScheme&quot;: true
+</code></pre>
+</li>
+<li>I've found that using monochrome themes makes me skip less of the code when reading it. So far, <a href="https://vscodethemes.com/e/notoroszbig.theme-nohappinessincolors/no-happiness-in-colors-theme">No happiness in Colors</a> is a great dark theme, and <a href="https://github.com/anotherglitchinthematrix/monochrome/">Subtle Monochrome (light)</a> is great as a light theme. Don't forget to also <a href="https://github.com/chelmertz/dotfiles/commit/cf68bf6163e9f8b639eba06e56f9175b4728fd0e">turn off rainbow bracket colors</a>.</li>
+</ul>
+</li>
+</ul>
+<p>Left to fix:</p>
+<ul>
+<li>Firefox' <a href="https://github.com/darkreader/darkreader">dark reader extension</a>
+<ul>
+<li>It has a &quot;Use system color scheme&quot; but toggling the system scheme doesn't make dark reader toggle the plugin's status</li>
+</ul>
+</li>
+<li>IDEA
+<ul>
+<li><a href="https://youtrack.jetbrains.com/issue/IJPL-54591/Implement-IDE-theme-sync-with-OS-on-Linux">Not supported yet on Linux</a> and the linked plugin doesn't do it for me
+<ul>
+<li><a href="https://github.com/abrookins/kant">kant</a> is one of few monochromatic color schemes available</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Previous attempt: &quot;signal-lamp&quot;</h2>
+<p>I tried, and failed, to solve this problem previously, in <a href="https://github.com/chelmertz/signal-lamp">https://github.com/chelmertz/signal-lamp</a>.</p>
+<p>I tried to take ownership of the current state/scheme myself, which would require hooks/APIs for every program I'd like to change.</p>
+<p>A particularly bad example: I never found a way to change the theme of all open gnome-terminal windows, so I used <a href="https://linux.die.net/man/1/wmctrl">wmctrl</a> and <a href="https://linux.die.net/man/1/wmctrl">xdotool</a> in a loop 🙈 It turned out super buggy and the code wasn't even pretty to read. A do-over was necessary.</p>
+<h2>Elsewhere: <code>darkman</code></h2>
+<p>I just found Darkman (<a href="https://whynothugo.nl/journal/2022/02/25/introducing-darkman-v1.0.0/">intro</a>, <a href="https://gitlab.com/WhyNotHugo/darkman">repo</a>) but it is a bit intrusive. I like the dbus parts but having a separate service for this, and the scripts for every application, is a bit like the &quot;signal-lamp&quot; attempt and rubs me the wrong way (configuration rabbit hole).</p>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
+
+<entry>
+  <title type="html">elly - PRs you can act on</title>
+  <link href="https://iamnearlythere.com/elly-keeps-track-of-prs/" rel="alternate" type="text/html" title="elly - PRs you can act on" />
+  <published>2023-08-02T16:34:00Z</published>
+  <updated>2023-08-02T16:34:00Z</updated>
+  <id>https://iamnearlythere.com/elly-keeps-track-of-prs</id>
+  <content type="html" xml:base="https://iamnearlythere.com/elly-keeps-track-of-prs/">
+  <![CDATA[<p><a href="https://github.com/chelmertz/elly">elly</a> shows you all of the pull requests you
+can take action on, by periodically pulling data from Github.</p>
+<p><strong>You should deal with the PRs in order, they're ranked by actionability.</strong></p>
+<p>For example, if a PR gets approved, <em>elly</em> shows the PR in the top - just merge it.</p>
+<p>If there's a new comment, <em>elly</em> bumps that PR up.</p>
+<p>If you just responded to someone's comment, but kept the comment thread open instead of resolving it, <em>elly</em> knows you're waiting for a reply and places the PR lower in the list.</p>
+<p>This is what it looks like:</p>
+<p><img src="/assets/elly_gui.png" alt="gui"></p>
+<p><img src="/assets/elly_about.png" alt="about"></p>
+<h2>Installation instructions</h2>
+<p>You'll find up to date <a href="https://github.com/chelmertz/elly">installation instructions in the project's README</a>.</p>
+<h2>System design</h2>
+<p><img src="/assets/elly_architecture.png" alt="architecture"></p>
+<h2>A small retrospective</h2>
+<ul>
+<li><a href="https://go.dev/security/fuzz/">Go fuzz testing</a>
+<ul>
+<li>A <a href="https://github.com/chelmertz/elly/commit/4bd771bb32ded27cd048d168034d860ae2bf77ba">single test found 3 bugs</a></li>
+<li>Inspired by re-reading <a href="https://danluu.com/testing/">Dan Luu on testing</a> for
+the fiftieth time. Finally something that unblocked me, after having read
+countless &quot;reversing things twice&quot; or &quot;encoding/decoding is commutative&quot;
+example. Writing longer test method bodies are fine.</li>
+<li>Going from one-off unit tests, to <a href="https://dave.cheney.net/2019/05/07/prefer-table-driven-tests">table driven tests</a>,
+to fuzzying, seems like a path I want to go down.</li>
+</ul>
+</li>
+<li>Writing <a href="https://adr.github.io/">ADR</a>s (architectural decision record) helped
+even for such a small project (see the <code>/decisions</code> folder)
+<ul>
+<li>Feels nice to not having to go back on certain decisions, since they're
+spelled out and reasoned about. For example: KISS, with a JSON file rather
+than an SQLite DB, felt better after articulating it in text.</li>
+<li>Went back and edited them a lot. They should probably have the <em>draft</em> or
+<em>suggestion</em> status for a while.</li>
+<li>The relation between retrospective items and ADRs almost feel 1:1. Using
+these methods, or something else, that triggers thinking about design
+before/during/after implementation is gold.</li>
+</ul>
+</li>
+<li><a href="https://graphql.org/">GraphQL</a>
+<ul>
+<li>First time querying against it. Using headers for auth, getting proper
+response codes back, and having the query in plain text is pleasant.</li>
+<li>Github specific:
+<ul>
+<li>Good <a href="https://docs.github.com/en/graphql/overview/explorer">API explorer</a>,
+especially with the search box. I guess that the explorer is standard,
+through some framework.</li>
+<li>Trying to extract enough comments (below pull requests, below repositories,
+below search results) is weird - should I traverse that paginated
+sub-sub-sub resource? The &quot;a single query that reaches everywhere&quot;
+paradigm breaks down a bit, to me.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Front end
+<ul>
+<li>Making a <a href="https://stackoverflow.com/questions/4575826/how-to-push-a-footer-to-the-bottom-of-page-when-content-is-short-or-missing">footer really sticky</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"><code>&lt;dialog/&gt;</code></a>.
+Amazing that this now exists. No deps/configuration needed, and <code>::backdrop</code>
+is a perfect partner.</li>
+<li><a href="https://developer.chrome.com/docs/devtools/css/flexbox/">Chrome dev tool's flexbox editor</a>
+<ul>
+<li>Never noticed this before, it's makes for a very quick feedback cycle.</li>
+</ul>
+</li>
+<li>Color scheme inspired by (and butchered, I'm no designer) <a href="https://www.gameuidatabase.com/gameData.php?id=441">Wolfenstein</a></li>
+</ul>
+</li>
+<li><a href="https://i3wm.org/">i3</a> status bar integration (via <a href="https://github.com/vivien/i3blocks">i3blocks</a>)</li>
+<li><a href="https://wiki.archlinux.org/title/systemd">systemd</a> integration</li>
+</ul>
+<p>Prior art: Gitlab variant (<a href="https://gitlab.com/chelmertz/gitlab-mr-bot/">gitlab-mr-bot</a>)</p>
+<ul>
+<li>I made this while at my previous employer who self-hosted Gitlab, where it worked fine.</li>
+<li>Gitlab's API for threads/comments on PRs is much easier to deal with
+(<em>elly</em> needs to guess if there are unanswered comments, since that
+schema is paginated in a nested way).</li>
+<li><code>gitlab-mr-bot</code> was used as a one-off script, storing state in SQLite, for
+others to query.
+<ul>
+<li>I'm leaning towards &quot;hiding things behind an API is friendler&quot;, especially
+if one wants to host things remotely. The transparency/hackability of
+having SQLite is very nice though.</li>
+</ul>
+</li>
+</ul>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
+
+<entry>
+  <title type="html">Man pages in color, with links</title>
+  <link href="https://iamnearlythere.com/man-pages-in-color-and-links/" rel="alternate" type="text/html" title="Man pages in color, with links" />
+  <published>2018-03-15T00:24:00Z</published>
+  <updated>2018-03-15T00:24:00Z</updated>
+  <id>https://iamnearlythere.com/man-pages-in-color-and-links</id>
+  <content type="html" xml:base="https://iamnearlythere.com/man-pages-in-color-and-links/">
+  <![CDATA[<p><a href="https://neovim.io/">Neovim</a> has builtin support for colorizing man pages, making them easier to read. It also lets you follow links to other man pages, by pressing <!-- raw HTML omitted -->K<!-- raw HTML omitted --> while hovering any term that has a man page.</p>
+<p>To set up Neovim as the default reader for when you invoke <code>man apropos</code> etc., place the following code in your ~/.bashrc or such:</p>
+<pre><code>export MANPAGER=&quot;nvim -c 'set ft=man' -&quot;
+</code></pre>
+<p>There are some more pointers in the short and readable section of the <a href="https://github.com/neovim/neovim/blob/5ce8158a5d462043306ee67a3261794f169bdb17/runtime/doc/filetype.txt#L509">Neovim manual on viewing man pages</a>.</p>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
+
+<entry>
+  <title type="html">Automatically download new photos from your Instagram contacts</title>
+  <link href="https://iamnearlythere.com/automatically-download-photos-your-instagram-contacts/" rel="alternate" type="text/html" title="Automatically download new photos from your Instagram contacts" />
+  <published>2018-01-20T21:24:00Z</published>
+  <updated>2018-01-20T21:24:00Z</updated>
+  <id>https://iamnearlythere.com/automatically-download-photos-your-instagram-contacts</id>
+  <content type="html" xml:base="https://iamnearlythere.com/automatically-download-photos-your-instagram-contacts/">
+  <![CDATA[<p>Let's say you want to downloaded the images uploaded to Instagram by you and your contacts, for backup reasons.</p>
+<p>You can login at the regular web application at <a href="https://instagram.com">https://instagram.com</a> and <a href="https://honeypotmarketing.com/save-a-photo-from-instagram/">right-click/inspect your way to the actual URI of the image file</a>. Manually downloading one photo at a time soon becomes boring though, let's look for other alternatives.</p>
+<p>There are a couple of sites that promote applications that does the job for you. The ones I saw wanted my username and password, which is out of the question.</p>
+<p>Let's try to do download the images ourselves instead, from an environment we control, our desktop.</p>
+<h2>Installing a scraper on your own computer to download photos</h2>
+<p><em>The rest of this blog post assumes that you are using <strong>Linux or macOS</strong> (for <code>cron</code> and regular CLI tools), and have <strong>python</strong> installed (for the scraping program).</em></p>
+<p>There's an easy to use <a href="https://en.wikipedia.org/wiki/Web_scraping">scraper</a> by Richard Arcega called <a href="https://github.com/rarcega/instagram-scraper/">Instagram Scraper</a> that we will use (version 1.5.18 at the time of writing). The scraper is available on <a href="https://pypi.python.org/pypi/instagram-scraper">pypi</a>, and you install it with:</p>
+<p>{% highlight bash %}
+sudo pip install instagram-scraper
+{% endhighlight %}</p>
+<p>The next thing we are going to do is to configure who you are and which profiles you want to download. You do that by creating a text file:</p>
+<p>{% highlight bash %}
+$ cat /home/ch/insta.txt
+-u=username
+-p=passwordinplaintext
+--latest
+--destination=/home/ch/Pictures/instagram
+--retain_username
+a_user_i_follow
+another_user_i_follow
+even_a_third_user_i_follow
+{% endhighlight %}</p>
+<p>Let's try it out:</p>
+<p>{% highlight bash %}
+$ instagram-scraper @/home/ch/insta.txt
+{% endhighlight %}</p>
+<p>If you've got image files in the folder referred to by <code>--destination</code>, you are home free.</p>
+<h2>Automating the scraping</h2>
+<p>To avoid executing the above command manually, we use <a href="https://en.wikipedia.org/wiki/Cron">cron</a> to fetch new images for us.</p>
+<p>This is what a my crontab looks like:</p>
+<p>{% highlight bash %}
+$ crontab -l
+1 * * * * /usr/bin/instagram-scraper -q @/home/ch/insta.txt
+{% endhighlight %}</p>
+<p>To edit your own crontab, use the command <code>crontab -e</code>.</p>
+<p>If you need to learn the syntax of cron, there's a handy form at <a href="https://crontab.guru/">https://crontab.guru/</a> that could help you.</p>
+<h2>Viewing newly downloaded images</h2>
+<p>I use a minimal image viewer called <a href="https://github.com/muennich/sxiv">sxiv</a> which is available in the default repos of, at least, Fedora.</p>
+<p>The following command let's you view all recently downloaded images:</p>
+<p>{% highlight bash %}
+$ sxiv $(find /home/ch/Pictures/instagram -mtime -10 -type f -name &quot;*jpg&quot;)
+{% endhighlight %}</p>
+<p>where the first argument to <code>find</code> is the value of <code>--destination</code> in your configuration, and <code>-10</code> let's you view images from the last ten days.</p>
+<h2>Caveats</h2>
+<h3>Notes about availability of images</h3>
+<p>All images uploaded to Instagram, even by those with their profiles set to private, are publicly accessible. Getting to know the URI is the only problem, that's why we use the scraping application, to find the correct URIs. Even though the URIs themselves do not require being authenticated to download, there may be rate limits or other counter measures against downloading images in bulk.</p>
+<h3>Shortcuts in the code</h3>
+<ul>
+<li>Feel free to <code>pip install --user</code> instead.</li>
+<li>Feel free to capture the stdout/stderr from the cronjob.</li>
+</ul>
+<p>*[URI]: Uniform Resource Identifier
+*[CDN]: Content delivery network</p>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
+
+<entry>
+  <title type="html">A shell's must-have features</title>
+  <link href="https://iamnearlythere.com/shell-must-have/" rel="alternate" type="text/html" title="A shell's must-have features" />
+  <published>2013-05-01T20:28:00Z</published>
+  <updated>2013-05-01T20:28:00Z</updated>
+  <id>https://iamnearlythere.com/shell-must-have</id>
+  <content type="html" xml:base="https://iamnearlythere.com/shell-must-have/">
+  <![CDATA[<p>I've been using zsh with oh-my-zsh for a long time now. If I were to replace it,
+this is what I'd look for in the future:</p>
+<ul>
+<li>Case insensitive completion/globbing</li>
+<li>Auto completion of filenames via tab, left + right, enter</li>
+<li>Fuzzy matching/spelling correction of targets when <code>cd</code>-ing</li>
+<li>Have sensible prompt looks
+<ul>
+<li>(aliased) directory</li>
+<li>git status
+<ul>
+<li>branch name</li>
+<li>dirty-index indicator</li>
+</ul>
+</li>
+<li>no username</li>
+</ul>
+</li>
+<li><!-- raw HTML omitted -->ctrl+r<!-- raw HTML omitted --> history</li>
+<li><code>!$</code> and <code>!!</code> expansion before execution</li>
+<li>up + down to traverse history</li>
+<li>globbing with <code>**</code></li>
+</ul>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
+
+<entry>
+  <title type="html">Making Jenkins work with python's virtualenv</title>
+  <link href="https://iamnearlythere.com/jenkins-python-virtualenv/" rel="alternate" type="text/html" title="Making Jenkins work with python's virtualenv" />
+  <published>2013-03-31T19:08:00Z</published>
+  <updated>2013-03-31T19:08:00Z</updated>
+  <id>https://iamnearlythere.com/jenkins-python-virtualenv</id>
+  <content type="html" xml:base="https://iamnearlythere.com/jenkins-python-virtualenv/">
+  <![CDATA[<p>If you use <a href="http://www.virtualenv.org/en/latest/">virtualenv</a> to isolate your python project's environment, and want your code tested automatically -- read on!</p>
+<h2>virtualenv isolates your project's python environment</h2>
+<p>virtualenv makes sure you lockdown your project's main directory and all subdirectories of it. This 'lockdown' means that you never touches your global python binary, or any globally installed libraries (like &quot;sudo pip install flask&quot; ).</p>
+<p>Once locked down, you install all packages again, even those you have globally installed. This enables you to have one version of flask globally installed, but another version in your project. All dependencies can be listed in a separate file and validate a precise environment for you to work with. Tightly controlled dependencies is key to a deployment without surprises.</p>
+<h2>Jenkins checks the health of your project for each change</h2>
+<p>Jenkins is a <a href="https://en.wikipedia.org/wiki/Continuous_integration#Principles">CI server</a> which means it does a lot of repeating stuff so you can focus on doing more important stuff. More specifically, it listens for changes to your project's version control system (like git).</p>
+<p>When changes are detected, the project is built and the test suite is executed. If any step fails, the CI server tells you that it did.</p>
+<h2>Setup Jenkins, and make it use virtualenv</h2>
+<p>Jenkins needs some massaging before it handles the hijacked environment of virtualenv. This is how I did it for my local git repository:</p>
+<ul>
+<li>Download <a href="http://jenkins-ci.org/">Jenkins</a></li>
+<li>Start it, it should be up on http://localhost:8080</li>
+<li>Add the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a></li>
+<li>Setup a new project with these properties:
+<ul>
+<li>Source Code Management: add the URI to your local repository, /Users/you/Sites/asdf in my case. Make sure the jenkins user can read this directory, otherwise the Jenkins GUI will tell you something random about invalid git repo, without a hint about a permissions error.</li>
+<li>Build Triggers: Poll SCM (with an interval like 0 * * * *). This is needed because
+<ul>
+<li>you're too lazy to build manually; and</li>
+<li>you can not trigger builds with a git post-commit hook otherwise</li>
+</ul>
+</li>
+<li>Build &gt; Execute shell. I've used two steps, one for setting up the environment and one for the actual tests:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-sh"># Setup a proper path, I call my virtualenv dir &quot;venv&quot; and
+# I've got the virtualenv command installed in /usr/local/bin
+PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
+if [ ! -d &quot;venv&quot; ]; then
+        virtualenv venv
+fi
+. venv/bin/activate
+pip install -r requirements.txt --download-cache=/tmp/$JOB_NAME
+</code></pre>
+<p>and</p>
+<pre><code class="language-sh">. venv/bin/activate
+python test_app.py
+</code></pre>
+<h2>Trigger Jenkins through git hook</h2>
+<p>You need to add a git hook which triggers a Jenkins build:</p>
+<pre><code class="language-sh">echo &quot;curl http://localhost:8080/git/notifyCommit?url=/Users/you/Sites/asdf&quot; &gt;&gt; .git/hooks/post-commit
+chmod +x !$
+</code></pre>
+<p>Add an erroneous test, this will do:</p>
+<pre><code class="language-python">def test_bad(self):
+    assert False
+</code></pre>
+<p>You should see a new build being queued up in Jenkins within a minute. If that doesn't work, execute the hook and watch the output for error messages:</p>
+<pre><code class="language-sh">./git/hooks/post-commit
+</code></pre>
+<p>Now, Jenkins should try to test your project but fail, and report the failure through the GUI. Tada.</p>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
+
+<entry>
+  <title type="html">From Youtube to mp3</title>
+  <link href="https://iamnearlythere.com/from-youtube-to-mp3/" rel="alternate" type="text/html" title="From Youtube to mp3" />
+  <published>2013-03-21T21:28:00Z</published>
+  <updated>2013-03-21T21:28:00Z</updated>
+  <id>https://iamnearlythere.com/from-youtube-to-mp3</id>
+  <content type="html" xml:base="https://iamnearlythere.com/from-youtube-to-mp3/">
+  <![CDATA[<p>Because I always forget the exact command:</p>
+<p>{% highlight bash %}
+youtube-dl -x <a href="https://youtube.com/?v=id_here">https://youtube.com/?v=id_here</a>
+{% endhighlight %}</p>
+<p>On OS X, you'll find youtube-dl through homebrew.</p>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
+
+<entry>
+  <title type="html">What I want from an interface</title>
+  <link href="https://iamnearlythere.com/what_i_want_from_an_api/" rel="alternate" type="text/html" title="What I want from an interface" />
+  <published>2013-02-06T21:27:00Z</published>
+  <updated>2013-02-06T21:27:00Z</updated>
+  <id>https://iamnearlythere.com/what_i_want_from_an_api</id>
+  <content type="html" xml:base="https://iamnearlythere.com/what_i_want_from_an_api/">
+  <![CDATA[<p>Consider this a checklist for your API, it should work for REST, CLI or source code.</p>
+<h2>What the interface is for</h2>
+<p>Have a scope and tell me what it is in a couple of sentences.</p>
+<h2>How to</h2>
+<p>Let me learn the general approach and edge cases via a concise and result oriented documentation.</p>
+<h2>Feedback</h2>
+<p>Scream at me when I did something wrong and, if I was close enough (and you have a lot of time), point me in the right direction.</p>
+<h2>Consistency</h2>
+<p>For example, when treating errors you shouldn't alternate between simultaneous ways of telling your users something went wrong. Pick one and go with it.</p>
+<ul>
+<li>error callbacks (JS)</li>
+<li>separate errors from regular output (bash)</li>
+<li>exceptions (python et al.)</li>
+<li>magical return codes (C)</li>
+</ul>
+<h2>As simple as possible</h2>
+<p>If there's a parameter that can be made abundant - toss it away or
+promote all other parameters before that one. Read <a href="http://ejohn.org/blog/selectors-in-javascript/">John Resig's post that led to
+jQuery</a> for a good monolog.</p>
+<p>Likewise, when your interface really depends on something, say so up front. Be it a
+library, variables or authentication - requirements can't show up five pages
+into the documentation or client code.</p>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
+
+</feed>
