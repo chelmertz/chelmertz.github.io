@@ -176,8 +176,6 @@ func main() {
 		Posts:       allPosts[:10],
 	}
 	must(atomTemplate.Execute(atomOutFile, atomData))
-
-	// TODO crawl to verify that all links work, both posts and assets
 }
 
 type IndexHtmlData struct {
