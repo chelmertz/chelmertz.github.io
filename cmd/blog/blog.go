@@ -14,6 +14,7 @@ import (
 
 	"github.com/yuin/goldmark"
 
+	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/parser"
 	"go.abhg.dev/goldmark/frontmatter"
 )
@@ -45,7 +46,7 @@ func main() {
 
 	// parse posts
 	md := goldmark.New(
-		goldmark.WithExtensions(&frontmatter.Extender{}),
+		goldmark.WithExtensions(&frontmatter.Extender{}, extension.Linkify),
 	)
 
 	indexHtmlData := IndexHtmlData{}
