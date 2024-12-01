@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"errors"
 	"fmt"
 	"html/template"
 	"io"
@@ -121,6 +122,9 @@ func main() {
 
 		must(os.Mkdir(filepath.Join(docs, post.Permalink), 0775))
 
+		if _, err := os.Stat(filepath.Join(docs, post.Permalink, "index.html")); !errors.Is(err, os.ErrNotExist) {
+			panic(fmt.Sprintf("post %s conflicts with some other post: %v\n", post.Permalink, err))
+		}
 		postIndexOutFile := must1(os.Create(filepath.Join(docs, post.Permalink, "index.html")))
 		must(postTemplate.Execute(postIndexOutFile, post))
 
