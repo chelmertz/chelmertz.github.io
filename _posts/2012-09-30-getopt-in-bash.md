@@ -1,4 +1,5 @@
 ---
+permalink: "getopt-in-bash"
 layout: post
 title: "getopt in bash"
 date: 2012-09-30 23:18

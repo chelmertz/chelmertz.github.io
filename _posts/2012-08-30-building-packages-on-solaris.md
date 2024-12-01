@@ -1,4 +1,5 @@
 ---
+permalink: "building-packages-on-solaris"
 layout: post
 title: "Building packages on Solaris"
 date: 2012-08-30 22:44
