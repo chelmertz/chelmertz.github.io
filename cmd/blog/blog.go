@@ -11,6 +11,7 @@ import (
 	"regexp"
 	"slices"
 	"strings"
+	textTemplate "text/template"
 	"time"
 
 	"github.com/yuin/goldmark"
@@ -26,7 +27,7 @@ var dateTimeInFilename = regexp.MustCompile(`\d{4}-\d{2}-\d{2}-\d{2}-\d{2}`)
 var dateInFilename = regexp.MustCompile(`\d{4}-\d{2}-\d{2}`)
 
 // TODO just for fun, profile this after done
-// hardcoded, idempotent, blunt error handling, not incremental, not parallel
+// hardcoded, idempotent, blunt error handling, not incremental, not parallel, duplicated data in memory
 func main() {
 	// github  pages wants to serve either / or docs/, let's go with docs/
 	must(os.RemoveAll(docs))
@@ -51,6 +52,7 @@ func main() {
 	)
 
 	indexHtmlData := IndexHtmlData{}
+	allPosts := make([]Post, 0)
 	postTemplate := template.Must(template.New("post.html").
 		Funcs(template.FuncMap{
 			"rfc3339": func(t time.Time) string {
@@ -113,6 +115,8 @@ func main() {
 			post.Permalink = strings.ReplaceAll(post.Permalink, "/", "")
 		}
 
+		allPosts = append(allPosts, post)
+
 		indexHtmlData.Posts = append(indexHtmlData.Posts, IndexPost{
 			Title:             post.Title,
 			Permalink:         post.Permalink,
@@ -146,18 +150,50 @@ func main() {
 	})
 	must(indexTemplate.Execute(indexOutFile, indexHtmlData))
 
-	// TODO also before publishing: check that the feed's xml matches what's already deployed
+	// atom feed: 10 entries
+	// docs/atom.xml
+	atomTemplate := textTemplate.Must(textTemplate.New("atom.xml").
+		Funcs(textTemplate.FuncMap{
+			"rfc3339": func(t time.Time) string {
+				return t.Format(time.RFC3339)
+			},
+		}).
+		ParseGlob("cmd/blog/atom.xml"))
+	atomOutFile := must1(os.Create(filepath.Join(docs, "atom.xml")))
+	slices.SortFunc(allPosts, func(i, j Post) int {
+		// sort by date, descending
+		asc := i.PublishedAt.Compare(j.PublishedAt)
+		switch asc {
+		case -1:
+			return 1
+		case 1:
+			return -1
+		}
+		return 0
+	})
+	atomData := AtomData{
+		FeedUpdated: allPosts[0].PublishedAt,
+		Posts:       allPosts[:10],
+	}
+	must(atomTemplate.Execute(atomOutFile, atomData))
+
 	// TODO crawl to verify that all links work, both posts and assets
 }
 
 type IndexHtmlData struct {
 	Posts []IndexPost
 }
+
 type IndexPost struct {
 	Title             string
 	Permalink         string
 	PublishedFriendly string
 	timestamp         int // for sorting reasons only
+}
+
+type AtomData struct {
+	FeedUpdated time.Time
+	Posts       []Post
 }
 
 type Post struct {

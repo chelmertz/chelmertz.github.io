@@ -8,15 +8,16 @@
 <subtitle>iamnearlythere.com, a blog on software development</subtitle>
 <author><name>Carl Helmertz</name></author>
 {{range .Posts}}
-<entry><title type="html">{{.Title}}</title>
-<link href="https://iamnearlythere.com/{{.Permalink}}/" rel="alternate" type="text/html" title="{{.Title}}" />
-<published>{{.PublishedAt | rfc3339}}</published>
-<updated>{{.PublishedAt | rfc3339}}</updated>
-<id>https://iamnearlythere.com/{{.Permalink}}</id>
-<content type="html" xml:base="https://iamnearlythere.com/{{.Permalink}}/">
-<![CDATA[{{.Content}}]]>
-</content>
-<author><name>Carl Helmertz</name></author>
+<entry>
+  <title type="html">{{.Title}}</title>
+  <link href="https://iamnearlythere.com/{{.Permalink}}/" rel="alternate" type="text/html" title="{{.Title}}" />
+  <published>{{.PublishedAt | rfc3339}}</published>
+  <updated>{{.PublishedAt | rfc3339}}</updated>
+  <id>https://iamnearlythere.com/{{.Permalink}}</id>
+  <content type="html" xml:base="https://iamnearlythere.com/{{.Permalink}}/">
+  <![CDATA[{{.Content}}]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
 </entry>
 {{end}}
 </feed>
