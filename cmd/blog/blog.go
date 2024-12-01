@@ -25,6 +25,12 @@ const docs = "docs"
 var dateTimeInFilename = regexp.MustCompile(`\d{4}-\d{2}-\d{2}-\d{2}-\d{2}`)
 var dateInFilename = regexp.MustCompile(`\d{4}-\d{2}-\d{2}`)
 
+var viewFuncs = template.FuncMap{
+	"rfc3339": func(t time.Time) string {
+		return t.Format(time.RFC3339)
+	},
+}
+
 // TODO just for fun, profile this after done
 // hardcoded, idempotent, blunt error handling, not incremental, not parallel, duplicated data in memory
 func main() {
@@ -53,11 +59,7 @@ func main() {
 	indexHtmlData := IndexHtmlData{}
 	allPosts := make([]Post, 0)
 	postTemplate := template.Must(template.New("post.html").
-		Funcs(template.FuncMap{
-			"rfc3339": func(t time.Time) string {
-				return t.Format(time.RFC3339)
-			},
-		}).
+		Funcs(viewFuncs).
 		ParseGlob("cmd/blog/post.html"))
 	filepath.WalkDir("_posts", func(path string, d os.DirEntry, err error) error {
 		if path == "_posts" {
@@ -128,11 +130,7 @@ func main() {
 
 	// docs/atom.xml
 	atomTemplate := textTemplate.Must(textTemplate.New("atom.xml").
-		Funcs(textTemplate.FuncMap{
-			"rfc3339": func(t time.Time) string {
-				return t.Format(time.RFC3339)
-			},
-		}).
+		Funcs(viewFuncs).
 		ParseGlob("cmd/blog/atom.xml"))
 	atomOutFile := must1(os.Create(filepath.Join(docs, "atom.xml")))
 	slices.SortFunc(allPosts, func(i, j Post) int {
