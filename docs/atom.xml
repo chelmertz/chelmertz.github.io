@@ -2,11 +2,111 @@
 <feed xmlns="http://www.w3.org/2005/Atom" >
 <link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml" />
 <link href="https://iamnearlythere.com/" rel="alternate" type="text/html" />
-<updated>2024-09-08T15:37:00Z</updated>
+<updated>2024-12-01T11:58:00Z</updated>
 <id>https://iamnearlythere.com/atom.xml</id>
 <title type="html">iamnearlythere.com</title>
 <subtitle>iamnearlythere.com, a blog on software development</subtitle>
 <author><name>Carl Helmertz</name></author>
+
+<entry>
+  <title type="html">Replacing Jekyll with Go</title>
+  <link href="https://iamnearlythere.com/replacing-Jekyll-with-go/" rel="alternate" type="text/html" title="Replacing Jekyll with Go" />
+  <published>2024-12-01T11:58:00Z</published>
+  <updated>2024-12-01T11:58:00Z</updated>
+  <id>https://iamnearlythere.com/replacing-Jekyll-with-go</id>
+  <summary>Jekyll was too annoying and now wouldn't start - replacing it all with Go and a couple of libraries took a couple of hours</summary>
+  <content type="html" xml:base="https://iamnearlythere.com/replacing-Jekyll-with-go/">
+  <![CDATA[<p>My old dockerized <a href="https://jekyllrb.com/">Jekyll</a> instance started breaking, and
+keeping the blog boring but built in a totally different way seemed like a good
+way to spend some quality time.</p>
+<p>The end result became <a href="https://github.com/chelmertz/chelmertz.github.io/blob/2b54b9fd13b68cba9098929535eb878e1c974056/cmd/blog/blog.go">a Go
+file</a>
+that does things in a simple way - a saving clause from said file: &quot;hardcoded,
+idempotent, blunt error handling, not incremental, not parallel, duplicated data
+in memory&quot;.</p>
+<p>This is a small devlog:</p>
+<ul>
+<li>Github pages &quot;just works&quot; with Jekyll, when moving to non-Jekyll I:
+<ul>
+<li>&quot;Deploy from the <em>main branch</em>&quot;; maintaining separate branches is a personal
+no-no, for a small personal project, <a href="https://trunkbaseddevelopment.com/">trunk-based
+development</a> is king.</li>
+<li>&quot;Deploy from a <em>folder</em>&quot;; pre-generating &amp; checking in things lets you know
+what you get (<a href="https://github.com/chelmertz/serve">just spin up a local HTTP
+server</a>), compared to crossing your
+fingers everytime Github's Jekyll integration takes over.
+<ul>
+<li>I read the docs on <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">DNS
+configuration</a>
+in the middle of the night, while making changes &amp; waiting for TTLs to
+expire, but what finally worked: <em>have a CNAME file in the <code>docs/</code> folder,
+even if you're using A records</em>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/chelmertz/chelmertz.github.io/blob/2b54b9fd13b68cba9098929535eb878e1c974056/cmd/blog/blog.go">The new blog &quot;script&quot;</a> was written iteratively, fixing lots of papercuts along the way.
+<ul>
+<li>As an example: sometime around 2012, my version of Jekyll at the time,
+started to add a <code>date:</code> in the frontmatter, rather than having it as part
+of the filename. There were several such cutoffs (<code>permalink:</code> not always
+being there, ... etc.).
+<ul>
+<li>If I were developing Jekyll, I would instead use a migration strategy to
+bring all files up to date, and then never having to worry about the old
+format again (like.. every RDBMS migration library), but instead Jekyll
+seemed to have kept the complexity of &quot;keep every old version working&quot;
+within their tool. What Jekyll's codebase looks like with that kind of
+approach, I don't want to know.</li>
+</ul>
+</li>
+<li>Fixing one issue at a time, such as &quot;parse publication date from filename
+<em>or</em> frontmatter <code>date:</code>&quot;, let me:
+<ol>
+<li>View a successfully rendered blog quicker.</li>
+<li>Amend the markdown posts with a more complete version of frontmatter
+properties.</li>
+<li><a href="https://github.com/chelmertz/chelmertz.github.io/commit/9908552b27e5ad4b1005afaf514af59a994651d5">Throw out the &quot;reparation&quot; code branches and replace them with a
+validation step</a>.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Go's backwards compatibility story will hopefully prove this right, in a
+couple of years from now.</li>
+<li>I am missing a single feature of jekyll: <a href="https://github.com/jekyll/jekyll/blob/0e4182aefad27c72c6b1c0f0e300e57edefaa0ba/lib/jekyll/excerpt.rb#L98-L145">extracting
+excerpts</a>,
+that are put in the generated HTML's <code>&lt;meta name=&quot;description&quot;/&gt;</code> and the items
+of the Atom feed's <code>&lt;summary&gt;</code>.
+<ul>
+<li>I just put this as a manual thing to write as an optional <code>summary:</code> front
+matter property, which would probably create a much better result in the
+end.</li>
+</ul>
+</li>
+</ul>
+<p>Here are some sed lines for working with frontmatter, notably the &quot;only work
+within the delimiter lines&quot;, which was news to me.</p>
+<p><strong>Removing slashes in <code>permalink:</code></strong></p>
+<pre><code class="language-bash">sed -i -e '/^---$/,/^---$/ {/^\s*permalink: /s/\///g}' _posts/*md
+</code></pre>
+<p><strong>Removing empty lines in frontmatter:</strong></p>
+<pre><code class="language-bash">sed -i '/^---$/,/^---$/ {/^\s*$/d}' _posts/*md
+</code></pre>
+<p><strong>Removing a frontmatter property:</strong></p>
+<pre><code class="language-bash">sed -i '/^---$/,/^---$/ {/^\s*comments:/d}' _posts/*md
+</code></pre>
+<p>And here's a paper trail of what broke the camel's back:</p>
+<pre><code>...
+Error reading file /srv/Jekyll/_layouts/post.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/post.html 
+Error reading file /srv/Jekyll/_layouts/default.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/default.html 
+Error reading file /srv/Jekyll/_layouts/page.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/page.html 
+Error reading file /srv/Jekyll/_layouts/home.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/home.html
+</code></pre>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
 
 <entry>
   <title type="html">image-sorter patches</title>
@@ -501,40 +601,6 @@ chmod +x !$
 youtube-dl -x <a href="https://youtube.com/?v=id_here">https://youtube.com/?v=id_here</a>
 {% endhighlight %}</p>
 <p>On OS X, you'll find youtube-dl through homebrew.</p>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">What I want from an interface</title>
-  <link href="https://iamnearlythere.com/what_i_want_from_an_api/" rel="alternate" type="text/html" title="What I want from an interface" />
-  <published>2013-02-06T21:27:00Z</published>
-  <updated>2013-02-06T21:27:00Z</updated>
-  <id>https://iamnearlythere.com/what_i_want_from_an_api</id>
-  <content type="html" xml:base="https://iamnearlythere.com/what_i_want_from_an_api/">
-  <![CDATA[<p>Consider this a checklist for your API, it should work for REST, CLI or source code.</p>
-<h2>What the interface is for</h2>
-<p>Have a scope and tell me what it is in a couple of sentences.</p>
-<h2>How to</h2>
-<p>Let me learn the general approach and edge cases via a concise and result oriented documentation.</p>
-<h2>Feedback</h2>
-<p>Scream at me when I did something wrong and, if I was close enough (and you have a lot of time), point me in the right direction.</p>
-<h2>Consistency</h2>
-<p>For example, when treating errors you shouldn't alternate between simultaneous ways of telling your users something went wrong. Pick one and go with it.</p>
-<ul>
-<li>error callbacks (JS)</li>
-<li>separate errors from regular output (bash)</li>
-<li>exceptions (python et al.)</li>
-<li>magical return codes (C)</li>
-</ul>
-<h2>As simple as possible</h2>
-<p>If there's a parameter that can be made abundant - toss it away or
-promote all other parameters before that one. Read <a href="http://ejohn.org/blog/selectors-in-javascript/">John Resig's post that led to
-jQuery</a> for a good monolog.</p>
-<p>Likewise, when your interface really depends on something, say so up front. Be it a
-library, variables or authentication - requirements can't show up five pages
-into the documentation or client code.</p>
 ]]>
   </content>
   <author><name>Carl Helmertz</name></author>
