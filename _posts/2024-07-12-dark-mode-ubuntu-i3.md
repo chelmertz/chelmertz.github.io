@@ -6,7 +6,6 @@ date: "2024-07-16 00:30"
 
 tags: project
 comments: true
-published: true
 ---
 
 I didn't find an easy way to switch between light and dark mode in

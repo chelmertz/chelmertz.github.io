@@ -5,7 +5,6 @@ title: "A shell's must-have features"
 date: "2013-05-01 20:28"
 tags: bash
 comments: true
-published: true
 ---
 
 I've been using zsh with oh-my-zsh for a long time now. If I were to replace it,
