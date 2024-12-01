@@ -176,6 +176,9 @@ func main() {
 		Posts:       allPosts[:10],
 	}
 	must(atomTemplate.Execute(atomOutFile, atomData))
+
+	// docs/CNAME
+	must(os.WriteFile(filepath.Join(docs, "CNAME"), []byte("iamnearlythere.com"), 0664))
 }
 
 type IndexHtmlData struct {
