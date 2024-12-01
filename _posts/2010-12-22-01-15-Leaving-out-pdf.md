@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Leaving out (pdf)"
-permalink: "/leaving-out-pdf/"
+permalink: "leaving-out-pdf"
 tags: [thoughts]
 ---
 

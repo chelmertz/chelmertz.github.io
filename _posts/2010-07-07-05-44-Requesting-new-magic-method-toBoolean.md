@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Requesting new magic method: `__toBoolean()`"
-permalink: "/requesting-new-magic-method-__toboolean/"
+permalink: "requesting-new-magic-method-__toboolean"
 tags: [php]
 ---
 

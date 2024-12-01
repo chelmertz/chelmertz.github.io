@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "vim \"bug\" while saving git commit message"
-permalink: "/vim-bug-while-saving-git-commit-message/"
+permalink: "vim-bug-while-saving-git-commit-message"
 tags: [git, mac, vim]
 ---
 

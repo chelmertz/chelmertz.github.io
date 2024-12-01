@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Better touch tool fixes Lion's incompetence"
-permalink: "/touch-tool-fixes-lions-incompetence/"
+permalink: "touch-tool-fixes-lions-incompetence"
 tags: [mac]
 ---
 

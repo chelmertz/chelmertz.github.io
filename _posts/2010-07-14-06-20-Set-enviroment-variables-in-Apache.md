@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Set enviroment variables in Apache"
-permalink: "/set-enviroment-variables-in-apache/"
+permalink: "set-enviroment-variables-in-apache"
 tags: [server, zend-framework]
 ---
 

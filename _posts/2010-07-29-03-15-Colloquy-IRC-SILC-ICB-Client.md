@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Colloquy: IRC, SILC & ICB Client"
-permalink: "/colloquy-irc-silc-icb-client/"
+permalink: "colloquy-irc-silc-icb-client"
 tags: [mac]
 ---
 

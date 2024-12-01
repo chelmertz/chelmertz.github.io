@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "gist.github.com + vim + posterous = true"
-permalink: "/gist-github-com-vim-posterous-true/"
+permalink: "gist-github-com-vim-posterous-true"
 tags: [vim]
 ---
 

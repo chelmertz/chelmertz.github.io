@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "which - saves the day"
-permalink: "/which-saves-the-day/"
+permalink: "which-saves-the-day"
 tags: [bash]
 ---
 

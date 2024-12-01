@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting started with Hudson"
-permalink: "/getting-started-with-hudson-hints-and-kinks/"
+permalink: "getting-started-with-hudson-hints-and-kinks"
 tags: [server]
 ---
 

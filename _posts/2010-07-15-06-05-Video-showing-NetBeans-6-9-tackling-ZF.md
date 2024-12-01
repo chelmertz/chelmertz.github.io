@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Video showing NetBeans 6.9 tackling ZF"
-permalink: "/video-showing-netbeans-6-9-tackling-zf/"
+permalink: "video-showing-netbeans-6-9-tackling-zf"
 tags: [netbeans, zend-framework]
 ---
 

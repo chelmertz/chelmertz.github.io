@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Screen capture from command line"
-permalink: "/screen-capture-from-command-line/"
+permalink: "screen-capture-from-command-line"
 tags: [bash, mac]
 ---
 

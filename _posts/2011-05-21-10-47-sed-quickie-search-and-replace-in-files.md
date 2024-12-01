@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "sed quickie, search and replace in files"
-permalink: "/sed-quickie-search-replace-files/"
+permalink: "sed-quickie-search-replace-files"
 tags: [bash]
 ---
 

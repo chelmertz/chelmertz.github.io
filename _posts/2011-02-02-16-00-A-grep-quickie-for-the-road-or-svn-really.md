@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A grep-quickie for the road (or svn, really)"
-permalink: "/a-grep-quickie-for-the-road-or-svn-really/"
+permalink: "a-grep-quickie-for-the-road-or-svn-really"
 tags: [bash, svn]
 ---
 

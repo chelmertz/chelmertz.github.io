@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "site2pdf - save all pages from a domain as a single PDF"
-permalink: "/site2pdf-save-pages-domain-single-pdf/"
+permalink: "site2pdf-save-pages-domain-single-pdf"
 tags: [project, ruby]
 ---
 

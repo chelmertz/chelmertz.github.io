@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Put a tail on that error log"
-permalink: "/put-a-tail-on-that-error-log/"
+permalink: "put-a-tail-on-that-error-log"
 tags: [server]
 ---
 

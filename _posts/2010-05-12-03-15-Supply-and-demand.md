@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Supply and demand"
-permalink: "/supply-and-demand/"
+permalink: "supply-and-demand"
 tags: [thoughts]
 ---
 

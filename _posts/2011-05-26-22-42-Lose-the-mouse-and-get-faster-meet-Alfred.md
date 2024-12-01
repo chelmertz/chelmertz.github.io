@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lose the mouse and get faster - meet Alfred"
-permalink: "/lose-mouse-get-faster-meet-alfred/"
+permalink: "lose-mouse-get-faster-meet-alfred"
 tags: [mac]
 ---
 

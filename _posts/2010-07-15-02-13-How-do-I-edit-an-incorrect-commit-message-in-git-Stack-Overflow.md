@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How do I edit an incorrect commit message in git - Stack Overflow"
-permalink: "/how-do-i-edit-an-incorrect-commit-message-in-git-stack-overflow/"
+permalink: "how-do-i-edit-an-incorrect-commit-message-in-git-stack-overflow"
 tags: [git]
 ---
 

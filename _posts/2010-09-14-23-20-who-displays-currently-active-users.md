@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "who displays currently active users"
-permalink: "/who-displays-currently-active-users/"
+permalink: "who-displays-currently-active-users"
 tags: [bash]
 ---
 

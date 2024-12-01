@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Remap caps-lock to esc in OS X Lion"
-permalink: "/map-esc-caps-lock-os-lion/"
+permalink: "map-esc-caps-lock-os-lion"
 tags: [mac]
 ---
 

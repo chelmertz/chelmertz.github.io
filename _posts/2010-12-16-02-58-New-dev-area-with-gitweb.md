@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "New dev area with gitweb"
-permalink: "/new-dev-area-with-gitweb/"
+permalink: "new-dev-area-with-gitweb"
 tags: [git, server]
 ---
 

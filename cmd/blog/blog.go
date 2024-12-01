@@ -110,9 +110,6 @@ func main() {
 			post.Permalink = strings.TrimPrefix(post.Permalink, "-")
 
 			post.Permalink = strings.TrimSuffix(post.Permalink, ".md")
-		} else {
-			// rather than formatting permalink as a "slug", it's actually a relative path to a directory
-			post.Permalink = strings.ReplaceAll(post.Permalink, "/", "")
 		}
 
 		allPosts = append(allPosts, post)

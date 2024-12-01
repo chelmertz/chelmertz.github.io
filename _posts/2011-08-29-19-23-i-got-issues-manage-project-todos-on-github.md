@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "i-got-issues: manage project todos on github"
-permalink: "/i-got-issues-manage-project-todos-github/"
+permalink: "i-got-issues-manage-project-todos-github"
 tags: [github, php, project]
 ---
 

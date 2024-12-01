@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vimium enables keyboard only navigation for Chrome"
-permalink: "/vimium-enables-keyboard-navigation-chrome/"
+permalink: "vimium-enables-keyboard-navigation-chrome"
 tags: [chrome, usability, vim]
 ---
 

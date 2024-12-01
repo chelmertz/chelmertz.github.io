@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Font face's comeback"
-permalink: "/font-face-comeback/"
+permalink: "font-face-comeback"
 tags: [css]
 ---
 

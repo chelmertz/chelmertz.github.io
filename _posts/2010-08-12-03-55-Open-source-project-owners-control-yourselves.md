@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Open source project owners: control yourselves!"
-permalink: "/open-source-project-owners-control-yourselves/"
+permalink: "open-source-project-owners-control-yourselves"
 tags: [thoughts]
 ---
 

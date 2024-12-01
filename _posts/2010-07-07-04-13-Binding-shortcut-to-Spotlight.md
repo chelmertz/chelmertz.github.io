@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Binding shortcut to Spotlight"
-permalink: "/binding-shortcut-to-spotlight/"
+permalink: "binding-shortcut-to-spotlight"
 tags: [mac]
 ---
 

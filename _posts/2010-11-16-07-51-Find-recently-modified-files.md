@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Find recently modified files"
-permalink: "/find-recently-modified-files/"
+permalink: "find-recently-modified-files"
 tags: [bash]
 ---
 

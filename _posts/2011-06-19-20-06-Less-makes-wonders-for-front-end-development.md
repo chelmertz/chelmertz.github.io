@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Less makes wonders for front end development"
-permalink: "/less-makes-wonders-front-development/"
+permalink: "less-makes-wonders-front-development"
 tags: [css, javascript]
 ---
 

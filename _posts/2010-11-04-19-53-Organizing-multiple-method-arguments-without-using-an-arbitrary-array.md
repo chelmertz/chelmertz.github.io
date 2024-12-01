@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Organizing multiple method arguments without using an arbitrary array"
-permalink: "/organizing-multiple-method-arguments-without-using-an-arbitrary-array/"
+permalink: "organizing-multiple-method-arguments-without-using-an-arbitrary-array"
 tags: [php]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Simple Desktops"
-permalink: "/simple-desktops/"
+permalink: "simple-desktops"
 tags: [visual]
 ---
 

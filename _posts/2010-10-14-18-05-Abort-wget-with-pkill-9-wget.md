@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Abort wget with pkill -9 wget"
-permalink: "/abort-wget-with-pkill-9-wget/"
+permalink: "abort-wget-with-pkill-9-wget"
 tags: [bash]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Something different - administrate Windows 7 through \"God mode\""
-permalink: "/something-different-administrate-windows-7-through-god-mode/"
+permalink: "something-different-administrate-windows-7-through-god-mode"
 tags: [windows]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Geo Developers Blog: MarkerClusterer: A Solution to the Too Many Markers Problem"
-permalink: "/google-geo-developers-blog-markerclusterer-a-solution-to-the-too-many-markers-problem/"
+permalink: "google-geo-developers-blog-markerclusterer-a-solution-to-the-too-many-markers-problem"
 tags: [javascript]
 ---
 

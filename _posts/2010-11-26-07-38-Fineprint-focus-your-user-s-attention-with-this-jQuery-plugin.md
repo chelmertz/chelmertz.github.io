@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fineprint - focus your user's attention with this jQuery plugin"
-permalink: "/fineprint-focus-users-attention-jquery-plugin/"
+permalink: "fineprint-focus-users-attention-jquery-plugin"
 tags: [javascript, project]
 ---
 

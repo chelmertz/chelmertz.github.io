@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "say-what.rb - trying out Ruby"
-permalink: "/say-what-rb-ruby/"
+permalink: "say-what-rb-ruby"
 tags: [project]
 ---
 

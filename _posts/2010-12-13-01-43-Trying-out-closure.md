@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Trying out closure"
-permalink: "/trying-out-closure/"
+permalink: "trying-out-closure"
 tags: [javascript, server]
 ---
 

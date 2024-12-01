@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Useless validation when filing for address change in Sweden"
-permalink: "/useless-validation-when-filing-for-address-change-in-sweden/"
+permalink: "useless-validation-when-filing-for-address-change-in-sweden"
 tags: [thoughts, usability]
 ---
 

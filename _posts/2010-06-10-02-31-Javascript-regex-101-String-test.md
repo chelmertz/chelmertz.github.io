@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Javascript regex 101: String.test()"
-permalink: "/javascript-regex-101-string-test/"
+permalink: "javascript-regex-101-string-test"
 tags: [javascript]
 ---
 

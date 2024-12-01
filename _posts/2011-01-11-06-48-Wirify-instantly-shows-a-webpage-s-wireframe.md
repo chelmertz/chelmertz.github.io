@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wirify instantly shows a webpage's wireframe"
-permalink: "/wirify-instantly-shows-a-webpages-wireframe/"
+permalink: "wirify-instantly-shows-a-webpages-wireframe"
 tags: [bookmarklet, javascript, visual]
 ---
 

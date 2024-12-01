@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Code Sign Error - switch to simulator"
-permalink: "/code-sign-error-switch-to-simulator/"
+permalink: "code-sign-error-switch-to-simulator"
 
 ---
 

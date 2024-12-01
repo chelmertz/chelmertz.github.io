@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Add Search Shortcuts to Google Chrome."
-permalink: "/how-to-add-search-shortcuts-to-google-chrome/"
+permalink: "how-to-add-search-shortcuts-to-google-chrome"
 tags: [chrome]
 ---
 

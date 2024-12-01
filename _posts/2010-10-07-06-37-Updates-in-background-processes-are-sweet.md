@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Updates in background processes are sweet"
-permalink: "/updates-in-background-processes-are-sweet/"
+permalink: "updates-in-background-processes-are-sweet"
 tags: [thoughts, usability]
 ---
 

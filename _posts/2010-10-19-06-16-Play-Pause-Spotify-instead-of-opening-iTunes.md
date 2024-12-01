@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Play/Pause Spotify instead of opening iTunes"
-permalink: "/playpause-spotify-instead-of-opening-itunes/"
+permalink: "playpause-spotify-instead-of-opening-itunes"
 tags: [mac]
 ---
 

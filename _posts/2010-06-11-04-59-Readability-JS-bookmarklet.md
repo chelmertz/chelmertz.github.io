@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Readability - JS bookmarklet"
-permalink: "/readability-js-bookmarklet/"
+permalink: "readability-js-bookmarklet"
 tags: [bookmarklet, javascript, usability]
 ---
 

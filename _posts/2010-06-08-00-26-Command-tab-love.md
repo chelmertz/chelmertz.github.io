@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Command + tab = love"
-permalink: "/command-tab-love/"
+permalink: "command-tab-love"
 tags: [mac]
 ---
 

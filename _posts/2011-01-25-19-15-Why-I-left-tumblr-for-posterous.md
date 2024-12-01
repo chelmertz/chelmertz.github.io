@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I left tumblr for posterous"
-permalink: "/why-i-left-tumblr-for-posterous/"
+permalink: "why-i-left-tumblr-for-posterous"
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setting up VirtualBox"
-permalink: "/setting-up-virtualbox/"
+permalink: "setting-up-virtualbox"
 tags: [virtualbox]
 ---
 

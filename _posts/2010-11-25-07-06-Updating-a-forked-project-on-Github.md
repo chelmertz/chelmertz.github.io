@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Updating a forked project on Github"
-permalink: "/updating-a-forked-project-on-github/"
+permalink: "updating-a-forked-project-on-github"
 tags: [git]
 ---
 

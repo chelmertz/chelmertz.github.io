@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Scrolling in less"
-permalink: "/scrolling-in-less/"
+permalink: "scrolling-in-less"
 tags: [bash]
 ---
 

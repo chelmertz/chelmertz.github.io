@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MySQL's `SUBSTRING()`'s index starts at 1"
-permalink: "/mysqls-substrings-index-starts-at-1/"
+permalink: "mysqls-substrings-index-starts-at-1"
 tags: [mysql]
 ---
 

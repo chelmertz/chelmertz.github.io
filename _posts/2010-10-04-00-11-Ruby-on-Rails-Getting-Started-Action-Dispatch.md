@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ruby on Rails: Getting Started & Action Dispatch"
-permalink: "/ruby-on-rails-getting-started-action-dispatch/"
+permalink: "ruby-on-rails-getting-started-action-dispatch"
 tags: [thoughts]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Visor is a system-wide terminal accessible via a hot-key"
-permalink: "/visor-is-a-system-wide-terminal-accessible-via-a-hot-key/"
+permalink: "visor-is-a-system-wide-terminal-accessible-via-a-hot-key"
 tags: [mac]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Delete a remote branch in git"
-permalink: "/delete-remote-branch-git/"
+permalink: "delete-remote-branch-git"
 tags: [git]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Global code sucks - php has 5468 global functions"
-permalink: "/global-code-sucks-php-has-5468-global-functions/"
+permalink: "global-code-sucks-php-has-5468-global-functions"
 tags: [php, thoughts]
 ---
 

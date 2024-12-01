@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Easy remote desktop from OS X to Windows with CoRD"
-permalink: "/easy-remote-desktop-os-windows-cord/"
+permalink: "easy-remote-desktop-os-windows-cord"
 tags: [mac]
 ---
 

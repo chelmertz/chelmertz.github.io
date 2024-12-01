@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installing Vim = discovering Mac's internals"
-permalink: "/installing-vim-discovering-macs-internals/"
+permalink: "installing-vim-discovering-macs-internals"
 tags: [mac, vim]
 ---
 

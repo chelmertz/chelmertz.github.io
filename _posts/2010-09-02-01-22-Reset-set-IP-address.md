@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reset/set IP address"
-permalink: "/resetset-ip-address/"
+permalink: "resetset-ip-address"
 tags: [bash, mac]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Make email lists unsubscribable with one click"
-permalink: "/email-lists-unsubscribable-oneclick/"
+permalink: "email-lists-unsubscribable-oneclick"
 tags: [thoughts, usability]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mini project: placeholder image generator in PHP"
-permalink: "/mini-project-placeholder-image-generator-php/"
+permalink: "mini-project-placeholder-image-generator-php"
 tags: [php, project]
 ---
 

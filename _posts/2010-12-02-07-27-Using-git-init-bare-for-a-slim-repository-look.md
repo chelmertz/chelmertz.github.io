@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using git init --bare for a slim repository look"
-permalink: "/using-git-init-bare-for-a-slim-repository-look/"
+permalink: "using-git-init-bare-for-a-slim-repository-look"
 tags: [git, server]
 ---
 

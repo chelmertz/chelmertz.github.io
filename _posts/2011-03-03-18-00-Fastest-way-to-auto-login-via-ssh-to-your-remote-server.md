@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fastest way to auto-login via ssh to your remote server"
-permalink: "/fastest-auto-login-ssh-remote-server/"
+permalink: "fastest-auto-login-ssh-remote-server"
 tags: [bash, server]
 ---
 
