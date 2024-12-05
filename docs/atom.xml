@@ -2,11 +2,49 @@
 <feed xmlns="http://www.w3.org/2005/Atom" >
 <link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml" />
 <link href="https://iamnearlythere.com/" rel="alternate" type="text/html" />
-<updated>2024-12-01T11:58:00Z</updated>
+<updated>2024-12-04T23:13:00Z</updated>
 <id>https://iamnearlythere.com/atom.xml</id>
 <title type="html">iamnearlythere.com</title>
 <subtitle>iamnearlythere.com, a blog on software development</subtitle>
 <author><name>Carl Helmertz</name></author>
+
+<entry>
+  <title type="html">A few system design & architecture experiences, low-level debugging stories and post-mortems</title>
+  <link href="https://iamnearlythere.com/interesting-reads/" rel="alternate" type="text/html" title="A few system design & architecture experiences, low-level debugging stories and post-mortems" />
+  <published>2024-12-04T23:13:00Z</published>
+  <updated>2024-12-04T23:13:00Z</updated>
+  <id>https://iamnearlythere.com/interesting-reads</id>
+  <summary>A bunch of different sources one could learn from</summary>
+  <content type="html" xml:base="https://iamnearlythere.com/interesting-reads/">
+  <![CDATA[<p>A living document of some nice real life dev experiences, documented elsewhere on the internet:</p>
+<table>
+<thead>
+<tr>
+<th>url</th>
+<th>media-type</th>
+<th>title</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HruBoinmPBA">https://www.youtube.com/watch?v=HruBoinmPBA</a></td>
+<td>video</td>
+<td>How Notion Scaled to 100 Million Users Without Their Database Exploding</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html">https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html</a></td>
+<td>text</td>
+<td>Brendan Gregg: The Speed of Time</td>
+<td>Flamegraphs discovers reading current time took longer on Ubuntu than CentOS</td>
+</tr>
+</tbody>
+</table>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
 
 <entry>
   <title type="html">Replacing Jekyll with Go</title>
@@ -584,23 +622,6 @@ chmod +x !$
 <pre><code class="language-sh">./git/hooks/post-commit
 </code></pre>
 <p>Now, Jenkins should try to test your project but fail, and report the failure through the GUI. Tada.</p>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">From Youtube to mp3</title>
-  <link href="https://iamnearlythere.com/from-youtube-to-mp3/" rel="alternate" type="text/html" title="From Youtube to mp3" />
-  <published>2013-03-21T21:28:00Z</published>
-  <updated>2013-03-21T21:28:00Z</updated>
-  <id>https://iamnearlythere.com/from-youtube-to-mp3</id>
-  <content type="html" xml:base="https://iamnearlythere.com/from-youtube-to-mp3/">
-  <![CDATA[<p>Because I always forget the exact command:</p>
-<p>{% highlight bash %}
-youtube-dl -x <a href="https://youtube.com/?v=id_here">https://youtube.com/?v=id_here</a>
-{% endhighlight %}</p>
-<p>On OS X, you'll find youtube-dl through homebrew.</p>
 ]]>
   </content>
   <author><name>Carl Helmertz</name></author>
