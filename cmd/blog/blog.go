@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"encoding/csv"
 	"errors"
 	"fmt"
 	"html/template"
@@ -10,6 +11,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"slices"
+	"strings"
 	textTemplate "text/template"
 	"time"
 
@@ -24,6 +26,7 @@ const docs = "docs"
 
 var dateTimeInFilename = regexp.MustCompile(`\d{4}-\d{2}-\d{2}-\d{2}-\d{2}`)
 var dateInFilename = regexp.MustCompile(`\d{4}-\d{2}-\d{2}`)
+var csvTable = regexp.MustCompile(`<<csvtable:(.*?)>>`)
 
 var viewFuncs = template.FuncMap{
 	"rfc3339": func(t time.Time) string {
@@ -53,7 +56,7 @@ func main() {
 
 	// parse posts
 	md := goldmark.New(
-		goldmark.WithExtensions(&frontmatter.Extender{}, extension.Linkify),
+		goldmark.WithExtensions(&frontmatter.Extender{}, extension.Linkify, extension.Table),
 	)
 
 	indexHtmlData := IndexHtmlData{}
@@ -67,9 +70,11 @@ func main() {
 		}
 
 		markdownFile := must1(os.ReadFile(path))
+		markdownContent := csvTableReplacer(markdownFile)
+
 		var outputHtml bytes.Buffer
 		ctx := parser.NewContext()
-		must(md.Convert(markdownFile, &outputHtml, parser.WithContext(ctx)))
+		must(md.Convert(markdownContent, &outputHtml, parser.WithContext(ctx)))
 		postsFrontMatter := frontmatter.Get(ctx)
 
 		if postsFrontMatter == nil {
@@ -179,6 +184,46 @@ type Post struct {
 	Published         bool
 	Permalink         string
 	Summary           string
+}
+
+// extension to allow markdown file to include a CSV file, formatted as a GFM table
+func csvTableReplacer(rawMarkdown []byte) []byte {
+	replaced := csvTable.ReplaceAllStringFunc(string(rawMarkdown), func(match string) string {
+		matches := csvTable.FindStringSubmatch(match)
+		if len(matches) > 1 {
+			filename := matches[1]
+			gfmTable := gfmTableOfCsv(filename)
+			return gfmTable
+		}
+		return match
+	})
+
+	return []byte(replaced)
+}
+
+func gfmTableOfCsv(filename string) string {
+	rows := make([]string, 0)
+	reader := csv.NewReader(must1(os.Open(filepath.Join("tables", filename))))
+	for {
+		csvRow, err := reader.Read()
+		if err != nil {
+			if errors.Is(err, io.EOF) {
+				break
+			}
+			panic(fmt.Sprintf("could not read csv %s, got err %v", filename, err))
+		}
+		if len(rows) == 0 {
+			// header
+			row := fmt.Sprintf("| %s |", strings.Join(csvRow, " | "))
+			rows = append(rows, row)
+
+			headerUnderline := "| " + strings.Repeat(" --- |", len(csvRow))
+			rows = append(rows, headerUnderline)
+		} else {
+			rows = append(rows, fmt.Sprintf("| %s |", strings.Join(csvRow, " | ")))
+		}
+	}
+	return strings.Join(rows, "\n")
 }
 
 func must(err error) {
