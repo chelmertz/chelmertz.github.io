@@ -201,6 +201,12 @@ func csvTableReplacer(rawMarkdown []byte) []byte {
 	return []byte(replaced)
 }
 
+// Naive function that takes placeholder-with-filename -> opens csv -> parses
+// csv In Good Faith™️ -> replaces the placeholder with a GFM (Github flavored
+// markdown) table
+//
+// Will break if csv contains delimiters or otherwise gets parsed weirdly by
+// encoding/csv
 func gfmTableOfCsv(filename string) string {
 	rows := make([]string, 0)
 	reader := csv.NewReader(must1(os.Open(filepath.Join("tables", filename))))
