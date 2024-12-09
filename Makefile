@@ -2,6 +2,14 @@
 docs:
 	go run cmd/blog/blog.go
 
+.PHONY: watch
+watch:
+	find . | grep -E 'go|csv|css' | entr make
+
+.PHONY: serve
+serve: docs
+	serve -d docs
+
 .PHONY: lint
 lint:
 	rm -rf wget.log 192.168.1.211:7999
