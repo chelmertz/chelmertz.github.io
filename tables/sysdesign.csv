@@ -1,3 +1,4 @@
 URL,Type,Title,Notes
 https://www.youtube.com/watch?v=HruBoinmPBA,video, How Notion Scaled to 100 Million Users Without Their Database Exploding ,"Doubling down on Postgres, scaling horizontally using shards and pgbouncer"
 https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html,text,Brendan Gregg: The Speed of Time,Flamegraphs discovers reading current time took longer on Ubuntu than CentOS
+https://www.youtube.com/watch?v=ahyk7h7qAF4,video, How Instagram Reduced Web Page Load by 50% ,"Many optimization patterns for front-end, from HTTP transportation, to asset fetching order, to caching locally (and avoiding conflicts with new state updates)"
