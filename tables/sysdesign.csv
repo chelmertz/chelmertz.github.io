@@ -1,3 +1,3 @@
-url,media-type,title,notes
-https://www.youtube.com/watch?v=HruBoinmPBA,video, How Notion Scaled to 100 Million Users Without Their Database Exploding ,
+URL,Type,Title,Notes
+https://www.youtube.com/watch?v=HruBoinmPBA,video, How Notion Scaled to 100 Million Users Without Their Database Exploding ,"Doubling down on Postgres, scaling horizontally using shards and pgbouncer"
 https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html,text,Brendan Gregg: The Speed of Time,Flamegraphs discovers reading current time took longer on Ubuntu than CentOS
