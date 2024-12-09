@@ -20,10 +20,10 @@
 <table>
 <thead>
 <tr>
-<th>url</th>
-<th>media-type</th>
-<th>title</th>
-<th>notes</th>
+<th>URL</th>
+<th>Type</th>
+<th>Title</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
@@ -31,7 +31,7 @@
 <td><a href="https://www.youtube.com/watch?v=HruBoinmPBA">https://www.youtube.com/watch?v=HruBoinmPBA</a></td>
 <td>video</td>
 <td>How Notion Scaled to 100 Million Users Without Their Database Exploding</td>
-<td></td>
+<td>Doubling down on Postgres, scaling horizontally using shards and pgbouncer</td>
 </tr>
 <tr>
 <td><a href="https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html">https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html</a></td>
