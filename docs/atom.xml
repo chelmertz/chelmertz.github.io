@@ -45,6 +45,12 @@
 <td>How Instagram Reduced Web Page Load by 50%</td>
 <td>Many optimization patterns for front-end, from HTTP transportation, to asset fetching order, to caching locally (and avoiding conflicts with new state updates)</td>
 </tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=TdhXPsDXdAI">https://www.youtube.com/watch?v=TdhXPsDXdAI</a></td>
+<td>video</td>
+<td>How Instagram Scaled to 14 Million Users With Only 3 Engineers</td>
+<td>Postgres: pgbouncer, ID strategy for finding correct shard, (stateless) Django, Gearman, etc.</td>
+</tr>
 </tbody>
 </table>
 ]]>
