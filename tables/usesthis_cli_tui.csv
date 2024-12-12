@@ -1,22 +1,23 @@
 Name,Purpose & context,URL
-bat,Nicer `cat`,
-cloc,Counts LoC in codebases,
-dunst,Notifications,
-entr,inotify-like watcher. Execute command when files change,
-fzf,Fuzzy finder,
-gh,Github via CLI. Usable for quickly entering TODOs with some attributes and for listing open issues and displaying with i3blocks,
-git-filter-repo,Can extract directory of git repo to its own repo,
-gron,Turns JSON into grep:able lines of text and back again,
-htop,Good enough system monitor,
+bat,Nicer `cat`,https://github.com/sharkdp/bat
+cloc,Counts LoC in codebases,https://github.com/AlDanial/cloc
+dunst,Notifications,https://github.com/dunst-project/dunst
+entr,inotify-like watcher. Execute command when files change,https://github.com/eradman/entr
+fzf,Fuzzy finder,https://github.com/junegunn/fzf
+gh,Github via CLI. Usable for quickly entering TODOs with some attributes and for listing open issues and displaying with i3blocks,https://cli.github.com/
+git-filter-repo,Can extract directory of git repo to its own repo,https://github.com/newren/git-filter-repo
+gron,Turns JSON into grep:able lines of text and back again,https://github.com/tomnomnom/gron
+htop,Good enough system monitor,https://htop.dev/
+image-sorter,TUI for quickly moving image files into proper directories,https://github.com/jgalat/image-sorter/
 lazygit,Very similar to Magit. Slightly less intuitive but working in the terminal without all of Emacs is more comfy.,https://github.com/jesseduffield/lazygit
 litecli,Better CLI for sqlite. See mycli,https://github.com/dbcli/litecli
 mycli,Better CLI for mysql. See litecli,https://github.com/dbcli/mycli
-pavucontrol,Choosing device for sound output,
+pavucontrol,Choosing device for sound output,https://freedesktop.org/software/pulseaudio/pavucontrol/
 ripdrag,“ripdrag filename” creates a small window with “filename” that you can use for drop-friendly interfaces,https://github.com/nik012003/ripdrag
-ripgrep,More ergonomic search than grep,
+ripgrep,More ergonomic search than grep,https://github.com/BurntSushi/ripgrep
 serve,Serve directory via HTTP,github.com/chelmertz/serve
-shellcheck,Lints bash scripts,
-wmctrl,API capabilities for X.org,
-xcape,Rebind keys. For example: pressing caps=esc & holding caps=ctrl,
-z,Interface to MRU directories when `cd`:ing around,
-zenity,Interactive bash scripts. Very useful with i3blocks,
+shellcheck,Lints bash scripts,https://www.shellcheck.net/
+wmctrl,API capabilities for X.org,https://linux.die.net/man/1/wmctrl
+xcape,Rebind keys. For example: pressing caps=esc & holding caps=ctrl,https://github.com/alols/xcape
+z,Interface to MRU directories when `cd`:ing around,https://github.com/rupa/z
+zenity,Interactive bash scripts. Very useful with i3blocks,https://help.gnome.org/users/zenity/stable/

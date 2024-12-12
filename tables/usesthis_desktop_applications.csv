@@ -1,17 +1,16 @@
 Name,Purpose & context,URL
-Doom Emacs,Purely as entry point to Org mode/Magit,
-Element,Matrix chat client,
-Excalidraw,,
-Flameshot,Screnshots,
-Libreoffice,Quick & dirty,
-Magit,,
-Obsidian,Purely as entry point to Excalidraw,
-Org mode,,
-Peek,Screen recorder,
-Screenkey,Displays the pressed keys on screen. Useful but not perfect with multiple monitors,
-VS code,Code editor,
-arandr,Configuring multi-monitor setup,
-copyq,Clipboard,
+Arandr,Configuring multi-monitor setup,https://christian.amsuess.com/tools/arandr/
+Copyq,Clipboard,https://hluk.github.io/CopyQ/
+Doom Emacs,Purely as entry point to Org mode/Magit,https://github.com/doomemacs/doomemacs
+Element,Matrix chat client,https://element.io/
+Flameshot,Screenshots with very convenient UI for quick editing,https://flameshot.org/
+Libreoffice,Quick & dirty editing of truth tables/decision tables and CSV files,https://www.libreoffice.org/
+Magit,The best git client. Also see lazygit,https://magit.vc/
+Obsidian,Purely as entry point to Excalidraw,https://obsidian.md/
+Org mode,Diary. TODOs.,https://orgmode.org/
+Peek,Screen recorder,https://github.com/phw/peek
+Rofi,Launcher. Easy to customize. Like fzf but without a terminal in the foreground,https://github.com/davatorium/rofi
+Screenkey,Displays the pressed keys on screen. Useful but not perfect with multiple monitors,https://www.thregr.org/wavexx/software/screenkey/
+VS code,Code editor,https://code.visualstudio.com/
 i3,Window manager,https://i3wm.org/
-i3blocks,Task bar for i3,
-rofi,Launcher. Easy to customize. Like fzf but without a terminal in the foreground,
+i3blocks,Task bar for i3,https://github.com/vivien/i3blocks
