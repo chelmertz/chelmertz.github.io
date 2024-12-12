@@ -4,7 +4,7 @@ docs:
 
 .PHONY: watch
 watch:
-	find . | grep -E 'go|csv|css' | entr make
+	find . | grep -E '(go|csv|css|md)$$' | entr make
 
 .PHONY: serve
 serve: docs
