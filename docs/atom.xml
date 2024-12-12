@@ -150,6 +150,10 @@
 <td>Better CLI for mysql. See litecli</td>
 </tr>
 <tr>
+<td><a href="https://pandoc.org/">pandoc</a></td>
+<td>Document converter</td>
+</tr>
+<tr>
 <td><a href="https://freedesktop.org/software/pulseaudio/pavucontrol/">pavucontrol</a></td>
 <td>Choosing device for sound output</td>
 </tr>

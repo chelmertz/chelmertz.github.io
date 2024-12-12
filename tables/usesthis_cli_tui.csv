@@ -12,6 +12,7 @@ image-sorter,TUI for quickly moving image files into proper directories,https://
 lazygit,Very similar to Magit. Slightly less intuitive but working in the terminal without all of Emacs is more comfy.,https://github.com/jesseduffield/lazygit
 litecli,Better CLI for sqlite. See mycli,https://github.com/dbcli/litecli
 mycli,Better CLI for mysql. See litecli,https://github.com/dbcli/mycli
+pandoc,Document converter,https://pandoc.org/
 pavucontrol,Choosing device for sound output,https://freedesktop.org/software/pulseaudio/pavucontrol/
 ripdrag,“ripdrag filename” creates a small window with “filename” that you can use for drop-friendly interfaces,https://github.com/nik012003/ripdrag
 ripgrep,More ergonomic search than grep,https://github.com/BurntSushi/ripgrep
