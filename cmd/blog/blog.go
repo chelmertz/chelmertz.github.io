@@ -232,14 +232,6 @@ func gfmTableOfCsv(filename string, options csvOptions) string {
 		return ""
 	}
 
-	// header
-	rows := make([]string, 0)
-	row := fmt.Sprintf("| %s |", strings.Join(csvRows[0], " | "))
-	rows = append(rows, row)
-
-	headerUnderline := "| " + strings.Repeat(" --- |", len(csvRows[0]))
-	rows = append(rows, headerUnderline)
-
 	// options
 	fromIndex, toIndex := -1, -1
 	doUrlTransformation := false
@@ -256,7 +248,17 @@ func gfmTableOfCsv(filename string, options csvOptions) string {
 			panic(fmt.Sprintf("could not find url headers in csv %s, with the options %v; headers: %v", filename, options, csvRows[0]))
 		}
 		doUrlTransformation = true
+
+		csvRows[0] = append(csvRows[0][:fromIndex], csvRows[0][fromIndex+1:]...)
 	}
+
+	// header
+	rows := make([]string, 0)
+	row := fmt.Sprintf("| %s |", strings.Join(csvRows[0], " | "))
+	rows = append(rows, row)
+
+	headerUnderline := "| " + strings.Repeat(" --- |", len(csvRows[0]))
+	rows = append(rows, headerUnderline)
 
 	// columns
 	for _, columns := range csvRows[1:] {
