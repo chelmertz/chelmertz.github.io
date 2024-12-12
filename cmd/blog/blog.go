@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"html/template"
 	"io"
+	"net/url"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -191,8 +192,16 @@ func csvTableReplacer(rawMarkdown []byte) []byte {
 	replaced := csvTable.ReplaceAllStringFunc(string(rawMarkdown), func(match string) string {
 		matches := csvTable.FindStringSubmatch(match)
 		if len(matches) > 1 {
-			filename := matches[1]
-			gfmTable := gfmTableOfCsv(filename)
+			filename := "file://" + matches[1]
+			options := csvOptions{}
+			if fileUrl, err := url.Parse(filename); err == nil {
+				filename = fileUrl.Hostname()
+
+				query := fileUrl.Query()
+				options.urlFrom = query.Get("urlFrom")
+				options.urlTo = query.Get("urlTo")
+			}
+			gfmTable := gfmTableOfCsv(filename, options)
 			return gfmTable
 		}
 		return match
@@ -201,34 +210,66 @@ func csvTableReplacer(rawMarkdown []byte) []byte {
 	return []byte(replaced)
 }
 
+type csvOptions struct {
+	urlFrom, urlTo string
+}
+
 // Naive function that takes placeholder-with-filename -> opens csv -> parses
 // csv In Good Faith™️ -> replaces the placeholder with a GFM (Github flavored
 // markdown) table
 //
 // Will break if csv contains delimiters or otherwise gets parsed weirdly by
 // encoding/csv
-func gfmTableOfCsv(filename string) string {
-	rows := make([]string, 0)
+func gfmTableOfCsv(filename string, options csvOptions) string {
 	reader := csv.NewReader(must1(os.Open(filepath.Join("tables", filename))))
-	for {
-		csvRow, err := reader.Read()
-		if err != nil {
-			if errors.Is(err, io.EOF) {
-				break
-			}
-			panic(fmt.Sprintf("could not read csv %s, got err %v", filename, err))
-		}
-		if len(rows) == 0 {
-			// header
-			row := fmt.Sprintf("| %s |", strings.Join(csvRow, " | "))
-			rows = append(rows, row)
 
-			headerUnderline := "| " + strings.Repeat(" --- |", len(csvRow))
-			rows = append(rows, headerUnderline)
-		} else {
-			rows = append(rows, fmt.Sprintf("| %s |", strings.Join(csvRow, " | ")))
-		}
+	csvRows, err := reader.ReadAll()
+	if err != nil {
+		panic(fmt.Sprintf("could not read csv %s, got err %v", filename, err))
 	}
+	if len(csvRows) < 2 {
+		// empty table, or just a header row
+		return ""
+	}
+
+	// header
+	rows := make([]string, 0)
+	row := fmt.Sprintf("| %s |", strings.Join(csvRows[0], " | "))
+	rows = append(rows, row)
+
+	headerUnderline := "| " + strings.Repeat(" --- |", len(csvRows[0]))
+	rows = append(rows, headerUnderline)
+
+	// options
+	fromIndex, toIndex := -1, -1
+	doUrlTransformation := false
+	if options.urlFrom != "" && options.urlTo != "" {
+		for i, header := range csvRows[0] {
+			if header == options.urlFrom {
+				fromIndex = i
+			}
+			if header == options.urlTo {
+				toIndex = i
+			}
+		}
+		if fromIndex == -1 || toIndex == -1 {
+			panic(fmt.Sprintf("could not find url headers in csv %s, with the options %v; headers: %v", filename, options, csvRows[0]))
+		}
+		doUrlTransformation = true
+	}
+
+	// columns
+	for _, columns := range csvRows[1:] {
+		if doUrlTransformation {
+			if columns[fromIndex] != "" {
+				// the URL column is not empty, make a link
+				columns[toIndex] = fmt.Sprintf("[%s](%s)", columns[toIndex], columns[fromIndex])
+			}
+			columns = append(columns[:fromIndex], columns[fromIndex+1:]...)
+		}
+		rows = append(rows, fmt.Sprintf("| %s |", strings.Join(columns, " | ")))
+	}
+
 	return strings.Join(rows, "\n")
 }
 
