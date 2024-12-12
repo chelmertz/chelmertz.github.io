@@ -23,89 +23,72 @@
 <tr>
 <th>Name</th>
 <th>Purpose &amp; context</th>
-<th>URL</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Doom Emacs</td>
 <td>Purely as entry point to Org mode/Magit</td>
-<td></td>
 </tr>
 <tr>
 <td>Element</td>
 <td>Matrix chat client</td>
-<td></td>
 </tr>
 <tr>
 <td>Excalidraw</td>
-<td></td>
 <td></td>
 </tr>
 <tr>
 <td>Flameshot</td>
 <td>Screnshots</td>
-<td></td>
 </tr>
 <tr>
 <td>Libreoffice</td>
 <td>Quick &amp; dirty</td>
-<td></td>
 </tr>
 <tr>
 <td>Magit</td>
-<td></td>
 <td></td>
 </tr>
 <tr>
 <td>Obsidian</td>
 <td>Purely as entry point to Excalidraw</td>
-<td></td>
 </tr>
 <tr>
 <td>Org mode</td>
-<td></td>
 <td></td>
 </tr>
 <tr>
 <td>Peek</td>
 <td>Screen recorder</td>
-<td></td>
 </tr>
 <tr>
 <td>Screenkey</td>
 <td>Displays the pressed keys on screen. Useful but not perfect with multiple monitors</td>
-<td></td>
 </tr>
 <tr>
 <td>VS code</td>
 <td>Code editor</td>
-<td></td>
 </tr>
 <tr>
 <td>arandr</td>
 <td>Configuring multi-monitor setup</td>
-<td></td>
 </tr>
 <tr>
 <td>copyq</td>
 <td>Clipboard</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="https://i3wm.org/">i3</a></td>
 <td>Window manager</td>
-<td></td>
 </tr>
 <tr>
 <td>i3blocks</td>
 <td>Task bar for i3</td>
-<td></td>
 </tr>
 <tr>
 <td>rofi</td>
 <td>Launcher. Easy to customize. Like fzf but without a terminal in the foreground</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -115,114 +98,92 @@
 <tr>
 <th>Name</th>
 <th>Purpose &amp; context</th>
-<th>URL</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>bat</td>
 <td>Nicer <code>cat</code></td>
-<td></td>
 </tr>
 <tr>
 <td>cloc</td>
 <td>Counts LoC in codebases</td>
-<td></td>
 </tr>
 <tr>
 <td>dunst</td>
 <td>Notifications</td>
-<td></td>
 </tr>
 <tr>
 <td>entr</td>
 <td>inotify-like watcher. Execute command when files change</td>
-<td></td>
 </tr>
 <tr>
 <td>fzf</td>
 <td>Fuzzy finder</td>
-<td></td>
 </tr>
 <tr>
 <td>gh</td>
 <td>Github via CLI. Usable for quickly entering TODOs with some attributes and for listing open issues and displaying with i3blocks</td>
-<td></td>
 </tr>
 <tr>
 <td>git-filter-repo</td>
 <td>Can extract directory of git repo to its own repo</td>
-<td></td>
 </tr>
 <tr>
 <td>gron</td>
 <td>Turns JSON into grep:able lines of text and back again</td>
-<td></td>
 </tr>
 <tr>
 <td>htop</td>
 <td>Good enough system monitor</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="https://github.com/jesseduffield/lazygit">lazygit</a></td>
 <td>Very similar to Magit. Slightly less intuitive but working in the terminal without all of Emacs is more comfy.</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="https://github.com/dbcli/litecli">litecli</a></td>
 <td>Better CLI for sqlite. See mycli</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="https://github.com/dbcli/mycli">mycli</a></td>
 <td>Better CLI for mysql. See litecli</td>
-<td></td>
 </tr>
 <tr>
 <td>pavucontrol</td>
 <td>Choosing device for sound output</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="https://github.com/nik012003/ripdrag">ripdrag</a></td>
 <td>“ripdrag filename” creates a small window with “filename” that you can use for drop-friendly interfaces</td>
-<td></td>
 </tr>
 <tr>
 <td>ripgrep</td>
 <td>More ergonomic search than grep</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="github.com/chelmertz/serve">serve</a></td>
 <td>Serve directory via HTTP</td>
-<td></td>
 </tr>
 <tr>
 <td>shellcheck</td>
 <td>Lints bash scripts</td>
-<td></td>
 </tr>
 <tr>
 <td>wmctrl</td>
 <td>API capabilities for X.org</td>
-<td></td>
 </tr>
 <tr>
 <td>xcape</td>
 <td>Rebind keys. For example: pressing caps=esc &amp; holding caps=ctrl</td>
-<td></td>
 </tr>
 <tr>
 <td>z</td>
 <td>Interface to MRU directories when <code>cd</code>:ing around</td>
-<td></td>
 </tr>
 <tr>
 <td>zenity</td>
 <td>Interactive bash scripts. Very useful with i3blocks</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -232,28 +193,23 @@
 <tr>
 <th>Name</th>
 <th>Purpose &amp; context</th>
-<th>URL</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Draw.io</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>Excalidraw</td>
-<td></td>
 <td></td>
 </tr>
 <tr>
 <td>Mermaid</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>Notion</td>
-<td></td>
 <td></td>
 </tr>
 </tbody>
@@ -264,29 +220,24 @@
 <tr>
 <th>Name</th>
 <th>Purpose &amp; context</th>
-<th>URL</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="https://darkreader.org/">dark reader</a></td>
 <td>automatic dark mode</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="https://addons.mozilla.org/en-US/firefox/addon/grasp/">grasp</a></td>
 <td>Bookmarks current page into an org file</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock origin</a></td>
 <td>Blocks ads</td>
-<td></td>
 </tr>
 <tr>
 <td><a href="https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/">vimium</a></td>
 <td>Vim bindings when browsing</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -296,14 +247,12 @@
 <tr>
 <th>Name</th>
 <th>Purpose &amp; context</th>
-<th>URL</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="https://www.keychron.com/products/keychron-k8-pro-qmk-via-wireless-mechanical-keyboard?_pos=1&amp;_psq=k8+pro&amp;_ss=e&amp;_v=1.0&amp;variant=40558016757849">Keychron K8 Pro</a></td>
 <td>Very comfortable keyboard</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -314,19 +263,16 @@
 <tr>
 <th>Name</th>
 <th>Purpose &amp; context</th>
-<th>URL</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="https://github.com/jesseduffield/lazydocker">lazydocker</a></td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td><a href="https://github.com/joehillen/sysz">zsys</a></td>
 <td>fzf TUI for systemctl</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -347,36 +293,31 @@
 <table>
 <thead>
 <tr>
-<th>URL</th>
-<th>Type</th>
 <th>Title</th>
 <th>Notes</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.youtube.com/watch?v=HruBoinmPBA">https://www.youtube.com/watch?v=HruBoinmPBA</a></td>
-<td>video</td>
-<td>How Notion Scaled to 100 Million Users Without Their Database Exploding</td>
+<td><a href="https://www.youtube.com/watch?v=HruBoinmPBA">How Notion Scaled to 100 Million Users Without Their Database Exploding </a></td>
 <td>Doubling down on Postgres, scaling horizontally using shards and pgbouncer</td>
+<td>video</td>
 </tr>
 <tr>
-<td><a href="https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html">https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html</a></td>
-<td>text</td>
-<td>Brendan Gregg: The Speed of Time</td>
+<td><a href="https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html">Brendan Gregg: The Speed of Time</a></td>
 <td>Flamegraphs discovers reading current time took longer on Ubuntu than CentOS</td>
+<td>text</td>
 </tr>
 <tr>
-<td><a href="https://www.youtube.com/watch?v=ahyk7h7qAF4">https://www.youtube.com/watch?v=ahyk7h7qAF4</a></td>
-<td>video</td>
-<td>How Instagram Reduced Web Page Load by 50%</td>
+<td><a href="https://www.youtube.com/watch?v=ahyk7h7qAF4">How Instagram Reduced Web Page Load by 50% </a></td>
 <td>Many optimization patterns for front-end, from HTTP transportation, to asset fetching order, to caching locally (and avoiding conflicts with new state updates)</td>
+<td>video</td>
 </tr>
 <tr>
-<td><a href="https://www.youtube.com/watch?v=TdhXPsDXdAI">https://www.youtube.com/watch?v=TdhXPsDXdAI</a></td>
-<td>video</td>
-<td>How Instagram Scaled to 14 Million Users With Only 3 Engineers</td>
+<td><a href="https://www.youtube.com/watch?v=TdhXPsDXdAI">How Instagram Scaled to 14 Million Users With Only 3 Engineers </a></td>
 <td>Postgres: pgbouncer, ID strategy for finding correct shard, (stateless) Django, Gearman, etc.</td>
+<td>video</td>
 </tr>
 </tbody>
 </table>
