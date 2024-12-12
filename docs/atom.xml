@@ -2,11 +2,338 @@
 <feed xmlns="http://www.w3.org/2005/Atom" >
 <link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml" />
 <link href="https://iamnearlythere.com/" rel="alternate" type="text/html" />
-<updated>2024-12-04T23:13:00Z</updated>
+<updated>2024-12-11T18:00:00Z</updated>
 <id>https://iamnearlythere.com/atom.xml</id>
 <title type="html">iamnearlythere.com</title>
 <subtitle>iamnearlythere.com, a blog on software development</subtitle>
 <author><name>Carl Helmertz</name></author>
+
+<entry>
+  <title type="html">Uses this - my preferred tools</title>
+  <link href="https://iamnearlythere.com/uses-this/" rel="alternate" type="text/html" title="Uses this - my preferred tools" />
+  <published>2024-12-11T18:00:00Z</published>
+  <updated>2024-12-11T18:00:00Z</updated>
+  <id>https://iamnearlythere.com/uses-this</id>
+  <summary>Tooling that I rely on, using Linux on the desktop as a software engineer</summary>
+  <content type="html" xml:base="https://iamnearlythere.com/uses-this/">
+  <![CDATA[<p><a href="https://github.com/chelmertz/dotfiles/blob/master/ansible-laptop.yml">My ansible file</a> could be used to look for sources &amp; dependencies.</p>
+<h2>Desktop applications</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Doom Emacs</td>
+<td>Purely as entry point to Org mode/Magit</td>
+<td></td>
+</tr>
+<tr>
+<td>Element</td>
+<td>Matrix chat client</td>
+<td></td>
+</tr>
+<tr>
+<td>Excalidraw</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Flameshot</td>
+<td>Screnshots</td>
+<td></td>
+</tr>
+<tr>
+<td>Libreoffice</td>
+<td>Quick &amp; dirty</td>
+<td></td>
+</tr>
+<tr>
+<td>Magit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Obsidian</td>
+<td>Purely as entry point to Excalidraw</td>
+<td></td>
+</tr>
+<tr>
+<td>Org mode</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Peek</td>
+<td>Screen recorder</td>
+<td></td>
+</tr>
+<tr>
+<td>Screenkey</td>
+<td>Displays the pressed keys on screen. Useful but not perfect with multiple monitors</td>
+<td></td>
+</tr>
+<tr>
+<td>VS code</td>
+<td>Code editor</td>
+<td></td>
+</tr>
+<tr>
+<td>arandr</td>
+<td>Configuring multi-monitor setup</td>
+<td></td>
+</tr>
+<tr>
+<td>copyq</td>
+<td>Clipboard</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://i3wm.org/">i3</a></td>
+<td>Window manager</td>
+<td></td>
+</tr>
+<tr>
+<td>i3blocks</td>
+<td>Task bar for i3</td>
+<td></td>
+</tr>
+<tr>
+<td>rofi</td>
+<td>Launcher. Easy to customize. Like fzf but without a terminal in the foreground</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>CLI &amp; TUI</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bat</td>
+<td>Nicer <code>cat</code></td>
+<td></td>
+</tr>
+<tr>
+<td>cloc</td>
+<td>Counts LoC in codebases</td>
+<td></td>
+</tr>
+<tr>
+<td>dunst</td>
+<td>Notifications</td>
+<td></td>
+</tr>
+<tr>
+<td>entr</td>
+<td>inotify-like watcher. Execute command when files change</td>
+<td></td>
+</tr>
+<tr>
+<td>fzf</td>
+<td>Fuzzy finder</td>
+<td></td>
+</tr>
+<tr>
+<td>gh</td>
+<td>Github via CLI. Usable for quickly entering TODOs with some attributes and for listing open issues and displaying with i3blocks</td>
+<td></td>
+</tr>
+<tr>
+<td>git-filter-repo</td>
+<td>Can extract directory of git repo to its own repo</td>
+<td></td>
+</tr>
+<tr>
+<td>gron</td>
+<td>Turns JSON into grep:able lines of text and back again</td>
+<td></td>
+</tr>
+<tr>
+<td>htop</td>
+<td>Good enough system monitor</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/jesseduffield/lazygit">lazygit</a></td>
+<td>Very similar to Magit. Slightly less intuitive but working in the terminal without all of Emacs is more comfy.</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/dbcli/litecli">litecli</a></td>
+<td>Better CLI for sqlite. See mycli</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/dbcli/mycli">mycli</a></td>
+<td>Better CLI for mysql. See litecli</td>
+<td></td>
+</tr>
+<tr>
+<td>pavucontrol</td>
+<td>Choosing device for sound output</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/nik012003/ripdrag">ripdrag</a></td>
+<td>“ripdrag filename” creates a small window with “filename” that you can use for drop-friendly interfaces</td>
+<td></td>
+</tr>
+<tr>
+<td>ripgrep</td>
+<td>More ergonomic search than grep</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="github.com/chelmertz/serve">serve</a></td>
+<td>Serve directory via HTTP</td>
+<td></td>
+</tr>
+<tr>
+<td>shellcheck</td>
+<td>Lints bash scripts</td>
+<td></td>
+</tr>
+<tr>
+<td>wmctrl</td>
+<td>API capabilities for X.org</td>
+<td></td>
+</tr>
+<tr>
+<td>xcape</td>
+<td>Rebind keys. For example: pressing caps=esc &amp; holding caps=ctrl</td>
+<td></td>
+</tr>
+<tr>
+<td>z</td>
+<td>Interface to MRU directories when <code>cd</code>:ing around</td>
+<td></td>
+</tr>
+<tr>
+<td>zenity</td>
+<td>Interactive bash scripts. Very useful with i3blocks</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Web applications</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw.io</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Excalidraw</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mermaid</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Notion</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Browser extensions</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://darkreader.org/">dark reader</a></td>
+<td>automatic dark mode</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://addons.mozilla.org/en-US/firefox/addon/grasp/">grasp</a></td>
+<td>Bookmarks current page into an org file</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock origin</a></td>
+<td>Blocks ads</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/">vimium</a></td>
+<td>Vim bindings when browsing</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Hardware</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.keychron.com/products/keychron-k8-pro-qmk-via-wireless-mechanical-keyboard?_pos=1&amp;_psq=k8+pro&amp;_ss=e&amp;_v=1.0&amp;variant=40558016757849">Keychron K8 Pro</a></td>
+<td>Very comfortable keyboard</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>On the radar</h2>
+<p>Untried but interesting.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/jesseduffield/lazydocker">lazydocker</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/joehillen/sysz">zsys</a></td>
+<td>fzf TUI for systemctl</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
 
 <entry>
   <title type="html">A few system design & architecture experiences, low-level debugging stories and post-mortems</title>
@@ -570,70 +897,6 @@ this is what I'd look for in the future:</p>
 <li>up + down to traverse history</li>
 <li>globbing with <code>**</code></li>
 </ul>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">Making Jenkins work with python's virtualenv</title>
-  <link href="https://iamnearlythere.com/jenkins-python-virtualenv/" rel="alternate" type="text/html" title="Making Jenkins work with python's virtualenv" />
-  <published>2013-03-31T19:08:00Z</published>
-  <updated>2013-03-31T19:08:00Z</updated>
-  <id>https://iamnearlythere.com/jenkins-python-virtualenv</id>
-  <content type="html" xml:base="https://iamnearlythere.com/jenkins-python-virtualenv/">
-  <![CDATA[<p>If you use <a href="http://www.virtualenv.org/en/latest/">virtualenv</a> to isolate your python project's environment, and want your code tested automatically -- read on!</p>
-<h2>virtualenv isolates your project's python environment</h2>
-<p>virtualenv makes sure you lockdown your project's main directory and all subdirectories of it. This 'lockdown' means that you never touches your global python binary, or any globally installed libraries (like &quot;sudo pip install flask&quot; ).</p>
-<p>Once locked down, you install all packages again, even those you have globally installed. This enables you to have one version of flask globally installed, but another version in your project. All dependencies can be listed in a separate file and validate a precise environment for you to work with. Tightly controlled dependencies is key to a deployment without surprises.</p>
-<h2>Jenkins checks the health of your project for each change</h2>
-<p>Jenkins is a <a href="https://en.wikipedia.org/wiki/Continuous_integration#Principles">CI server</a> which means it does a lot of repeating stuff so you can focus on doing more important stuff. More specifically, it listens for changes to your project's version control system (like git).</p>
-<p>When changes are detected, the project is built and the test suite is executed. If any step fails, the CI server tells you that it did.</p>
-<h2>Setup Jenkins, and make it use virtualenv</h2>
-<p>Jenkins needs some massaging before it handles the hijacked environment of virtualenv. This is how I did it for my local git repository:</p>
-<ul>
-<li>Download <a href="http://jenkins-ci.org/">Jenkins</a></li>
-<li>Start it, it should be up on http://localhost:8080</li>
-<li>Add the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a></li>
-<li>Setup a new project with these properties:
-<ul>
-<li>Source Code Management: add the URI to your local repository, /Users/you/Sites/asdf in my case. Make sure the jenkins user can read this directory, otherwise the Jenkins GUI will tell you something random about invalid git repo, without a hint about a permissions error.</li>
-<li>Build Triggers: Poll SCM (with an interval like 0 * * * *). This is needed because
-<ul>
-<li>you're too lazy to build manually; and</li>
-<li>you can not trigger builds with a git post-commit hook otherwise</li>
-</ul>
-</li>
-<li>Build &gt; Execute shell. I've used two steps, one for setting up the environment and one for the actual tests:</li>
-</ul>
-</li>
-</ul>
-<pre><code class="language-sh"># Setup a proper path, I call my virtualenv dir &quot;venv&quot; and
-# I've got the virtualenv command installed in /usr/local/bin
-PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
-if [ ! -d &quot;venv&quot; ]; then
-        virtualenv venv
-fi
-. venv/bin/activate
-pip install -r requirements.txt --download-cache=/tmp/$JOB_NAME
-</code></pre>
-<p>and</p>
-<pre><code class="language-sh">. venv/bin/activate
-python test_app.py
-</code></pre>
-<h2>Trigger Jenkins through git hook</h2>
-<p>You need to add a git hook which triggers a Jenkins build:</p>
-<pre><code class="language-sh">echo &quot;curl http://localhost:8080/git/notifyCommit?url=/Users/you/Sites/asdf&quot; &gt;&gt; .git/hooks/post-commit
-chmod +x !$
-</code></pre>
-<p>Add an erroneous test, this will do:</p>
-<pre><code class="language-python">def test_bad(self):
-    assert False
-</code></pre>
-<p>You should see a new build being queued up in Jenkins within a minute. If that doesn't work, execute the hook and watch the output for error messages:</p>
-<pre><code class="language-sh">./git/hooks/post-commit
-</code></pre>
-<p>Now, Jenkins should try to test your project but fail, and report the failure through the GUI. Tada.</p>
 ]]>
   </content>
   <author><name>Carl Helmertz</name></author>

@@ -1,0 +1,17 @@
+Name,Purpose & context,URL
+Doom Emacs,Purely as entry point to Org mode/Magit,
+Element,Matrix chat client,
+Excalidraw,,
+Flameshot,Screnshots,
+Libreoffice,Quick & dirty,
+Magit,,
+Obsidian,Purely as entry point to Excalidraw,
+Org mode,,
+Peek,Screen recorder,
+Screenkey,Displays the pressed keys on screen. Useful but not perfect with multiple monitors,
+VS code,Code editor,
+arandr,Configuring multi-monitor setup,
+copyq,Clipboard,
+i3,Window manager,https://i3wm.org/
+i3blocks,Task bar for i3,
+rofi,Launcher. Easy to customize. Like fzf but without a terminal in the foreground,
