@@ -22,3 +22,7 @@ table {
         --accent: #fff;
     }
 }
+
+.post-meta {
+    font-style: italic;
+}
