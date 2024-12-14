@@ -2,9 +2,12 @@ Name,Purpose & context,URL
 bat,Nicer `cat`,https://github.com/sharkdp/bat
 cloc,Counts LoC in codebases,https://github.com/AlDanial/cloc
 datedate,Transforms dates & timestamps,https://github.com/chelmertz/dotfiles/blob/master/bin/datedate
+duc,Another disk usage tool. Sunburst chart,http://duc.zevv.nl/
 dunst,Notifications,https://github.com/dunst-project/dunst
 entr,inotify-like watcher. Execute command when files change,https://github.com/eradman/entr
+fd,Less verbose `find`,https://github.com/sharkdp/fd
 fzf,Fuzzy finder,https://github.com/junegunn/fzf
+gdu,A fast disk usage analyser,https://github.com/dundee/gdu
 gh,Github via CLI. Usable for quickly entering TODOs with some attributes and for listing open issues and displaying with i3blocks,https://cli.github.com/
 git-filter-repo,Can extract directory of git repo to its own repo,https://github.com/newren/git-filter-repo
 gron,Turns JSON into grep:able lines of text and back again,https://github.com/tomnomnom/gron

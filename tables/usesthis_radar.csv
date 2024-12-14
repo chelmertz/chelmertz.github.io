@@ -1,6 +1,12 @@
 Name,Purpose & context,URL
+fq,jq for binary files,https://github.com/wader/fq
 git-absorb,Aids fixups,https://github.com/tummychow/git-absorb
+hyperfine,Benchmarks,https://github.com/sharkdp/hyperfine
+ijq,Interactive version of jq,https://sr.ht/~gpanders/ijq/
 jujutsu,VCS on top of git,https://github.com/martinvonz/jj
 lazydocker,TUI for docker. See _lazygit_,https://github.com/jesseduffield/lazydocker
+pastel,CLI for color palettes,https://github.com/sharkdp/pastel
 plantuml,Diagrams,https://plantuml.com/
+ugrep,Interactive grep,https://github.com/Genivia/ugrep
+yazi,File manager TUI,https://github.com/sxyazi/yazi
 zsys,fzf TUI for systemctl,https://github.com/joehillen/sysz
