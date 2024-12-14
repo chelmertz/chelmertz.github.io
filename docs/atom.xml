@@ -31,6 +31,10 @@
 <td>Configuring multi-monitor setup</td>
 </tr>
 <tr>
+<td><a href="https://gitlab.gnome.org/GNOME/console">Console</a></td>
+<td>A good enough terminal. Supporting dark/light mode is critical</td>
+</tr>
+<tr>
 <td><a href="https://hluk.github.io/CopyQ/">Copyq</a></td>
 <td>Clipboard</td>
 </tr>
@@ -39,12 +43,28 @@
 <td>Purely as entry point to Org mode/Magit</td>
 </tr>
 <tr>
+<td><a href="https://www.dropbox.com">Dropbox</a></td>
+<td>Sync between mobile and laptop is a must</td>
+</tr>
+<tr>
 <td><a href="https://element.io/">Element</a></td>
 <td>Matrix chat client</td>
 </tr>
 <tr>
+<td><a href="https://github.com/chelmertz/elly">Elly</a></td>
+<td>Github pull request tracker</td>
+</tr>
+<tr>
+<td><a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a></td>
+<td>I hear Chrome is mucking about with adblockers</td>
+</tr>
+<tr>
 <td><a href="https://flameshot.org/">Flameshot</a></td>
 <td>Screenshots with very convenient UI for quick editing</td>
+</tr>
+<tr>
+<td><a href="https://www.jetbrains.com/idea/">Intellij IDEA</a></td>
+<td>Editor for java and grails (don't ask)</td>
 </tr>
 <tr>
 <td><a href="https://www.libreoffice.org/">Libreoffice</a></td>
@@ -52,7 +72,7 @@
 </tr>
 <tr>
 <td><a href="https://magit.vc/">Magit</a></td>
-<td>The best git client. Also see lazygit</td>
+<td>The best git client. See <em>lazygit</em></td>
 </tr>
 <tr>
 <td><a href="https://obsidian.md/">Obsidian</a></td>
@@ -106,6 +126,10 @@
 <td>Counts LoC in codebases</td>
 </tr>
 <tr>
+<td><a href="https://github.com/chelmertz/dotfiles/blob/master/bin/datedate">datedate</a></td>
+<td>Transforms dates &amp; timestamps</td>
+</tr>
+<tr>
 <td><a href="https://github.com/dunst-project/dunst">dunst</a></td>
 <td>Notifications</td>
 </tr>
@@ -143,11 +167,11 @@
 </tr>
 <tr>
 <td><a href="https://github.com/dbcli/litecli">litecli</a></td>
-<td>Better CLI for sqlite. See mycli</td>
+<td>Better CLI for sqlite. See <em>mycli</em></td>
 </tr>
 <tr>
 <td><a href="https://github.com/dbcli/mycli">mycli</a></td>
-<td>Better CLI for mysql. See litecli</td>
+<td>Better CLI for mysql. See <em>litecli</em></td>
 </tr>
 <tr>
 <td><a href="https://pandoc.org/">pandoc</a></td>
@@ -287,8 +311,16 @@
 <td>Aids fixups</td>
 </tr>
 <tr>
+<td><a href="https://github.com/martinvonz/jj">jujutsu</a></td>
+<td>VCS on top of git</td>
+</tr>
+<tr>
 <td><a href="https://github.com/jesseduffield/lazydocker">lazydocker</a></td>
-<td></td>
+<td>TUI for docker. See <em>lazygit</em></td>
+</tr>
+<tr>
+<td><a href="https://plantuml.com/">plantuml</a></td>
+<td>Diagrams</td>
 </tr>
 <tr>
 <td><a href="https://github.com/joehillen/sysz">zsys</a></td>

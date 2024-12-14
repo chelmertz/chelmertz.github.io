@@ -1,6 +1,7 @@
 Name,Purpose & context,URL
 bat,Nicer `cat`,https://github.com/sharkdp/bat
 cloc,Counts LoC in codebases,https://github.com/AlDanial/cloc
+datedate,Transforms dates & timestamps,https://github.com/chelmertz/dotfiles/blob/master/bin/datedate
 dunst,Notifications,https://github.com/dunst-project/dunst
 entr,inotify-like watcher. Execute command when files change,https://github.com/eradman/entr
 fzf,Fuzzy finder,https://github.com/junegunn/fzf
@@ -10,8 +11,8 @@ gron,Turns JSON into grep:able lines of text and back again,https://github.com/t
 htop,Good enough system monitor,https://htop.dev/
 image-sorter,TUI for quickly moving image files into proper directories,https://github.com/jgalat/image-sorter/
 lazygit,Very similar to Magit. Slightly less intuitive but working in the terminal without all of Emacs is more comfy.,https://github.com/jesseduffield/lazygit
-litecli,Better CLI for sqlite. See mycli,https://github.com/dbcli/litecli
-mycli,Better CLI for mysql. See litecli,https://github.com/dbcli/mycli
+litecli,Better CLI for sqlite. See _mycli_,https://github.com/dbcli/litecli
+mycli,Better CLI for mysql. See _litecli_,https://github.com/dbcli/mycli
 pandoc,Document converter,https://pandoc.org/
 pavucontrol,Choosing device for sound output,https://freedesktop.org/software/pulseaudio/pavucontrol/
 ripdrag,“ripdrag filename” creates a small window with “filename” that you can use for drop-friendly interfaces,https://github.com/nik012003/ripdrag

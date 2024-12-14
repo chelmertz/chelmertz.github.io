@@ -1,4 +1,6 @@
 Name,Purpose & context,URL
 git-absorb,Aids fixups,https://github.com/tummychow/git-absorb
-lazydocker,,https://github.com/jesseduffield/lazydocker
+jujutsu,VCS on top of git,https://github.com/martinvonz/jj
+lazydocker,TUI for docker. See _lazygit_,https://github.com/jesseduffield/lazydocker
+plantuml,Diagrams,https://plantuml.com/
 zsys,fzf TUI for systemctl,https://github.com/joehillen/sysz

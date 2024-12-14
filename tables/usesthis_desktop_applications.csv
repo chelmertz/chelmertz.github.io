@@ -1,11 +1,16 @@
 Name,Purpose & context,URL
 Arandr,Configuring multi-monitor setup,https://christian.amsuess.com/tools/arandr/
+Console,A good enough terminal. Supporting dark/light mode is critical,https://gitlab.gnome.org/GNOME/console
 Copyq,Clipboard,https://hluk.github.io/CopyQ/
 Doom Emacs,Purely as entry point to Org mode/Magit,https://github.com/doomemacs/doomemacs
+Dropbox,Sync between mobile and laptop is a must,https://www.dropbox.com
 Element,Matrix chat client,https://element.io/
+Elly,Github pull request tracker,https://github.com/chelmertz/elly
+Firefox,I hear Chrome is mucking about with adblockers,https://www.mozilla.org/en-US/firefox/new/
 Flameshot,Screenshots with very convenient UI for quick editing,https://flameshot.org/
+Intellij IDEA,Editor for java and grails (don't ask),https://www.jetbrains.com/idea/
 Libreoffice,Quick & dirty editing of truth tables/decision tables and CSV files,https://www.libreoffice.org/
-Magit,The best git client. Also see lazygit,https://magit.vc/
+Magit,The best git client. See _lazygit_,https://magit.vc/
 Obsidian,Purely as entry point to Excalidraw,https://obsidian.md/
 Org mode,Diary. TODOs.,https://orgmode.org/
 Peek,Screen recorder,https://github.com/phw/peek
