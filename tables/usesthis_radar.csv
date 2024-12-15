@@ -1,4 +1,6 @@
 Name,Purpose & context,URL
+ansisvg,Capture terminal output into svg for presentations,https://github.com/wader/ansisvg
+dive,Docker image layer introspection,https://github.com/wagoodman/dive
 fq,jq for binary files,https://github.com/wader/fq
 git-absorb,Aids fixups,https://github.com/tummychow/git-absorb
 hyperfine,Benchmarks,https://github.com/sharkdp/hyperfine
@@ -8,5 +10,6 @@ lazydocker,TUI for docker. See _lazygit_,https://github.com/jesseduffield/lazydo
 pastel,CLI for color palettes,https://github.com/sharkdp/pastel
 plantuml,Diagrams,https://plantuml.com/
 ugrep,Interactive grep,https://github.com/Genivia/ugrep
+up,Ultimate plumber. Interactive pipelines,https://github.com/akavel/up
 yazi,File manager TUI,https://github.com/sxyazi/yazi
 zsys,fzf TUI for systemctl,https://github.com/joehillen/sysz

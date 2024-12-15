@@ -1,6 +1,8 @@
 Name,Purpose & context,URL
+Asciinema,Record terminal interactions,https://asciinema.org/
 Draw.io,Diagrams,https://app.diagrams.net/
 Excalidraw,Diagrams,https://excalidraw.com/
+FlameGraph,Hierarchical profile viewer,https://github.com/brendangregg/FlameGraph
 Mermaid,Diagrams,https://mermaid.js.org/
 Notion,Wiki,https://www.notion.so/
 Numbr,Adds up numbers in plaintext. Good for splitting costs,https://numbr.dev/
