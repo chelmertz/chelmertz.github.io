@@ -2,11 +2,55 @@
 <feed xmlns="http://www.w3.org/2005/Atom" >
 <link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml" />
 <link href="https://iamnearlythere.com/" rel="alternate" type="text/html" />
-<updated>2024-12-11T18:00:00Z</updated>
+<updated>2024-12-20T00:29:00Z</updated>
 <id>https://iamnearlythere.com/atom.xml</id>
 <title type="html">iamnearlythere.com</title>
 <subtitle>iamnearlythere.com, a blog on software development</subtitle>
 <author><name>Carl Helmertz</name></author>
+
+<entry>
+  <title type="html">Upgrading to Ubuntu 24.04</title>
+  <link href="https://iamnearlythere.com/ubuntu-2404/" rel="alternate" type="text/html" title="Upgrading to Ubuntu 24.04" />
+  <published>2024-12-20T00:29:00Z</published>
+  <updated>2024-12-20T00:29:00Z</updated>
+  <id>https://iamnearlythere.com/ubuntu-2404</id>
+  <summary>Not everything went super smoothly</summary>
+  <content type="html" xml:base="https://iamnearlythere.com/ubuntu-2404/">
+  <![CDATA[<p>Some issues I ran into:</p>
+<ul>
+<li><code>man</code> pages were no longer colored.
+<ul>
+<li>Workaround: <a href="https://bbs.archlinux.org/viewtopic.php?id=287185"><code>export GROFF_NO_SGR=1</code></a>.</li>
+</ul>
+</li>
+<li>Switching system theme with <code>gsettings set org.gnome.desktop.interface color-scheme prefer-dark</code> no longer takes effect.
+<ul>
+<li>No workaround as of yet.</li>
+<li>Lot's of <code>xdg-portal</code> related packages installed and configured back and forth, to no avail.</li>
+</ul>
+</li>
+<li>Running a simple Ansible playbook no longer works.
+<ul>
+<li>No workaround as of yet.</li>
+<li>Missing python package, Ubuntu no longer likes <code>pip3</code>. Good, in a way; especially language-specific packages should not really be installed globally.</li>
+<li>Tried using <code>uv</code> for the first time, didn't find the correct invocation.</li>
+</ul>
+</li>
+<li>Volume up/down buttons didn't work.
+<ul>
+<li>Installing <code>pulseaudio</code> &quot;fixed&quot; it. It was supposed to be a &quot;temporary solution&quot;, it probably will be permanent. I guess <code>pipewire</code> just needs some configuration and things probably work by accident currently.</li>
+</ul>
+</li>
+<li><code>gedit</code> is no longer a thing.
+<ul>
+<li><code>gnome-text-editor</code> is apparently the new thing.</li>
+</ul>
+</li>
+</ul>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
 
 <entry>
   <title type="html">Uses this - my preferred tools</title>
@@ -923,41 +967,6 @@ $ sxiv $(find /home/ch/Pictures/instagram -mtime -10 -type f -name &quot;*jpg&qu
 </ul>
 <p>*[URI]: Uniform Resource Identifier
 *[CDN]: Content delivery network</p>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">A shell's must-have features</title>
-  <link href="https://iamnearlythere.com/shell-must-have/" rel="alternate" type="text/html" title="A shell's must-have features" />
-  <published>2013-05-01T20:28:00Z</published>
-  <updated>2013-05-01T20:28:00Z</updated>
-  <id>https://iamnearlythere.com/shell-must-have</id>
-  <content type="html" xml:base="https://iamnearlythere.com/shell-must-have/">
-  <![CDATA[<p>I've been using zsh with oh-my-zsh for a long time now. If I were to replace it,
-this is what I'd look for in the future:</p>
-<ul>
-<li>Case insensitive completion/globbing</li>
-<li>Auto completion of filenames via tab, left + right, enter</li>
-<li>Fuzzy matching/spelling correction of targets when <code>cd</code>-ing</li>
-<li>Have sensible prompt looks
-<ul>
-<li>(aliased) directory</li>
-<li>git status
-<ul>
-<li>branch name</li>
-<li>dirty-index indicator</li>
-</ul>
-</li>
-<li>no username</li>
-</ul>
-</li>
-<li><!-- raw HTML omitted -->ctrl+r<!-- raw HTML omitted --> history</li>
-<li><code>!$</code> and <code>!!</code> expansion before execution</li>
-<li>up + down to traverse history</li>
-<li>globbing with <code>**</code></li>
-</ul>
 ]]>
   </content>
   <author><name>Carl Helmertz</name></author>
