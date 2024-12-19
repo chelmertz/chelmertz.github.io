@@ -10,6 +10,10 @@ watch:
 serve: docs
 	serve -d docs
 
+.PHONY: new
+new:
+	go run cmd/new/new.go
+
 .PHONY: lint
 lint:
 	rm -rf wget.log 192.168.1.211:7999
