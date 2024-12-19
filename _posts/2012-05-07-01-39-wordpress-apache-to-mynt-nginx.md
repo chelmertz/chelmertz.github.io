@@ -1,6 +1,5 @@
 ---
 date: "2012-05-07 01:39"
-layout: post
 title: "From Wordpress on Apache to mynt on nginx"
 permalink: "wordpress-apache-to-mynt-nginx"
 tags: "project"

@@ -1,6 +1,5 @@
 ---
 date: "2010-09-23 17:39"
-layout: post
 title: "Word- and linecount in unix"
 permalink: "word-and-linecount-in-unix"
 tags: [bash]

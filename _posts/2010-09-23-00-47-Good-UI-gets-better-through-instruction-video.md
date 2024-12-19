@@ -1,6 +1,5 @@
 ---
 date: "2010-09-23 00:47"
-layout: post
 title: "Good UI gets better through instruction video"
 permalink: "good-ui-gets-better-through-instruction-video"
 tags: [thoughts]

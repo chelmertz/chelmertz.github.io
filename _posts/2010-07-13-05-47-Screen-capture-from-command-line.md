@@ -1,6 +1,5 @@
 ---
 date: "2010-07-13 05:47"
-layout: post
 title: "Screen capture from command line"
 permalink: "screen-capture-from-command-line"
 tags: [bash, mac]

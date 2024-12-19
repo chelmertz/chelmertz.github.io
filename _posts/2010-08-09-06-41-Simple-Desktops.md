@@ -1,6 +1,5 @@
 ---
 date: "2010-08-09 06:41"
-layout: post
 title: "Simple Desktops"
 permalink: "simple-desktops"
 tags: [visual]

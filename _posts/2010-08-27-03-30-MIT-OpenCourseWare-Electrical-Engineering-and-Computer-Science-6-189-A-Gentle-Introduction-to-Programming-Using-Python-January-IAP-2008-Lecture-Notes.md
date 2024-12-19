@@ -1,6 +1,5 @@
 ---
 date: "2010-08-27 03:30"
-layout: post
 title: "MIT OpenCourseWare | Electrical Engineering and Computer Science | 6.189 A Gentle Introduction to Programming Using Python, January IAP 2008 | Lecture Notes"
 permalink: "mit-opencourseware-electrical-engineering-and-computer-science-6-189-a-gentle-introduction-to-programming-using-python-january-iap-2008-lecture-notes"
 tags: [python]

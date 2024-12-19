@@ -1,6 +1,5 @@
 ---
 date: "2010-11-13 08:36"
-layout: post
 title: "Make your Mac sing songs"
 permalink: "make-your-mac-sing-songs"
 tags: [mac]

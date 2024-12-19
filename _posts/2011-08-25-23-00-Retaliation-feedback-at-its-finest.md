@@ -1,6 +1,5 @@
 ---
 date: "2011-08-25 23:00"
-layout: post
 title: "Retaliation - feedback at its finest"
 permalink: "retaliation-feedback-finest"
 tags: [fun]

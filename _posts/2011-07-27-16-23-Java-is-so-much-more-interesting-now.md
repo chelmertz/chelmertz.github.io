@@ -1,6 +1,5 @@
 ---
 date: "2011-07-27 16:23"
-layout: post
 title: "Java is so much more interesting now"
 permalink: "java-is-so-much-more-interesting-now"
 tags: [fun]

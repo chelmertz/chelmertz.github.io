@@ -1,6 +1,5 @@
 ---
 date: "2010-09-21 16:40"
-layout: post
 title: "How to display correct amount of free memory in Linux"
 permalink: "how-to-display-correct-amount-of-free-memory-in-linux"
 tags: [bash]

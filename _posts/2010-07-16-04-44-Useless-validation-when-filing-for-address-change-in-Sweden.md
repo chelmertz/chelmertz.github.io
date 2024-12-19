@@ -1,6 +1,5 @@
 ---
 date: "2010-07-16 04:44"
-layout: post
 title: "Useless validation when filing for address change in Sweden"
 permalink: "useless-validation-when-filing-for-address-change-in-sweden"
 tags: [thoughts, usability]

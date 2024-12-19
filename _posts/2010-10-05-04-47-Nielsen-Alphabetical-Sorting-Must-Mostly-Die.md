@@ -1,6 +1,5 @@
 ---
 date: "2010-10-05 04:47"
-layout: post
 title: "Nielsen: Alphabetical Sorting Must (Mostly) Die"
 permalink: "nielsen-alphabetical-sorting-must-mostly-die"
 tags: [usability]

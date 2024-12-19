@@ -1,6 +1,5 @@
 ---
 date: "2010-09-01 03:19"
-layout: post
 title: "Check the PATH of your Mac with echo $PATH - OS X Daily"
 permalink: "check-the-path-of-your-mac-with-echo-path-os-x-daily"
 tags: [bash, mac]

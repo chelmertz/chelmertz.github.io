@@ -1,6 +1,5 @@
 ---
 date: "2011-02-15 20:42"
-layout: post
 title: "Automatically insert acronyms with Hz_Filter_Acronym"
 permalink: "automatically-insert-acronyms-with-hz_filter_acronym"
 tags: [php, project, zend-framework]

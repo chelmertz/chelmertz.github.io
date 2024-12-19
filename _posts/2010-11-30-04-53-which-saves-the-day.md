@@ -1,6 +1,5 @@
 ---
 date: "2010-11-30 04:53"
-layout: post
 title: "which - saves the day"
 permalink: "which-saves-the-day"
 tags: [bash]

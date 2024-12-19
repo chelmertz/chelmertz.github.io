@@ -1,6 +1,5 @@
 ---
 date: "2010-08-25 06:51"
-layout: post
 title: "Plain English explanation of Big O - Stack Overflow"
 permalink: "plain-english-explanation-of-big-o-stack-overflow"
 ---

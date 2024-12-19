@@ -1,6 +1,5 @@
 ---
 date: "2011-01-25 19:15"
-layout: post
 title: "Why I left tumblr for posterous"
 permalink: "why-i-left-tumblr-for-posterous"
 ---

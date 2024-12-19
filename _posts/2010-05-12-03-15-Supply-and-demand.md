@@ -1,6 +1,5 @@
 ---
 date: "2010-05-12 03:15"
-layout: post
 title: "Supply and demand"
 permalink: "supply-and-demand"
 tags: [thoughts]

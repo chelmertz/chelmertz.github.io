@@ -1,6 +1,5 @@
 ---
 date: "2010-07-29 03:15"
-layout: post
 title: "Colloquy: IRC, SILC & ICB Client"
 permalink: "colloquy-irc-silc-icb-client"
 tags: [mac]

@@ -1,6 +1,5 @@
 ---
 date: "2011-02-17 17:09"
-layout: post
 title: "Arrange icons in a folder, and keep them in a grid"
 permalink: "arrange-icons-in-a-folder-and-keep-them-in-a-grid-9"
 tags: [mac]

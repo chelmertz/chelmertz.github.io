@@ -1,6 +1,5 @@
 ---
 date: "2010-10-27 00:16"
-layout: post
 title: "Linux: Change Directory or CD to the Previous Directory / Last Path"
 permalink: "linux-change-directory-or-cd-to-the-previous-directory-last-path"
 tags: [bash]

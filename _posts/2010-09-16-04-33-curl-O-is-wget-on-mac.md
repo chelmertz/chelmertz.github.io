@@ -1,6 +1,5 @@
 ---
 date: "2010-09-16 04:33"
-layout: post
 title: "curl -O is wget on mac"
 permalink: "curl-o-is-wget-on-mac"
 tags: [bash, mac]

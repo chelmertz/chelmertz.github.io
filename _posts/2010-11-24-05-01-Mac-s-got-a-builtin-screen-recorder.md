@@ -1,6 +1,5 @@
 ---
 date: "2010-11-24 05:01"
-layout: post
 title: "Mac's got a builtin screen recorder"
 permalink: "macs-got-a-builtin-screen-recorder"
 tags: [mac]

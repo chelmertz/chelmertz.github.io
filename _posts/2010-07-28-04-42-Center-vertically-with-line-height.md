@@ -1,6 +1,5 @@
 ---
 date: "2010-07-28 04:42"
-layout: post
 title: "Center vertically with `line-height`"
 permalink: "center-vertically-with-line-height"
 tags: [css]

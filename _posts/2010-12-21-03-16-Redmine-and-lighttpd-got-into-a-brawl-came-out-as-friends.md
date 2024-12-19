@@ -1,6 +1,5 @@
 ---
 date: "2010-12-21 03:16"
-layout: post
 title: "Redmine and lighttpd got into a brawl, came out as friends"
 permalink: "redmine-and-lighttpd-got-into-a-brawl-came-out-as-friends"
 tags: [server]

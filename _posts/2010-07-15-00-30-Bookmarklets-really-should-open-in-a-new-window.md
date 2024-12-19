@@ -1,6 +1,5 @@
 ---
 date: "2010-07-15 00:30"
-layout: post
 title: "Bookmarklets really should open in a new window"
 permalink: "bookmarklet-really-should-be-in-a-new-window"
 tags: [bookmarklet, javascript, thoughts, usability]

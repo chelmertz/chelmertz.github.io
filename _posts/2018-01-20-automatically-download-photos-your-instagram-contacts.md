@@ -1,6 +1,5 @@
 ---
 permalink: "automatically-download-photos-your-instagram-contacts"
-layout: post
 title: "Automatically download new photos from your Instagram contacts"
 date: "2018-01-20 21:24"
 tags: bash

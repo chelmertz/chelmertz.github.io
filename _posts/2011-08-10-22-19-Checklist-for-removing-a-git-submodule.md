@@ -1,6 +1,5 @@
 ---
 date: "2011-08-10 22:19"
-layout: post
 title: "Checklist for removing a git submodule"
 permalink: "checklist-removing-git-submodule"
 tags: [git]

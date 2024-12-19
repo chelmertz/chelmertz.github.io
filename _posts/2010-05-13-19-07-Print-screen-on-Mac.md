@@ -1,6 +1,5 @@
 ---
 date: "2010-05-13 19:07"
-layout: post
 title: "Print screen on Mac"
 permalink: "print-screen-on-mac"
 tags: [mac]

@@ -1,6 +1,5 @@
 ---
 date: "2011-08-20 03:04"
-layout: post
 title: "bookshelf, aka link roulette"
 permalink: "bookshelf-aka-link-roulette"
 tags: [php, project]

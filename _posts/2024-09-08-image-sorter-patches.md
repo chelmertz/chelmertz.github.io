@@ -1,6 +1,5 @@
 ---
 permalink: "image-sorter-patches"
-layout: post
 title: "image-sorter patches"
 summary: "Contributing to image-sorter, that helps manual categorization of images"
 date: "2024-09-08 15:37"

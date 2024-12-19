@@ -1,6 +1,5 @@
 ---
 date: "2011-06-19 20:06"
-layout: post
 title: "Less makes wonders for front end development"
 permalink: "less-makes-wonders-front-development"
 tags: [css, javascript]

@@ -1,6 +1,5 @@
 ---
 date: "2011-07-22 02:08"
-layout: post
 title: "Delete a remote branch in git"
 permalink: "delete-remote-branch-git"
 tags: [git]

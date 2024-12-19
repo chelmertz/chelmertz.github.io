@@ -1,6 +1,5 @@
 ---
 date: "2010-06-30 03:31"
-layout: post
 title: "Something different - administrate Windows 7 through \"God mode\""
 permalink: "something-different-administrate-windows-7-through-god-mode"
 tags: [windows]

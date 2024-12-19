@@ -1,6 +1,5 @@
 ---
 date: "2011-05-21 10:47"
-layout: post
 title: "sed quickie, search and replace in files"
 permalink: "sed-quickie-search-replace-files"
 tags: [bash]

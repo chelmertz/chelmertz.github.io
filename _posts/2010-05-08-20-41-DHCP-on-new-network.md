@@ -1,6 +1,5 @@
 ---
 date: "2010-05-08 20:41"
-layout: post
 title: "DHCP on new network"
 permalink: "dhcp-on-new-network"
 ---

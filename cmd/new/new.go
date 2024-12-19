@@ -10,7 +10,6 @@ import (
 
 var postTemplateText = `---
 permalink: "todo-should-be-a-lowercase-slug-here"
-layout: post
 title: "TODO fill this in"
 summary: "TODO fill this in"
 date: "{{.Now}}"

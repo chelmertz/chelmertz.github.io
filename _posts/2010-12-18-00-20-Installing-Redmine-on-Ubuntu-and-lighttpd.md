@@ -1,6 +1,5 @@
 ---
 date: "2010-12-18 00:20"
-layout: post
 title: "Installing Redmine on Ubuntu and lighttpd"
 permalink: "installing-redmine-on-ubuntu-and-lighttpd"
 tags: [server]

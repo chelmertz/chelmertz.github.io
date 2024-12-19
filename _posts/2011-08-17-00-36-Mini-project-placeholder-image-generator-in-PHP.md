@@ -1,6 +1,5 @@
 ---
 date: "2011-08-17 00:36"
-layout: post
 title: "Mini project: placeholder image generator in PHP"
 permalink: "mini-project-placeholder-image-generator-php"
 tags: [php, project]

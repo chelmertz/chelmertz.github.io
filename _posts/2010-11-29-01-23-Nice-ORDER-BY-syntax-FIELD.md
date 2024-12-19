@@ -1,6 +1,5 @@
 ---
 date: "2010-11-29 01:23"
-layout: post
 title: "Nice ORDER BY-syntax: FIELD()"
 permalink: "nice-order-by-syntax-field"
 tags: [mysql]

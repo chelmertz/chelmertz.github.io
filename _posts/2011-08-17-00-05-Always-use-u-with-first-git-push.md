@@ -1,6 +1,5 @@
 ---
 date: "2011-08-17 00:05"
-layout: post
 title: "Always use -u with first git push"
 permalink: "use-u-with-first-git-push"
 tags: [git]

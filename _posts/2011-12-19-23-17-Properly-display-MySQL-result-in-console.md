@@ -1,6 +1,5 @@
 ---
 date: "2011-12-19 23:17"
-layout: post
 title: "Properly display MySQL result in console"
 permalink: "properly-display-mysql-result-console"
 tags: [mysql]

@@ -1,6 +1,5 @@
 ---
 date: "2011-06-03 00:07"
-layout: post
 title: "Add sftp-capabilities to cURL"
 permalink: "add-sftp-capabilities-to-curl"
 tags: [server]

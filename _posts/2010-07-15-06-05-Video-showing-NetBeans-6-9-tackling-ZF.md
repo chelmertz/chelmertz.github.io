@@ -1,6 +1,5 @@
 ---
 date: "2010-07-15 06:05"
-layout: post
 title: "Video showing NetBeans 6.9 tackling ZF"
 permalink: "video-showing-netbeans-6-9-tackling-zf"
 tags: [netbeans, zend-framework]

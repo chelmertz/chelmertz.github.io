@@ -1,6 +1,5 @@
 ---
 date: "2010-10-04 00:11"
-layout: post
 title: "Ruby on Rails: Getting Started & Action Dispatch"
 permalink: "ruby-on-rails-getting-started-action-dispatch"
 tags: [thoughts]

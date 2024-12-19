@@ -1,6 +1,5 @@
 ---
 date: "2010-09-02 01:22"
-layout: post
 title: "Reset/set IP address"
 permalink: "resetset-ip-address"
 tags: [bash, mac]

@@ -1,6 +1,5 @@
 ---
 date: "2010-06-03 07:17"
-layout: post
 title: "Read headers with curl"
 permalink: "read-headers-with-curl"
 tags: [server]

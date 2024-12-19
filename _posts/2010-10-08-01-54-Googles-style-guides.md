@@ -1,6 +1,5 @@
 ---
 date: "2010-10-08 01:54"
-layout: post
 title: "Googles style guides"
 permalink: "googles-style-guides"
 tags: [organized]

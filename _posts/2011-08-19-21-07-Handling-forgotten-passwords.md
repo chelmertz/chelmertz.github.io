@@ -1,6 +1,5 @@
 ---
 date: "2011-08-19 21:07"
-layout: post
 title: "Handling forgotten passwords"
 permalink: "handling-forgotten-passwords"
 tags: [thoughts]

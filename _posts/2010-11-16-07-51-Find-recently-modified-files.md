@@ -1,6 +1,5 @@
 ---
 date: "2010-11-16 07:51"
-layout: post
 title: "Find recently modified files"
 permalink: "find-recently-modified-files"
 tags: [bash]

@@ -1,6 +1,5 @@
 ---
 date: "2010-10-21 04:41"
-layout: post
 title: "How to design form buttons in one breath"
 permalink: "how-to-design-form-buttons-in-one-breath"
 tags: [thoughts, usability, visual]

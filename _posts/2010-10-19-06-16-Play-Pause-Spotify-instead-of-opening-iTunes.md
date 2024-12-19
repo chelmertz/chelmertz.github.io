@@ -1,6 +1,5 @@
 ---
 date: "2010-10-19 06:16"
-layout: post
 title: "Play/Pause Spotify instead of opening iTunes"
 permalink: "playpause-spotify-instead-of-opening-itunes"
 tags: [mac]

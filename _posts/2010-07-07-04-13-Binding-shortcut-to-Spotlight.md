@@ -1,6 +1,5 @@
 ---
 date: "2010-07-07 04:13"
-layout: post
 title: "Binding shortcut to Spotlight"
 permalink: "binding-shortcut-to-spotlight"
 tags: [mac]

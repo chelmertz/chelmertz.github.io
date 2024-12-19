@@ -1,6 +1,5 @@
 ---
 date: "2010-05-07 02:13"
-layout: post
 title: "Installing Vim = discovering Mac's internals"
 permalink: "installing-vim-discovering-macs-internals"
 tags: [mac, vim]

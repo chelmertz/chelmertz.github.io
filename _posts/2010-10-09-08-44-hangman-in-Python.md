@@ -1,6 +1,5 @@
 ---
 date: "2010-10-09 08:44"
-layout: post
 title: "hangman in Python"
 permalink: "hangman-in-python"
 tags: [project]

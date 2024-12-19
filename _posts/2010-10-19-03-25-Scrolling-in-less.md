@@ -1,6 +1,5 @@
 ---
 date: "2010-10-19 03:25"
-layout: post
 title: "Scrolling in less"
 permalink: "scrolling-in-less"
 tags: [bash]

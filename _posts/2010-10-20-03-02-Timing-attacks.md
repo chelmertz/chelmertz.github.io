@@ -1,6 +1,5 @@
 ---
 date: "2010-10-20 03:02"
-layout: post
 title: "Timing attacks"
 permalink: "timing-attacks"
 tags: [security]

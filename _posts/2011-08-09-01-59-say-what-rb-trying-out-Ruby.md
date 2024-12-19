@@ -1,6 +1,5 @@
 ---
 date: "2011-08-09 01:59"
-layout: post
 title: "say-what.rb - trying out Ruby"
 permalink: "say-what-rb-ruby"
 tags: [project]

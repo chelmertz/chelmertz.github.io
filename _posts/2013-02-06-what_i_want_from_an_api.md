@@ -1,6 +1,5 @@
 ---
 permalink: "what_i_want_from_an_api"
-layout: post
 title: "What I want from an interface"
 date: "2013-02-06 21:27"
 tags: thoughts
