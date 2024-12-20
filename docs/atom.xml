@@ -254,6 +254,10 @@
 <td>Lints bash scripts</td>
 </tr>
 <tr>
+<td><a href="https://github.com/watchexec/watchexec">watchexec</a></td>
+<td>inotify-like watcher. Execute command when files change. Slightly more complete than <code>entr</code> - might overtake its position</td>
+</tr>
+<tr>
 <td><a href="https://linux.die.net/man/1/wmctrl">wmctrl</a></td>
 <td>API capabilities for X.org</td>
 </tr>
@@ -425,6 +429,10 @@
 <tr>
 <td><a href="https://github.com/akavel/up">up</a></td>
 <td>Ultimate plumber. Interactive pipelines</td>
+</tr>
+<tr>
+<td><a href="https://webhook.site/">webhook.site</a></td>
+<td>Hosted/one-off webhooks</td>
 </tr>
 <tr>
 <td><a href="https://github.com/sxyazi/yazi">yazi</a></td>

@@ -4,7 +4,7 @@ docs:
 
 .PHONY: watch
 watch:
-	find . | grep -E '(go|csv|css|md)$$' | entr make
+	watchexec --restart --filter 'assets/**' --filter 'cmd/**' --filter '_posts/**' --filter 'tables/**' make
 
 .PHONY: serve
 serve: docs

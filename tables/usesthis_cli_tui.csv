@@ -22,6 +22,7 @@ ripdrag,“ripdrag filename” creates a small window with “filename” that y
 ripgrep,More ergonomic search than grep,https://github.com/BurntSushi/ripgrep
 serve,Serve directory via HTTP,github.com/chelmertz/serve
 shellcheck,Lints bash scripts,https://www.shellcheck.net/
+watchexec,inotify-like watcher. Execute command when files change. Slightly more complete than `entr` - might overtake its position,https://github.com/watchexec/watchexec
 wmctrl,API capabilities for X.org,https://linux.die.net/man/1/wmctrl
 xcape,Rebind keys. For example: pressing caps=esc & holding caps=ctrl,https://github.com/alols/xcape
 z,Interface to MRU directories when `cd`:ing around,https://github.com/rupa/z
