@@ -66,7 +66,7 @@ func main() {
 		Funcs(viewFuncs).
 		ParseGlob("cmd/blog/post.html"))
 	filepath.WalkDir("_posts", func(path string, d os.DirEntry, err error) error {
-		if path == "_posts" {
+		if !strings.HasSuffix(path, ".md") {
 			return nil
 		}
 
