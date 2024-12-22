@@ -924,7 +924,22 @@ having SQLite is very nice though.</li>
   <updated>2018-03-15T00:24:00Z</updated>
   <id>https://iamnearlythere.com/man-pages-in-color-and-links</id>
   <content type="html" xml:base="https://iamnearlythere.com/man-pages-in-color-and-links/">
-  <![CDATA[<p><a href="https://neovim.io/">Neovim</a> has builtin support for colorizing man pages, making them easier to read. It also lets you follow links to other man pages, by pressing <!-- raw HTML omitted -->K<!-- raw HTML omitted --> while hovering any term that has a man page.</p>
+  <![CDATA[<p>Update 2024-12-22:</p>
+<p>I am using regular less now, with these lines in my zshrc:</p>
+<pre><code>export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+# the above worked in Ubuntu 22.04 but something broke &quot;in&quot; 24.04 and this workaround does it for me
+# also see https://github.com/jedsoft/most/issues/18
+export GROFF_NO_SGR=1
+</code></pre>
+<hr>
+<p>Old post:</p>
+<p><a href="https://neovim.io/">Neovim</a> has builtin support for colorizing man pages, making them easier to read. It also lets you follow links to other man pages, by pressing <!-- raw HTML omitted -->K<!-- raw HTML omitted --> while hovering any term that has a man page.</p>
 <p>To set up Neovim as the default reader for when you invoke <code>man apropos</code> etc., place the following code in your ~/.bashrc or such:</p>
 <pre><code>export MANPAGER=&quot;nvim -c 'set ft=man' -&quot;
 </code></pre>
