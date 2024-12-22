@@ -37,9 +37,19 @@
 <li>Switching system theme with <code>gsettings set org.gnome.desktop.interface color-scheme prefer-dark</code> no longer takes effect.
 <ul>
 <li>No workaround as of yet.</li>
-<li>Lot's of <code>xdg-portal</code> related packages installed and configured back and forth, to no avail.</li>
+<li>Lot's of <code>xdg-portal</code> related packages installed and configured back and forth, to no avail (yet).</li>
+<li>Adding <code>i3</code> to <code>UseIn=gnome;i3</code> in /usr/share/xdg-desktop-portal/portals/gtk.portal didn't help, reverted.</li>
+<li>Adding <code>org.freedesktop.impl.portal.Settings=gtk</code> in ~/.config/xdg-desktop-portal/portals.conf didn't help, reverted.</li>
+<li><code>XDG_CURRENT_DESKTOP</code> is &quot;i3&quot;, and <code>XDG_DESKTOP_PORTAL</code> is &quot;&quot;</li>
+<li>I've got (not sure who owns this change) .config/systemd/user/xdg-desktop-portal.service.d/override.conf</li>
 </ul>
 </li>
+</ul>
+<pre><code>[Service]
+Environment=GTK_USE_PORTAL=1
+</code></pre>
+<ul>
+<li>There's an arch wiki page on <a href="https://wiki.archlinux.org/title/XDG_Desktop_Portal">XDG Desktop Portal</a></li>
 <li>Running a simple Ansible playbook no longer works.
 <ul>
 <li>No workaround as of yet.</li>
@@ -55,6 +65,11 @@
 <li><code>gedit</code> is no longer a thing.
 <ul>
 <li><code>gnome-text-editor</code> is apparently the new thing.</li>
+</ul>
+</li>
+<li>Gnome Console (kgx) renders an extra symbol for dead keys (like ~ or `) even when &quot;completed&quot;
+<ul>
+<li>Both in the shell and in e.g. vim</li>
 </ul>
 </li>
 </ul>
