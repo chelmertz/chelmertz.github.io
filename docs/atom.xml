@@ -152,6 +152,25 @@
 </tr>
 </tbody>
 </table>
+<h2>Languages &amp; libraries</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://go.dev/">Go</a></td>
+<td>Programming in general</td>
+</tr>
+<tr>
+<td><a href="https://learn.openapis.org/">OpenAPI</a></td>
+<td>REST APIs. Spec first and generate clients/server works really well</td>
+</tr>
+</tbody>
+</table>
 <h2>CLI &amp; TUI</h2>
 <table>
 <thead>
