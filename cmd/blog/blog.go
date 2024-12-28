@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"cmp"
 	"encoding/csv"
 	"errors"
 	"fmt"
@@ -15,6 +16,8 @@ import (
 	"strings"
 	textTemplate "text/template"
 	"time"
+
+	tfidf "github.com/dkgv/go-tf-idf"
 
 	"github.com/yuin/goldmark"
 
@@ -86,6 +89,7 @@ func main() {
 		var post Post
 		must(postsFrontMatter.Decode(&post))
 		post.Content = template.HTML(outputHtml.String())
+		post.RawMarkdown = markdownContent
 
 		if post.Date == "" {
 			panic(fmt.Sprintf("date not found in frontmatter for path %s\n", path))
@@ -190,6 +194,7 @@ type AtomData struct {
 
 type Post struct {
 	Content           template.HTML
+	RawMarkdown       []byte
 	Title             string
 	PublishedAt       time.Time
 	PublishedFriendly string
@@ -201,8 +206,9 @@ type Post struct {
 }
 
 type RelatedPost struct {
-	Url   string
-	Title string
+	Permalink        string
+	Title            string
+	CosineSimilarity float64
 }
 
 // extension to allow markdown file to include a CSV file, formatted as a GFM table
@@ -295,6 +301,38 @@ func gfmTableOfCsv(filename string, options csvOptions) string {
 
 // relatedPosts modifies all posts to include related posts.
 func relatedPosts(posts []Post) {
+	rawMarkdowns := make([]string, len(posts))
+	for i := range posts {
+		rawMarkdowns[i] = string(posts[i].RawMarkdown)
+	}
+	comparator := tfidf.New(tfidf.WithDefaultStopWords(),
+		tfidf.WithComparator(tfidf.CosineComparator),
+		tfidf.WithDocuments(rawMarkdowns),
+	)
+
+	for i := range posts {
+		similarities := make([]RelatedPost, 0)
+		for j := range posts {
+			if posts[i].Permalink == posts[j].Permalink {
+				continue
+			}
+			similarity := must1(comparator.Compare(string(posts[i].RawMarkdown), string(posts[j].RawMarkdown)))
+			similarities = append(similarities, RelatedPost{
+				Permalink:        "/" + posts[j].Permalink,
+				Title:            posts[j].Title,
+				CosineSimilarity: similarity,
+			})
+		}
+
+		slices.SortFunc(similarities, func(i, j RelatedPost) int {
+			return cmp.Compare(j.CosineSimilarity, i.CosineSimilarity)
+		})
+
+		posts[i].RelatedPosts = make([]RelatedPost, 5)
+		for sim := range 5 {
+			posts[i].RelatedPosts[sim] = similarities[sim]
+		}
+	}
 }
 
 func must(err error) {

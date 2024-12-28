@@ -9,5 +9,6 @@ require (
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
+	github.com/dkgv/go-tf-idf v0.0.0-20220422104447-dad26aa7b2f4 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
