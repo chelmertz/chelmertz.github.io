@@ -31,14 +31,16 @@
 <li>Adding <code>org.freedesktop.impl.portal.Settings=gtk</code> in ~/.config/xdg-desktop-portal/portals.conf didn't help, reverted.</li>
 <li><code>XDG_CURRENT_DESKTOP</code> is &quot;i3&quot;, and <code>XDG_DESKTOP_PORTAL</code> is &quot;&quot;</li>
 <li>There's an arch wiki page on <a href="https://wiki.archlinux.org/title/XDG_Desktop_Portal">XDG Desktop Portal</a></li>
-<li>I've got (not sure who owns this change) .config/systemd/user/xdg-desktop-portal.service.d/override.conf</li>
-</ul>
-</li>
-</ul>
+<li>I've got (not sure who owns this change) .config/systemd/user/xdg-desktop-portal.service.d/override.conf
 <pre><code>[Service]
 Environment=GTK_USE_PORTAL=1
 </code></pre>
 <ul>
+<li>Adding <code>Environment=GDK_DEBUG=portals</code> didn't help, reverted.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Running a simple Ansible playbook no longer works.
 <ul>
 <li>No workaround as of yet.</li>
