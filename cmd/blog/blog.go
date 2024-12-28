@@ -112,6 +112,8 @@ func main() {
 		return nil
 	})
 
+	relatedPosts(allPosts)
+
 	{
 		// docs/posts
 		for _, post := range allPosts {
@@ -195,6 +197,12 @@ type Post struct {
 	Published         bool
 	Permalink         string
 	Summary           string
+	RelatedPosts      []RelatedPost
+}
+
+type RelatedPost struct {
+	Url   string
+	Title string
 }
 
 // extension to allow markdown file to include a CSV file, formatted as a GFM table
@@ -283,6 +291,10 @@ func gfmTableOfCsv(filename string, options csvOptions) string {
 	}
 
 	return strings.Join(rows, "\n")
+}
+
+// relatedPosts modifies all posts to include related posts.
+func relatedPosts(posts []Post) {
 }
 
 func must(err error) {

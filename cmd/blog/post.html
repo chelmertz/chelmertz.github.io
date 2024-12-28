@@ -29,7 +29,15 @@
             {{.Content}}
           </section>
         </div>
-      </article>
+      </article>{{with .RelatedPosts}}
+      <section>
+        <h2>Related posts</h2>
+        <ul>
+          {{range .}}
+          <li><a href="{{.Url}}">{{.Title}}</a></li>
+          {{end}}
+        </ul>
+      </section>{{end}}
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz
