@@ -18,22 +18,20 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">Retrieve removed file from SVN</h1>
-            <p class="post-meta"><time datetime="2010-09-30T06:42:00Z" itemprop="datePublished">Sep 30, 2010</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p><!-- raw HTML omitted -->svn copy -r &lt;revision&gt; http://&lt;repos&gt;/&lt;file&gt; .<!-- raw HTML omitted --></p>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">Retrieve removed file from SVN</h1>
+          <p class="post-meta"><time datetime="2010-09-30T06:42:00Z" itemprop="datePublished">Sep 30, 2010</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p><!-- raw HTML omitted -->svn copy -r &lt;revision&gt; http://&lt;repos&gt;/&lt;file&gt; .<!-- raw HTML omitted --></p>
 <p>Pretty obvious really, but still… Use the remote path ( &amp; ) to the file that existed in  and place it in the current dir: . (or anywhere really).</p>
 <p>PS: this retrieved the contents of  but you would also need to <!-- raw HTML omitted -->svn commit<!-- raw HTML omitted --> any changes to reinsert the file into the repos.</p>
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

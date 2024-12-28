@@ -19,15 +19,14 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">Replacing Jekyll with Go</h1>
-            <p class="post-meta"><time datetime="2024-12-01T11:58:00Z" itemprop="datePublished">Dec 1, 2024</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p>My old dockerized <a href="https://jekyllrb.com/">Jekyll</a> instance started breaking, and
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">Replacing Jekyll with Go</h1>
+          <p class="post-meta"><time datetime="2024-12-01T11:58:00Z" itemprop="datePublished">Dec 1, 2024</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p>My old dockerized <a href="https://jekyllrb.com/">Jekyll</a> instance started breaking, and
 keeping the blog boring but built in a totally different way seemed like a good
 way to spend some quality time.</p>
 <p>The end result became <a href="https://github.com/chelmertz/chelmertz.github.io/blob/2b54b9fd13b68cba9098929535eb878e1c974056/cmd/blog/blog.go">a Go
@@ -115,10 +114,9 @@ Error reading file /srv/Jekyll/_layouts/page.html: No such file or directory @ r
 Error reading file /srv/Jekyll/_layouts/home.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/home.html
 </code></pre>
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

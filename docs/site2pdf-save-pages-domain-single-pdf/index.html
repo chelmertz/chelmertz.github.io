@@ -18,25 +18,23 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">site2pdf - save all pages from a domain as a single PDF</h1>
-            <p class="post-meta"><time datetime="2011-11-28T22:10:00Z" itemprop="datePublished">Nov 28, 2011</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p>Point <!-- raw HTML omitted -->site2pdf<!-- raw HTML omitted --> to a domain you want and it will save all of its pages to a single PDF:</p>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">site2pdf - save all pages from a domain as a single PDF</h1>
+          <p class="post-meta"><time datetime="2011-11-28T22:10:00Z" itemprop="datePublished">Nov 28, 2011</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p>Point <!-- raw HTML omitted -->site2pdf<!-- raw HTML omitted --> to a domain you want and it will save all of its pages to a single PDF:</p>
 <pre><code>ruby site2pdf http://12factor.net
 </code></pre>
 <p>This detects all &quot;internal links&quot; (links to pages on the same domain), crawls these and joins them together. The target for my development process was <!-- raw HTML omitted -->12factor.net<!-- raw HTML omitted --> which is well written checklist and guide for your development and deployment.</p>
 <p>There are a couple of dependencies: you need rubygems and wkhtmltopdf (compiled with qt in order to get all URI:s into the same PDF document).</p>
 <p><!-- raw HTML omitted -->Download site2pdf on github: <!-- raw HTML omitted --><a href="https://github.com/chelmertz/site2pdf">https://github.com/chelmertz/site2pdf</a><!-- raw HTML omitted --> <!-- raw HTML omitted -->(code is subject for a lot of refactoring when I'm completely out of other stuff to do).</p>
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

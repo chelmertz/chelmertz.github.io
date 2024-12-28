@@ -19,19 +19,17 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">{{.Title}}</h1>
-            <p class="post-meta"><time datetime="{{.PublishedAt | rfc3339}}" itemprop="datePublished">{{.PublishedFriendly}}</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              {{.Content}}
-            </section>
-          </div>
-        </article>
-      </div>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">{{.Title}}</h1>
+          <p class="post-meta"><time datetime="{{.PublishedAt | rfc3339}}" itemprop="datePublished">{{.PublishedFriendly}}</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            {{.Content}}
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

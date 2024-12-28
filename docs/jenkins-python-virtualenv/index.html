@@ -18,15 +18,14 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">Making Jenkins work with python&#39;s virtualenv</h1>
-            <p class="post-meta"><time datetime="2013-03-31T19:08:00Z" itemprop="datePublished">Mar 31, 2013</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p>If you use <a href="http://www.virtualenv.org/en/latest/">virtualenv</a> to isolate your python project's environment, and want your code tested automatically -- read on!</p>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">Making Jenkins work with python&#39;s virtualenv</h1>
+          <p class="post-meta"><time datetime="2013-03-31T19:08:00Z" itemprop="datePublished">Mar 31, 2013</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p>If you use <a href="http://www.virtualenv.org/en/latest/">virtualenv</a> to isolate your python project's environment, and want your code tested automatically -- read on!</p>
 <h2>virtualenv isolates your project's python environment</h2>
 <p>virtualenv makes sure you lockdown your project's main directory and all subdirectories of it. This 'lockdown' means that you never touches your global python binary, or any globally installed libraries (like &quot;sudo pip install flask&quot; ).</p>
 <p>Once locked down, you install all packages again, even those you have globally installed. This enables you to have one version of flask globally installed, but another version in your project. All dependencies can be listed in a separate file and validate a precise environment for you to work with. Tightly controlled dependencies is key to a deployment without surprises.</p>
@@ -79,10 +78,9 @@ chmod +x !$
 </code></pre>
 <p>Now, Jenkins should try to test your project but fail, and report the failure through the GUI. Tada.</p>
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

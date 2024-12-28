@@ -18,23 +18,21 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">Git reminder: set permissions of hooks to executable</h1>
-            <p class="post-meta"><time datetime="2011-02-16T14:58:00Z" itemprop="datePublished">Feb 16, 2011</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p>When you’ve written a git hook, don’t forget to make it executable. Git will not tell you why it’s skipped and go ahead and skip the hook all together.</p>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">Git reminder: set permissions of hooks to executable</h1>
+          <p class="post-meta"><time datetime="2011-02-16T14:58:00Z" itemprop="datePublished">Feb 16, 2011</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p>When you’ve written a git hook, don’t forget to make it executable. Git will not tell you why it’s skipped and go ahead and skip the hook all together.</p>
 <p>Solution:</p>
 <pre><code>chmod ug+x .git/hooks/*
 </code></pre>
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

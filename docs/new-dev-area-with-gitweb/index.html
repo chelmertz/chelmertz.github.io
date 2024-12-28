@@ -18,15 +18,14 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">New dev area with gitweb</h1>
-            <p class="post-meta"><time datetime="2010-12-16T02:58:00Z" itemprop="datePublished">Dec 16, 2010</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p>I’m currently setting up a new dev server at work. This includes hands-on work such as writing PHP organized in namespaces, but at a more technical level, modifying lighttpd and installing lots of packages on a Ubuntu server.</p>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">New dev area with gitweb</h1>
+          <p class="post-meta"><time datetime="2010-12-16T02:58:00Z" itemprop="datePublished">Dec 16, 2010</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p>I’m currently setting up a new dev server at work. This includes hands-on work such as writing PHP organized in namespaces, but at a more technical level, modifying lighttpd and installing lots of packages on a Ubuntu server.</p>
 <p>The dev server which is being deprecated is equipped with svn &amp; trac, which has been really nice, especially for browsing the source code, code reviews and managing tickets, so the goals are set for this new server.</p>
 <p>Gitweb will correspond to the demands for viewing source code, diffs and branches. Installing it and getting it up on lighttpd was a breeze, thanks to the guide <!-- raw HTML omitted -->How to setup gitweb with lighttpd on Ubuntu - jonathanrobson.me<!-- raw HTML omitted -->.</p>
 <p>I used his config with some tweaks. The <!-- raw HTML omitted -->$projectroot<!-- raw HTML omitted --> variable in <!-- raw HTML omitted -->/etc/gitweb.conf<!-- raw HTML omitted --> now points at a directory which has a clone of each of our reposes. I.e.</p>
@@ -34,10 +33,9 @@
 <p>If you followed my approach,</p>
 <!-- raw HTML omitted -->
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

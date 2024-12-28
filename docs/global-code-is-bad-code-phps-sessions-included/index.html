@@ -18,22 +18,20 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">Global code is bad code - PHP&#39;s sessions included</h1>
-            <p class="post-meta"><time datetime="2010-08-12T05:13:00Z" itemprop="datePublished">Aug 12, 2010</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p>If you rely on sessions in your application, just one call to <!-- raw HTML omitted -->session_destroy()<!-- raw HTML omitted -->, like that without any arguments, all your storage is reset. Doesn’t matter if it’s a shopping cart, logged in user’s surfing session, message alert, et cetera.</p>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">Global code is bad code - PHP&#39;s sessions included</h1>
+          <p class="post-meta"><time datetime="2010-08-12T05:13:00Z" itemprop="datePublished">Aug 12, 2010</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p>If you rely on sessions in your application, just one call to <!-- raw HTML omitted -->session_destroy()<!-- raw HTML omitted -->, like that without any arguments, all your storage is reset. Doesn’t matter if it’s a shopping cart, logged in user’s surfing session, message alert, et cetera.</p>
 <p>The only viable solution is to user namespaces like<!-- raw HTML omitted -->$_SESSION['userSession']<!-- raw HTML omitted --> (with <!-- raw HTML omitted -->loggedInSince<!-- raw HTML omitted --> as possible key), <!-- raw HTML omitted -->$_SESSION['shoppingCart']<!-- raw HTML omitted --> like such:</p>
 <!-- raw HTML omitted -->
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

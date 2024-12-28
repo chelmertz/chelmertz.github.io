@@ -18,25 +18,23 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">Set enviroment variables in Apache</h1>
-            <p class="post-meta"><time datetime="2010-07-14T06:20:00Z" itemprop="datePublished">Jul 14, 2010</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p>In .htaccess:</p>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">Set enviroment variables in Apache</h1>
+          <p class="post-meta"><time datetime="2010-07-14T06:20:00Z" itemprop="datePublished">Jul 14, 2010</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p>In .htaccess:</p>
 <p><!-- raw HTML omitted -->SetEnv APPLICATION_ENV development<!-- raw HTML omitted --></p>
 <p>In php (from ZF’s bootstrapped setup):
 <!-- raw HTML omitted -->// Define application environment<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->defined('APPLICATION_ENV')<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->|| define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));<!-- raw HTML omitted --></p>
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

@@ -18,15 +18,14 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">PHP Sadness - showcase of PHP&#39;s shortcomings</h1>
-            <p class="post-meta"><time datetime="2011-05-29T23:39:00Z" itemprop="datePublished">May 29, 2011</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p><!-- raw HTML omitted -->PHP Sadness<!-- raw HTML omitted --> is a listing of PHP's roughest edges - things that could have been clearer, weird implementations and plain errors in design. I agree with most of the list's items, especially the ones concerning inconsistent behavior/signatures of native functions. Most of those annoyances would be impossible to get wrong if everything was an object and functions were instead methods (yes, I'm jealously looking at Ruby). For example:</p>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">PHP Sadness - showcase of PHP&#39;s shortcomings</h1>
+          <p class="post-meta"><time datetime="2011-05-29T23:39:00Z" itemprop="datePublished">May 29, 2011</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p><!-- raw HTML omitted -->PHP Sadness<!-- raw HTML omitted --> is a listing of PHP's roughest edges - things that could have been clearer, weird implementations and plain errors in design. I agree with most of the list's items, especially the ones concerning inconsistent behavior/signatures of native functions. Most of those annoyances would be impossible to get wrong if everything was an object and functions were instead methods (yes, I'm jealously looking at Ruby). For example:</p>
 <pre><code>// what's correct again?
 in_array('blue', $array);
 // or, perhaps:
@@ -40,10 +39,9 @@ $array-&gt;contains('blue')
 <p>The second most important part is the often really badly expressed error messages, sometimes even the stack trace is corrupted and then the developer's guessing game begins.</p>
 <p>I really hope that some of the issues gets fixed since the article has been by wide audiences already, perhaps it will put some pressure on fixing what needs to be fixed.</p>
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

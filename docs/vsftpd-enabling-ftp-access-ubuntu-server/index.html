@@ -18,15 +18,14 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">vsftpd - enabling FTP access on your Ubuntu server</h1>
-            <p class="post-meta"><time datetime="2011-05-15T15:30:00Z" itemprop="datePublished">May 15, 2011</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p>I found a great but old guide to installing <!-- raw HTML omitted -->FTP on Ubuntu<!-- raw HTML omitted -->, which I've never done before.</p>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">vsftpd - enabling FTP access on your Ubuntu server</h1>
+          <p class="post-meta"><time datetime="2011-05-15T15:30:00Z" itemprop="datePublished">May 15, 2011</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p>I found a great but old guide to installing <!-- raw HTML omitted -->FTP on Ubuntu<!-- raw HTML omitted -->, which I've never done before.</p>
 <p>It was a really smooth procedure. The only error I received was this:</p>
 <blockquote>
 <p>Unable to connect to system bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory</p>
@@ -37,10 +36,9 @@ sudo touch /var/run/dbus/system_bus_socket
 </code></pre>
 <p>By design, the default settings allow you to log onto your machine with your common user credentials, and land in that folder (/home/<!-- raw HTML omitted -->)</p>
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz

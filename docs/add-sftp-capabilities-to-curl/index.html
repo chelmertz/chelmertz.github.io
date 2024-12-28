@@ -18,15 +18,14 @@
   <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <header class="site-header" role="banner"><h2><a class="site-title" href="/">iamnearlythere.com</a></h2></header>
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-          <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">Add sftp-capabilities to cURL</h1>
-            <p class="post-meta"><time datetime="2011-06-03T00:07:00Z" itemprop="datePublished">Jun 3, 2011</time></p>
-          </header>
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              <p>I just ran into a problem while importing some cronjobs to a new server - apparently the sftp protocol is not supported by a newly installed cURL's default settings, which in turn made the cronjob pretty useless. The good thing was the error message, cURL is usually really good at helping users get going again:</p>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">Add sftp-capabilities to cURL</h1>
+          <p class="post-meta"><time datetime="2011-06-03T00:07:00Z" itemprop="datePublished">Jun 3, 2011</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            <p>I just ran into a problem while importing some cronjobs to a new server - apparently the sftp protocol is not supported by a newly installed cURL's default settings, which in turn made the cronjob pretty useless. The good thing was the error message, cURL is usually really good at helping users get going again:</p>
 <blockquote>
 <p>curl: (1) Protocol sftp not supported or disabled in libcurl</p>
 </blockquote>
@@ -66,10 +65,9 @@ Features: GSS-Negotiate IDN IPv6 Largefile NTLM SSL libz
 </code></pre>
 <p>alas, there is support for scp as well as sftp - nice!</p>
 
-            </section>
-          </div>
-        </article>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
     <footer class="site-footer">
       <p> by Carl Helmertz
