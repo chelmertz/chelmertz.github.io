@@ -65,6 +65,7 @@ func main() {
 	postTemplate := template.Must(template.New("post.html").
 		Funcs(viewFuncs).
 		ParseGlob("cmd/blog/post.html"))
+
 	filepath.WalkDir("_posts", func(path string, d os.DirEntry, err error) error {
 		if !strings.HasSuffix(path, ".md") {
 			return nil
@@ -119,42 +120,46 @@ func main() {
 		return nil
 	})
 
-	// docs/index.html
-	indexTemplate := template.Must(template.New("index.html").ParseGlob("cmd/blog/index.html"))
-	indexOutFile := must1(os.Create(filepath.Join(docs, "index.html")))
-	slices.SortFunc(indexHtmlData.Posts, func(i, j IndexPost) int {
-		// sort by date, descending
-		if i.timestamp > j.timestamp {
-			return -1
-		}
-		if i.timestamp < j.timestamp {
-			return 1
-		}
-		return 0
-	})
-	must(indexTemplate.Execute(indexOutFile, indexHtmlData))
-
-	// docs/atom.xml
-	atomTemplate := textTemplate.Must(textTemplate.New("atom.xml").
-		Funcs(viewFuncs).
-		ParseGlob("cmd/blog/atom.xml"))
-	atomOutFile := must1(os.Create(filepath.Join(docs, "atom.xml")))
-	slices.SortFunc(allPosts, func(i, j Post) int {
-		// sort by date, descending
-		asc := i.PublishedAt.Compare(j.PublishedAt)
-		switch asc {
-		case -1:
-			return 1
-		case 1:
-			return -1
-		}
-		return 0
-	})
-	atomData := AtomData{
-		FeedUpdated: allPosts[0].PublishedAt,
-		Posts:       allPosts[:10],
+	{
+		// docs/index.html
+		indexTemplate := template.Must(template.New("index.html").ParseGlob("cmd/blog/index.html"))
+		indexOutFile := must1(os.Create(filepath.Join(docs, "index.html")))
+		slices.SortFunc(indexHtmlData.Posts, func(i, j IndexPost) int {
+			// sort by date, descending
+			if i.timestamp > j.timestamp {
+				return -1
+			}
+			if i.timestamp < j.timestamp {
+				return 1
+			}
+			return 0
+		})
+		must(indexTemplate.Execute(indexOutFile, indexHtmlData))
 	}
-	must(atomTemplate.Execute(atomOutFile, atomData))
+
+	{
+		// docs/atom.xml
+		atomTemplate := textTemplate.Must(textTemplate.New("atom.xml").
+			Funcs(viewFuncs).
+			ParseGlob("cmd/blog/atom.xml"))
+		atomOutFile := must1(os.Create(filepath.Join(docs, "atom.xml")))
+		slices.SortFunc(allPosts, func(i, j Post) int {
+			// sort by date, descending
+			asc := i.PublishedAt.Compare(j.PublishedAt)
+			switch asc {
+			case -1:
+				return 1
+			case 1:
+				return -1
+			}
+			return 0
+		})
+		atomData := AtomData{
+			FeedUpdated: allPosts[0].PublishedAt,
+			Posts:       allPosts[:10],
+		}
+		must(atomTemplate.Execute(atomOutFile, atomData))
+	}
 
 	// docs/CNAME
 	must(os.WriteFile(filepath.Join(docs, "CNAME"), []byte("iamnearlythere.com"), 0664))
