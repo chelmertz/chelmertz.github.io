@@ -25,9 +25,19 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p>If you rely on sessions in your application, just one call to <!-- raw HTML omitted -->session_destroy()<!-- raw HTML omitted -->, like that without any arguments, all your storage is reset. Doesn’t matter if it’s a shopping cart, logged in user’s surfing session, message alert, et cetera.</p>
-<p>The only viable solution is to user namespaces like<!-- raw HTML omitted -->$_SESSION['userSession']<!-- raw HTML omitted --> (with <!-- raw HTML omitted -->loggedInSince<!-- raw HTML omitted --> as possible key), <!-- raw HTML omitted -->$_SESSION['shoppingCart']<!-- raw HTML omitted --> like such:</p>
-<!-- raw HTML omitted -->
+            <p>If you rely on sessions in your application, just one call to <code>session_destroy()</code>, like that without any arguments, all your storage is reset. Doesn’t matter if it’s a shopping cart, logged in user’s surfing session, message alert, et cetera.</p>
+<p>The only viable solution is to user namespaces like<code>$_SESSION['userSession']</code> (with <code>loggedInSince</code> as possible key), <code>$_SESSION['shoppingCart']</code> like such:</p>
+<pre><code>&lt;ul&gt;
+	&lt;li&gt;product
+	&lt;ul&gt;
+		&lt;li&gt;id =&gt; 4&lt;/li&gt;
+		&lt;li&gt;quantity =&gt; 5&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+</code></pre>
+<p>Thus, <code>session_destroy()</code> becomes <code>unset($_SESSION['namespace'])</code>.</p>
 
           </section>
         </div>
@@ -36,15 +46,15 @@
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/automatically-insert-acronyms-with-hz_filter_acronym">Automatically insert acronyms with Hz_Filter_Acronym</a></li>
-          
-          <li><a href="/scp-where-have-you-been">scp - where have you been?</a></li>
-          
           <li><a href="/supply-and-demand">Supply and demand</a></li>
           
-          <li><a href="/set-enviroment-variables-in-apache">Set enviroment variables in Apache</a></li>
+          <li><a href="/handling-forgotten-passwords">Handling forgotten passwords</a></li>
           
-          <li><a href="/scope-it-up">Scope it up</a></li>
+          <li><a href="/why-i-left-tumblr-for-posterous">Why I left tumblr for posterous</a></li>
+          
+          <li><a href="/automatically-insert-acronyms-with-hz_filter_acronym">Automatically insert acronyms with Hz_Filter_Acronym</a></li>
+          
+          <li><a href="/programming-books-on-kindle">Programming books on Kindle</a></li>
           
         </ul>
       </section>

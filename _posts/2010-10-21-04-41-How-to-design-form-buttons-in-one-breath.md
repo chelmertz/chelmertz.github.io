@@ -5,11 +5,11 @@ permalink: "how-to-design-form-buttons-in-one-breath"
 tags: [thoughts, usability, visual]
 ---
 
-<ul>
-	<li>make their <strong>display order</strong> count, be consistent</li>
-	<li>avoid <strong>reoccurring phrases</strong> (use alive headings/icons instead of “Information”, “Settings”, “About”)</li>
-	<li> <strong>never use general wordings</strong> (like “Ok”, “Cancel”, “Abort”) - <strong>use active phrasing</strong> (like “Store my information”, “Place order”, “Annul reclamation”)</li>
-	<li> <strong>use words humans understand</strong>, not machines (“Save location” vs “Store latitude &amp; longitude in memory until cookie dies”), always use a metaphor belonging to the user’s mental model of the current situation</li>
-	<li> <strong>differentiate the primary choice of many</strong> for example by letting a “cancel editing”-button become an &lt;a&gt;-element while keeping the “save information”-button more button-like; different sizes and colours are alternatives as well</li>
-	<li>let the user confirm their lesser-important-actions by <strong>adding an undo-button</strong> and confirm their more-important-actions <strong>before the action’s taken place</strong> with a confirm-dialog or checkbox</li>
-</ul>
+
+- make their *display order* count, be consistent
+- avoid *reoccurring phrases* (use alive headings/icons instead of “Information”, “Settings”, “About”)
+- *never use general wordings* (like “Ok”, “Cancel”, “Abort”) - *use active phrasing* (like “Store my information”, “Place order”, “Annul reclamation”)
+- *use words humans understand*, not machines ("Save location" vs "Store latitude & longitude in memory until cookie dies"), always use a metaphor belonging to the user’s mental model of the current situation
+- *differentiate the primary choice of many* for example by letting a “cancel editing”-button become an `<a>`-element while keeping the "save information"-button more button-like; different sizes and colours are alternatives as well
+- let the user confirm their lesser-important-actions by *adding an undo-button* and confirm their more-important-actions *before the action’s taken place* with a confirm-dialog or checkbox
+

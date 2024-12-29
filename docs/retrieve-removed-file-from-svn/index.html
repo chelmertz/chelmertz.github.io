@@ -25,9 +25,10 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p><!-- raw HTML omitted -->svn copy -r &lt;revision&gt; http://&lt;repos&gt;/&lt;file&gt; .<!-- raw HTML omitted --></p>
-<p>Pretty obvious really, but still… Use the remote path ( &amp; ) to the file that existed in  and place it in the current dir: . (or anywhere really).</p>
-<p>PS: this retrieved the contents of  but you would also need to <!-- raw HTML omitted -->svn commit<!-- raw HTML omitted --> any changes to reinsert the file into the repos.</p>
+            <pre><code>svn copy -r a-revision http://some-repo/some-file .
+</code></pre>
+<p>Pretty obvious really, but still. Use the remote path to the file that existed in that revision and place it in the current dir: . (or anywhere really).</p>
+<p>PS: this retrieved the contents of  but you would also need to <code>svn commit</code> any changes to reinsert the file into the repos.</p>
 
           </section>
         </div>
@@ -36,15 +37,15 @@
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/scp-where-have-you-been">scp - where have you been?</a></li>
+          <li><a href="/fake">Fake</a></li>
           
-          <li><a href="/binding-shortcut-to-spotlight">Binding shortcut to Spotlight</a></li>
+          <li><a href="/program-for-yourself">Program for yourself</a></li>
           
-          <li><a href="/curl-o-is-wget-on-mac">curl -O is wget on mac</a></li>
+          <li><a href="/open-file-cmd-down-navigate-upwards-cmd-up">Open file: cmd &#43; down; navigate upwards: cmd &#43; up</a></li>
+          
+          <li><a href="/gconf-editor-lets-ubuntu-users-edit-keys">gconf-editor lets Ubuntu users edit keys</a></li>
           
           <li><a href="/word-and-linecount-in-unix">Word- and linecount in unix</a></li>
-          
-          <li><a href="/set-enviroment-variables-in-apache">Set enviroment variables in Apache</a></li>
           
         </ul>
       </section>
