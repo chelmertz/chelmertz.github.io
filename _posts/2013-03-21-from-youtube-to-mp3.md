@@ -7,8 +7,8 @@ tags: tools
 
 Because I always forget the exact command:
 
-{% highlight bash %}
+```
 youtube-dl -x https://youtube.com/?v=id_here
-{% endhighlight %}
+```
 
 On OS X, you'll find youtube-dl through homebrew.

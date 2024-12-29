@@ -28,15 +28,31 @@
             <p>I just discovered an interesting wiki part of php.net, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><a href="http://wiki.php.net/rfc">http://wiki.php.net/rfc</a><!-- raw HTML omitted -->.</p>
 <p>It contains drafts, proposals in an easy-on-the-eyes format. Some of the more interesting topics are</p>
 <!-- raw HTML omitted -->
-<pre><code>public double Hours
+<pre><code>function a() { return array(1, 2, 3);}
+echo a()[0];
+</code></pre>
+<p>Status is listed as “accepted” - finally! This syntax is so handy, the only real alternative seems to be <!-- raw HTML omitted -->list()<!-- raw HTML omitted --> which is a bit clunky. Besides, everybody knows this syntax from javascript.</p>
+<!-- raw HTML omitted -->
+<pre><code>trigger_error(&quot;Use BlaBla::Bla() instead of &quot;.__METHOD__, E_USER_DEPRECATED);
+</code></pre>
+<!-- raw HTML omitted -->
+<pre><code>function(int $apples, string $collection_name) {}
+</code></pre>
+<!-- raw HTML omitted -->
+<pre><code>class TimePeriod
 {
-    get { return seconds / 3600; }
-    set { seconds = value * 3600; }// The variable &quot;value&quot; holds the incoming value to be &quot;set&quot;
+    private double seconds;
+
+    public double Hours
+    {
+        get { return seconds / 3600; }
+        set { seconds = value * 3600; }// The variable &quot;value&quot; holds the incoming value to be &quot;set&quot;
+    }
 }
 </code></pre>
-<p>}<!-- raw HTML omitted --></p>
+<p>The proposal then tries to include every possible aspect of this, from the beginning, good idea. Just by reading the discussion on the wiki (never read any mailing lists) I’m already getting tired of it. Too bad.</p>
 <!-- raw HTML omitted -->
-<p>Also, it feels nice to see inspiration coming from other languages (surprisingly javascript stands for quite a few). I wonder if it will become more and more like java, with all the oop/namespacing in the latest patches. (I hope so.) <!-- raw HTML omitted -->The more global functions we get rid off, the better.<!-- raw HTML omitted --></p>
+<p>Also, it feels nice to see inspiration coming from other languages (surprisingly javascript stands for quite a few). I wonder if it will become more and more like java, with all the oop/namespacing in the latest patches. (I hope so.) <a href="/global-code-sucks-php-has-5468-global-functions/">The more global functions we get rid off, the better.</a></p>
 
           </section>
         </div>
@@ -45,15 +61,15 @@
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/trying-out-closure">Trying out closure</a></li>
-          
           <li><a href="/requesting-new-magic-method-__toboolean">Requesting new magic method: `__toBoolean()`</a></li>
           
-          <li><a href="/new-dev-area-with-gitweb">New dev area with gitweb</a></li>
+          <li><a href="/splfileinfogetextension">SplFileInfo::getExtension()</a></li>
           
-          <li><a href="/center-vertically-with-line-height">Center vertically with `line-height`</a></li>
+          <li><a href="/global-code-sucks-php-has-5468-global-functions">Global code sucks - php has 5468 global functions</a></li>
           
-          <li><a href="/checklist-removing-git-submodule">Checklist for removing a git submodule</a></li>
+          <li><a href="/touch-tool-fixes-lions-incompetence">Better touch tool fixes Lion&#39;s incompetence</a></li>
+          
+          <li><a href="/which-saves-the-day">which - saves the day</a></li>
           
         </ul>
       </section>

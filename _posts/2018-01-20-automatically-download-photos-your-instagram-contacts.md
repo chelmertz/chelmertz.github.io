@@ -20,13 +20,13 @@ Let's try to do download the images ourselves instead, from an environment we co
 There's an easy to use [scraper](https://en.wikipedia.org/wiki/Web_scraping) by Richard Arcega called [Instagram Scraper](https://github.com/rarcega/instagram-scraper/) that we will use (version 1.5.18 at the time of writing). The scraper is available on [pypi](https://pypi.python.org/pypi/instagram-scraper), and you install it with:
 
 
-{% highlight bash %}
+```
 sudo pip install instagram-scraper
-{% endhighlight %}
+```
 
 The next thing we are going to do is to configure who you are and which profiles you want to download. You do that by creating a text file:
 
-{% highlight bash %}
+```
 $ cat /home/ch/insta.txt
 -u=username
 -p=passwordinplaintext
@@ -36,13 +36,13 @@ $ cat /home/ch/insta.txt
 a_user_i_follow
 another_user_i_follow
 even_a_third_user_i_follow
-{% endhighlight %}
+```
 
 Let's try it out:
 
-{% highlight bash %}
+```
 $ instagram-scraper @/home/ch/insta.txt
-{% endhighlight %}
+```
 
 If you've got image files in the folder referred to by `--destination`, you are home free.
 
@@ -52,10 +52,10 @@ To avoid executing the above command manually, we use [cron](https://en.wikipedi
 
 This is what a my crontab looks like:
 
-{% highlight bash %}
+```
 $ crontab -l
 1 * * * * /usr/bin/instagram-scraper -q @/home/ch/insta.txt
-{% endhighlight %}
+```
 
 To edit your own crontab, use the command `crontab -e`.
 
@@ -67,9 +67,9 @@ I use a minimal image viewer called [sxiv](https://github.com/muennich/sxiv) whi
 
 The following command let's you view all recently downloaded images:
 
-{% highlight bash %}
+```
 $ sxiv $(find /home/ch/Pictures/instagram -mtime -10 -type f -name "*jpg")
-{% endhighlight %}
+```
 
 where the first argument to `find` is the value of `--destination` in your configuration, and `-10` let's you view images from the last ten days.
 

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>`case`</title>
+  <title>`case` in bash</title>
 
   <link rel="canonical" href="https://iamnearlythere.com/case/">
   <link rel="alternate" type="application/rss+xml" title="iamnearlythere.com" href="/atom.xml">
@@ -20,21 +20,22 @@
     <main class="page-content" aria-label="Content">
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-          <h1 class="post-title" itemprop="name headline">`case`</h1>
+          <h1 class="post-title" itemprop="name headline">`case` in bash</h1>
           <p class="post-meta"><time datetime="2010-09-02T17:54:00Z" itemprop="datePublished">Sep 2, 2010</time></p>
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
             <p><!-- raw HTML omitted --><a href="http://ss64.com/bash/case.html">http://ss64.com/bash/case.html</a><!-- raw HTML omitted --></p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->echo -n “Enter the name of an animal: “
+<pre><code>echo -n &quot;Enter the name of an animal: &quot;
 read ANIMAL
 echo -n “The $ANIMAL has “
 case $ANIMAL in
-horse | dog | cat) echo -n “four”;;
-man | kangaroo ) echo -n “two”;;
-*) echo -n “an unknown number of”;;
+    horse | dog | cat) echo -n &quot;four&quot;;;
+    man | kangaroo ) echo -n &quot;two&quot;;;
+    *) echo -n &quot;an unknown number of&quot;;;
 esac
-echo ” legs.”`<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+echo ” legs.”
+</code></pre>
 <p>Ok, gotta start learning this sweet syntax.</p>
 
           </section>
@@ -52,7 +53,7 @@ echo ” legs.”`<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
           
           <li><a href="/check-the-path-of-your-mac-with-echo-path-os-x-daily">Check the PATH of your Mac with echo $PATH - OS X Daily</a></li>
           
-          <li><a href="/tail-n-0-f-varlog">tail -n 0 -f /var/log/...</a></li>
+          <li><a href="/simple-desktops">Simple Desktops</a></li>
           
         </ul>
       </section>

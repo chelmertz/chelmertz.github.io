@@ -7,7 +7,7 @@ tags: bash
 
 How to properly read command line arguments for a bash script and do it well even without getopt:
 
-{% highlight bash %}
+```
 while :; do
         case "$1" in
                 -h|--help)
@@ -34,7 +34,7 @@ while :; do
                         ;;
         esac
 done
-{% endhighlight %}
+```
 
 I think the syntax is much cleaner than that of getopt's as well -- that is, if you've even got a bash version supporting getopt.
 

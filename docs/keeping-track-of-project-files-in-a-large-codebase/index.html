@@ -28,7 +28,15 @@
             <p>Insight: symlinks should really be abused!</p>
 <p>Let’s say you’re in the same position as me, working within a large codebase that requires <!-- raw HTML omitted -->focus over multiple folders<!-- raw HTML omitted -->* even for working with just one project. Perhaps you need to add logic, content, conditions, markup and css. These areas should all be separated, so naturally you’ll be clicking/<!-- raw HTML omitted -->cd<!-- raw HTML omitted -->-ing a lot… you see where this is going, right?</p>
 <p>Make a temporary, meaningless folder named YourProject2010 and start pulling symlinks into it so you’ll never have to leave home again :) That would mean something like this:</p>
-<!-- raw HTML omitted -->
+<pre><code>cd /var/www/your-dev/YourProject2010
+ln -s /var/www/your-dev/css/campaign_file.css .
+ln -s /var/www/your-dev/js/campaign_file.js .
+ln -s /var/www/your-dev/lib/campaign_file.php .
+</code></pre>
+<p>When you’re all done with the project, merging your branch with master and</p>
+<pre><code>rm -r /var/www/your-dev/YourProject2010
+</code></pre>
+<p>are the only two steps you need wipe out your traces and tell your boss that “it was a hard project to pull off because of its scope”.</p>
 
           </section>
         </div>
@@ -37,15 +45,15 @@
         <h2>Possibly related posts</h2>
         <ul>
           
+          <li><a href="/building-packages-on-solaris">Building packages on Solaris</a></li>
+          
           <li><a href="/trying-out-closure">Trying out closure</a></li>
           
-          <li><a href="/center-vertically-with-line-height">Center vertically with `line-height`</a></li>
+          <li><a href="/accessing-windows-server-remotely-with-mac">Accessing Windows server remotely with Mac</a></li>
           
-          <li><a href="/roadmap-of-php-development-follow-it">Roadmap of PHP development - follow it</a></li>
+          <li><a href="/move-vivim-editor-temporary-swap-and-backup-files-to-another-directory-devdaily-com">Move vi/vim editor temporary swap and backup files to another directory | devdaily.com</a></li>
           
-          <li><a href="/which-saves-the-day">which - saves the day</a></li>
-          
-          <li><a href="/new-dev-area-with-gitweb">New dev area with gitweb</a></li>
+          <li><a href="/how-to-report-bugs-effectively">How to Report Bugs Effectively</a></li>
           
         </ul>
       </section>

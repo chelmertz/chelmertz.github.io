@@ -5,8 +5,12 @@ permalink: "fastest-auto-login-ssh-remote-server"
 tags: [bash, server]
 ---
 
-Via <a href="http://topecoders.blogspot.com/2010/04/remote-deployment-with-ant-and-rsync.html">Remote Deployment with Ant and Rsync</a>:
-<pre>$ scp ~/.ssh/id_rsa.pub remote_user_name@remoteserver:remote_user_name.pub
+Via [Remote Deployment with Ant and Rsync](http://topecoders.blogspot.com/2010/04/remote-deployment-with-ant-and-rsync.html):
 
-remoteserver$ cat ~/remote_user_name.pub &gt;&gt; ~/.ssh/authorized_keys</pre>
+```
+$ scp ~/.ssh/id_rsa.pub remote_user_name@remoteserver:remote_user_name.pub
+
+remoteserver$ cat ~/remote_user_name.pub &gt;&gt; ~/.ssh/authorized_keys
+```
+
 That's an excerpt but it was enough for me, having a public ssh key generated since before.

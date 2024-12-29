@@ -5,14 +5,14 @@ permalink: "center-vertically-with-line-height"
 tags: [css]
 ---
 
-For an <code>a</code>-element:
-<div class="CodeRay">
-<div class="code">
-<pre>display: block;
+For an `a`-element:
+
+```css
+display: block;
 height: 100px;
 line-height: 100px;
 width: 200px;
-text-align: center;</pre>
-</div>
-</div>
+text-align: center;
+```
+
 This will make the text center both vertically and horizontally!

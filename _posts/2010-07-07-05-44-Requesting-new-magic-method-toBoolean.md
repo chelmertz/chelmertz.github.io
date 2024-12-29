@@ -6,34 +6,34 @@ tags: [php]
 ---
 
 What if you only want to display your active users in a very simple way? Consider the following:
-<div class="CodeRay">
-<div class="code">
-<pre>class User {
+
+```
+class User {
   public $active = true;
   private $_name;
   public function __construct($name) {
-    $this-&gt;_name = (string) $name;
+    $this->_name = (string) $name;
   }
   public function __toBoolean() {
-    return (bool) $this-&gt;active;
+    return (bool) $this->active;
   }
   public function getName() {
-    return $this-&gt;_name;
+    return $this->_name;
   }
 }
 
 $emily = new User('Emily');
-$emily-&gt;active = false;
+$emily->active = false;
 $sara = new User('Sara');
 
 $users = array($emily, $sara);
 foreach($users as $user) {
   if($user) {
-    echo $user-&gt;getName();
+    echo $user->getName();
   }
-}</pre>
-</div>
-</div>
+}
+```
+
 This could provide really convenient shortcuts, like only list unread mails, active users (see example), files in a directory that aren’t . or ..; just about everything!
 
-The <code>__toBoolean()</code> would in some ways be equivalent to the method <a href="http://www.php.net/manual/en/class.filteriterator.php"><code>FilterIterator::accept()</code></a>.
+The `__toBoolean()` would in some ways be equivalent to the method [`FilterIterator::accept()`](http://www.php.net/manual/en/class.filteriterator.php).

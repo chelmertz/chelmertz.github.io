@@ -35,46 +35,49 @@
 <p>Grab the gitweb cgi, copy it to where your local Apache server can find it:</p>
 </li>
 </ul>
-<p>{% highlight bash %}</p>
-<h1>cp /usr/local/Cellar/git/1.7.11.1/share/gitweb/gitweb.cgi /Library/WebServer/CGI-Executables</h1>
-<h1>cp /usr/local/Cellar/git/1.7.11.1/share/gitweb/static /Library/WebServer/Documents/gitweb</h1>
-<p>{% endhighlight %}</p>
+<pre><code class="language-shell"># cp /usr/local/Cellar/git/1.7.11.1/share/gitweb/gitweb.cgi /Library/WebServer/CGI-Executables
+# cp /usr/local/Cellar/git/1.7.11.1/share/gitweb/static /Library/WebServer/Documents/gitweb
+</code></pre>
 <ul>
 <li>Modify gitweb.cgi to let it find the static files, to find the git projects and to not choke on really large directories that I'm sure does not contain anything git' anyway:</li>
 </ul>
-<p>{% highlight diff %}
---- /usr/local/Cellar/git/1.7.11.1/share/gitweb/gitweb.cgi	2012-07-11 20:23:10.000000000 +0200
+<pre><code class="language-diff">--- /usr/local/Cellar/git/1.7.11.1/share/gitweb/gitweb.cgi	2012-07-11 20:23:10.000000000 +0200
 +++ /Library/WebServer/CGI-Executables/gitweb.cgi	2012-07-11 20:50:36.000000000 +0200
-@@ -71,11 +71,11 @@</p>
-<h1>absolute fs-path which will be prepended to the project path</h1>
-<p>#our $projectroot = &quot;/pub/scm&quot;;
+@@ -71,11 +71,11 @@
+ 
+ # absolute fs-path which will be prepended to the project path
+ #our $projectroot = &quot;/pub/scm&quot;;
 -our $projectroot = &quot;/pub/git&quot;;
-+our $projectroot = &quot;/Users/my-user/Sites&quot;;</p>
-<h1>fs traversing limit for getting project list</h1>
-<h1>the number is relative to the projectroot</h1>
-<p>-our $project_maxdepth = 2007;
-+our $project_maxdepth = 5;</p>
-<h1>string of the home link on top of all pages</h1>
-<p>our $home_link_str = &quot;projects&quot;;
++our $projectroot = &quot;/Users/my-user/Sites&quot;;
+ 
+ # fs traversing limit for getting project list
+ # the number is relative to the projectroot
+-our $project_maxdepth = 2007;
++our $project_maxdepth = 5;
+ 
+ # string of the home link on top of all pages
+ our $home_link_str = &quot;projects&quot;;
 @@ -95,15 +95,15 @@
-our $site_footer = &quot;&quot;;</p>
-<h1>URI of stylesheets</h1>
-<p>-our @stylesheets = (&quot;static/gitweb.css&quot;);
-+our @stylesheets = (&quot;/gitweb/static/gitweb.css&quot;);</p>
-<h1>URI of a single stylesheet, which can be overridden in GITWEB_CONFIG.</h1>
-<p>our $stylesheet = undef;</p>
-<h1>URI of GIT logo (72x27 size)</h1>
-<p>-our $logo = &quot;static/git-logo.png&quot;;
-+our $logo = &quot;/gitweb/static/git-logo.png&quot;;</p>
-<h1>URI of GIT favicon, assumed to be image/png type</h1>
-<p>-our $favicon = &quot;static/git-favicon.png&quot;;
-+our $favicon = &quot;/gitweb/static/git-favicon.png&quot;;</p>
-<h1>URI of gitweb.js (JavaScript code for gitweb)</h1>
-<p>-our $javascript = &quot;static/gitweb.js&quot;;
-+our $javascript = &quot;/gitweb/static/gitweb.js&quot;;</p>
-<h1>URI and label (title) of GIT logo link</h1>
-<p>#our $logo_url = &quot;http://www.kernel.org/pub/software/scm/git/docs/&quot;;
-{% endhighlight %}</p>
+ our $site_footer = &quot;&quot;;
+ 
+ # URI of stylesheets
+-our @stylesheets = (&quot;static/gitweb.css&quot;);
++our @stylesheets = (&quot;/gitweb/static/gitweb.css&quot;);
+ # URI of a single stylesheet, which can be overridden in GITWEB_CONFIG.
+ our $stylesheet = undef;
+ # URI of GIT logo (72x27 size)
+-our $logo = &quot;static/git-logo.png&quot;;
++our $logo = &quot;/gitweb/static/git-logo.png&quot;;
+ # URI of GIT favicon, assumed to be image/png type
+-our $favicon = &quot;static/git-favicon.png&quot;;
++our $favicon = &quot;/gitweb/static/git-favicon.png&quot;;
+ # URI of gitweb.js (JavaScript code for gitweb)
+-our $javascript = &quot;static/gitweb.js&quot;;
++our $javascript = &quot;/gitweb/static/gitweb.js&quot;;
+ 
+ # URI and label (title) of GIT logo link
+ #our $logo_url = &quot;http://www.kernel.org/pub/software/scm/git/docs/&quot;;
+</code></pre>
 <p>Now, visit &amp; bookmark http://localhost/cgi-bin/gitweb.cgi in your browser and you should be good to go.</p>
 
           </section>
@@ -90,9 +93,9 @@ our $site_footer = &quot;&quot;;</p>
           
           <li><a href="/using-git-init-bare-for-a-slim-repository-look">Using git init --bare for a slim repository look</a></li>
           
-          <li><a href="/updating-a-forked-project-on-github">Updating a forked project on Github</a></li>
-          
           <li><a href="/jenkins-python-virtualenv">Making Jenkins work with python&#39;s virtualenv</a></li>
+          
+          <li><a href="/updating-a-forked-project-on-github">Updating a forked project on Github</a></li>
           
         </ul>
       </section>

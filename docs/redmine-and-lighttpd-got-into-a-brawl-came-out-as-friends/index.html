@@ -25,9 +25,19 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p>So much for the <!-- raw HTML omitted -->easy setup of Redmine<!-- raw HTML omitted -->, our server gazed at me with a 500 Internal Server error the following monday morning.</p>
+            <p>So much for the <a href="/installing-redmine-on-ubuntu-and-lighttpd">easy setup of Redmine</a>, our server gazed at me with a 500 Internal Server error the following monday morning.</p>
 <p>To track down the error, I started out by tailing Redmine’s error log that I previously defined in <!-- raw HTML omitted -->/etc/lighttpd/lighttpd.conf<!-- raw HTML omitted -->, showing:</p>
-<!-- raw HTML omitted -->
+<pre><code>$ tail -f /var/log/lighttpd/redmine_error.log
+2010-12-20 12:09:04: (mod_fastcgi.c.2582) unexpected end-of-file (perhaps the fastcgi process died): pid: 6425 socket: unix:/tmp/redmine.socket-0
+2010-12-20 12:09:04: (mod_fastcgi.c.3367) response not received, request sent: 909 on socket: unix:/tmp/redmine.socket-0 for /dispatch.fcgi?, closing connection                                                                          
+2010-12-20 12:09:04: (mod_fastcgi.c.1734) connect failed: Connection refused on unix:/tmp/redmine.socket-3
+2010-12-20 12:09:04: (mod_fastcgi.c.3037) backend died; we'll disable it for 1 seconds and send the request to another backend instead: reconnects: 0 load: 1
+</code></pre>
+<p>What I did to solve it was (after some <a href="http://www.webhostingtalk.com/archive/index.php/t-662362.html">googling</a>) to change the lighttpd conf setting for Redmine’s socket from <!-- raw HTML omitted -->/tmp/redmine.socket<!-- raw HTML omitted --> to <!-- raw HTML omitted -->/tmp/lighttpd/redmine.socket<!-- raw HTML omitted -->. Before I could do that, I had to</p>
+<pre><code>$ sudo mkdir /tmp/lighttpd
+$ sudo chown -R www-data:www-data /tmp/lighttpd
+</code></pre>
+<p>to make sure it was going to be writable. Restarting lighttpd after that seems to have solved the issue, permanently I hope.</p>
 
           </section>
         </div>
@@ -36,15 +46,15 @@
         <h2>Possibly related posts</h2>
         <ul>
           
+          <li><a href="/put-a-tail-on-that-error-log">Put a tail on that error log</a></li>
+          
+          <li><a href="/installing-redmine-on-ubuntu-and-lighttpd">Installing Redmine on Ubuntu and lighttpd</a></li>
+          
           <li><a href="/new-dev-area-with-gitweb">New dev area with gitweb</a></li>
           
+          <li><a href="/tail-n-0-f-varlog">tail -n 0 -f /var/log/...</a></li>
+          
           <li><a href="/trying-out-closure">Trying out closure</a></li>
-          
-          <li><a href="/center-vertically-with-line-height">Center vertically with `line-height`</a></li>
-          
-          <li><a href="/roadmap-of-php-development-follow-it">Roadmap of PHP development - follow it</a></li>
-          
-          <li><a href="/which-saves-the-day">which - saves the day</a></li>
           
         </ul>
       </section>

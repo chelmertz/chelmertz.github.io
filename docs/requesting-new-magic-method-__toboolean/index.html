@@ -26,18 +26,33 @@
         <div class="post-content" itemprop="articleBody">
           <section>
             <p>What if you only want to display your active users in a very simple way? Consider the following:</p>
-<!-- raw HTML omitted -->
-<p>$emily = new User('Emily');
-$emily-&gt;active = false;
-$sara = new User('Sara');</p>
-<p>$users = array($emily, $sara);
-foreach($users as $user) {
-if($user) {
-echo $user-&gt;getName();
+<pre><code>class User {
+  public $active = true;
+  private $_name;
+  public function __construct($name) {
+    $this-&gt;_name = (string) $name;
+  }
+  public function __toBoolean() {
+    return (bool) $this-&gt;active;
+  }
+  public function getName() {
+    return $this-&gt;_name;
+  }
 }
-}<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<p>The <!-- raw HTML omitted -->__toBoolean()<!-- raw HTML omitted --> would in some ways be equivalent to the method <!-- raw HTML omitted --><!-- raw HTML omitted -->FilterIterator::accept()<!-- raw HTML omitted --><!-- raw HTML omitted -->.</p>
+
+$emily = new User('Emily');
+$emily-&gt;active = false;
+$sara = new User('Sara');
+
+$users = array($emily, $sara);
+foreach($users as $user) {
+  if($user) {
+    echo $user-&gt;getName();
+  }
+}
+</code></pre>
+<p>This could provide really convenient shortcuts, like only list unread mails, active users (see example), files in a directory that aren’t . or ..; just about everything!</p>
+<p>The <code>__toBoolean()</code> would in some ways be equivalent to the method <a href="http://www.php.net/manual/en/class.filteriterator.php"><code>FilterIterator::accept()</code></a>.</p>
 
           </section>
         </div>
@@ -50,11 +65,11 @@ echo $user-&gt;getName();
           
           <li><a href="/javascript-regex-101-string-test">Javascript regex 101: String.test()</a></li>
           
-          <li><a href="/trying-out-closure">Trying out closure</a></li>
+          <li><a href="/gitweb-on-osx">Gitweb on OSX</a></li>
           
-          <li><a href="/center-vertically-with-line-height">Center vertically with `line-height`</a></li>
+          <li><a href="/debugging-some-php">Debugging some php..</a></li>
           
-          <li><a href="/new-dev-area-with-gitweb">New dev area with gitweb</a></li>
+          <li><a href="/dhcp-on-new-network">DHCP on new network</a></li>
           
         </ul>
       </section>

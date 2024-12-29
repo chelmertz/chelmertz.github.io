@@ -29,7 +29,18 @@
 <p>This setting will differ quite a lot from what I’m used to:</p>
 <!-- raw HTML omitted -->
 <p>Let’s get to the good stuff:</p>
-<!-- raw HTML omitted -->
+<pre><code># create a user named 'git' and make that user the owner of your repositories, and nothing else
+$ mkdir -p /home/git/repositories
+$ cd /home/git/repositories
+$ mkdir your-project.git &amp;&amp; cd your-project.git
+$ git init --bare
+$ git config receive.denyCurrentBranch &quot;ignore&quot;
+$ mkdir -p ~/www/your-project &amp;&amp; cd ~/www/your-project
+$ echo &quot;lalala, random file&quot; &gt; random.txt &amp;&amp; git add . &amp;&amp; git commit -m &quot;First commit&quot;
+$ git remote add origin /home/git/repositories/your-project.git
+$ git push origin master
+</code></pre>
+<p>There you go, a fully capable external repository, local on your dev machine, ready to export to a staging/testing/Q&amp;A-setting. For an easy setup of this, go read <!-- raw HTML omitted --><!-- raw HTML omitted -->Using Git to manage a web site<!-- raw HTML omitted --><!-- raw HTML omitted --> which <!-- raw HTML omitted -->worked out of the box<!-- raw HTML omitted --> for us.</p>
 <p>If you get any errors whilst doing this, google it or just try to parse it (for us, it mostly came down to <!-- raw HTML omitted -->chown<!-- raw HTML omitted -->- and <!-- raw HTML omitted -->chmod<!-- raw HTML omitted -->-ing the <!-- raw HTML omitted -->-R /home/git/repositories/<!-- raw HTML omitted --> folders, so using <!-- raw HTML omitted -->sudo<!-- raw HTML omitted --> helps a lot).</p>
 
           </section>

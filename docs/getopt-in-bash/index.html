@@ -26,34 +26,33 @@
         <div class="post-content" itemprop="articleBody">
           <section>
             <p>How to properly read command line arguments for a bash script and do it well even without getopt:</p>
-<p>{% highlight bash %}
-while :; do
-case &quot;$1&quot; in
--h|--help)
-echo &quot;This is helping&quot;
-exit 0
-;;</p>
-<pre><code>            -s|--simple-flag)
-                    echo &quot;You passed a flag&quot;
-                    shift
-                    ;;
-            -p|--pass-option)
-                    shift
-                    echo &quot;You set option to $1&quot;
-                    option=&quot;$1&quot;
-                    shift
-                    ;;
-            -*)
-                    echo &quot;That's a weird option&quot;
-                    exit 1
-            *)
-                    # No more args to read
-                    break
-                    ;;
-    esac
+<pre><code>while :; do
+        case &quot;$1&quot; in
+                -h|--help)
+                        echo &quot;This is helping&quot;
+                        exit 0
+                        ;;
+
+                -s|--simple-flag)
+                        echo &quot;You passed a flag&quot;
+                        shift
+                        ;;
+                -p|--pass-option)
+                        shift
+                        echo &quot;You set option to $1&quot;
+                        option=&quot;$1&quot;
+                        shift
+                        ;;
+                -*)
+                        echo &quot;That's a weird option&quot;
+                        exit 1
+                *)
+                        # No more args to read
+                        break
+                        ;;
+        esac
+done
 </code></pre>
-<p>done
-{% endhighlight %}</p>
 <p>I think the syntax is much cleaner than that of getopt's as well -- that is, if you've even got a bash version supporting getopt.</p>
 <p><!-- raw HTML omitted -->Edit: Thanks Willem D'Haese for pointing out the missing <code>esac</code>.<!-- raw HTML omitted --></p>
 
@@ -64,15 +63,15 @@ exit 0
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/case">`case`</a></li>
+          <li><a href="/case">`case` in bash</a></li>
           
           <li><a href="/from-youtube-to-mp3">From Youtube to mp3</a></li>
-          
-          <li><a href="/automatically-download-photos-your-instagram-contacts">Automatically download new photos from your Instagram contacts</a></li>
           
           <li><a href="/program-for-yourself">Program for yourself</a></li>
           
           <li><a href="/mysqls-substrings-index-starts-at-1">MySQL&#39;s `SUBSTRING()`&#39;s index starts at 1</a></li>
+          
+          <li><a href="/gconf-editor-lets-ubuntu-users-edit-keys">gconf-editor lets Ubuntu users edit keys</a></li>
           
         </ul>
       </section>

@@ -32,12 +32,10 @@
 <h2>Installing a scraper on your own computer to download photos</h2>
 <p><em>The rest of this blog post assumes that you are using <strong>Linux or macOS</strong> (for <code>cron</code> and regular CLI tools), and have <strong>python</strong> installed (for the scraping program).</em></p>
 <p>There's an easy to use <a href="https://en.wikipedia.org/wiki/Web_scraping">scraper</a> by Richard Arcega called <a href="https://github.com/rarcega/instagram-scraper/">Instagram Scraper</a> that we will use (version 1.5.18 at the time of writing). The scraper is available on <a href="https://pypi.python.org/pypi/instagram-scraper">pypi</a>, and you install it with:</p>
-<p>{% highlight bash %}
-sudo pip install instagram-scraper
-{% endhighlight %}</p>
+<pre><code>sudo pip install instagram-scraper
+</code></pre>
 <p>The next thing we are going to do is to configure who you are and which profiles you want to download. You do that by creating a text file:</p>
-<p>{% highlight bash %}
-$ cat /home/ch/insta.txt
+<pre><code>$ cat /home/ch/insta.txt
 -u=username
 -p=passwordinplaintext
 --latest
@@ -46,27 +44,24 @@ $ cat /home/ch/insta.txt
 a_user_i_follow
 another_user_i_follow
 even_a_third_user_i_follow
-{% endhighlight %}</p>
+</code></pre>
 <p>Let's try it out:</p>
-<p>{% highlight bash %}
-$ instagram-scraper @/home/ch/insta.txt
-{% endhighlight %}</p>
+<pre><code>$ instagram-scraper @/home/ch/insta.txt
+</code></pre>
 <p>If you've got image files in the folder referred to by <code>--destination</code>, you are home free.</p>
 <h2>Automating the scraping</h2>
 <p>To avoid executing the above command manually, we use <a href="https://en.wikipedia.org/wiki/Cron">cron</a> to fetch new images for us.</p>
 <p>This is what a my crontab looks like:</p>
-<p>{% highlight bash %}
-$ crontab -l
+<pre><code>$ crontab -l
 1 * * * * /usr/bin/instagram-scraper -q @/home/ch/insta.txt
-{% endhighlight %}</p>
+</code></pre>
 <p>To edit your own crontab, use the command <code>crontab -e</code>.</p>
 <p>If you need to learn the syntax of cron, there's a handy form at <a href="https://crontab.guru/">https://crontab.guru/</a> that could help you.</p>
 <h2>Viewing newly downloaded images</h2>
 <p>I use a minimal image viewer called <a href="https://github.com/muennich/sxiv">sxiv</a> which is available in the default repos of, at least, Fedora.</p>
 <p>The following command let's you view all recently downloaded images:</p>
-<p>{% highlight bash %}
-$ sxiv $(find /home/ch/Pictures/instagram -mtime -10 -type f -name &quot;*jpg&quot;)
-{% endhighlight %}</p>
+<pre><code>$ sxiv $(find /home/ch/Pictures/instagram -mtime -10 -type f -name &quot;*jpg&quot;)
+</code></pre>
 <p>where the first argument to <code>find</code> is the value of <code>--destination</code> in your configuration, and <code>-10</code> let's you view images from the last ten days.</p>
 <h2>Caveats</h2>
 <h3>Notes about availability of images</h3>
@@ -86,15 +81,15 @@ $ sxiv $(find /home/ch/Pictures/instagram -mtime -10 -type f -name &quot;*jpg&qu
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/from-youtube-to-mp3">From Youtube to mp3</a></li>
-          
-          <li><a href="/getopt-in-bash">getopt in bash</a></li>
-          
-          <li><a href="/image-sorter-patches">image-sorter patches</a></li>
+          <li><a href="/trying-out-closure">Trying out closure</a></li>
           
           <li><a href="/jenkins-python-virtualenv">Making Jenkins work with python&#39;s virtualenv</a></li>
           
-          <li><a href="/building-packages-on-solaris">Building packages on Solaris</a></li>
+          <li><a href="/dark-mode-ubuntu-i3">Toggling light/dark color scheme for i3 on Ubuntu</a></li>
+          
+          <li><a href="/from-youtube-to-mp3">From Youtube to mp3</a></li>
+          
+          <li><a href="/image-sorter-patches">image-sorter patches</a></li>
           
         </ul>
       </section>

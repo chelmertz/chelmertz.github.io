@@ -29,8 +29,13 @@
 <p>The dev server which is being deprecated is equipped with svn &amp; trac, which has been really nice, especially for browsing the source code, code reviews and managing tickets, so the goals are set for this new server.</p>
 <p>Gitweb will correspond to the demands for viewing source code, diffs and branches. Installing it and getting it up on lighttpd was a breeze, thanks to the guide <!-- raw HTML omitted -->How to setup gitweb with lighttpd on Ubuntu - jonathanrobson.me<!-- raw HTML omitted -->.</p>
 <p>I used his config with some tweaks. The <!-- raw HTML omitted -->$projectroot<!-- raw HTML omitted --> variable in <!-- raw HTML omitted -->/etc/gitweb.conf<!-- raw HTML omitted --> now points at a directory which has a clone of each of our reposes. I.e.</p>
-<!-- raw HTML omitted -->
+<pre><code>$ cd /home/git/projects
+</code></pre>
+<p>if <!-- raw HTML omitted -->/home/git/projects/<!-- raw HTML omitted --> is where you store all of your repositories, in a common place as a base for your dev or stage area. Read my entry <a href="/using-git-init-bare-for-a-slim-repository-look">Using git init —bare for a slim repository look</a> for a directory layout that works.</p>
 <p>If you followed my approach,</p>
+<pre><code>$ ls /home/git/projects
+</code></pre>
+<p>should only consist of directories called <!-- raw HTML omitted -->project-1.git<!-- raw HTML omitted -->, <!-- raw HTML omitted -->project-2.git<!-- raw HTML omitted --> and so forth. This is <!-- raw HTML omitted -->ideal for gitweb<!-- raw HTML omitted -->, which prefers to have a single directory to check for git repositories. (Check jonathanrobson’s link above for the whole shebang.)</p>
 <!-- raw HTML omitted -->
 
           </section>
@@ -42,13 +47,13 @@
           
           <li><a href="/using-git-init-bare-for-a-slim-repository-look">Using git init --bare for a slim repository look</a></li>
           
-          <li><a href="/roadmap-of-php-development-follow-it">Roadmap of PHP development - follow it</a></li>
-          
-          <li><a href="/trying-out-closure">Trying out closure</a></li>
+          <li><a href="/vim-bug-while-saving-git-commit-message">vim &#34;bug&#34; while saving git commit message</a></li>
           
           <li><a href="/updating-a-forked-project-on-github">Updating a forked project on Github</a></li>
           
-          <li><a href="/redmine-and-lighttpd-got-into-a-brawl-came-out-as-friends">Redmine and lighttpd got into a brawl, came out as friends</a></li>
+          <li><a href="/gitweb-on-osx">Gitweb on OSX</a></li>
+          
+          <li><a href="/put-a-tail-on-that-error-log">Put a tail on that error log</a></li>
           
         </ul>
       </section>

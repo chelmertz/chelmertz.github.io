@@ -15,20 +15,20 @@ This setting will differ quite a lot from what I’m used to:
 Also, exercising a plain <code>git init</code> routine creates a complete repository with all source files, branches &amp; stuff; which really are ment to keep track off and develop in. Let’s not, let’s just keep the repository there and only <code>git push</code> there so <strong>all development will be done in each user’s local repository</strong>.
 
 Let’s get to the good stuff:
-<div class="CodeRay">
-<div class="code">
-<pre># create a user named 'git' and make that user the owner of your repositories, and nothing else
+
+```
+# create a user named 'git' and make that user the owner of your repositories, and nothing else
 $ mkdir -p /home/git/repositories
 $ cd /home/git/repositories
-$ mkdir your-project.git &amp;&amp; cd your-project.git
+$ mkdir your-project.git && cd your-project.git
 $ git init --bare
 $ git config receive.denyCurrentBranch "ignore"
-$ mkdir -p ~/www/your-project &amp;&amp; cd ~/www/your-project
-$ echo "lalala, random file" &gt; random.txt &amp;&amp; git add . &amp;&amp; git commit -m "First commit"
+$ mkdir -p ~/www/your-project && cd ~/www/your-project
+$ echo "lalala, random file" > random.txt && git add . && git commit -m "First commit"
 $ git remote add origin /home/git/repositories/your-project.git
-$ git push origin master</pre>
-</div>
-</div>
+$ git push origin master
+```
+
 There you go, a fully capable external repository, local on your dev machine, ready to export to a staging/testing/Q&amp;A-setting. For an easy setup of this, go read <strong><a href="http://toroid.org/ams/git-website-howto">Using Git to manage a web site</a></strong> which <em>worked out of the box</em> for us.
 
 If you get any errors whilst doing this, google it or just try to parse it (for us, it mostly came down to <code>chown</code>- and <code>chmod</code>-ing the <em>-R /home/git/repositories/</em> folders, so using <code>sudo</code> helps a lot).

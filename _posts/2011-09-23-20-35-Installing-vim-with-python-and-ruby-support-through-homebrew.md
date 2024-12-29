@@ -9,13 +9,14 @@ tags: [mac, vim]
 My new macbook came builtin with an "old"(er) version of vim which apparently was compiled without python and ruby. I want that.
 
 <h2>Prerequisites</h2>
-Start by <a href="http://developer.apple.com/xcode/">installing xcode</a>, <a href="http://mxcl.github.com/homebrew/">homebrew</a> and git via <pre><code lang=""bash"">$ brew install git</code></pre>
+Start by [installing xcode](http://developer.apple.com/xcode/), [homebrew](http://mxcl.github.com/homebrew/) and git via `$ brew install git`
+
 <h2>Installing custom formula</h2>
 Now, since I want vim compiled with python and ruby support (for some plugins), I can not use
 
     $ brew install vim
 
-so I need a <a href="https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb">custom brew formula</a>:
+so I need a [custom brew formula](https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb):
 
     $ brew install https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb
 
