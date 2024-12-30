@@ -25,14 +25,14 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p>Very easy way of minimizing a few bytes of every request using Google’s <!-- raw HTML omitted -->Closure Compiler<!-- raw HTML omitted --> which is a java program for compressing javascript.</p>
+            <p>Very easy way of minimizing a few bytes of every request using Google’s <em>Closure Compiler</em> which is a java program for compressing javascript.</p>
 <pre><code>$ curl -0 http://closure-compiler.googlecode.com/files/compiler-latest.zip
 $ unzip compiler-latest.zip -d ~/Applications/closure-compiler ; cd ~/Applications/closure-compiler
 $ echo &quot;// A simple function.
 function hello(longName) {
   alert('Hello, ' + longName);
 }
-hello('New User');&quot; &amp;gt; hello.js
+hello('New User');&quot; &gt; hello.js
 $ java -jar compiler.jar --js hello.js --js_output_file hello-compiled.js
 $ cat hello-compiled.js
 function hello(a){alert(&quot;Hello, &quot;+a)}hello(&quot;New User&quot;);
@@ -41,7 +41,7 @@ $ wc -c hello.js
 $ wc -c hello-compiled.js
 56 hello-compiled.js
 </code></pre>
-<!-- raw HTML omitted -->
+<h2>Rinse and repeat</h2>
 <pre><code>$ curl -0 http://closure-compiler.googlecode.com/files/compiler-latest.zip
 </code></pre>
 <p>Download the good stuff</p>
@@ -52,12 +52,12 @@ $ wc -c hello-compiled.js
 function hello(longName) {
   alert('Hello, ' + longName);
 }
-hello('New User');&quot; &amp;gt; hello.js
+hello('New User');&quot; &gt; hello.js
 </code></pre>
 <p>Create a file with valid javascript in it</p>
 <pre><code>$ java -jar compiler.jar --js hello.js --js_output_file hello-compiled.js
 </code></pre>
-<p>Use the recently unzipped <!-- raw HTML omitted -->compiler.jar<!-- raw HTML omitted --> to take input from <!-- raw HTML omitted -->hello.js<!-- raw HTML omitted --> and generate its optimized version at <!-- raw HTML omitted -->hello-compiled.js<!-- raw HTML omitted -->. <!-- raw HTML omitted -->Note that there’s only one file to use, compiler.jar. Usable.<!-- raw HTML omitted --></p>
+<p>Use the recently unzipped <em>compiler.jar</em> to take input from <em>hello.js</em> and generate its optimized version at <em>hello-compiled.js</em>. Note that there’s only one file to use, compiler.jar. Usable.</p>
 <pre><code>$ cat hello-compiled.js
 function hello(a){alert(&quot;Hello, &quot;+a)}hello(&quot;New User&quot;);
 </code></pre>
@@ -78,13 +78,13 @@ $ wc -c hello-compiled.js
           
           <li><a href="/automatically-download-photos-your-instagram-contacts">Automatically download new photos from your Instagram contacts</a></li>
           
-          <li><a href="/fastest-auto-login-ssh-remote-server">Fastest way to auto-login via ssh to your remote server</a></li>
-          
           <li><a href="/installing-vim-discovering-macs-internals">Installing Vim = discovering Mac&#39;s internals</a></li>
           
-          <li><a href="/which-saves-the-day">which - saves the day</a></li>
+          <li><a href="/fastest-auto-login-ssh-remote-server">Fastest way to auto-login via ssh to your remote server</a></li>
           
           <li><a href="/using-git-init-bare-for-a-slim-repository-look">Using git init --bare for a slim repository look</a></li>
+          
+          <li><a href="/keeping-track-of-project-files-in-a-large-codebase">Keeping track of project files in a large codebase</a></li>
           
         </ul>
       </section>

@@ -25,9 +25,13 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p>Until now, I’ve mainly worked alone with my git repositories. Sometime pushing to <!-- raw HTML omitted -->my github-account<!-- raw HTML omitted -->, but always using the service as a kind of backup solution. Until now. At work, we’re setting up our new environment with git and I’m lucky enough to learn it while doing it.</p>
+            <p>Until now, I’ve mainly worked alone with my git repositories. Sometime pushing to <a href="https://github.com/chelmertz">my github-account</a>, but always using the service as a kind of backup solution. Until now. At work, we’re setting up our new environment with git and I’m lucky enough to learn it while doing it.</p>
 <p>This setting will differ quite a lot from what I’m used to:</p>
-<!-- raw HTML omitted -->
+<ul>
+<li>for private projects, the git repository is my project folder;</li>
+<li>for work, the repository has to be <em>synced across multiple users</em>, a base for <em>deployment</em> and <em>act as a more important repository</em> than our local ones, kind of what SVN was doing and what, I’m told, git isn’t really made for.</li>
+</ul>
+<p>Also, exercising a plain <code>git init</code> routine creates a complete repository with all source files, branches &amp; stuff, which really are ment to keep track off and develop in. Let’s not, let’s just keep the repository there and only <code>git push</code> there so <em>all development will be done in each user’s local repository</em>.</p>
 <p>Let’s get to the good stuff:</p>
 <pre><code># create a user named 'git' and make that user the owner of your repositories, and nothing else
 $ mkdir -p /home/git/repositories
@@ -40,8 +44,8 @@ $ echo &quot;lalala, random file&quot; &gt; random.txt &amp;&amp; git add . &amp
 $ git remote add origin /home/git/repositories/your-project.git
 $ git push origin master
 </code></pre>
-<p>There you go, a fully capable external repository, local on your dev machine, ready to export to a staging/testing/Q&amp;A-setting. For an easy setup of this, go read <!-- raw HTML omitted --><!-- raw HTML omitted -->Using Git to manage a web site<!-- raw HTML omitted --><!-- raw HTML omitted --> which <!-- raw HTML omitted -->worked out of the box<!-- raw HTML omitted --> for us.</p>
-<p>If you get any errors whilst doing this, google it or just try to parse it (for us, it mostly came down to <!-- raw HTML omitted -->chown<!-- raw HTML omitted -->- and <!-- raw HTML omitted -->chmod<!-- raw HTML omitted -->-ing the <!-- raw HTML omitted -->-R /home/git/repositories/<!-- raw HTML omitted --> folders, so using <!-- raw HTML omitted -->sudo<!-- raw HTML omitted --> helps a lot).</p>
+<p>There you go, a fully capable external repository, local on your dev machine, ready to export to a staging/testing/Q&amp;A-setting. For an easy setup of this, go read <em><a href="http://toroid.org/ams/git-website-howto">Using Git to manage a web site</a></em> which <em>worked out of the box</em> for us.</p>
+<p>If you get any errors whilst doing this, google it or just try to parse it (for us, it mostly came down to <code>chown</code>- and <code>chmod</code>-ing the <code>-R /home/git/repositories/</code> folders, so using <code>sudo</code> helps a lot).</p>
 
           </section>
         </div>
@@ -50,15 +54,15 @@ $ git push origin master
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/updating-a-forked-project-on-github">Updating a forked project on Github</a></li>
-          
           <li><a href="/git">git</a></li>
+          
+          <li><a href="/updating-a-forked-project-on-github">Updating a forked project on Github</a></li>
           
           <li><a href="/new-dev-area-with-gitweb">New dev area with gitweb</a></li>
           
-          <li><a href="/checklist-removing-git-submodule">Checklist for removing a git submodule</a></li>
-          
           <li><a href="/git-reminder-set-permissions-of-hooks-to-executable">Git reminder: set permissions of hooks to executable</a></li>
+          
+          <li><a href="/jenkins-python-virtualenv">Making Jenkins work with python&#39;s virtualenv</a></li>
           
         </ul>
       </section>

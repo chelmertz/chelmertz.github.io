@@ -26,12 +26,26 @@
         <div class="post-content" itemprop="articleBody">
           <section>
             <p>This is how I would let a user login again, after she lost her password:</p>
-<!-- raw HTML omitted -->
-<p>If it is you, who requested your password to be reset, click this link &lt;yoursite.com/forgotten/3ttnjwnt32t&gt; to reset it.<!-- raw HTML omitted -->
-The &quot;3ttnjwnt32t&quot; string is only mentioned in the letter, you save<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<ul>
+<li>Provide a clear &quot;Lost your password?&quot; link at the login page and possibly in the &quot;help section&quot;</li>
+<li>Let your user provide one thing she surely remembers - her email</li>
+<li>Send a confirmation mail to the user with a text like
+<blockquote>
+<p>Hi, this is &lt;you&gt;. Someone requested a password reset on &lt;your site&gt;. If that was not you, you can safely ignore this email and nothing will happen.</p>
+<p>If it is you, who requested your password to be reset, click this link &lt;yoursite.com/forgotten/3ttnjwnt32t&gt; to reset it.</p>
+</blockquote>
+</li>
+</ul>
+<p>The &quot;3ttnjwnt32t&quot; string is only mentioned in the letter, you save</p>
+<p>store encrypted with a hash</p>
 <p>password resets:</p>
-<!-- raw HTML omitted -->
+<ul>
+<li>request reset</li>
+<li>allow anybody to send a reset-request-email</li>
+<li>arrive at hidden page that lasts 1 hour</li>
+<li>ask for a new password and the email</li>
+</ul>
+<p>This also implies that an admin never should be able to change a password, only send out an email to the user who in turn changes it herself.</p>
 
           </section>
         </div>
@@ -40,15 +54,15 @@ The &quot;3ttnjwnt32t&quot; string is only mentioned in the letter, you save<!--
         <h2>Possibly related posts</h2>
         <ul>
           
+          <li><a href="/shell-must-have">A shell&#39;s must-have features</a></li>
+          
+          <li><a href="/ubuntu-2404">Upgrading to Ubuntu 24.04</a></li>
+          
+          <li><a href="/wordpress-apache-to-mynt-nginx">From Wordpress on Apache to mynt on nginx</a></li>
+          
+          <li><a href="/elly-keeps-track-of-prs">elly - PRs you can act on</a></li>
+          
           <li><a href="/programming-books-on-kindle">Programming books on Kindle</a></li>
-          
-          <li><a href="/open-source-project-owners-control-yourselves">Open source project owners: control yourselves!</a></li>
-          
-          <li><a href="/supply-and-demand">Supply and demand</a></li>
-          
-          <li><a href="/global-code-is-bad-code-phps-sessions-included">Global code is bad code - PHP&#39;s sessions included</a></li>
-          
-          <li><a href="/why-i-left-tumblr-for-posterous">Why I left tumblr for posterous</a></li>
           
         </ul>
       </section>

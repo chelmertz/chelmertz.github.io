@@ -5,7 +5,7 @@ permalink: "bug-when-using-zf-create-config-wrong-syntax-for-include-path"
 tags: [netbeans, zend-framework]
 ---
 
-<a href="https://netbeans.org/bugzilla/show_bug.cgi?format=multiple&amp;id=187234">https://netbeans.org/bugzilla/show_bug.cgi?format=multiple&amp;id=187234</a>
+https://netbeans.org/bugzilla/show_bug.cgi?format=multiple&id=187234
 
-The NetBeans - through <code>zf create config</code> - generated file <em>~/.zf.ini</em> contains the following error:
-<code>php.includepath</code> should be <strong><code>php.include_path</code></strong>
+The NetBeans - through `zf create config` - generated file _~/.zf.ini_ contains the following error:
+`php.includepath` should be `php.include_path`

@@ -5,7 +5,7 @@ permalink: "trying-out-closure"
 tags: [javascript, server]
 ---
 
-Very easy way of minimizing a few bytes of every request using Google’s <em>Closure Compiler</em> which is a java program for compressing javascript.
+Very easy way of minimizing a few bytes of every request using Google’s _Closure Compiler_ which is a java program for compressing javascript.
 
 ```
 $ curl -0 http://closure-compiler.googlecode.com/files/compiler-latest.zip
@@ -14,7 +14,7 @@ $ echo "// A simple function.
 function hello(longName) {
   alert('Hello, ' + longName);
 }
-hello('New User');" &gt; hello.js
+hello('New User');" > hello.js
 $ java -jar compiler.jar --js hello.js --js_output_file hello-compiled.js
 $ cat hello-compiled.js
 function hello(a){alert("Hello, "+a)}hello("New User");
@@ -24,7 +24,7 @@ $ wc -c hello-compiled.js
 56 hello-compiled.js
 ```
 
-<h2>Rinse and repeat</h2>
+## Rinse and repeat
 
 ```
 $ curl -0 http://closure-compiler.googlecode.com/files/compiler-latest.zip
@@ -43,7 +43,7 @@ $ echo "// A simple function.
 function hello(longName) {
   alert('Hello, ' + longName);
 }
-hello('New User');" &gt; hello.js
+hello('New User');" > hello.js
 ```
 
 Create a file with valid javascript in it
@@ -52,7 +52,7 @@ Create a file with valid javascript in it
 $ java -jar compiler.jar --js hello.js --js_output_file hello-compiled.js
 ```
 
-Use the recently unzipped <em>compiler.jar</em> to take input from <em>hello.js</em> and generate its optimized version at <em>hello-compiled.js</em>. <em>Note that there’s only one file to use, compiler.jar. Usable.</em>
+Use the recently unzipped _compiler.jar_ to take input from _hello.js_ and generate its optimized version at _hello-compiled.js_. Note that there’s only one file to use, compiler.jar. Usable.
 
 ```
 $ cat hello-compiled.js

@@ -6,15 +6,15 @@ tags: [kindle]
 ---
 
 Some features of the Kindle:
-<ul>
-	<li>no lighting (battery lasts longer, better visibility in sunshine than in the dark, impossible to read in darkness)</li>
-	<li>built in dictionary</li>
-	<li>black &amp; white display</li>
-	<li>search any books</li>
-	<li>place bookmarks</li>
-	<li>save excerpt from any text</li>
-	<li>purchase a book on Amazon, have it available on your device within minutes</li>
-</ul>
+
+- no lighting (battery lasts longer, better visibility in sunshine than in the dark, impossible to read in darkness)
+- built in dictionary
+- black & white display
+- search any books
+- place bookmarks
+- save excerpt from any text
+- purchase a book on Amazon, have it available on your device within minutes
+
 Bought Bergmans X book at Amazon
 
 Readability Chrome plugin

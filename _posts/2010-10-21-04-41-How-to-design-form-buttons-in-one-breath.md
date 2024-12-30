@@ -12,4 +12,3 @@ tags: [thoughts, usability, visual]
 - *use words humans understand*, not machines ("Save location" vs "Store latitude & longitude in memory until cookie dies"), always use a metaphor belonging to the user’s mental model of the current situation
 - *differentiate the primary choice of many* for example by letting a “cancel editing”-button become an `<a>`-element while keeping the "save information"-button more button-like; different sizes and colours are alternatives as well
 - let the user confirm their lesser-important-actions by *adding an undo-button* and confirm their more-important-actions *before the action’s taken place* with a confirm-dialog or checkbox
-

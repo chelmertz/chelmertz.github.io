@@ -10,7 +10,7 @@ Via [Remote Deployment with Ant and Rsync](http://topecoders.blogspot.com/2010/
 ```
 $ scp ~/.ssh/id_rsa.pub remote_user_name@remoteserver:remote_user_name.pub
 
-remoteserver$ cat ~/remote_user_name.pub &gt;&gt; ~/.ssh/authorized_keys
+remoteserver$ cat ~/remote_user_name.pub >> ~/.ssh/authorized_keys
 ```
 
 That's an excerpt but it was enough for me, having a public ssh key generated since before.
