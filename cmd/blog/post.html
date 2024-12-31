@@ -32,10 +32,8 @@
       </article>{{with .RelatedPosts}}
       <section>
         <h2>Possibly related posts</h2>
-        <ul>
-          {{range .}}
-          <li><a href="{{.Permalink}}">{{.Title}}</a></li>
-          {{end}}
+        <ul>{{range .}}
+          <li><a href="{{.Permalink}}">{{.Title}}</a></li>{{end}}
         </ul>
       </section>{{end}}
     </main>
