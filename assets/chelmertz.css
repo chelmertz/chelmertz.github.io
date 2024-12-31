@@ -26,3 +26,8 @@ table {
 .post-meta {
     font-style: italic;
 }
+
+.post-list {
+    list-style-type: none;
+    padding: 0;
+}
