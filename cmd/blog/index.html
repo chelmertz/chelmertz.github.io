@@ -33,12 +33,15 @@
           <li><strong>picture-this</strong> — generates image placeholders (<a href="/mini-project-placeholder-image-generator-php">blog post</a>, <a href="https://github.com/chelmertz/picture-this">source</a>)</li>
           <li><strong>i-got-issues</strong> — display your submitted issues in your own projects, a.k.a. todos (<a href="/i-got-issues-manage-project-todos-github">blog post</a>, <a href="https://github.com/chelmertz/i-got-issues">source</a>)</li>
         </ul>
-        <h2>posts</h2>{{with .Posts}}
-        <ul class="post-list">{{range .}}
-            <li>
-              <a class="post-link" href="/{{.Permalink}}/">{{.Title}}</a>
-              <span class="post-meta">{{.PublishedFriendly}}</span>
-            </li>{{end}}
+
+        <h2>posts</h2>{{range .Years}}
+
+        <h3>{{.}}</h3>
+        <ul class="post-list">{{range index $.PostsByYear .}}
+          <li>
+            <a class="post-link" href="/{{.Permalink}}/">{{.Title}}</a>
+            <span class="post-meta">{{.PublishedFriendly}}</span>
+          </li>{{end}}
         </ul>{{end}}
         <p class="rss-subscribe">subscribe <a href="/atom.xml">to Atom feed</a></p>
       </div>

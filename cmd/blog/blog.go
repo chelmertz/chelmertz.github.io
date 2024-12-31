@@ -65,6 +65,8 @@ func main() {
 	)
 
 	indexHtmlData := IndexHtmlData{}
+	indexHtmlData.PostsByYear = make(map[int][]IndexPost)
+
 	allPosts := make([]Post, 0)
 	postTemplate := template.Must(template.New("post.html").
 		Funcs(viewFuncs).
@@ -107,7 +109,8 @@ func main() {
 
 		allPosts = append(allPosts, post)
 
-		indexHtmlData.Posts = append(indexHtmlData.Posts, IndexPost{
+		year := publishedAt.Year()
+		indexHtmlData.PostsByYear[year] = append(indexHtmlData.PostsByYear[year], IndexPost{
 			Title:             post.Title,
 			Permalink:         post.Permalink,
 			PublishedFriendly: post.PublishedFriendly,
@@ -136,16 +139,24 @@ func main() {
 		// docs/index.html
 		indexTemplate := template.Must(template.New("index.html").ParseGlob("cmd/blog/index.html"))
 		indexOutFile := must1(os.Create(filepath.Join(docs, "index.html")))
-		slices.SortFunc(indexHtmlData.Posts, func(i, j IndexPost) int {
-			// sort by date, descending
-			if i.timestamp > j.timestamp {
-				return -1
-			}
-			if i.timestamp < j.timestamp {
-				return 1
-			}
-			return 0
+		indexHtmlData.Years = make([]int, 0)
+		for ip := range indexHtmlData.PostsByYear {
+			slices.SortFunc(indexHtmlData.PostsByYear[ip], func(i, j IndexPost) int {
+				// sort by date, descending
+				if i.timestamp > j.timestamp {
+					return -1
+				}
+				if i.timestamp < j.timestamp {
+					return 1
+				}
+				return 0
+			})
+			indexHtmlData.Years = append(indexHtmlData.Years, ip)
+		}
+		slices.SortFunc(indexHtmlData.Years, func(i, j int) int {
+			return cmp.Compare(j, i)
 		})
+
 		must(indexTemplate.Execute(indexOutFile, indexHtmlData))
 	}
 
@@ -178,7 +189,8 @@ func main() {
 }
 
 type IndexHtmlData struct {
-	Posts []IndexPost
+	PostsByYear map[int][]IndexPost
+	Years       []int
 }
 
 type IndexPost struct {
