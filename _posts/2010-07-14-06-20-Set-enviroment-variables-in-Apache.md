@@ -7,9 +7,14 @@ tags: [server, zend-framework]
 
 In .htaccess:
 
-<code>SetEnv APPLICATION_ENV development</code>
+```
+SetEnv APPLICATION_ENV development
+```
 
 In php (from ZF’s bootstrapped setup):
-<code>// Define application environment</code>
-<code>defined('APPLICATION_ENV')</code>
-<code>|| define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));</code>
+
+```php
+// Define application environment
+defined('APPLICATION_ENV')
+|| define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
+```

@@ -5,4 +5,4 @@ permalink: "program-for-yourself"
 tags: [thoughts]
 ---
 
-<blockquote class="posterous_short_quote">Always use the software you build yourself.</blockquote>
+> Always use the software you build yourself.

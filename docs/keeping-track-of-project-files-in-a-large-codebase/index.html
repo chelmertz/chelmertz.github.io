@@ -26,17 +26,15 @@
         <div class="post-content" itemprop="articleBody">
           <section>
             <p>Insight: symlinks should really be abused!</p>
-<p>Let’s say you’re in the same position as me, working within a large codebase that requires <!-- raw HTML omitted -->focus over multiple folders<!-- raw HTML omitted -->* even for working with just one project. Perhaps you need to add logic, content, conditions, markup and css. These areas should all be separated, so naturally you’ll be clicking/<!-- raw HTML omitted -->cd<!-- raw HTML omitted -->-ing a lot… you see where this is going, right?</p>
+<p>Let’s say you’re in the same position as me, working within a large codebase that requires <em>focus over multiple folders</em> even for working with just one project. Perhaps you need to add logic, content, conditions, markup and css. These areas should all be separated, so naturally you’ll be clicking/<code>cd</code>-ing a lot… you see where this is going, right?</p>
 <p>Make a temporary, meaningless folder named YourProject2010 and start pulling symlinks into it so you’ll never have to leave home again :) That would mean something like this:</p>
-<pre><code>cd /var/www/your-dev/YourProject2010
-ln -s /var/www/your-dev/css/campaign_file.css .
-ln -s /var/www/your-dev/js/campaign_file.js .
-ln -s /var/www/your-dev/lib/campaign_file.php .
-</code></pre>
-<p>When you’re all done with the project, merging your branch with master and</p>
-<pre><code>rm -r /var/www/your-dev/YourProject2010
-</code></pre>
-<p>are the only two steps you need wipe out your traces and tell your boss that “it was a hard project to pull off because of its scope”.</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#0086b3">cd</span> /var/www/your-dev/YourProject2010
+</span></span><span style="display:flex;"><span>ln -s /var/www/your-dev/css/campaign_file.css .
+</span></span><span style="display:flex;"><span>ln -s /var/www/your-dev/js/campaign_file.js .
+</span></span><span style="display:flex;"><span>ln -s /var/www/your-dev/lib/campaign_file.php .
+</span></span></code></pre><p>When you’re all done with the project, merging your branch with master and</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>rm -r /var/www/your-dev/YourProject2010
+</span></span></code></pre><p>are the only two steps you need wipe out your traces and tell your boss that “it was a hard project to pull off because of its scope”.</p>
 
           </section>
         </div>
@@ -44,10 +42,10 @@ ln -s /var/www/your-dev/lib/campaign_file.php .
       <section>
         <h2>Possibly related posts</h2>
         <ul>
-          <li><a href="/trying-out-closure">Trying out closure</a></li>
           <li><a href="/building-packages-on-solaris">Building packages on Solaris</a></li>
           <li><a href="/backup-remotely">Backup remotely</a></li>
           <li><a href="/vsftpd-enabling-ftp-access-ubuntu-server">vsftpd - enabling FTP access on your Ubuntu server</a></li>
+          <li><a href="/tail-n-0-f-varlog">tail -n 0 -f /var/log/...</a></li>
           <li><a href="/accessing-windows-server-remotely-with-mac">Accessing Windows server remotely with Mac</a></li>
         </ul>
       </section>

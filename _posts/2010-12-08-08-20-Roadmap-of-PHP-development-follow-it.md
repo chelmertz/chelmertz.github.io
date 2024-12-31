@@ -17,10 +17,10 @@ function a() { return array(1, 2, 3);}
 echo a()[0];
 ```
 
-Status is listed as “accepted” - finally! This syntax is so handy, the only real alternative seems to be <code>list()</code> which is a bit clunky. Besides, everybody knows this syntax from javascript.
+Status is listed as “accepted” - finally! This syntax is so handy, the only real alternative seems to be `list()` which is a bit clunky. Besides, everybody knows this syntax from javascript.
 
 ## [E_USER_DEPRECATED](http://wiki.php.net/rfc/e-user-deprecated-warning)
-Finally a way to properly mark parts of your API as <em>old</em>:
+Finally a way to properly mark parts of your API as _old_:
 
 ```php
 trigger_error("Use BlaBla::Bla() instead of ".__METHOD__, E_USER_DEPRECATED);

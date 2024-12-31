@@ -25,10 +25,10 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p>Place the following in a file called <!-- raw HTML omitted -->/usr/local/bin/tail_log<!-- raw HTML omitted -->:</p>
-<p><!-- raw HTML omitted -->tail -f /var/log/lighttpd/php_error_log|egrep -i &quot;fatal|stack|#|thrown&quot;<!-- raw HTML omitted --></p>
-<p>That enables a user to issue <!-- raw HTML omitted -->tail_log<!-- raw HTML omitted --> to listen for fatals in the php error log, usable for dev enviroments when developing in new realms.</p>
-<p>Note that the location of <!-- raw HTML omitted -->php_error_log<!-- raw HTML omitted --> might differ, especially if the server isn’t lighttpd…</p>
+            <p>Place the following in a file called <em>/usr/local/bin/tail_log</em>:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>tail -f /var/log/lighttpd/php_error_log|egrep -i <span style="color:#d14">&#34;fatal|stack|#|thrown&#34;</span>
+</span></span></code></pre><p>That enables a user to issue <em>tail_log</em> to listen for fatals in the php error log, usable for dev enviroments when developing in new realms.</p>
+<p>Note that the location of <em>php_error_log</em> might differ, especially if the server isn’t lighttpd…</p>
 
           </section>
         </div>
@@ -38,9 +38,9 @@
         <ul>
           <li><a href="/tail-n-0-f-varlog">tail -n 0 -f /var/log/...</a></li>
           <li><a href="/which-saves-the-day">which - saves the day</a></li>
-          <li><a href="/set-enviroment-variables-in-apache">Set enviroment variables in Apache</a></li>
-          <li><a href="/scp-where-have-you-been">scp - where have you been?</a></li>
-          <li><a href="/debugging-some-php">Debugging some php..</a></li>
+          <li><a href="/redmine-and-lighttpd-got-into-a-brawl-came-out-as-friends">Redmine and lighttpd got into a brawl, came out as friends</a></li>
+          <li><a href="/vsftpd-enabling-ftp-access-ubuntu-server">vsftpd - enabling FTP access on your Ubuntu server</a></li>
+          <li><a href="/terminal-start-faster">Make your terminal start faster</a></li>
         </ul>
       </section>
     </main>

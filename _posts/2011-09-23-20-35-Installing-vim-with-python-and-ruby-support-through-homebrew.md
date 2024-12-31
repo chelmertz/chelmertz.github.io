@@ -5,38 +5,50 @@ permalink: "installing-vim-python-ruby-support-homebrew"
 tags: [mac, vim]
 ---
 
-<h2>Background</h2>
 My new macbook came builtin with an "old"(er) version of vim which apparently was compiled without python and ruby. I want that.
 
-<h2>Prerequisites</h2>
+## Prerequisites
+
 Start by [installing xcode](http://developer.apple.com/xcode/), [homebrew](http://mxcl.github.com/homebrew/) and git via `$ brew install git`
 
-<h2>Installing custom formula</h2>
+## Installing custom formula
+
 Now, since I want vim compiled with python and ruby support (for some plugins), I can not use
 
-    $ brew install vim
+```shell
+brew install vim
+```
 
 so I need a [custom brew formula](https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb):
 
-    $ brew install https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb
+```shell
+brew install https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb
+```
 
-<h2>Tell shell to use correctly compiled vim</h2>
+## Tell shell to use correctly compiled vim
+
 (By default) homebrew installs its programs in /usr/local/bin. But after installing vim via brew in the previous step, I still get this:
 
-    $ which vim
-    /usr/bin/vim
+```shell
+which vim
+/usr/bin/vim
+```
 
 My solution to using the correct vim, was to prepend /usr/local/bin to $PATH instead of having it somewhere in the middle. Now my $PATH looks like this in my .zshrc:
 
-    export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin
+```shell
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin
+```
 
 and, as evidence:
 
-    $ which vim
-    /usr/local/bin/vim
-    $ vim --version | grep +ruby | echo $?
-    0
-    $ vim --version | grep +python | echo $?
-    0
+```shell
+which vim
+/usr/local/bin/vim
+vim --version | grep +ruby | echo $?
+0
+vim --version | grep +python | echo $?
+0
+```
 
 Allright, we're good to go!

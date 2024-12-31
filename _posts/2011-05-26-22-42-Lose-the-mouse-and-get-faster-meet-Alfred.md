@@ -20,4 +20,4 @@ You open the quicklaunch window with `⌘+space` and start typing, and Alfred wi
 - It's fast, I always prefer to leave the mouse (-pad) for as long as possible
 - It thinks for me, the auto completion doesn't even need me to remember more than a letter or two of the app I'm looking for
 - The desktop/dock is much less cluttered since icons becomes kind of unnecessary
-- All keyboard, no mouse makes you look like a hacker and thereby you <em>are</em> more professional
+- All keyboard, no mouse makes you look like a hacker and thereby you _are_ more professional

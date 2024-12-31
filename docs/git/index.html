@@ -27,68 +27,58 @@
           <section>
             <p>Collection of intermediate but handy git tricks. This post will be updated now and then.</p>
 <h2>Apply patch from email</h2>
-<pre><code>    git am -3 --signoff &lt;name of patch&gt;.patch
-</code></pre>
-<h2>Bisect</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git am -3 --signoff &lt;name of patch&gt;.patch
+</span></span></code></pre><h2>Bisect</h2>
 <p><code>&lt;object id&gt;</code> could be <em>master</em>, <em>35f1cab</em> or <em>v1.4</em>, for example.</p>
-<pre><code>    git bisect start
-    git bisect good &lt;object id&gt;
-    git bisect bad &lt;object id&gt;
-    # test the given revision
-    # say if it's bad or not with
-    git bisect bad
-    # continue this way and exit with
-    git bisect reset
-</code></pre>
-<h2>Branch off commit</h2>
-<pre><code>    git branch new_branch &lt;ref&gt;
-</code></pre>
-<h2>Commit part of diff from a file</h2>
-<pre><code>    git add -p
-</code></pre>
-<h2>Create emailable patch</h2>
-<pre><code>    # edit
-    # commit
-    git format patch origin/master --stdout &gt; my_changes.patch
-</code></pre>
-<p>Where origin/master is the base for references.</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git bisect start
+</span></span><span style="display:flex;"><span>git bisect good &lt;object id&gt;
+</span></span><span style="display:flex;"><span>git bisect bad &lt;object id&gt;
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># test the given revision</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># say if it&#39;s bad or not with</span>
+</span></span><span style="display:flex;"><span>git bisect bad
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># continue this way and exit with</span>
+</span></span><span style="display:flex;"><span>git bisect reset
+</span></span></code></pre><h2>Branch off commit</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git branch new_branch &lt;ref&gt;
+</span></span></code></pre><h2>Commit part of diff from a file</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git add -p
+</span></span></code></pre><h2>Create emailable patch</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#998;font-style:italic"># edit</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># commit</span>
+</span></span><span style="display:flex;"><span>git format patch origin/master --stdout &gt; my_changes.patch
+</span></span></code></pre><p>Where origin/master is the base for references.</p>
 <h2>Discard parts of a diff</h2>
-<pre><code>    git checkout -p
-    # is hunk too big? 's' to split it
-</code></pre>
-<h2>Merge commits</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git checkout -p
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># is hunk too big? &#39;s&#39; to split it</span>
+</span></span></code></pre><h2>Merge commits</h2>
 <p>If you want to add some changes that you'd want included in the previous un-pushed commit</p>
-<pre><code>    git commit -am &quot;just a commit&quot;
-    # make changes
-    git commit --amend -a
-</code></pre>
-<h2>Move hunk of commit to another commit</h2>
-<pre><code>    git rebase -i HEAD~2
-    # p ...
-    # e ... &lt;- edit this
-    #edit files
-    # git add; git commit --amend; git rebase --continue
-</code></pre>
-<h2>Remove remote branch</h2>
-<pre><code>    git push &lt;remote&gt; :&lt;branch&gt;
-</code></pre>
-<h2>Show log with patches</h2>
-<pre><code>    git log -p
-    # for a specific file
-    git log -p &lt;path&gt;
-</code></pre>
-
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git commit -am <span style="color:#d14">&#34;just a commit&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># make changes</span>
+</span></span><span style="display:flex;"><span>git commit --amend -a
+</span></span></code></pre><h2>Move hunk of commit to another commit</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git rebase -i HEAD~2
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># p ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># e ... &lt;- edit this</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#edit files</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># git add; git commit --amend; git rebase --continue</span>
+</span></span></code></pre><h2>Remove remote branch</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git push &lt;remote&gt; :&lt;branch&gt;
+</span></span></code></pre><h2>Show log with patches</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git log -p
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># for a specific file</span>
+</span></span><span style="display:flex;"><span>git log -p &lt;path&gt;
+</span></span></code></pre>
           </section>
         </div>
       </article>
       <section>
         <h2>Possibly related posts</h2>
         <ul>
-          <li><a href="/using-git-init-bare-for-a-slim-repository-look">Using git init --bare for a slim repository look</a></li>
           <li><a href="/updating-a-forked-project-on-github">Updating a forked project on Github</a></li>
-          <li><a href="/git-reminder-set-permissions-of-hooks-to-executable">Git reminder: set permissions of hooks to executable</a></li>
+          <li><a href="/using-git-init-bare-for-a-slim-repository-look">Using git init --bare for a slim repository look</a></li>
+          <li><a href="/jenkins-python-virtualenv">Making Jenkins work with python&#39;s virtualenv</a></li>
           <li><a href="/gitweb-on-osx">Gitweb on OSX</a></li>
-          <li><a href="/how-do-i-edit-an-incorrect-commit-message-in-git-stack-overflow">How do I edit an incorrect commit message in git - Stack Overflow</a></li>
+          <li><a href="/git-reminder-set-permissions-of-hooks-to-executable">Git reminder: set permissions of hooks to executable</a></li>
         </ul>
       </section>
     </main>

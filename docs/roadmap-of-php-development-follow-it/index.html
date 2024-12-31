@@ -31,9 +31,9 @@
 <p>Example:</p>
 <pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#000;font-weight:bold">function</span> <span style="color:#900;font-weight:bold">a</span>() { <span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">array</span>(<span style="color:#099">1</span>, <span style="color:#099">2</span>, <span style="color:#099">3</span>);}
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">echo</span> a()[<span style="color:#099">0</span>];
-</span></span></code></pre><p>Status is listed as “accepted” - finally! This syntax is so handy, the only real alternative seems to be <!-- raw HTML omitted -->list()<!-- raw HTML omitted --> which is a bit clunky. Besides, everybody knows this syntax from javascript.</p>
+</span></span></code></pre><p>Status is listed as “accepted” - finally! This syntax is so handy, the only real alternative seems to be <code>list()</code> which is a bit clunky. Besides, everybody knows this syntax from javascript.</p>
 <h2><a href="http://wiki.php.net/rfc/e-user-deprecated-warning">E_USER_DEPRECATED</a></h2>
-<p>Finally a way to properly mark parts of your API as <!-- raw HTML omitted -->old<!-- raw HTML omitted -->:</p>
+<p>Finally a way to properly mark parts of your API as <em>old</em>:</p>
 <pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>trigger_error(<span style="color:#d14">&#34;Use BlaBla::Bla() instead of &#34;</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">__METHOD__</span>, E_USER_DEPRECATED);
 </span></span></code></pre><h2><a href="http://wiki.php.net/rfc/docblockparser">docBlock Parser</a></h2>
 <p>A native parser for docblocks which will probably be a lot faster and also increase awareness and interest of actually documenting code. PHPUnit testcases and frameworks such as Doctrine 2 might gain some speed increase.</p>
@@ -66,8 +66,8 @@
           <li><a href="/requesting-new-magic-method-__toboolean">Requesting new magic method: `__toBoolean()`</a></li>
           <li><a href="/splfileinfogetextension">SplFileInfo::getExtension()</a></li>
           <li><a href="/global-code-sucks-php-has-5468-global-functions">Global code sucks - php has 5468 global functions</a></li>
+          <li><a href="/set-enviroment-variables-in-apache">Set enviroment variables in Apache</a></li>
           <li><a href="/what_i_want_from_an_api">What I want from an interface</a></li>
-          <li><a href="/which-saves-the-day">which - saves the day</a></li>
         </ul>
       </section>
     </main>

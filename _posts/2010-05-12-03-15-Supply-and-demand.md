@@ -7,7 +7,7 @@ tags: [thoughts]
 
 Everybody knows how to backup but the important thing is to [know how to restore from that backup]("http://www.joelonsoftware.com/items/2009/12/14.html").
 
-I’m thinking this POV often is missing when discussing documentation of software. The [Wikipedia article on Software Documentation](http://en.wikipedia.org/wiki/Software_documentation) is focusing a lot on pigeonholing the different type of documentation that <em>may exist</em> so that no type is left out. That’s sometimes what I feel myself when trying to document a process - have I really made sure that this way of documenting is #1 or should I just go over the alternatives again?
+I’m thinking this POV often is missing when discussing documentation of software. The [Wikipedia article on Software Documentation](http://en.wikipedia.org/wiki/Software_documentation) is focusing a lot on pigeonholing the different type of documentation that _may exist_ so that no type is left out. That’s sometimes what I feel myself when trying to document a process - have I really made sure that this way of documenting is #1 or should I just go over the alternatives again?
 
 Hold your horses. From now on, every inch taken towards documenting something must be questioned.
 

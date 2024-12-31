@@ -5,5 +5,6 @@ permalink: "which-linux-version-am-i-using"
 tags: [bash, server]
 ---
 
-<code>cat /etc/issue</code> shows a string like
+`cat /etc/issue` shows a string like
+
 CentOS release 5

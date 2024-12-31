@@ -25,30 +25,28 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<pre><code>$ brew install vim
-</code></pre>
-<p>so I need a <a href="https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb">custom brew formula</a>:</p>
-<pre><code>$ brew install https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb
-</code></pre>
-<!-- raw HTML omitted -->
-<pre><code>$ which vim
-/usr/bin/vim
-</code></pre>
-<p>My solution to using the correct vim, was to prepend /usr/local/bin to $PATH instead of having it somewhere in the middle. Now my $PATH looks like this in my .zshrc:</p>
-<pre><code>export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin
-</code></pre>
-<p>and, as evidence:</p>
-<pre><code>$ which vim
-/usr/local/bin/vim
-$ vim --version | grep +ruby | echo $?
-0
-$ vim --version | grep +python | echo $?
-0
-</code></pre>
-<p>Allright, we're good to go!</p>
+            <p>My new macbook came builtin with an &quot;old&quot;(er) version of vim which apparently was compiled without python and ruby. I want that.</p>
+<h2>Prerequisites</h2>
+<p>Start by <a href="http://developer.apple.com/xcode/">installing xcode</a>, <a href="http://mxcl.github.com/homebrew/">homebrew</a> and git via <code>$ brew install git</code></p>
+<h2>Installing custom formula</h2>
+<p>Now, since I want vim compiled with python and ruby support (for some plugins), I can not use</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>brew install vim
+</span></span></code></pre><p>so I need a <a href="https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb">custom brew formula</a>:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>brew install https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb
+</span></span></code></pre><h2>Tell shell to use correctly compiled vim</h2>
+<p>(By default) homebrew installs its programs in /usr/local/bin. But after installing vim via brew in the previous step, I still get this:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>which vim
+</span></span><span style="display:flex;"><span>/usr/bin/vim
+</span></span></code></pre><p>My solution to using the correct vim, was to prepend /usr/local/bin to $PATH instead of having it somewhere in the middle. Now my $PATH looks like this in my .zshrc:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">PATH</span><span style="color:#000;font-weight:bold">=</span>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin
+</span></span></code></pre><p>and, as evidence:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>which vim
+</span></span><span style="display:flex;"><span>/usr/local/bin/vim
+</span></span><span style="display:flex;"><span>vim --version | grep +ruby | <span style="color:#0086b3">echo</span> <span style="color:#008080">$?</span>
+</span></span><span style="display:flex;"><span><span style="color:#099">0</span>
+</span></span><span style="display:flex;"><span>vim --version | grep +python | <span style="color:#0086b3">echo</span> <span style="color:#008080">$?</span>
+</span></span><span style="display:flex;"><span><span style="color:#099">0</span>
+</span></span></code></pre><p>Allright, we're good to go!</p>
 
           </section>
         </div>
@@ -58,9 +56,9 @@ $ vim --version | grep +python | echo $?
         <ul>
           <li><a href="/which-saves-the-day">which - saves the day</a></li>
           <li><a href="/installing-vim-discovering-macs-internals">Installing Vim = discovering Mac&#39;s internals</a></li>
-          <li><a href="/gist-github-com-vim-posterous-true">gist.github.com &#43; vim &#43; posterous = true</a></li>
           <li><a href="/dark-mode-ubuntu-i3">Toggling light/dark color scheme for i3 on Ubuntu</a></li>
           <li><a href="/jenkins-python-virtualenv">Making Jenkins work with python&#39;s virtualenv</a></li>
+          <li><a href="/gist-github-com-vim-posterous-true">gist.github.com &#43; vim &#43; posterous = true</a></li>
         </ul>
       </section>
     </main>

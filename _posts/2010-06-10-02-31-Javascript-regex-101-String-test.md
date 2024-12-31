@@ -5,12 +5,10 @@ permalink: "javascript-regex-101-string-test"
 tags: [javascript]
 ---
 
-<code>
+```javascript
 var containsOnlyDigits = function(string) {
-
-return !/D/.test(number);
-
+    return !/D/.test(number);
 }
-</code>
+```
 
-Basically: <code>/regex/.test("hits regexes")</code> returns true.
+Basically: `/regex/.test("hits regexes")` returns true.

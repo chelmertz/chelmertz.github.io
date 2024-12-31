@@ -26,18 +26,16 @@
         <div class="post-content" itemprop="articleBody">
           <section>
             <p>So much for the <a href="/installing-redmine-on-ubuntu-and-lighttpd">easy setup of Redmine</a>, our server gazed at me with a 500 Internal Server error the following monday morning.</p>
-<p>To track down the error, I started out by tailing Redmine’s error log that I previously defined in <!-- raw HTML omitted -->/etc/lighttpd/lighttpd.conf<!-- raw HTML omitted -->, showing:</p>
-<pre><code>$ tail -f /var/log/lighttpd/redmine_error.log
-2010-12-20 12:09:04: (mod_fastcgi.c.2582) unexpected end-of-file (perhaps the fastcgi process died): pid: 6425 socket: unix:/tmp/redmine.socket-0
-2010-12-20 12:09:04: (mod_fastcgi.c.3367) response not received, request sent: 909 on socket: unix:/tmp/redmine.socket-0 for /dispatch.fcgi?, closing connection                                                                          
-2010-12-20 12:09:04: (mod_fastcgi.c.1734) connect failed: Connection refused on unix:/tmp/redmine.socket-3
-2010-12-20 12:09:04: (mod_fastcgi.c.3037) backend died; we'll disable it for 1 seconds and send the request to another backend instead: reconnects: 0 load: 1
-</code></pre>
-<p>What I did to solve it was (after some <a href="http://www.webhostingtalk.com/archive/index.php/t-662362.html">googling</a>) to change the lighttpd conf setting for Redmine’s socket from <!-- raw HTML omitted -->/tmp/redmine.socket<!-- raw HTML omitted --> to <!-- raw HTML omitted -->/tmp/lighttpd/redmine.socket<!-- raw HTML omitted -->. Before I could do that, I had to</p>
-<pre><code>$ sudo mkdir /tmp/lighttpd
-$ sudo chown -R www-data:www-data /tmp/lighttpd
-</code></pre>
-<p>to make sure it was going to be writable. Restarting lighttpd after that seems to have solved the issue, permanently I hope.</p>
+<p>To track down the error, I started out by tailing Redmine’s error log that I previously defined in <em>/etc/lighttpd/lighttpd.conf</em>, showing:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>tail -f /var/log/lighttpd/redmine_error.log
+</span></span><span style="display:flex;"><span>2010-12-20 12:09:04: <span style="color:#000;font-weight:bold">(</span>mod_fastcgi.c.2582<span style="color:#000;font-weight:bold">)</span> unexpected end-of-file <span style="color:#000;font-weight:bold">(</span>perhaps the fastcgi process died<span style="color:#000;font-weight:bold">)</span>: pid: <span style="color:#099">6425</span> socket: unix:/tmp/redmine.socket-0
+</span></span><span style="display:flex;"><span>2010-12-20 12:09:04: <span style="color:#000;font-weight:bold">(</span>mod_fastcgi.c.3367<span style="color:#000;font-weight:bold">)</span> response not received, request sent: <span style="color:#099">909</span> on socket: unix:/tmp/redmine.socket-0 <span style="color:#000;font-weight:bold">for</span> /dispatch.fcgi?, closing connection                                                                          
+</span></span><span style="display:flex;"><span>2010-12-20 12:09:04: <span style="color:#000;font-weight:bold">(</span>mod_fastcgi.c.1734<span style="color:#000;font-weight:bold">)</span> connect failed: Connection refused on unix:/tmp/redmine.socket-3
+</span></span><span style="display:flex;"><span>2010-12-20 12:09:04: <span style="color:#000;font-weight:bold">(</span>mod_fastcgi.c.3037<span style="color:#000;font-weight:bold">)</span> backend died; we<span style="color:#a61717;background-color:#e3d2d2">&#39;</span>ll disable it <span style="color:#000;font-weight:bold">for</span> <span style="color:#099">1</span> seconds and send the request to another backend instead: reconnects: <span style="color:#099">0</span> load: <span style="color:#099">1</span>
+</span></span></code></pre><p>What I did to solve it was (after some <a href="http://www.webhostingtalk.com/archive/index.php/t-662362.html">googling</a>) to change the lighttpd conf setting for Redmine’s socket from <em>/tmp/redmine.socket</em> to <em>/tmp/lighttpd/redmine.socket</em>. Before I could do that, I had to</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>sudo mkdir /tmp/lighttpd
+</span></span><span style="display:flex;"><span>sudo chown -R www-data:www-data /tmp/lighttpd
+</span></span></code></pre><p>to make sure it was going to be writable. Restarting lighttpd after that seems to have solved the issue, permanently I hope.</p>
 
           </section>
         </div>
@@ -47,9 +45,9 @@ $ sudo chown -R www-data:www-data /tmp/lighttpd
         <ul>
           <li><a href="/put-a-tail-on-that-error-log">Put a tail on that error log</a></li>
           <li><a href="/installing-redmine-on-ubuntu-and-lighttpd">Installing Redmine on Ubuntu and lighttpd</a></li>
-          <li><a href="/new-dev-area-with-gitweb">New dev area with gitweb</a></li>
-          <li><a href="/vsftpd-enabling-ftp-access-ubuntu-server">vsftpd - enabling FTP access on your Ubuntu server</a></li>
           <li><a href="/tail-n-0-f-varlog">tail -n 0 -f /var/log/...</a></li>
+          <li><a href="/vsftpd-enabling-ftp-access-ubuntu-server">vsftpd - enabling FTP access on your Ubuntu server</a></li>
+          <li><a href="/new-dev-area-with-gitweb">New dev area with gitweb</a></li>
         </ul>
       </section>
     </main>

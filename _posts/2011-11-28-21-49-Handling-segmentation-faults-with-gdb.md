@@ -11,11 +11,13 @@ gdb helped out a lot by letting me get from "segfault happened" to "function x a
 
 The slide [Introduction to segmentation fault handling](http://www.slideshare.net/noobyahoo/introduction-to-segmentation-fault-handling-5563036) rocks; based on that article, this is kinda what my process & debugging step in the makefile looks like now:
 
-    gcc -Wall -c -g *.c
-    gcc -o my_program *.o
-    gdb my_program
-    (inside gdb) run
-    (inside gdb) <..make your program segfault..>
-    (inside gdb) backtrace
+```shell
+gcc -Wall -c -g *.c
+gcc -o my_program *.o
+gdb my_program
+(inside gdb) run
+(inside gdb) <..make your program segfault..>
+(inside gdb) backtrace
+```
 
 Sweet!

@@ -7,7 +7,7 @@ tags: [thoughts]
 
 … or rather - welcome in, pdf!
 
-I just posted a link to a pdf and named it <em>Title of important document here (pdf)</em>.
+I just posted a link to a pdf and named it _Title of important document here (pdf)_.
 
 Is that really necessary anymore? As a Google Chrome user, I don’t really have to bother checking the target of a link anymore because of the built in PDF-reader. It deserves so much cred, it’s unbelievable.
 

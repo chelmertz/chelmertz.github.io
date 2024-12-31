@@ -9,7 +9,7 @@ If you rely on sessions in your application, just one call to `session_destroy()
 
 The only viable solution is to user namespaces like`$_SESSION['userSession']` (with `loggedInSince` as possible key), `$_SESSION['shoppingCart']` like such:
 
-```
+```html
 <ul>
 	<li>product
 	<ul>
@@ -18,7 +18,6 @@ The only viable solution is to user namespaces like`$_SESSION['userSession']` (w
 	</ul>
 </li>
 </ul>
-
 ```
 
 Thus, `session_destroy()` becomes `unset($_SESSION['namespace'])`.

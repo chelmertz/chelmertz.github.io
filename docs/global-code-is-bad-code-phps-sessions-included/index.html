@@ -27,17 +27,15 @@
           <section>
             <p>If you rely on sessions in your application, just one call to <code>session_destroy()</code>, like that without any arguments, all your storage is reset. Doesn’t matter if it’s a shopping cart, logged in user’s surfing session, message alert, et cetera.</p>
 <p>The only viable solution is to user namespaces like<code>$_SESSION['userSession']</code> (with <code>loggedInSince</code> as possible key), <code>$_SESSION['shoppingCart']</code> like such:</p>
-<pre><code>&lt;ul&gt;
-	&lt;li&gt;product
-	&lt;ul&gt;
-		&lt;li&gt;id =&gt; 4&lt;/li&gt;
-		&lt;li&gt;quantity =&gt; 5&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-</code></pre>
-<p>Thus, <code>session_destroy()</code> becomes <code>unset($_SESSION['namespace'])</code>.</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>&lt;<span style="color:#000080">ul</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#000080">li</span>&gt;product
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#000080">ul</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#000080">li</span>&gt;id =&gt; 4&lt;/<span style="color:#000080">li</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#000080">li</span>&gt;quantity =&gt; 5&lt;/<span style="color:#000080">li</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#000080">ul</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080">li</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080">ul</span>&gt;
+</span></span></code></pre><p>Thus, <code>session_destroy()</code> becomes <code>unset($_SESSION['namespace'])</code>.</p>
 
           </section>
         </div>
@@ -45,11 +43,11 @@
       <section>
         <h2>Possibly related posts</h2>
         <ul>
-          <li><a href="/why-i-left-tumblr-for-posterous">Why I left tumblr for posterous</a></li>
-          <li><a href="/updates-in-background-processes-are-sweet">Updates in background processes are sweet</a></li>
-          <li><a href="/bookmarklet-really-should-be-in-a-new-window">Bookmarklets really should open in a new window</a></li>
-          <li><a href="/program-for-yourself">Program for yourself</a></li>
           <li><a href="/which-linux-version-am-i-using">Which Linux version am I using?</a></li>
+          <li><a href="/something-different-administrate-windows-7-through-god-mode">Something different - administrate Windows 7 through &#34;God mode&#34;</a></li>
+          <li><a href="/gconf-editor-lets-ubuntu-users-edit-keys">gconf-editor lets Ubuntu users edit keys</a></li>
+          <li><a href="/screen-capture-from-command-line">Screen capture from command line</a></li>
+          <li><a href="/program-for-yourself">Program for yourself</a></li>
         </ul>
       </section>
     </main>

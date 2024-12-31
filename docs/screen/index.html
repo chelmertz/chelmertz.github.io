@@ -26,7 +26,20 @@
         <div class="post-content" itemprop="articleBody">
           <section>
             <p>Screen could be used as <code>nohup</code> with the additional possibility of attaching to the terminal session again, once your ssh session was aborted (or equivalent).</p>
-<!-- raw HTML omitted -->
+<ul>
+<li><code>screen</code>- Create a new screen</li>
+<li><code>screen -S name</code>- Create a new screen named &quot;name&quot;</li>
+<li><code>screen -ls</code>- List screens</li>
+<li><code>screen -D</code>- Detach from screen</li>
+<li><code>screen -r</code>- Attach to the single existing screen</li>
+<li><code>screen -r 4262</code>- Attach to the detached screen with pid 4262</li>
+<li><code>screen -x 4262</code>- Reattach to the attached screen with pid 4262</li>
+<li><code>ctrl+a c</code> - Create a new terminal in the current screen</li>
+<li><code>ctrl+a H</code> - Log all output of current screen to a log file</li>
+<li><code>ctrl+a space</code> - Change terminals within current screen</li>
+<li><code>ctrl+a :sessionname name</code> - Rename current screen to &quot;name&quot;</li>
+<li><code>ctrl+a d</code> - Detach from current screen, like exit but keeps the terminal for reattaching later on</li>
+</ul>
 
           </section>
         </div>
@@ -34,11 +47,11 @@
       <section>
         <h2>Possibly related posts</h2>
         <ul>
-          <li><a href="/macs-got-a-builtin-screen-recorder">Mac&#39;s got a builtin screen recorder</a></li>
-          <li><a href="/terminal-start-faster">Make your terminal start faster</a></li>
-          <li><a href="/dhcp-on-new-network">DHCP on new network</a></li>
-          <li><a href="/print-screen-on-mac">Print screen on Mac</a></li>
-          <li><a href="/adding-alias-commands-on-the-fly">Adding `alias`-commands on the fly</a></li>
+          <li><a href="/shell-must-have">A shell&#39;s must-have features</a></li>
+          <li><a href="/ubuntu-2404">Upgrading to Ubuntu 24.04</a></li>
+          <li><a href="/elly-keeps-track-of-prs">elly - PRs you can act on</a></li>
+          <li><a href="/wordpress-apache-to-mynt-nginx">From Wordpress on Apache to mynt on nginx</a></li>
+          <li><a href="/programming-books-on-kindle">Programming books on Kindle</a></li>
         </ul>
       </section>
     </main>
