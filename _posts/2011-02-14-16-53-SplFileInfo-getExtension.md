@@ -5,6 +5,6 @@ permalink: "splfileinfogetextension"
 tags: [php]
 ---
 
-My <a href="http://bugs.php.net/bug.php?id=48767">request for the method <code>SplFileInfo::getExtension()</code></a> is now in the php trunk, yay!
+My [request for the method `SplFileInfo::getExtension`()](http://bugs.php.net/bug.php?id=48767) is now in the php trunk, yay!
 
-Thank you, <a href="http://cowburn.info/">salathe</a>!
+Thank you, [salathe](http://cowburn.info/)!

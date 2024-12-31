@@ -35,50 +35,48 @@
 <p>Grab the gitweb cgi, copy it to where your local Apache server can find it:</p>
 </li>
 </ul>
-<pre><code class="language-shell"># cp /usr/local/Cellar/git/1.7.11.1/share/gitweb/gitweb.cgi /Library/WebServer/CGI-Executables
-# cp /usr/local/Cellar/git/1.7.11.1/share/gitweb/static /Library/WebServer/Documents/gitweb
-</code></pre>
-<ul>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#998;font-style:italic"># cp /usr/local/Cellar/git/1.7.11.1/share/gitweb/gitweb.cgi /Library/WebServer/CGI-Executables</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># cp /usr/local/Cellar/git/1.7.11.1/share/gitweb/static /Library/WebServer/Documents/gitweb</span>
+</span></span></code></pre><ul>
 <li>Modify gitweb.cgi to let it find the static files, to find the git projects and to not choke on really large directories that I'm sure does not contain anything git' anyway:</li>
 </ul>
-<pre><code class="language-diff">--- /usr/local/Cellar/git/1.7.11.1/share/gitweb/gitweb.cgi	2012-07-11 20:23:10.000000000 +0200
-+++ /Library/WebServer/CGI-Executables/gitweb.cgi	2012-07-11 20:50:36.000000000 +0200
-@@ -71,11 +71,11 @@
- 
- # absolute fs-path which will be prepended to the project path
- #our $projectroot = &quot;/pub/scm&quot;;
--our $projectroot = &quot;/pub/git&quot;;
-+our $projectroot = &quot;/Users/my-user/Sites&quot;;
- 
- # fs traversing limit for getting project list
- # the number is relative to the projectroot
--our $project_maxdepth = 2007;
-+our $project_maxdepth = 5;
- 
- # string of the home link on top of all pages
- our $home_link_str = &quot;projects&quot;;
-@@ -95,15 +95,15 @@
- our $site_footer = &quot;&quot;;
- 
- # URI of stylesheets
--our @stylesheets = (&quot;static/gitweb.css&quot;);
-+our @stylesheets = (&quot;/gitweb/static/gitweb.css&quot;);
- # URI of a single stylesheet, which can be overridden in GITWEB_CONFIG.
- our $stylesheet = undef;
- # URI of GIT logo (72x27 size)
--our $logo = &quot;static/git-logo.png&quot;;
-+our $logo = &quot;/gitweb/static/git-logo.png&quot;;
- # URI of GIT favicon, assumed to be image/png type
--our $favicon = &quot;static/git-favicon.png&quot;;
-+our $favicon = &quot;/gitweb/static/git-favicon.png&quot;;
- # URI of gitweb.js (JavaScript code for gitweb)
--our $javascript = &quot;static/gitweb.js&quot;;
-+our $javascript = &quot;/gitweb/static/gitweb.js&quot;;
- 
- # URI and label (title) of GIT logo link
- #our $logo_url = &quot;http://www.kernel.org/pub/software/scm/git/docs/&quot;;
-</code></pre>
-<p>Now, visit &amp; bookmark http://localhost/cgi-bin/gitweb.cgi in your browser and you should be good to go.</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#000;background-color:#fdd">--- /usr/local/Cellar/git/1.7.11.1/share/gitweb/gitweb.cgi	2012-07-11 20:23:10.000000000 +0200
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd"></span><span style="color:#000;background-color:#dfd">+++ /Library/WebServer/CGI-Executables/gitweb.cgi	2012-07-11 20:50:36.000000000 +0200
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#dfd"></span><span style="color:#aaa">@@ -71,11 +71,11 @@
+</span></span></span><span style="display:flex;"><span><span style="color:#aaa"></span> 
+</span></span><span style="display:flex;"><span> # absolute fs-path which will be prepended to the project path
+</span></span><span style="display:flex;"><span> #our $projectroot = &#34;/pub/scm&#34;;
+</span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd">-our $projectroot = &#34;/pub/git&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd"></span><span style="color:#000;background-color:#dfd">+our $projectroot = &#34;/Users/my-user/Sites&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#dfd"></span> 
+</span></span><span style="display:flex;"><span> # fs traversing limit for getting project list
+</span></span><span style="display:flex;"><span> # the number is relative to the projectroot
+</span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd">-our $project_maxdepth = 2007;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd"></span><span style="color:#000;background-color:#dfd">+our $project_maxdepth = 5;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#dfd"></span> 
+</span></span><span style="display:flex;"><span> # string of the home link on top of all pages
+</span></span><span style="display:flex;"><span> our $home_link_str = &#34;projects&#34;;
+</span></span><span style="display:flex;"><span><span style="color:#aaa">@@ -95,15 +95,15 @@
+</span></span></span><span style="display:flex;"><span><span style="color:#aaa"></span> our $site_footer = &#34;&#34;;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> # URI of stylesheets
+</span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd">-our @stylesheets = (&#34;static/gitweb.css&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd"></span><span style="color:#000;background-color:#dfd">+our @stylesheets = (&#34;/gitweb/static/gitweb.css&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#dfd"></span> # URI of a single stylesheet, which can be overridden in GITWEB_CONFIG.
+</span></span><span style="display:flex;"><span> our $stylesheet = undef;
+</span></span><span style="display:flex;"><span> # URI of GIT logo (72x27 size)
+</span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd">-our $logo = &#34;static/git-logo.png&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd"></span><span style="color:#000;background-color:#dfd">+our $logo = &#34;/gitweb/static/git-logo.png&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#dfd"></span> # URI of GIT favicon, assumed to be image/png type
+</span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd">-our $favicon = &#34;static/git-favicon.png&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd"></span><span style="color:#000;background-color:#dfd">+our $favicon = &#34;/gitweb/static/git-favicon.png&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#dfd"></span> # URI of gitweb.js (JavaScript code for gitweb)
+</span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd">-our $javascript = &#34;static/gitweb.js&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#fdd"></span><span style="color:#000;background-color:#dfd">+our $javascript = &#34;/gitweb/static/gitweb.js&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;background-color:#dfd"></span> 
+</span></span><span style="display:flex;"><span> # URI and label (title) of GIT logo link
+</span></span><span style="display:flex;"><span> #our $logo_url = &#34;http://www.kernel.org/pub/software/scm/git/docs/&#34;;
+</span></span></code></pre><p>Now, visit &amp; bookmark http://localhost/cgi-bin/gitweb.cgi in your browser and you should be good to go.</p>
 
           </section>
         </div>
@@ -93,9 +91,9 @@
           
           <li><a href="/using-git-init-bare-for-a-slim-repository-look">Using git init --bare for a slim repository look</a></li>
           
-          <li><a href="/jenkins-python-virtualenv">Making Jenkins work with python&#39;s virtualenv</a></li>
-          
           <li><a href="/updating-a-forked-project-on-github">Updating a forked project on Github</a></li>
+          
+          <li><a href="/jenkins-python-virtualenv">Making Jenkins work with python&#39;s virtualenv</a></li>
           
         </ul>
       </section>

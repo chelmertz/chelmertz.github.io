@@ -5,6 +5,6 @@ permalink: "simple-desktops"
 tags: [visual]
 ---
 
-<a href="http://simpledesktops.com/">http://simpledesktops.com/</a>
+http://simpledesktops.com/
 
 Top of the notch wallpapers

@@ -5,7 +5,7 @@ permalink: "readability-js-bookmarklet"
 tags: [bookmarklet, javascript, usability]
 ---
 
-<a href="http://lab.arc90.com/experiments/readability/">http://lab.arc90.com/experiments/readability/</a>
+http://lab.arc90.com/experiments/readability/
 
 Readability is a great idea, acomplishing something big in a very fashionable way - with both its homepage’s finesse and the use of the script.
 

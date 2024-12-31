@@ -9,7 +9,7 @@ As a C newbie, I've never gotten a segfault until tonight (yes, my homework's du
 
 gdb helped out a lot by letting me get from "segfault happened" to "function x and y were called but z failed at my_file.c:30, here's that line for you: ...".
 
-The slide <a href="http://www.slideshare.net/noobyahoo/introduction-to-segmentation-fault-handling-5563036">Introduction to segmentation fault handling</a> rocks; based on that article, this is kinda what my process & debugging step in the makefile looks like now:
+The slide [Introduction to segmentation fault handling](http://www.slideshare.net/noobyahoo/introduction-to-segmentation-fault-handling-5563036) rocks; based on that article, this is kinda what my process & debugging step in the makefile looks like now:
 
     gcc -Wall -c -g *.c
     gcc -o my_program *.o

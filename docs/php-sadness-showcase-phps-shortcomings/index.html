@@ -25,18 +25,17 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p><!-- raw HTML omitted -->PHP Sadness<!-- raw HTML omitted --> is a listing of PHP's roughest edges - things that could have been clearer, weird implementations and plain errors in design. I agree with most of the list's items, especially the ones concerning inconsistent behavior/signatures of native functions. Most of those annoyances would be impossible to get wrong if everything was an object and functions were instead methods (yes, I'm jealously looking at Ruby). For example:</p>
-<pre><code>// what's correct again?
-in_array('blue', $array);
-// or, perhaps:
-in_array($array, 'blue');
-
-//wouldn't this be better?
-$array-&gt;contains('blue')
-// or perhaps
-'blue'-&gt;in_array($array)
-</code></pre>
-<p>The second most important part is the often really badly expressed error messages, sometimes even the stack trace is corrupted and then the developer's guessing game begins.</p>
+            <p><a href="http://phpsadness.com/">PHP Sadness</a> is a listing of PHP's roughest edges - things that could have been clearer, weird implementations and plain errors in design. I agree with most of the list's items, especially the ones concerning inconsistent behavior/signatures of native functions. Most of those annoyances would be impossible to get wrong if everything was an object and functions were instead methods (yes, I'm jealously looking at Ruby). For example:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#998;font-style:italic">// what&#39;s correct again?
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>in_array(<span style="color:#d14">&#39;blue&#39;</span>, <span style="color:#008080">$array</span>);
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// or, perhaps:
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>in_array(<span style="color:#008080">$array</span>, <span style="color:#d14">&#39;blue&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">//wouldn&#39;t this be better?
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#008080">$array</span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#008080">contains</span>(<span style="color:#d14">&#39;blue&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// or perhaps
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span><span style="color:#d14">&#39;blue&#39;</span><span style="color:#000;font-weight:bold">-&gt;</span><span style="color:#008080">in_array</span>(<span style="color:#008080">$array</span>)
+</span></span></code></pre><p>The second most important part is the often really badly expressed error messages, sometimes even the stack trace is corrupted and then the developer's guessing game begins.</p>
 <p>I really hope that some of the issues gets fixed since the article has been by wide audiences already, perhaps it will put some pressure on fixing what needs to be fixed.</p>
 
           </section>
@@ -46,15 +45,15 @@ $array-&gt;contains('blue')
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/osxfuse-macfuse-lion">OSXFUSE instead of MacFuse on Lion</a></li>
-          
           <li><a href="/elly-keeps-track-of-prs">elly - PRs you can act on</a></li>
           
-          <li><a href="/vimium-enables-keyboard-navigation-chrome">Vimium enables keyboard only navigation for Chrome</a></li>
+          <li><a href="/ubuntu-2404">Upgrading to Ubuntu 24.04</a></li>
           
-          <li><a href="/simple-desktops">Simple Desktops</a></li>
+          <li><a href="/osxfuse-macfuse-lion">OSXFUSE instead of MacFuse on Lion</a></li>
           
-          <li><a href="/plain-english-explanation-of-big-o-stack-overflow">Plain English explanation of Big O - Stack Overflow</a></li>
+          <li><a href="/lose-mouse-get-faster-meet-alfred">Lose the mouse and get faster - meet Alfred</a></li>
+          
+          <li><a href="/shell-must-have">A shell&#39;s must-have features</a></li>
           
         </ul>
       </section>

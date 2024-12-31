@@ -9,11 +9,13 @@ Reminder for the issue `error: There was a problem with the editor 'vi'` while t
 
 This can be solved by
 
-    $ git config --global core.editor `which vim`
+```shell
+git config --global core.editor `which vim`
+```
 
-(via <a href="http://tooky.github.com/2010/04/08/there-was-a-problem-with-the-editor-vi-git-on-mac-os-x.html">http://tooky.github.com/2010/04/08/there-was-a-problem-with-the-editor-vi-git-on-mac-os-x.html</a>)
+via http://tooky.github.com/2010/04/08/there-was-a-problem-with-the-editor-vi-git-on-mac-os-x.html
 
 Some recent changes that might have introduced this "bug" in my setup:
 
-- Installing a brand new config: <a href="https://github.com/spf13/spf13-vim">spf13-vim</a>
-- Started to use gVim, more especially <a href="https://github.com/b4winckler/macvim">MacVim</a>
+- Installing a brand new config: [spf13-vim](https://github.com/spf13/spf13-vim)
+- Started to use gVim, more especially [MacVim](https://github.com/b4winckler/macvim)

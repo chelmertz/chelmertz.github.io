@@ -5,13 +5,12 @@ permalink: "checklist-removing-git-submodule"
 tags: [git]
 ---
 
-<blockquote cite="https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial">
-<ol>
-	<li>Delete the relevant line from the <em>.gitmodules</em> file.</li>
-	<li>Delete the relevant section from <em>.git/config</em>.</li>
-	<li>Run <em>git rm --cached path_to_submodule</em> (no trailing slash).</li>
-	<li>Commit the superproject.</li>
-	<li>Delete the now untracked submodule files.</li>
-</ol>
-</blockquote>
-From <a href="https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial">https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial</a>
+
+>- Delete the relevant line from the _.gitmodules_ file.
+>- Delete the relevant section from _.git/config_.
+>- Run _git rm --cached path_to_submodule_ (no trailing slash).
+>- Commit the superproject.
+>- Delete the now untracked submodule files.
+
+
+From https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial

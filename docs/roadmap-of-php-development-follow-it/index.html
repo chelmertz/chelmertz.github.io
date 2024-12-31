@@ -25,33 +25,36 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p>I just discovered an interesting wiki part of php.net, <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><a href="http://wiki.php.net/rfc">http://wiki.php.net/rfc</a><!-- raw HTML omitted -->.</p>
+            <p>I just discovered an interesting wiki part of php.net, <a href="http://wiki.php.net/rfc">http://wiki.php.net/rfc</a></p>
 <p>It contains drafts, proposals in an easy-on-the-eyes format. Some of the more interesting topics are</p>
-<!-- raw HTML omitted -->
-<pre><code>function a() { return array(1, 2, 3);}
-echo a()[0];
-</code></pre>
-<p>Status is listed as “accepted” - finally! This syntax is so handy, the only real alternative seems to be <!-- raw HTML omitted -->list()<!-- raw HTML omitted --> which is a bit clunky. Besides, everybody knows this syntax from javascript.</p>
-<!-- raw HTML omitted -->
-<pre><code>trigger_error(&quot;Use BlaBla::Bla() instead of &quot;.__METHOD__, E_USER_DEPRECATED);
-</code></pre>
-<!-- raw HTML omitted -->
-<pre><code>function(int $apples, string $collection_name) {}
-</code></pre>
-<!-- raw HTML omitted -->
-<pre><code>class TimePeriod
-{
-    private double seconds;
-
-    public double Hours
-    {
-        get { return seconds / 3600; }
-        set { seconds = value * 3600; }// The variable &quot;value&quot; holds the incoming value to be &quot;set&quot;
-    }
-}
-</code></pre>
-<p>The proposal then tries to include every possible aspect of this, from the beginning, good idea. Just by reading the discussion on the wiki (never read any mailing lists) I’m already getting tired of it. Too bad.</p>
-<!-- raw HTML omitted -->
+<h2><a href="http://wiki.php.net/rfc/functionarraydereferencing">Function Array Dereferencing</a></h2>
+<p>Example:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#000;font-weight:bold">function</span> <span style="color:#900;font-weight:bold">a</span>() { <span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">array</span>(<span style="color:#099">1</span>, <span style="color:#099">2</span>, <span style="color:#099">3</span>);}
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">echo</span> a()[<span style="color:#099">0</span>];
+</span></span></code></pre><p>Status is listed as “accepted” - finally! This syntax is so handy, the only real alternative seems to be <!-- raw HTML omitted -->list()<!-- raw HTML omitted --> which is a bit clunky. Besides, everybody knows this syntax from javascript.</p>
+<h2><a href="http://wiki.php.net/rfc/e-user-deprecated-warning">E_USER_DEPRECATED</a></h2>
+<p>Finally a way to properly mark parts of your API as <!-- raw HTML omitted -->old<!-- raw HTML omitted -->:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>trigger_error(<span style="color:#d14">&#34;Use BlaBla::Bla() instead of &#34;</span><span style="color:#000;font-weight:bold">.</span><span style="color:#008080">__METHOD__</span>, E_USER_DEPRECATED);
+</span></span></code></pre><h2><a href="http://wiki.php.net/rfc/docblockparser">docBlock Parser</a></h2>
+<p>A native parser for docblocks which will probably be a lot faster and also increase awareness and interest of actually documenting code. PHPUnit testcases and frameworks such as Doctrine 2 might gain some speed increase.</p>
+<h2><a href="http://wiki.php.net/rfc/typechecking">Strict type</a></h2>
+<p>There are some proposials (about time) for making a method signature like the following valid:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#000;font-weight:bold">function</span>(int <span style="color:#008080">$apples</span>, string <span style="color:#008080">$collection_name</span>) {}
+</span></span></code></pre><h2><a href="http://wiki.php.net/rfc/propertygetsetsyntax">C# style getters/setters</a></h2>
+<p>A really usable syntax, instead of <code>__get()</code>, <code>__set()</code> or <code>__call()</code>:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">TimePeriod</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">private</span> double seconds;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">public</span> double Hours
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        get { <span style="color:#000;font-weight:bold">return</span> seconds <span style="color:#000;font-weight:bold">/</span> <span style="color:#099">3600</span>; }
+</span></span><span style="display:flex;"><span>        set { seconds <span style="color:#000;font-weight:bold">=</span> value <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">3600</span>; }<span style="color:#998;font-style:italic">// The variable &#34;value&#34; holds the incoming value to be &#34;set&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre><p>The proposal then tries to include every possible aspect of this, from the beginning, good idea. Just by reading the discussion on the wiki (never read any mailing lists) I’m already getting tired of it. Too bad.</p>
+<h2>Conclusion</h2>
+<p>There exists some really nice discussions in an easy-to-read format. Since there are quite a few proposals already implemented, I probably got hoping for too many new features… In one way, it’s great to see the language improving, in another way: why is it taking so long?</p>
 <p>Also, it feels nice to see inspiration coming from other languages (surprisingly javascript stands for quite a few). I wonder if it will become more and more like java, with all the oop/namespacing in the latest patches. (I hope so.) <a href="/global-code-sucks-php-has-5468-global-functions/">The more global functions we get rid off, the better.</a></p>
 
           </section>
@@ -67,7 +70,7 @@ echo a()[0];
           
           <li><a href="/global-code-sucks-php-has-5468-global-functions">Global code sucks - php has 5468 global functions</a></li>
           
-          <li><a href="/touch-tool-fixes-lions-incompetence">Better touch tool fixes Lion&#39;s incompetence</a></li>
+          <li><a href="/what_i_want_from_an_api">What I want from an interface</a></li>
           
           <li><a href="/which-saves-the-day">which - saves the day</a></li>
           

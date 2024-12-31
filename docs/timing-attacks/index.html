@@ -25,9 +25,12 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p><!-- raw HTML omitted --><a href="http://devzone.zend.com/article/12654-Zend-Framework-1.11.0BETA1-Released">http://devzone.zend.com/article/12654-Zend-Framework-1.11.0BETA1-Released</a><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted -->I wonder why not all companies producing serious code, hire hackers for a lot of $$$ to find bugs in their software.<!-- raw HTML omitted --></p>
+            <p><a href="http://devzone.zend.com/article/12654-Zend-Framework-1.11.0BETA1-Released">http://devzone.zend.com/article/12654-Zend-Framework-1.11.0BETA1-Released</a></p>
+<blockquote>
+<p>The nature of the leaks is that strings are often compared byte by byte, with a negative result being returned early as soon as any set of non-matching bytes is detected. The more bytes that are equal (starting from the first byte) between both sides of the comparison, the longer it takes for a final result to be returned. Based on the time it takes to return a negative or positive result, it is possible that an attacker could, over many samples of requests, craft a string that compares positively to another secret string value known only to a target server simply by guessing the string one byte at a time and measuring each guess’ execution time.</p>
+</blockquote>
+<p>Perfect scope for a problem that is easily adopted on framework level in an application. It’s probably a very unusual type of attack to defend against, building the ordinary out-of-the-box-application.</p>
+<p>I wonder why not all companies producing serious code, hire hackers for a lot of $$$ to find bugs in their software.</p>
 
           </section>
         </div>
@@ -36,13 +39,13 @@
         <h2>Possibly related posts</h2>
         <ul>
           
+          <li><a href="/google-geo-developers-blog-markerclusterer-a-solution-to-the-too-many-markers-problem">Google Geo Developers Blog: MarkerClusterer: A Solution to the Too Many Markers Problem</a></li>
+          
           <li><a href="/accessing-windows-server-remotely-with-mac">Accessing Windows server remotely with Mac</a></li>
           
           <li><a href="/screen-capture-from-command-line">Screen capture from command line</a></li>
           
           <li><a href="/simple-desktops">Simple Desktops</a></li>
-          
-          <li><a href="/import-legacy-php-app-into-zf-with-ease">Import legacy PHP app into ZF with ease</a></li>
           
           <li><a href="/make-your-mac-sing-songs">Make your Mac sing songs</a></li>
           

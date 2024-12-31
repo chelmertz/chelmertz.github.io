@@ -5,8 +5,8 @@ permalink: "import-legacy-php-app-into-zf-with-ease"
 tags: [php, zend-framework]
 ---
 
-<a href="http://www.chrisabernethy.com/zend-framework-legacy-scripts/">Migrating to Zend Framework: Legacy Scripts : Chris Abernethy . com</a>
+[Migrating to Zend Framework: Legacy Scripts : Chris Abernethy . com](http://www.chrisabernethy.com/zend-framework-legacy-scripts/)
 
 and
 
-<a href="http://stackoverflow.com/questions/3428419/integrating-existing-pages-in-a-zend-framework-application">Integrating existing pages in a Zend Framework application</a>
+[Integrating existing pages in a Zend Framework application](http://stackoverflow.com/questions/3428419/integrating-existing-pages-in-a-zend-framework-application)

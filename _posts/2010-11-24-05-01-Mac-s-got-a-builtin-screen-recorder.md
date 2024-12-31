@@ -5,7 +5,7 @@ permalink: "macs-got-a-builtin-screen-recorder"
 tags: [mac]
 ---
 
-<a href="http://osxdaily.com/2010/11/16/screen-recorder-mac/">http://osxdaily.com/2010/11/16/screen-recorder-mac/</a>
+http://osxdaily.com/2010/11/16/screen-recorder-mac/
 
 … it’s called Quicktime.
 

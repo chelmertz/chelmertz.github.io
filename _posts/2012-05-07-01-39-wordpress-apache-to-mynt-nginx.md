@@ -35,7 +35,7 @@ Going from Wordpress to [mynt](http://mynt.mirroredwhite.com/).
 
 - Install mynt, requires xcode on osx (for "watchdog" -- an, in my eyes, unnecessary dependency)
 - Export all posts from wordpress (I got an XML file out of 3.3.1)
-- Run `$ ./wp2mynt.php export-file.xml` (<a href="https://github.com/chelmertz/mynt-tools/blob/master/wp2mynt.php">wp2mynt.php is on github</a>)
+- Run `$ ./wp2mynt.php export-file.xml` ([wp2mynt.php is on github](https://github.com/chelmertz/mynt-tools/blob/master/wp2mynt.php))
 - Modify the theme a bit (far too many h1 used, for example)
   - Get a pattern from subtlepatterns.com
 - Upload it to a new /var/www/directory-here, add a virtual host section to apache's config with ServerName test.iamnearlythere.com. Forgot to register test.iamnearlythere.com as an A record at my DNS registrar, 30 min wasted.
@@ -46,7 +46,7 @@ Going from Wordpress to [mynt](http://mynt.mirroredwhite.com/).
   - Make sure mysqld doesn't start on boot: http://superuser.com/a/139059/9539
 - Make sure nginx does start on boot: http://articles.slicehost.com/2007/10/17/ubuntu-lts-adding-an-nginx-init-script (I had to replace the nginx path with /usr/local/nginx/sbin/nginx)
 - Allright, I'm done.. ish. When using `$ tail -f /usr/local/nginx/logs/error.log` I notice a bunch of stuff I missed. Redirections here we go
-- Also, <a href="https://github.com/chelmertz/mynt-tools/blob/master/Makefile">create a Makefile</a> for generating, testing and deploying the blog (mynt generate; rsync)
+- Also, [create a Makefile](https://github.com/chelmertz/mynt-tools/blob/master/Makefile) for generating, testing and deploying the blog (mynt generate; rsync)
   - It contains [multiline strings](http://stackoverflow.com/questions/649246/is-it-possible-to-create-a-multi-line-string-variable-in-a-makefile) and [feeding vim with input](http://superuser.com/questions/421367/read-from-stdin-to-new-named-file-in-vim)
 
 ## Result:

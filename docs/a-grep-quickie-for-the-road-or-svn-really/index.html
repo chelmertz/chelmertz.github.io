@@ -25,13 +25,13 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p>This post is outdated, you should read <!-- raw HTML omitted -->&quot;sed quickie, search and replace in files&quot;<!-- raw HTML omitted --> instead!</p>
-<!-- raw HTML omitted -->
-<p>When working with <!-- raw HTML omitted -->svn<!-- raw HTML omitted --> instead of <!-- raw HTML omitted -->git<!-- raw HTML omitted -->, there are a lot more hits when performing a simple</p>
-<p><!-- raw HTML omitted -->grep -Ri &quot;search for me&quot; .<!-- raw HTML omitted --></p>
-<p>which, when using svn, returns in lots more hits than wanted. To filter them out, add another grep with the -v flag which inverts the results, i.e. passes along everything that does <!-- raw HTML omitted -->not<!-- raw HTML omitted --> match the following pattern. Like this:</p>
-<p><!-- raw HTML omitted -->grep -Ri &quot;search for me&quot; . | grep -v.svn<!-- raw HTML omitted --></p>
-
+            <p>This post is outdated, you should read <a href="/sed-quickie-search-replace-files">&quot;sed quickie, search and replace in files&quot;</a> instead!</p>
+<hr>
+<p>When working with svn instead of git, there are a lot more hits when performing a simple</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>grep -Ri <span style="color:#d14">&#34;search for me&#34;</span> .
+</span></span></code></pre><p>which, when using svn, returns in lots more hits than wanted. To filter them out, add another grep with the -v flag which inverts the results, i.e. passes along everything that does <!-- raw HTML omitted -->not<!-- raw HTML omitted --> match the following pattern. Like this:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>grep -Ri <span style="color:#d14">&#34;search for me&#34;</span> . | grep -v<span style="color:#d14">\.</span>svn
+</span></span></code></pre>
           </section>
         </div>
       </article>
@@ -39,15 +39,15 @@
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/simple-desktops">Simple Desktops</a></li>
-          
-          <li><a href="/less-makes-wonders-front-development">Less makes wonders for front end development</a></li>
+          <li><a href="/search-ack-better-grep">search with ack - &#34;better than grep&#34;</a></li>
           
           <li><a href="/googles-style-guides">Googles style guides</a></li>
           
-          <li><a href="/import-legacy-php-app-into-zf-with-ease">Import legacy PHP app into ZF with ease</a></li>
+          <li><a href="/which-linux-version-am-i-using">Which Linux version am I using?</a></li>
           
-          <li><a href="/search-ack-better-grep">search with ack - &#34;better than grep&#34;</a></li>
+          <li><a href="/from-youtube-to-mp3">From Youtube to mp3</a></li>
+          
+          <li><a href="/updating-a-forked-project-on-github">Updating a forked project on Github</a></li>
           
         </ul>
       </section>

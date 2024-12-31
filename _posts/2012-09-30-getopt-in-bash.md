@@ -7,7 +7,7 @@ tags: bash
 
 How to properly read command line arguments for a bash script and do it well even without getopt:
 
-```
+```shell
 while :; do
         case "$1" in
                 -h|--help)

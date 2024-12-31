@@ -56,7 +56,7 @@
 <ul>
 <li>Install mynt, requires xcode on osx (for &quot;watchdog&quot; -- an, in my eyes, unnecessary dependency)</li>
 <li>Export all posts from wordpress (I got an XML file out of 3.3.1)</li>
-<li>Run <code>$ ./wp2mynt.php export-file.xml</code> (<!-- raw HTML omitted -->wp2mynt.php is on github<!-- raw HTML omitted -->)</li>
+<li>Run <code>$ ./wp2mynt.php export-file.xml</code> (<a href="https://github.com/chelmertz/mynt-tools/blob/master/wp2mynt.php">wp2mynt.php is on github</a>)</li>
 <li>Modify the theme a bit (far too many h1 used, for example)
 <ul>
 <li>Get a pattern from subtlepatterns.com</li>
@@ -76,7 +76,7 @@
 </li>
 <li>Make sure nginx does start on boot: <a href="http://articles.slicehost.com/2007/10/17/ubuntu-lts-adding-an-nginx-init-script">http://articles.slicehost.com/2007/10/17/ubuntu-lts-adding-an-nginx-init-script</a> (I had to replace the nginx path with /usr/local/nginx/sbin/nginx)</li>
 <li>Allright, I'm done.. ish. When using <code>$ tail -f /usr/local/nginx/logs/error.log</code> I notice a bunch of stuff I missed. Redirections here we go</li>
-<li>Also, <!-- raw HTML omitted -->create a Makefile<!-- raw HTML omitted --> for generating, testing and deploying the blog (mynt generate; rsync)
+<li>Also, <a href="https://github.com/chelmertz/mynt-tools/blob/master/Makefile">create a Makefile</a> for generating, testing and deploying the blog (mynt generate; rsync)
 <ul>
 <li>It contains <a href="http://stackoverflow.com/questions/649246/is-it-possible-to-create-a-multi-line-string-variable-in-a-makefile">multiline strings</a> and <a href="http://superuser.com/questions/421367/read-from-stdin-to-new-named-file-in-vim">feeding vim with input</a></li>
 </ul>

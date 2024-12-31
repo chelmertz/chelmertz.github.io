@@ -5,4 +5,4 @@ permalink: "check-the-path-of-your-mac-with-echo-path-os-x-daily"
 tags: [bash, mac]
 ---
 
-<a href="http://osxdaily.com/2010/08/31/check-the-path-of-your-mac-with-echo-path/">http://osxdaily.com/2010/08/31/check-the-path-of-your-mac-with-echo-path/</a>
+http://osxdaily.com/2010/08/31/check-the-path-of-your-mac-with-echo-path/

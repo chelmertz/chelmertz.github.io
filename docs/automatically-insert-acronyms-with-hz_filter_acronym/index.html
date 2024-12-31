@@ -28,7 +28,16 @@
             <p>I hope this demo speaks for itself:</p>
 <!-- raw HTML omitted -->
 <p>This class is only good for parsing. If you’d like to use it in your application, here are some tips using the variable names from the gist’s example:</p>
-<!-- raw HTML omitted -->
+<ul>
+<li>initialize the class once, so you won’t have to pass on <code>$words</code> on every initiation</li>
+<li>cache the output, it’s an expensive round trip you do not want to do</li>
+<li>invalidate (delete) cache only when <code>$words</code> get bigger or when <code>$sentence</code> changes</li>
+</ul>
+<p>Requirements:</p>
+<ul>
+<li>Zend Framework, or at least the <code>Zend_Filter_Interface</code>-class on your include path. Even this single requirement is optional, just comment out <code>implements Zend_Filter_Interface</code> if you want to use it as a standalone component.</li>
+</ul>
+<p>You find <a href="https://github.com/chelmertz/Hz/blob/master/Hz/Filter/Acronym.php">Hz_Filter_Acronym at github</a></p>
 
           </section>
         </div>
@@ -37,15 +46,15 @@
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/global-code-is-bad-code-phps-sessions-included">Global code is bad code - PHP&#39;s sessions included</a></li>
+          <li><a href="/elly-keeps-track-of-prs">elly - PRs you can act on</a></li>
+          
+          <li><a href="/wordpress-apache-to-mynt-nginx">From Wordpress on Apache to mynt on nginx</a></li>
+          
+          <li><a href="/dark-mode-ubuntu-i3">Toggling light/dark color scheme for i3 on Ubuntu</a></li>
+          
+          <li><a href="/shell-must-have">A shell&#39;s must-have features</a></li>
           
           <li><a href="/open-source-project-owners-control-yourselves">Open source project owners: control yourselves!</a></li>
-          
-          <li><a href="/scp-where-have-you-been">scp - where have you been?</a></li>
-          
-          <li><a href="/set-enviroment-variables-in-apache">Set enviroment variables in Apache</a></li>
-          
-          <li><a href="/why-i-left-tumblr-for-posterous">Why I left tumblr for posterous</a></li>
           
         </ul>
       </section>

@@ -5,4 +5,4 @@ permalink: "colloquy-irc-silc-icb-client"
 tags: [mac]
 ---
 
-<a href="http://colloquy.info/">http://colloquy.info/</a>
+http://colloquy.info/

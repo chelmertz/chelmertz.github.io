@@ -10,15 +10,13 @@ This is how I would let a user login again, after she lost her password:
 - Provide a clear "Lost your password?" link at the login page and possibly in the "help section"
 - Let your user provide one thing she surely remembers - her email
 - Send a confirmation mail to the user with a text like
-    > Hi, this is &lt;you&gt;. Someone requested a password reset on &lt;your site&gt;. If that was not you, you can safely ignore this email and nothing will happen.
+    > Hi, this is _you_;. Someone requested a password reset on _your site_. If that was not you, you can safely ignore this email and nothing will happen.
 	> 
-	> If it is you, who requested your password to be reset, click this link &lt;yoursite.com/forgotten/3ttnjwnt32t&gt; to reset it.
+	> If it is you, who requested your password to be reset, click this link _yoursite.com/forgotten/3ttnjwnt32t_ to reset it.
 
-The "3ttnjwnt32t" string is only mentioned in the letter, you save
+The "3ttnjwnt32t" string is only mentioned in the letter, for a single user. You store it temporarily and use it to get the user.
 
-store encrypted with a hash
-
-password resets:
+Password resets:
 
 - request reset
 - allow anybody to send a reset-request-email

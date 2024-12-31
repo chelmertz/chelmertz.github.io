@@ -5,8 +5,8 @@ permalink: "something-different-administrate-windows-7-through-god-mode"
 tags: [windows]
 ---
 
-<a href="http://news.cnet.com/8301-13860_3-10423985-56.html">http://news.cnet.com/8301-13860_3-10423985-56.html</a>
+http://news.cnet.com/8301-13860_3-10423985-56.html
 
-Create a folder named <em>GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}</em>
+Create a folder named _GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}_
 
 Works like a charm!

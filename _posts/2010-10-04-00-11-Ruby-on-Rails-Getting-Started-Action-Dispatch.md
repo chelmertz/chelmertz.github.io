@@ -5,6 +5,6 @@ permalink: "ruby-on-rails-getting-started-action-dispatch"
 tags: [thoughts]
 ---
 
-<a href="http://rubyonrails.org/screencasts/rails3/getting-started-action-dispatch">http://rubyonrails.org/screencasts/rails3/getting-started-action-dispatch</a>
+http://rubyonrails.org/screencasts/rails3/getting-started-action-dispatch
 
 Now this is how you release an open source project’s latest update.

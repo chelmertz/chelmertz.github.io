@@ -51,32 +51,27 @@
 </ul>
 </li>
 </ul>
-<pre><code class="language-sh"># Setup a proper path, I call my virtualenv dir &quot;venv&quot; and
-# I've got the virtualenv command installed in /usr/local/bin
-PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
-if [ ! -d &quot;venv&quot; ]; then
-        virtualenv venv
-fi
-. venv/bin/activate
-pip install -r requirements.txt --download-cache=/tmp/$JOB_NAME
-</code></pre>
-<p>and</p>
-<pre><code class="language-sh">. venv/bin/activate
-python test_app.py
-</code></pre>
-<h2>Trigger Jenkins through git hook</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Setup a proper path, I call my virtualenv dir &#34;venv&#34; and</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># I&#39;ve got the virtualenv command installed in /usr/local/bin</span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">PATH</span><span style="color:#000;font-weight:bold">=</span><span style="color:#008080">$WORKSPACE</span>/venv/bin:/usr/local/bin:<span style="color:#008080">$PATH</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">[</span> ! -d <span style="color:#d14">&#34;venv&#34;</span> <span style="color:#000;font-weight:bold">]</span>; <span style="color:#000;font-weight:bold">then</span>
+</span></span><span style="display:flex;"><span>        virtualenv venv
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">fi</span>
+</span></span><span style="display:flex;"><span>. venv/bin/activate
+</span></span><span style="display:flex;"><span>pip install -r requirements.txt --download-cache<span style="color:#000;font-weight:bold">=</span>/tmp/<span style="color:#008080">$JOB_NAME</span>
+</span></span></code></pre><p>and</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>. venv/bin/activate
+</span></span><span style="display:flex;"><span>python test_app.py
+</span></span></code></pre><h2>Trigger Jenkins through git hook</h2>
 <p>You need to add a git hook which triggers a Jenkins build:</p>
-<pre><code class="language-sh">echo &quot;curl http://localhost:8080/git/notifyCommit?url=/Users/you/Sites/asdf&quot; &gt;&gt; .git/hooks/post-commit
-chmod +x !$
-</code></pre>
-<p>Add an erroneous test, this will do:</p>
-<pre><code class="language-python">def test_bad(self):
-    assert False
-</code></pre>
-<p>You should see a new build being queued up in Jenkins within a minute. If that doesn't work, execute the hook and watch the output for error messages:</p>
-<pre><code class="language-sh">./git/hooks/post-commit
-</code></pre>
-<p>Now, Jenkins should try to test your project but fail, and report the failure through the GUI. Tada.</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;curl http://localhost:8080/git/notifyCommit?url=/Users/you/Sites/asdf&#34;</span> &gt;&gt; .git/hooks/post-commit
+</span></span><span style="display:flex;"><span>chmod +x !$
+</span></span></code></pre><p>Add an erroneous test, this will do:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">test_bad</span>(<span style="color:#999">self</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">assert</span> <span style="color:#000;font-weight:bold">False</span>
+</span></span></code></pre><p>You should see a new build being queued up in Jenkins within a minute. If that doesn't work, execute the hook and watch the output for error messages:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>./git/hooks/post-commit
+</span></span></code></pre><p>Now, Jenkins should try to test your project but fail, and report the failure through the GUI. Tada.</p>
 
           </section>
         </div>

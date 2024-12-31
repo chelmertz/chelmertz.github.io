@@ -7,9 +7,10 @@ tags: [server]
 
 cURL is great for zooming in on a host, example:
 
-<code>curl -I <a href="http://www.google.com">http://www.google.com</a></code>
-<strong>HTTP/1.1 302 Found</strong>
-<strong>Location: <a href="http://www.google.se/">http://www.google.se/</a></strong>
+```
+curl -I http://www.google.com
+HTTP/1.1 302 Found
+Location: http://www.google.se/
 
 Cache-Control: private
 
@@ -24,9 +25,13 @@ Server: gws
 Content-Length: 218
 
 X-XSS-Protection: 1; mode=block
+```
 
-<code>curl -I <a href="http://www.google.se">http://www.google.se</a></code>
-<strong>HTTP/1.1 200 OK</strong>
+and following the returned `Location`:
+
+```
+curl -I http://www.google.se
+HTTP/1.1 200 OK
 
 Date: Wed, 02 Jun 2010 22:14:04 GMT
 
@@ -43,5 +48,6 @@ Server: gws
 X-XSS-Protection: 1; mode=block
 
 Transfer-Encoding: chunked
+```
 
 Nice!

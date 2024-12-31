@@ -5,10 +5,10 @@ permalink: "scrolling-in-less"
 tags: [bash]
 ---
 
-<a href="https://linux.die.net/man/1/less">https://linux.die.net/man/1/less</a>
+https://linux.die.net/man/1/less
 
-Didn’t even realize that manuals, from <code>man ssh</code> for example, is opened in the <code>less</code>program.
+Didn’t even realize that manuals, from `man ssh` for example, is opened in the `less` program.
 
-Anyways, <code>d</code> scrolls down a bit faster and <code>b </code>backwards. Bonus: you search like you do in vim, with <code>/pattern</code>.
+Anyways, `d` scrolls down a bit faster and `b` backwards. Bonus: you search like you do in vim, with `/pattern`.
 
 <ins>Edit: changed the dead link to point at something more neutral. Thanks Tom Wilcox.</ins>

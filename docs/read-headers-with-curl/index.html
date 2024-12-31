@@ -26,26 +26,44 @@
         <div class="post-content" itemprop="articleBody">
           <section>
             <p>cURL is great for zooming in on a host, example:</p>
-<p><!-- raw HTML omitted -->curl -I <!-- raw HTML omitted --><a href="http://www.google.com">http://www.google.com</a><!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->HTTP/1.1 302 Found<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->Location: <!-- raw HTML omitted --><a href="http://www.google.se/">http://www.google.se/</a><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<p>Cache-Control: private</p>
-<p>Content-Type: text/html; charset=UTF-8</p>
-<p>Set-Cookie: PREF=ID=4b82b41ad9278a4f:TM=1275516833:LM=1275516833:S=Qb2w71XyZoBvyONx; expires=Fri, 01-Jun-2012 22:13:53 GMT; path=/; domain=.google.com</p>
-<p>Date: Wed, 02 Jun 2010 22:13:53 GMT</p>
-<p>Server: gws</p>
-<p>Content-Length: 218</p>
-<p>X-XSS-Protection: 1; mode=block</p>
-<p><!-- raw HTML omitted -->curl -I <!-- raw HTML omitted --><a href="http://www.google.se">http://www.google.se</a><!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->HTTP/1.1 200 OK<!-- raw HTML omitted --></p>
-<p>Date: Wed, 02 Jun 2010 22:14:04 GMT</p>
-<p>Expires: -1</p>
-<p>Cache-Control: private, max-age=0</p>
-<p>Content-Type: text/html; charset=ISO-8859-1</p>
-<p>Set-Cookie: PREF=ID=c90ae10c41b80229:TM=1275516844:LM=1275516844:S=yKvAIaXwqmsaWD-H; expires=Fri, 01-Jun-2012 22:14:04 GMT; path=/; domain=.google.se</p>
-<p>Server: gws</p>
-<p>X-XSS-Protection: 1; mode=block</p>
-<p>Transfer-Encoding: chunked</p>
+<pre><code>curl -I http://www.google.com
+HTTP/1.1 302 Found
+Location: http://www.google.se/
+
+Cache-Control: private
+
+Content-Type: text/html; charset=UTF-8
+
+Set-Cookie: PREF=ID=4b82b41ad9278a4f:TM=1275516833:LM=1275516833:S=Qb2w71XyZoBvyONx; expires=Fri, 01-Jun-2012 22:13:53 GMT; path=/; domain=.google.com
+
+Date: Wed, 02 Jun 2010 22:13:53 GMT
+
+Server: gws
+
+Content-Length: 218
+
+X-XSS-Protection: 1; mode=block
+</code></pre>
+<p>and following the returned <code>Location</code>:</p>
+<pre><code>curl -I http://www.google.se
+HTTP/1.1 200 OK
+
+Date: Wed, 02 Jun 2010 22:14:04 GMT
+
+Expires: -1
+
+Cache-Control: private, max-age=0
+
+Content-Type: text/html; charset=ISO-8859-1
+
+Set-Cookie: PREF=ID=c90ae10c41b80229:TM=1275516844:LM=1275516844:S=yKvAIaXwqmsaWD-H; expires=Fri, 01-Jun-2012 22:14:04 GMT; path=/; domain=.google.se
+
+Server: gws
+
+X-XSS-Protection: 1; mode=block
+
+Transfer-Encoding: chunked
+</code></pre>
 <p>Nice!</p>
 
           </section>
@@ -59,11 +77,11 @@
           
           <li><a href="/accessing-windows-server-remotely-with-mac">Accessing Windows server remotely with Mac</a></li>
           
-          <li><a href="/sshfs-finally">Sshfs, finally</a></li>
+          <li><a href="/mysqls-substrings-index-starts-at-1">MySQL&#39;s `SUBSTRING()`&#39;s index starts at 1</a></li>
           
-          <li><a href="/font-face-comeback">Font face&#39;s comeback</a></li>
+          <li><a href="/add-sftp-capabilities-to-curl">Add sftp-capabilities to cURL</a></li>
           
-          <li><a href="/linux-change-directory-or-cd-to-the-previous-directory-last-path">Linux: Change Directory or CD to the Previous Directory / Last Path</a></li>
+          <li><a href="/screen-capture-from-command-line">Screen capture from command line</a></li>
           
         </ul>
       </section>

@@ -5,6 +5,6 @@ permalink: "googles-style-guides"
 tags: [organized]
 ---
 
-<a href="http://google-styleguide.googlecode.com/svn/trunk/pyguide.html">Google Python Style Guide</a> and <a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google JavaScript Style Guide</a> are really good reads.
+[Google Python Style Guide](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html) and [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml) are really good reads.
 
 Learning some tricky language features just by reading these guides, consisting of very simple code samples.

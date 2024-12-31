@@ -30,40 +30,37 @@
 <p>curl: (1) Protocol sftp not supported or disabled in libcurl</p>
 </blockquote>
 <p>I went on checking features, following someone else's steps:</p>
-<pre><code>$ curl -V
-curl 7.19.7 (x86_64-pc-linux-gnu) libcurl/7.19.7 OpenSSL/0.9.8k zlib/1.2.3.3 libidn/1.15
-Protocols: tftp ftp telnet dict ldap ldaps http file https ftps
-Features: GSS-Negotiate IDN IPv6 Largefile NTLM SSL libz
-</code></pre>
-<p>There it was, right out in the open: no sftp support. Onwards, googling led me to the third post in <!-- raw HTML omitted -->this thread<!-- raw HTML omitted --> which I'm quoting:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>$ curl -V
+</span></span><span style="display:flex;"><span>curl 7.19.7 <span style="color:#000;font-weight:bold">(</span>x86_64-pc-linux-gnu<span style="color:#000;font-weight:bold">)</span> libcurl/7.19.7 OpenSSL/0.9.8k zlib/1.2.3.3 libidn/1.15
+</span></span><span style="display:flex;"><span>Protocols: tftp ftp telnet dict ldap ldaps http file https ftps
+</span></span><span style="display:flex;"><span>Features: GSS-Negotiate IDN IPv6 Largefile NTLM SSL libz
+</span></span></code></pre><p>There it was, right out in the open: no sftp support. Onwards, googling led me to the third post in <a href="https://bugs.launchpad.net/ubuntu/+source/curl/+bug/311029">this thread</a> which I'm quoting:</p>
 <p>To generate a curl with ssh support on Ubuntu 9.04:</p>
-<pre><code>sudo apt-get install build-essential debhelper libssh2-1-dev
-sudo apt-get source libcurl3
-sudo apt-get build-dep libcurl3
-
-cd curl-7.18.2/debian
-
-gedit rules
-
-find and replace &quot;--without-libssh2&quot; with &quot;--with-libssh2&quot;
-
-cd ..
-
-sudo dpkg-buildpackage
-
-cd ..
-
-sudo dpkg -i curl_7.18.2-8ubuntu4.1_amd64.deb
-sudo dpkg -i libcurl3_7.18.2-8ubuntu4.1_amd64.deb
-sudo dpkg -i libcurl3-gnutls_7.18.2-8ubuntu4.1_amd64.deb
-</code></pre>
-<p>Those steps got it working for me, even though I'm on Ubuntu 10.10. Worth mentioning: I did not uninstall cURL before starting out. Some of the version numbers are newer but the process I went through was identical. Checking cURL's features, again, gave me:</p>
-<pre><code>$ curl -V
-curl 7.19.7 (x86_64-pc-linux-gnu) libcurl/7.19.7 OpenSSL/0.9.8k zlib/1.2.3.3 libidn/1.15 libssh2/1.2.2
-Protocols: tftp ftp telnet dict ldap ldaps http file https ftps scp sftp
-Features: GSS-Negotiate IDN IPv6 Largefile NTLM SSL libz
-</code></pre>
-<p>alas, there is support for scp as well as sftp - nice!</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>sudo apt-get install build-essential debhelper libssh2-1-dev
+</span></span><span style="display:flex;"><span>sudo apt-get <span style="color:#0086b3">source</span> libcurl3
+</span></span><span style="display:flex;"><span>sudo apt-get build-dep libcurl3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">cd</span> curl-7.18.2/debian
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gedit rules
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#find and replace &#34;--without-libssh2&#34; with &#34;--with-libssh2&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">cd</span> ..
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo dpkg-buildpackage
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">cd</span> ..
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo dpkg -i curl_7.18.2-8ubuntu4.1_amd64.deb
+</span></span><span style="display:flex;"><span>sudo dpkg -i libcurl3_7.18.2-8ubuntu4.1_amd64.deb
+</span></span><span style="display:flex;"><span>sudo dpkg -i libcurl3-gnutls_7.18.2-8ubuntu4.1_amd64.deb
+</span></span></code></pre><p>Those steps got it working for me, even though I'm on Ubuntu 10.10. Worth mentioning: I did not uninstall cURL before starting out. Some of the version numbers are newer but the process I went through was identical. Checking cURL's features, again, gave me:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>$ curl -V
+</span></span><span style="display:flex;"><span>curl 7.19.7 <span style="color:#000;font-weight:bold">(</span>x86_64-pc-linux-gnu<span style="color:#000;font-weight:bold">)</span> libcurl/7.19.7 OpenSSL/0.9.8k zlib/1.2.3.3 libidn/1.15 libssh2/1.2.2
+</span></span><span style="display:flex;"><span>Protocols: tftp ftp telnet dict ldap ldaps http file https ftps scp sftp
+</span></span><span style="display:flex;"><span>Features: GSS-Negotiate IDN IPv6 Largefile NTLM SSL libz
+</span></span></code></pre><p>alas, there is support for scp as well as sftp - nice!</p>
 
           </section>
         </div>
@@ -72,15 +69,15 @@ Features: GSS-Negotiate IDN IPv6 Largefile NTLM SSL libz
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/installing-redmine-on-ubuntu-and-lighttpd">Installing Redmine on Ubuntu and lighttpd</a></li>
+          <li><a href="/read-headers-with-curl">Read headers with curl</a></li>
           
-          <li><a href="/setting-up-virtualbox">Setting up VirtualBox</a></li>
+          <li><a href="/installing-redmine-on-ubuntu-and-lighttpd">Installing Redmine on Ubuntu and lighttpd</a></li>
           
           <li><a href="/vsftpd-enabling-ftp-access-ubuntu-server">vsftpd - enabling FTP access on your Ubuntu server</a></li>
           
-          <li><a href="/read-headers-with-curl">Read headers with curl</a></li>
+          <li><a href="/search-ack-better-grep">search with ack - &#34;better than grep&#34;</a></li>
           
-          <li><a href="/wordpress-apache-to-mynt-nginx">From Wordpress on Apache to mynt on nginx</a></li>
+          <li><a href="/say-what-rb-ruby">say-what.rb - trying out Ruby</a></li>
           
         </ul>
       </section>

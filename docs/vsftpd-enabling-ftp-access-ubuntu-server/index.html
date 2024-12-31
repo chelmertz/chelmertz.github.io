@@ -25,16 +25,15 @@
         </header>
         <div class="post-content" itemprop="articleBody">
           <section>
-            <p>I found a great but old guide to installing <!-- raw HTML omitted -->FTP on Ubuntu<!-- raw HTML omitted -->, which I've never done before.</p>
+            <p>I found a great but old guide to installing <a href="https://help.ubuntu.com/6.06/ubuntu/serverguide/C/ftp-server.html">FTP on Ubuntu</a>, which I've never done before.</p>
 <p>It was a really smooth procedure. The only error I received was this:</p>
 <blockquote>
 <p>Unable to connect to system bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory</p>
 </blockquote>
 <p>which was easy to solve since that file only needs to exist and be writable/readable:</p>
-<pre><code>sudo mkdir -p /var/run/dbus
-sudo touch /var/run/dbus/system_bus_socket
-</code></pre>
-<p>By design, the default settings allow you to log onto your machine with your common user credentials, and land in that folder (/home/<!-- raw HTML omitted -->)</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>sudo mkdir -p /var/run/dbus
+</span></span><span style="display:flex;"><span>sudo touch /var/run/dbus/system_bus_socket
+</span></span></code></pre><p>By design, the default settings allow you to log onto your machine with your common user credentials, and land in that folder, /home/user.</p>
 
           </section>
         </div>
@@ -43,15 +42,15 @@ sudo touch /var/run/dbus/system_bus_socket
         <h2>Possibly related posts</h2>
         <ul>
           
-          <li><a href="/backup-remotely">Backup remotely</a></li>
-          
           <li><a href="/gconf-editor-lets-ubuntu-users-edit-keys">gconf-editor lets Ubuntu users edit keys</a></li>
           
-          <li><a href="/simple-desktops">Simple Desktops</a></li>
-          
-          <li><a href="/osxfuse-macfuse-lion">OSXFUSE instead of MacFuse on Lion</a></li>
-          
           <li><a href="/put-a-tail-on-that-error-log">Put a tail on that error log</a></li>
+          
+          <li><a href="/backup-remotely">Backup remotely</a></li>
+          
+          <li><a href="/getting-started-with-hudson-hints-and-kinks">Getting started with Hudson</a></li>
+          
+          <li><a href="/video-on-the-web-dive-into-html5">Video on the Web - Dive Into HTML5</a></li>
           
         </ul>
       </section>

@@ -5,6 +5,6 @@ permalink: "macs-got-a-native-ftp-client-very-easy-to-use"
 tags: [mac]
 ---
 
-While finder is active (select the desktop), press ⌘+k (cmd+k) and type <code>ftp://your_host.com</code>.
+While finder is active (select the desktop), press ⌘+k (cmd+k) and type `ftp://your_host.com`.
 
-You will be able to reach it via <code>/Volumes/your_host.com</code>. A bit easier than using sshfs.. Via <a href="http://osxdaily.com/2011/02/07/ftp-from-mac/">osxdaily.com</a>
+You will be able to reach it via `/Volumes/your_host.com`. A bit easier than using sshfs.. Via [osxdaily.com](http://osxdaily.com/2011/02/07/ftp-from-mac/)

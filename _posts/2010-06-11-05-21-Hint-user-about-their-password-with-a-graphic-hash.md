@@ -5,7 +5,7 @@ permalink: "password-hash-graphed"
 tags: [javascript, usability, visual]
 ---
 
-Browsing around the Arc90’s “lab” section a bit more I found this delicious thing, a real eye opener. Meet <a href="http://lab.arc90.com/2009/07/09/hashmask-another-more-secure-experiment-in-password-masking/">HashMask</a>.
+Browsing around the Arc90’s “lab” section a bit more I found this delicious thing, a real eye opener. Meet [HashMask](http://lab.arc90.com/2009/07/09/hashmask-another-more-secure-experiment-in-password-masking/).
 
 What am I excited about? Oh nothing, just something that GUARANTEES YOU WON’T MISTYPE YOUR PASSWORD EVER AGAIN.
 

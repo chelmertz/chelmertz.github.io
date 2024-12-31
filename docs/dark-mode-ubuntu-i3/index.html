@@ -51,25 +51,24 @@ full_text=
 command=~/bin/color-scheme&gt;/dev/null
 </code></pre>
 <p>A left click toggles between light and dark, here's the <a href="https://github.com/chelmertz/dotfiles/tree/master/bin/color-scheme"><code>~/bin/color-scheme</code> script</a>:</p>
-<pre><code class="language-sh">#!/bin/sh
-
-current=$(gsettings get org.gnome.desktop.interface color-scheme)
-if [ $? -ne 0 ]; then echo &quot;Could not fetch current color-scheme&quot; &gt;&amp;2; exit 1; fi
-echo &quot;Current color-scheme: $current&quot;
-
-case &quot;$current&quot; in
-	&quot;'prefer-dark'&quot;) new_color_scheme=&quot;prefer-light&quot; ;;
-	&quot;'prefer-light'&quot;|&quot;'default'&quot;) new_color_scheme=&quot;prefer-dark&quot; ;;
-esac
-
-echo &quot;New color-scheme: $new_color_scheme&quot;
-
-if ! $(gsettings set org.gnome.desktop.interface color-scheme &quot;$new_color_scheme&quot;); then
-	echo &quot;Could not set new color-scheme&quot; &gt;&amp;2
-	exit 1
-fi
-</code></pre>
-<h2>Make software react to the system setting</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">current</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">$(</span>gsettings get org.gnome.desktop.interface color-scheme<span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#008080">$?</span> -ne <span style="color:#099">0</span> <span style="color:#000;font-weight:bold">]</span>; <span style="color:#000;font-weight:bold">then</span> <span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;Could not fetch current color-scheme&#34;</span> &gt;&amp;2; <span style="color:#0086b3">exit</span> 1; <span style="color:#000;font-weight:bold">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;Current color-scheme: </span><span style="color:#008080">$current</span><span style="color:#d14">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#34;</span><span style="color:#008080">$current</span><span style="color:#d14">&#34;</span> in
+</span></span><span style="display:flex;"><span>	<span style="color:#d14">&#34;&#39;prefer-dark&#39;&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#008080">new_color_scheme</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;prefer-light&#34;</span> ;;
+</span></span><span style="display:flex;"><span>	<span style="color:#d14">&#34;&#39;prefer-light&#39;&#34;</span>|<span style="color:#d14">&#34;&#39;default&#39;&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#008080">new_color_scheme</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;prefer-dark&#34;</span> ;;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">esac</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;New color-scheme: </span><span style="color:#008080">$new_color_scheme</span><span style="color:#d14">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> ! <span style="color:#000;font-weight:bold">$(</span>gsettings <span style="color:#0086b3">set</span> org.gnome.desktop.interface color-scheme <span style="color:#d14">&#34;</span><span style="color:#008080">$new_color_scheme</span><span style="color:#d14">&#34;</span><span style="color:#000;font-weight:bold">)</span>; <span style="color:#000;font-weight:bold">then</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;Could not set new color-scheme&#34;</span> &gt;&amp;<span style="color:#099">2</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#0086b3">exit</span> <span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">fi</span>
+</span></span></code></pre><h2>Make software react to the system setting</h2>
 <p>Software that can be configured to adapt to the system wide settings:</p>
 <ul>
 <li>Firefox</li>

@@ -5,6 +5,6 @@ permalink: "macs-apps-what-are-they"
 tags: [mac]
 ---
 
-<a href="http://guides.macrumors.com/Installing_Applications_in_Mac_OS_X">http://guides.macrumors.com/Installing_Applications_in_Mac_OS_X</a>
+http://guides.macrumors.com/Installing_Applications_in_Mac_OS_X
 
 Aaah, so that’s what’s happening under the hood!

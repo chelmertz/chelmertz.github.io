@@ -5,6 +5,6 @@ permalink: "how-to-add-search-shortcuts-to-google-chrome"
 tags: [chrome]
 ---
 
-<a href="http://www.wolf-howl.com/google/how-to-add-search-shortcuts-to-google-chrome/">http://www.wolf-howl.com/google/how-to-add-search-shortcuts-to-google-chrome/</a>
+http://www.wolf-howl.com/google/how-to-add-search-shortcuts-to-google-chrome/
 
 Only thing I missed in Chrome - until now.

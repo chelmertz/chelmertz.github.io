@@ -5,6 +5,6 @@ permalink: "google-geo-developers-blog-markerclusterer-a-solution-to-the-too-man
 tags: [javascript]
 ---
 
-<a href="http://googlegeodevelopers.blogspot.com/2009/04/markerclusterer-solution-to-too-many.html">http://googlegeodevelopers.blogspot.com/2009/04/markerclusterer-solution-to-t...</a>
+http://googlegeodevelopers.blogspot.com/2009/04/markerclusterer-solution-to-too-many.html
 
 Perfect solution for displaying many markers at the same time in Google Maps.

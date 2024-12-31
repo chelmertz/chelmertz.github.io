@@ -98,15 +98,12 @@ end.</li>
 <p>Here are some sed lines for working with frontmatter, notably the &quot;only work
 within the delimiter lines&quot;, which was news to me.</p>
 <p><strong>Removing slashes in <code>permalink:</code></strong></p>
-<pre><code class="language-bash">sed -i -e '/^---$/,/^---$/ {/^\s*permalink: /s/\///g}' _posts/*md
-</code></pre>
-<p><strong>Removing empty lines in frontmatter:</strong></p>
-<pre><code class="language-bash">sed -i '/^---$/,/^---$/ {/^\s*$/d}' _posts/*md
-</code></pre>
-<p><strong>Removing a frontmatter property:</strong></p>
-<pre><code class="language-bash">sed -i '/^---$/,/^---$/ {/^\s*comments:/d}' _posts/*md
-</code></pre>
-<p>And here's a paper trail of what broke the camel's back:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>sed -i -e <span style="color:#d14">&#39;/^---$/,/^---$/ {/^\s*permalink: /s/\///g}&#39;</span> _posts/*md
+</span></span></code></pre><p><strong>Removing empty lines in frontmatter:</strong></p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>sed -i <span style="color:#d14">&#39;/^---$/,/^---$/ {/^\s*$/d}&#39;</span> _posts/*md
+</span></span></code></pre><p><strong>Removing a frontmatter property:</strong></p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>sed -i <span style="color:#d14">&#39;/^---$/,/^---$/ {/^\s*comments:/d}&#39;</span> _posts/*md
+</span></span></code></pre><p>And here's a paper trail of what broke the camel's back:</p>
 <pre><code>...
 Error reading file /srv/Jekyll/_layouts/post.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/post.html 
 Error reading file /srv/Jekyll/_layouts/default.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/default.html 
