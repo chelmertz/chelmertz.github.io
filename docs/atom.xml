@@ -18,7 +18,7 @@
   <content type="html" xml:base="https://iamnearlythere.com/vscode-snippets-for-internal-blog-links/">
   <![CDATA[<p><a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">Visual Studio Code supports user defined snippets</a></p>
 <p>It lets us spit out one snippet per blog post, by hooking into the generation of our blog. This is the end result:</p>
-<p>TODO video here, use wysiwyg @ github</p>
+<p><a href="https://github.com/user-attachments/assets/02d53ef2-d89e-4afd-a720-9662e25ab230">https://github.com/user-attachments/assets/02d53ef2-d89e-4afd-a720-9662e25ab230</a></p>
 <h2>VS Code's JSON format</h2>
 <p>After some experimentation, this is the target format:</p>
 <pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>{
