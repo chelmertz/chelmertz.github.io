@@ -47,40 +47,7 @@ Good ideas:
 
 ## Generating the snippets
 
-Thanks to VS Code's format, all it takes is a loop to populate it:
-
-```go
-type Snippet struct {
-	Scope       string `json:"scope"`
-	Prefix      string `json:"prefix"`
-	Body        string `json:"body"`
-	Description string `json:"description"`
-}
-
-func createSnippets(posts []Post) {
-	snippets := make(map[string]Snippet)
-
-	for _, post := range posts {
-		snippets[post.Title] = Snippet{
-			Scope:       "markdown",
-			Prefix:      fmt.Sprintf("@@%s - %s", post.Permalink, post.Title),
-			Body:        fmt.Sprintf("[${1:%s}](/%s) ", post.Title, post.Permalink),
-			Description: post.Title,
-		}
-	}
-
-	asJson, jsonErr := json.MarshalIndent(snippets, "", "  ")
-	if jsonErr != nil {
-		panic(fmt.Sprintf("error marshalling vscode snippets for : %v", jsonErr))
-	}
-	snippetsFile := filepath.Join(".vscode", "posts.code-snippets")
-	writeErr := os.WriteFile(snippetsFile, asJson, 0644)
-
-	if writeErr != nil {
-		panic(fmt.Sprintf("error writing vscode snippets to file %s : %v", snippetsFile, writeErr))
-	}
-}
-```
+Thanks to VS Code's format, [all it takes is a loop to populate the snippets](https://github.com/chelmertz/chelmertz.github.io/commit/9bf5b41ccba352ed91450316b638d2f6a3bda6b9#diff-94984348a77639388f82ce61d30baf29dd5177f404e5a7a22dc3e2945d9ec5e2R360-R382).
 
 By regenerating the snippets for each build of the blog contents, we make sure
 that the snippets' URLs & titles are up to date.
@@ -88,7 +55,8 @@ that the snippets' URLs & titles are up to date.
 ## Postscript, on motivation
 
 I'm trying to get over my private org mode file usage and "blog" more.  `wc`
-reports 240k words, but there was only three blog posts between 2013 and 2024.
+reports 240k words, in comparison to only three blog posts between 2013 and
+2024.
 
 One part of this effort was to make the blog engine a bit more lightweight and
 custom, [so I wrote a new one](/replacing-Jekyll-with-go).

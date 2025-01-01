@@ -61,42 +61,13 @@
 </li>
 </ul>
 <h2>Generating the snippets</h2>
-<p>Thanks to VS Code's format, all it takes is a loop to populate it:</p>
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#000;font-weight:bold">type</span> Snippet <span style="color:#000;font-weight:bold">struct</span> {
-</span></span><span style="display:flex;"><span>	Scope       <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`json:&#34;scope&#34;`</span>
-</span></span><span style="display:flex;"><span>	Prefix      <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`json:&#34;prefix&#34;`</span>
-</span></span><span style="display:flex;"><span>	Body        <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`json:&#34;body&#34;`</span>
-</span></span><span style="display:flex;"><span>	Description <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`json:&#34;description&#34;`</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">createSnippets</span>(posts []Post) {
-</span></span><span style="display:flex;"><span>	snippets <span style="color:#000;font-weight:bold">:=</span> <span style="color:#0086b3">make</span>(<span style="color:#000;font-weight:bold">map</span>[<span style="color:#458;font-weight:bold">string</span>]Snippet)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#000;font-weight:bold">for</span> _, post <span style="color:#000;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">range</span> posts {
-</span></span><span style="display:flex;"><span>		snippets[post.Title] = Snippet{
-</span></span><span style="display:flex;"><span>			Scope:       <span style="color:#d14">&#34;markdown&#34;</span>,
-</span></span><span style="display:flex;"><span>			Prefix:      fmt.<span style="color:#900;font-weight:bold">Sprintf</span>(<span style="color:#d14">&#34;@@%s - %s&#34;</span>, post.Permalink, post.Title),
-</span></span><span style="display:flex;"><span>			Body:        fmt.<span style="color:#900;font-weight:bold">Sprintf</span>(<span style="color:#d14">&#34;[${1:%s}](/%s) &#34;</span>, post.Title, post.Permalink),
-</span></span><span style="display:flex;"><span>			Description: post.Title,
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	asJson, jsonErr <span style="color:#000;font-weight:bold">:=</span> json.<span style="color:#900;font-weight:bold">MarshalIndent</span>(snippets, <span style="color:#d14">&#34;&#34;</span>, <span style="color:#d14">&#34;  &#34;</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#000;font-weight:bold">if</span> jsonErr <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#0086b3">panic</span>(fmt.<span style="color:#900;font-weight:bold">Sprintf</span>(<span style="color:#d14">&#34;error marshalling vscode snippets for : %v&#34;</span>, jsonErr))
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	snippetsFile <span style="color:#000;font-weight:bold">:=</span> filepath.<span style="color:#900;font-weight:bold">Join</span>(<span style="color:#d14">&#34;.vscode&#34;</span>, <span style="color:#d14">&#34;posts.code-snippets&#34;</span>)
-</span></span><span style="display:flex;"><span>	writeErr <span style="color:#000;font-weight:bold">:=</span> os.<span style="color:#900;font-weight:bold">WriteFile</span>(snippetsFile, asJson, <span style="color:#099">0644</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#000;font-weight:bold">if</span> writeErr <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
-</span></span><span style="display:flex;"><span>		<span style="color:#0086b3">panic</span>(fmt.<span style="color:#900;font-weight:bold">Sprintf</span>(<span style="color:#d14">&#34;error writing vscode snippets to file %s : %v&#34;</span>, snippetsFile, writeErr))
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre><p>By regenerating the snippets for each build of the blog contents, we make sure
+<p>Thanks to VS Code's format, <a href="https://github.com/chelmertz/chelmertz.github.io/commit/9bf5b41ccba352ed91450316b638d2f6a3bda6b9#diff-94984348a77639388f82ce61d30baf29dd5177f404e5a7a22dc3e2945d9ec5e2R360-R382">all it takes is a loop to populate the snippets</a>.</p>
+<p>By regenerating the snippets for each build of the blog contents, we make sure
 that the snippets' URLs &amp; titles are up to date.</p>
 <h2>Postscript, on motivation</h2>
 <p>I'm trying to get over my private org mode file usage and &quot;blog&quot; more.  <code>wc</code>
-reports 240k words, but there was only three blog posts between 2013 and 2024.</p>
+reports 240k words, in comparison to only three blog posts between 2013 and
+2024.</p>
 <p>One part of this effort was to make the blog engine a bit more lightweight and
 custom, <a href="/replacing-Jekyll-with-go">so I wrote a new one</a>.</p>
 <p>Another part was to find a quick way to refer to sibling blog posts here, when
