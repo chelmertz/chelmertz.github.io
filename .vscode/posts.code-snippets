@@ -767,6 +767,12 @@
     "body": "[${1:VPN from Mac}](/vpn-from-mac) ",
     "description": "VPN from Mac"
   },
+  "VS Code snippets for internal blog links": {
+    "scope": "markdown",
+    "prefix": "@@vscode-snippets-for-internal-blog-links - VS Code snippets for internal blog links",
+    "body": "[${1:VS Code snippets for internal blog links}](/vscode-snippets-for-internal-blog-links) ",
+    "description": "VS Code snippets for internal blog links"
+  },
   "Video on the Web - Dive Into HTML5": {
     "scope": "markdown",
     "prefix": "@@video-on-the-web-dive-into-html5 - Video on the Web - Dive Into HTML5",

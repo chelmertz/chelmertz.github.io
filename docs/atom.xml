@@ -2,11 +2,114 @@
 <feed xmlns="http://www.w3.org/2005/Atom" >
 <link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml" />
 <link href="https://iamnearlythere.com/" rel="alternate" type="text/html" />
-<updated>2024-12-20T00:29:00Z</updated>
+<updated>2025-01-01T23:33:00Z</updated>
 <id>https://iamnearlythere.com/atom.xml</id>
 <title type="html">iamnearlythere.com</title>
 <subtitle>iamnearlythere.com, a blog on software development</subtitle>
 <author><name>Carl Helmertz</name></author>
+
+<entry>
+  <title type="html">VS Code snippets for internal blog links</title>
+  <link href="https://iamnearlythere.com/vscode-snippets-for-internal-blog-links/" rel="alternate" type="text/html" title="VS Code snippets for internal blog links" />
+  <published>2025-01-01T23:33:00Z</published>
+  <updated>2025-01-01T23:33:00Z</updated>
+  <id>https://iamnearlythere.com/vscode-snippets-for-internal-blog-links</id>
+  <summary>Linking to other blog posts is only a few keys away</summary>
+  <content type="html" xml:base="https://iamnearlythere.com/vscode-snippets-for-internal-blog-links/">
+  <![CDATA[<p><a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">Visual Studio Code supports user defined snippets</a></p>
+<p>It lets us spit out one snippet per blog post, by hooking into the generation of our blog. This is the end result:</p>
+<p>TODO video here, use wysiwyg @ github</p>
+<h2>VS Code's JSON format</h2>
+<p>After some experimentation, this is the target format:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#000080">&#34;A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;scope&#34;</span>: <span style="color:#d14">&#34;markdown&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;prefix&#34;</span>: <span style="color:#d14">&#34;@@interesting-reads - A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;body&#34;</span>: <span style="color:#d14">&#34;[${1:A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems}](/interesting-reads) &#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;description&#34;</span>: <span style="color:#d14">&#34;A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#000080">&#34;A grep-quickie for the road (or svn, really)&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;scope&#34;</span>: <span style="color:#d14">&#34;markdown&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;prefix&#34;</span>: <span style="color:#d14">&#34;@@a-grep-quickie-for-the-road-or-svn-really - A grep-quickie for the road (or svn, really)&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;body&#34;</span>: <span style="color:#d14">&#34;[${1:A grep-quickie for the road (or svn, really)}](/a-grep-quickie-for-the-road-or-svn-really) &#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;description&#34;</span>: <span style="color:#d14">&#34;A grep-quickie for the road (or svn, really)&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
+</span></span></code></pre><p>Good ideas:</p>
+<ul>
+<li>Use a common starting string, <code>@@</code>, for all snippets' <code>&quot;prefix&quot;</code>.
+<ul>
+<li>This should limit suggestions to only blog posts.</li>
+</ul>
+</li>
+<li>Spam keywords in <code>&quot;prefix&quot;</code>.
+<ul>
+<li>This is the only part that VS Code's fuzzy auto completion matches against, <code>&quot;description&quot;</code> is decoration only.</li>
+</ul>
+</li>
+<li>Provide a default for the link text (to the blog post title).
+<ul>
+<li>In body text, the link text will almost always be removed, but having a writing prompt is not too shabby.</li>
+<li>VS Code smartly pre-selects the default, so there's no cost of just starting to write something completely different.</li>
+</ul>
+</li>
+<li>Put a trailing space in <code>&quot;body&quot;</code>.
+<ul>
+<li>Allows for quickly continuing to write. If the link is at the end of a sentence, you need to follow up with a backspace. So be it.</li>
+</ul>
+</li>
+</ul>
+<h2>Generating the snippets</h2>
+<p>Thanks to VS Code's format, all it takes is a loop to populate it:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#000;font-weight:bold">type</span> Snippet <span style="color:#000;font-weight:bold">struct</span> {
+</span></span><span style="display:flex;"><span>	Scope       <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`json:&#34;scope&#34;`</span>
+</span></span><span style="display:flex;"><span>	Prefix      <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`json:&#34;prefix&#34;`</span>
+</span></span><span style="display:flex;"><span>	Body        <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`json:&#34;body&#34;`</span>
+</span></span><span style="display:flex;"><span>	Description <span style="color:#458;font-weight:bold">string</span> <span style="color:#d14">`json:&#34;description&#34;`</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">createSnippets</span>(posts []Post) {
+</span></span><span style="display:flex;"><span>	snippets <span style="color:#000;font-weight:bold">:=</span> <span style="color:#0086b3">make</span>(<span style="color:#000;font-weight:bold">map</span>[<span style="color:#458;font-weight:bold">string</span>]Snippet)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#000;font-weight:bold">for</span> _, post <span style="color:#000;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">range</span> posts {
+</span></span><span style="display:flex;"><span>		snippets[post.Title] = Snippet{
+</span></span><span style="display:flex;"><span>			Scope:       <span style="color:#d14">&#34;markdown&#34;</span>,
+</span></span><span style="display:flex;"><span>			Prefix:      fmt.<span style="color:#900;font-weight:bold">Sprintf</span>(<span style="color:#d14">&#34;@@%s - %s&#34;</span>, post.Permalink, post.Title),
+</span></span><span style="display:flex;"><span>			Body:        fmt.<span style="color:#900;font-weight:bold">Sprintf</span>(<span style="color:#d14">&#34;[${1:%s}](/%s) &#34;</span>, post.Title, post.Permalink),
+</span></span><span style="display:flex;"><span>			Description: post.Title,
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	asJson, jsonErr <span style="color:#000;font-weight:bold">:=</span> json.<span style="color:#900;font-weight:bold">MarshalIndent</span>(snippets, <span style="color:#d14">&#34;&#34;</span>, <span style="color:#d14">&#34;  &#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#000;font-weight:bold">if</span> jsonErr <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#0086b3">panic</span>(fmt.<span style="color:#900;font-weight:bold">Sprintf</span>(<span style="color:#d14">&#34;error marshalling vscode snippets for : %v&#34;</span>, jsonErr))
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	snippetsFile <span style="color:#000;font-weight:bold">:=</span> filepath.<span style="color:#900;font-weight:bold">Join</span>(<span style="color:#d14">&#34;.vscode&#34;</span>, <span style="color:#d14">&#34;posts.code-snippets&#34;</span>)
+</span></span><span style="display:flex;"><span>	writeErr <span style="color:#000;font-weight:bold">:=</span> os.<span style="color:#900;font-weight:bold">WriteFile</span>(snippetsFile, asJson, <span style="color:#099">0644</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#000;font-weight:bold">if</span> writeErr <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#0086b3">panic</span>(fmt.<span style="color:#900;font-weight:bold">Sprintf</span>(<span style="color:#d14">&#34;error writing vscode snippets to file %s : %v&#34;</span>, snippetsFile, writeErr))
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre><p>By regenerating the snippets for each build of the blog contents, we make sure
+that the snippets' URLs &amp; titles are up to date.</p>
+<h2>Postscript, on motivation</h2>
+<p>I'm trying to get over my private org mode file usage and &quot;blog&quot; more.  <code>wc</code>
+reports 240k words, but there was only three blog posts between 2013 and 2024.</p>
+<p>One part of this effort was to make the blog engine a bit more lightweight and
+custom, <a href="/replacing-Jekyll-with-go">so I wrote a new one</a>.</p>
+<p>Another part was to find a quick way to refer to sibling blog posts here, when
+writing markdown.</p>
+<p>Zettelkasten (small notes and a giant web of internal links) seems to be super
+popular. There are many plugins supporting this, it sounds a bit like
+<a href="https://vimdoc.sourceforge.net/htmldoc/editing.html#gf"><code>gf</code></a> in vim), but I
+figured that each markdown post's <code>permalink</code> would be unique &amp; stable enough to
+use as a target.</p>
+]]>
+  </content>
+  <author><name>Carl Helmertz</name></author>
+</entry>
 
 <entry>
   <title type="html">Upgrading to Ubuntu 24.04</title>
@@ -957,66 +1060,6 @@ export GROFF_NO_SGR=1
 <pre><code>export MANPAGER=&quot;nvim -c 'set ft=man' -&quot;
 </code></pre>
 <p>There are some more pointers in the short and readable section of the <a href="https://github.com/neovim/neovim/blob/5ce8158a5d462043306ee67a3261794f169bdb17/runtime/doc/filetype.txt#L509">Neovim manual on viewing man pages</a>.</p>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">Automatically download new photos from your Instagram contacts</title>
-  <link href="https://iamnearlythere.com/automatically-download-photos-your-instagram-contacts/" rel="alternate" type="text/html" title="Automatically download new photos from your Instagram contacts" />
-  <published>2018-01-20T21:24:00Z</published>
-  <updated>2018-01-20T21:24:00Z</updated>
-  <id>https://iamnearlythere.com/automatically-download-photos-your-instagram-contacts</id>
-  <content type="html" xml:base="https://iamnearlythere.com/automatically-download-photos-your-instagram-contacts/">
-  <![CDATA[<p>Let's say you want to downloaded the images uploaded to Instagram by you and your contacts, for backup reasons.</p>
-<p>You can login at the regular web application at <a href="https://instagram.com">https://instagram.com</a> and <a href="https://honeypotmarketing.com/save-a-photo-from-instagram/">right-click/inspect your way to the actual URI of the image file</a>. Manually downloading one photo at a time soon becomes boring though, let's look for other alternatives.</p>
-<p>There are a couple of sites that promote applications that does the job for you. The ones I saw wanted my username and password, which is out of the question.</p>
-<p>Let's try to do download the images ourselves instead, from an environment we control, our desktop.</p>
-<h2>Installing a scraper on your own computer to download photos</h2>
-<p><em>The rest of this blog post assumes that you are using <strong>Linux or macOS</strong> (for <code>cron</code> and regular CLI tools), and have <strong>python</strong> installed (for the scraping program).</em></p>
-<p>There's an easy to use <a href="https://en.wikipedia.org/wiki/Web_scraping">scraper</a> by Richard Arcega called <a href="https://github.com/rarcega/instagram-scraper/">Instagram Scraper</a> that we will use (version 1.5.18 at the time of writing). The scraper is available on <a href="https://pypi.python.org/pypi/instagram-scraper">pypi</a>, and you install it with:</p>
-<pre><code>sudo pip install instagram-scraper
-</code></pre>
-<p>The next thing we are going to do is to configure who you are and which profiles you want to download. You do that by creating a text file:</p>
-<pre><code>$ cat /home/ch/insta.txt
--u=username
--p=passwordinplaintext
---latest
---destination=/home/ch/Pictures/instagram
---retain_username
-a_user_i_follow
-another_user_i_follow
-even_a_third_user_i_follow
-</code></pre>
-<p>Let's try it out:</p>
-<pre><code>$ instagram-scraper @/home/ch/insta.txt
-</code></pre>
-<p>If you've got image files in the folder referred to by <code>--destination</code>, you are home free.</p>
-<h2>Automating the scraping</h2>
-<p>To avoid executing the above command manually, we use <a href="https://en.wikipedia.org/wiki/Cron">cron</a> to fetch new images for us.</p>
-<p>This is what a my crontab looks like:</p>
-<pre><code>$ crontab -l
-1 * * * * /usr/bin/instagram-scraper -q @/home/ch/insta.txt
-</code></pre>
-<p>To edit your own crontab, use the command <code>crontab -e</code>.</p>
-<p>If you need to learn the syntax of cron, there's a handy form at <a href="https://crontab.guru/">https://crontab.guru/</a> that could help you.</p>
-<h2>Viewing newly downloaded images</h2>
-<p>I use a minimal image viewer called <a href="https://github.com/muennich/sxiv">sxiv</a> which is available in the default repos of, at least, Fedora.</p>
-<p>The following command let's you view all recently downloaded images:</p>
-<pre><code>$ sxiv $(find /home/ch/Pictures/instagram -mtime -10 -type f -name &quot;*jpg&quot;)
-</code></pre>
-<p>where the first argument to <code>find</code> is the value of <code>--destination</code> in your configuration, and <code>-10</code> let's you view images from the last ten days.</p>
-<h2>Caveats</h2>
-<h3>Notes about availability of images</h3>
-<p>All images uploaded to Instagram, even by those with their profiles set to private, are publicly accessible. Getting to know the URI is the only problem, that's why we use the scraping application, to find the correct URIs. Even though the URIs themselves do not require being authenticated to download, there may be rate limits or other counter measures against downloading images in bulk.</p>
-<h3>Shortcuts in the code</h3>
-<ul>
-<li>Feel free to <code>pip install --user</code> instead.</li>
-<li>Feel free to capture the stdout/stderr from the cronjob.</li>
-</ul>
-<p>*[URI]: Uniform Resource Identifier
-*[CDN]: Content delivery network</p>
 ]]>
   </content>
   <author><name>Carl Helmertz</name></author>
