@@ -1,18 +1,980 @@
 {
-	// Place your chelmertz.github.io workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
-	// Placeholders with the same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"scope": "javascript,typescript",
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
+  "A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems": {
+    "scope": "markdown",
+    "prefix": "@@interesting-reads - A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems",
+    "body": "[${1:A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems}](/interesting-reads) ",
+    "description": "A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems"
+  },
+  "A grep-quickie for the road (or svn, really)": {
+    "scope": "markdown",
+    "prefix": "@@a-grep-quickie-for-the-road-or-svn-really - A grep-quickie for the road (or svn, really)",
+    "body": "[${1:A grep-quickie for the road (or svn, really)}](/a-grep-quickie-for-the-road-or-svn-really) ",
+    "description": "A grep-quickie for the road (or svn, really)"
+  },
+  "A shell's must-have features": {
+    "scope": "markdown",
+    "prefix": "@@shell-must-have - A shell's must-have features",
+    "body": "[${1:A shell's must-have features}](/shell-must-have) ",
+    "description": "A shell's must-have features"
+  },
+  "Abort wget with pkill -9 wget": {
+    "scope": "markdown",
+    "prefix": "@@abort-wget-with-pkill-9-wget - Abort wget with pkill -9 wget",
+    "body": "[${1:Abort wget with pkill -9 wget}](/abort-wget-with-pkill-9-wget) ",
+    "description": "Abort wget with pkill -9 wget"
+  },
+  "Accessing Windows server remotely with Mac": {
+    "scope": "markdown",
+    "prefix": "@@accessing-windows-server-remotely-with-mac - Accessing Windows server remotely with Mac",
+    "body": "[${1:Accessing Windows server remotely with Mac}](/accessing-windows-server-remotely-with-mac) ",
+    "description": "Accessing Windows server remotely with Mac"
+  },
+  "Add sftp-capabilities to cURL": {
+    "scope": "markdown",
+    "prefix": "@@add-sftp-capabilities-to-curl - Add sftp-capabilities to cURL",
+    "body": "[${1:Add sftp-capabilities to cURL}](/add-sftp-capabilities-to-curl) ",
+    "description": "Add sftp-capabilities to cURL"
+  },
+  "Adding `alias`-commands on the fly": {
+    "scope": "markdown",
+    "prefix": "@@adding-alias-commands-on-the-fly - Adding `alias`-commands on the fly",
+    "body": "[${1:Adding `alias`-commands on the fly}](/adding-alias-commands-on-the-fly) ",
+    "description": "Adding `alias`-commands on the fly"
+  },
+  "Always use -u with first git push": {
+    "scope": "markdown",
+    "prefix": "@@use-u-with-first-git-push - Always use -u with first git push",
+    "body": "[${1:Always use -u with first git push}](/use-u-with-first-git-push) ",
+    "description": "Always use -u with first git push"
+  },
+  "Arrange icons in a folder, and keep them in a grid": {
+    "scope": "markdown",
+    "prefix": "@@arrange-icons-in-a-folder-and-keep-them-in-a-grid-9 - Arrange icons in a folder, and keep them in a grid",
+    "body": "[${1:Arrange icons in a folder, and keep them in a grid}](/arrange-icons-in-a-folder-and-keep-them-in-a-grid-9) ",
+    "description": "Arrange icons in a folder, and keep them in a grid"
+  },
+  "Automatically download new photos from your Instagram contacts": {
+    "scope": "markdown",
+    "prefix": "@@automatically-download-photos-your-instagram-contacts - Automatically download new photos from your Instagram contacts",
+    "body": "[${1:Automatically download new photos from your Instagram contacts}](/automatically-download-photos-your-instagram-contacts) ",
+    "description": "Automatically download new photos from your Instagram contacts"
+  },
+  "Automatically insert acronyms with Hz_Filter_Acronym": {
+    "scope": "markdown",
+    "prefix": "@@automatically-insert-acronyms-with-hz_filter_acronym - Automatically insert acronyms with Hz_Filter_Acronym",
+    "body": "[${1:Automatically insert acronyms with Hz_Filter_Acronym}](/automatically-insert-acronyms-with-hz_filter_acronym) ",
+    "description": "Automatically insert acronyms with Hz_Filter_Acronym"
+  },
+  "Backup remotely": {
+    "scope": "markdown",
+    "prefix": "@@backup-remotely - Backup remotely",
+    "body": "[${1:Backup remotely}](/backup-remotely) ",
+    "description": "Backup remotely"
+  },
+  "Better touch tool fixes Lion's incompetence": {
+    "scope": "markdown",
+    "prefix": "@@touch-tool-fixes-lions-incompetence - Better touch tool fixes Lion's incompetence",
+    "body": "[${1:Better touch tool fixes Lion's incompetence}](/touch-tool-fixes-lions-incompetence) ",
+    "description": "Better touch tool fixes Lion's incompetence"
+  },
+  "Binding shortcut to Spotlight": {
+    "scope": "markdown",
+    "prefix": "@@binding-shortcut-to-spotlight - Binding shortcut to Spotlight",
+    "body": "[${1:Binding shortcut to Spotlight}](/binding-shortcut-to-spotlight) ",
+    "description": "Binding shortcut to Spotlight"
+  },
+  "Bookmarklets really should open in a new window": {
+    "scope": "markdown",
+    "prefix": "@@bookmarklet-really-should-be-in-a-new-window - Bookmarklets really should open in a new window",
+    "body": "[${1:Bookmarklets really should open in a new window}](/bookmarklet-really-should-be-in-a-new-window) ",
+    "description": "Bookmarklets really should open in a new window"
+  },
+  "Bug when using `Zf create config`, wrong syntax for include path": {
+    "scope": "markdown",
+    "prefix": "@@bug-when-using-zf-create-config-wrong-syntax-for-include-path - Bug when using `Zf create config`, wrong syntax for include path",
+    "body": "[${1:Bug when using `Zf create config`, wrong syntax for include path}](/bug-when-using-zf-create-config-wrong-syntax-for-include-path) ",
+    "description": "Bug when using `Zf create config`, wrong syntax for include path"
+  },
+  "Building packages on Solaris": {
+    "scope": "markdown",
+    "prefix": "@@building-packages-on-solaris - Building packages on Solaris",
+    "body": "[${1:Building packages on Solaris}](/building-packages-on-solaris) ",
+    "description": "Building packages on Solaris"
+  },
+  "Center vertically with `line-height`": {
+    "scope": "markdown",
+    "prefix": "@@center-vertically-with-line-height - Center vertically with `line-height`",
+    "body": "[${1:Center vertically with `line-height`}](/center-vertically-with-line-height) ",
+    "description": "Center vertically with `line-height`"
+  },
+  "Check the PATH of your Mac with echo $PATH - OS X Daily": {
+    "scope": "markdown",
+    "prefix": "@@check-the-path-of-your-mac-with-echo-path-os-x-daily - Check the PATH of your Mac with echo $PATH - OS X Daily",
+    "body": "[${1:Check the PATH of your Mac with echo $PATH - OS X Daily}](/check-the-path-of-your-mac-with-echo-path-os-x-daily) ",
+    "description": "Check the PATH of your Mac with echo $PATH - OS X Daily"
+  },
+  "Checklist for removing a git submodule": {
+    "scope": "markdown",
+    "prefix": "@@checklist-removing-git-submodule - Checklist for removing a git submodule",
+    "body": "[${1:Checklist for removing a git submodule}](/checklist-removing-git-submodule) ",
+    "description": "Checklist for removing a git submodule"
+  },
+  "Client - or co-worker?": {
+    "scope": "markdown",
+    "prefix": "@@client-or-co-worker - Client - or co-worker?",
+    "body": "[${1:Client - or co-worker?}](/client-or-co-worker) ",
+    "description": "Client - or co-worker?"
+  },
+  "Code Sign Error - switch to simulator": {
+    "scope": "markdown",
+    "prefix": "@@code-sign-error-switch-to-simulator - Code Sign Error - switch to simulator",
+    "body": "[${1:Code Sign Error - switch to simulator}](/code-sign-error-switch-to-simulator) ",
+    "description": "Code Sign Error - switch to simulator"
+  },
+  "Colloquy: IRC, SILC \u0026 ICB Client": {
+    "scope": "markdown",
+    "prefix": "@@colloquy-irc-silc-icb-client - Colloquy: IRC, SILC \u0026 ICB Client",
+    "body": "[${1:Colloquy: IRC, SILC \u0026 ICB Client}](/colloquy-irc-silc-icb-client) ",
+    "description": "Colloquy: IRC, SILC \u0026 ICB Client"
+  },
+  "Command + tab = love": {
+    "scope": "markdown",
+    "prefix": "@@command-tab-love - Command + tab = love",
+    "body": "[${1:Command + tab = love}](/command-tab-love) ",
+    "description": "Command + tab = love"
+  },
+  "DHCP on new network": {
+    "scope": "markdown",
+    "prefix": "@@dhcp-on-new-network - DHCP on new network",
+    "body": "[${1:DHCP on new network}](/dhcp-on-new-network) ",
+    "description": "DHCP on new network"
+  },
+  "Debugging some php..": {
+    "scope": "markdown",
+    "prefix": "@@debugging-some-php - Debugging some php..",
+    "body": "[${1:Debugging some php..}](/debugging-some-php) ",
+    "description": "Debugging some php.."
+  },
+  "Delete a remote branch in git": {
+    "scope": "markdown",
+    "prefix": "@@delete-remote-branch-git - Delete a remote branch in git",
+    "body": "[${1:Delete a remote branch in git}](/delete-remote-branch-git) ",
+    "description": "Delete a remote branch in git"
+  },
+  "Designing with progressive enhancement": {
+    "scope": "markdown",
+    "prefix": "@@designing-with-progressive-enhancement - Designing with progressive enhancement",
+    "body": "[${1:Designing with progressive enhancement}](/designing-with-progressive-enhancement) ",
+    "description": "Designing with progressive enhancement"
+  },
+  "Easy remote desktop from OS X to Windows with CoRD": {
+    "scope": "markdown",
+    "prefix": "@@easy-remote-desktop-os-windows-cord - Easy remote desktop from OS X to Windows with CoRD",
+    "body": "[${1:Easy remote desktop from OS X to Windows with CoRD}](/easy-remote-desktop-os-windows-cord) ",
+    "description": "Easy remote desktop from OS X to Windows with CoRD"
+  },
+  "Fake": {
+    "scope": "markdown",
+    "prefix": "@@fake - Fake",
+    "body": "[${1:Fake}](/fake) ",
+    "description": "Fake"
+  },
+  "Fastest way to auto-login via ssh to your remote server": {
+    "scope": "markdown",
+    "prefix": "@@fastest-auto-login-ssh-remote-server - Fastest way to auto-login via ssh to your remote server",
+    "body": "[${1:Fastest way to auto-login via ssh to your remote server}](/fastest-auto-login-ssh-remote-server) ",
+    "description": "Fastest way to auto-login via ssh to your remote server"
+  },
+  "Find recently modified files": {
+    "scope": "markdown",
+    "prefix": "@@find-recently-modified-files - Find recently modified files",
+    "body": "[${1:Find recently modified files}](/find-recently-modified-files) ",
+    "description": "Find recently modified files"
+  },
+  "Fineprint - focus your user's attention with this jQuery plugin": {
+    "scope": "markdown",
+    "prefix": "@@fineprint-focus-users-attention-jquery-plugin - Fineprint - focus your user's attention with this jQuery plugin",
+    "body": "[${1:Fineprint - focus your user's attention with this jQuery plugin}](/fineprint-focus-users-attention-jquery-plugin) ",
+    "description": "Fineprint - focus your user's attention with this jQuery plugin"
+  },
+  "Firesheep 101": {
+    "scope": "markdown",
+    "prefix": "@@firesheep-101 - Firesheep 101",
+    "body": "[${1:Firesheep 101}](/firesheep-101) ",
+    "description": "Firesheep 101"
+  },
+  "Font face's comeback": {
+    "scope": "markdown",
+    "prefix": "@@font-face-comeback - Font face's comeback",
+    "body": "[${1:Font face's comeback}](/font-face-comeback) ",
+    "description": "Font face's comeback"
+  },
+  "From Wordpress on Apache to mynt on nginx": {
+    "scope": "markdown",
+    "prefix": "@@wordpress-apache-to-mynt-nginx - From Wordpress on Apache to mynt on nginx",
+    "body": "[${1:From Wordpress on Apache to mynt on nginx}](/wordpress-apache-to-mynt-nginx) ",
+    "description": "From Wordpress on Apache to mynt on nginx"
+  },
+  "From Youtube to mp3": {
+    "scope": "markdown",
+    "prefix": "@@from-youtube-to-mp3 - From Youtube to mp3",
+    "body": "[${1:From Youtube to mp3}](/from-youtube-to-mp3) ",
+    "description": "From Youtube to mp3"
+  },
+  "Getting started with Hudson": {
+    "scope": "markdown",
+    "prefix": "@@getting-started-with-hudson-hints-and-kinks - Getting started with Hudson",
+    "body": "[${1:Getting started with Hudson}](/getting-started-with-hudson-hints-and-kinks) ",
+    "description": "Getting started with Hudson"
+  },
+  "Git reminder: set permissions of hooks to executable": {
+    "scope": "markdown",
+    "prefix": "@@git-reminder-set-permissions-of-hooks-to-executable - Git reminder: set permissions of hooks to executable",
+    "body": "[${1:Git reminder: set permissions of hooks to executable}](/git-reminder-set-permissions-of-hooks-to-executable) ",
+    "description": "Git reminder: set permissions of hooks to executable"
+  },
+  "Gitweb on OSX": {
+    "scope": "markdown",
+    "prefix": "@@gitweb-on-osx - Gitweb on OSX",
+    "body": "[${1:Gitweb on OSX}](/gitweb-on-osx) ",
+    "description": "Gitweb on OSX"
+  },
+  "Global code is bad code - PHP's sessions included": {
+    "scope": "markdown",
+    "prefix": "@@global-code-is-bad-code-phps-sessions-included - Global code is bad code - PHP's sessions included",
+    "body": "[${1:Global code is bad code - PHP's sessions included}](/global-code-is-bad-code-phps-sessions-included) ",
+    "description": "Global code is bad code - PHP's sessions included"
+  },
+  "Global code sucks - php has 5468 global functions": {
+    "scope": "markdown",
+    "prefix": "@@global-code-sucks-php-has-5468-global-functions - Global code sucks - php has 5468 global functions",
+    "body": "[${1:Global code sucks - php has 5468 global functions}](/global-code-sucks-php-has-5468-global-functions) ",
+    "description": "Global code sucks - php has 5468 global functions"
+  },
+  "Good UI gets better through instruction video": {
+    "scope": "markdown",
+    "prefix": "@@good-ui-gets-better-through-instruction-video - Good UI gets better through instruction video",
+    "body": "[${1:Good UI gets better through instruction video}](/good-ui-gets-better-through-instruction-video) ",
+    "description": "Good UI gets better through instruction video"
+  },
+  "Google Geo Developers Blog: MarkerClusterer: A Solution to the Too Many Markers Problem": {
+    "scope": "markdown",
+    "prefix": "@@google-geo-developers-blog-markerclusterer-a-solution-to-the-too-many-markers-problem - Google Geo Developers Blog: MarkerClusterer: A Solution to the Too Many Markers Problem",
+    "body": "[${1:Google Geo Developers Blog: MarkerClusterer: A Solution to the Too Many Markers Problem}](/google-geo-developers-blog-markerclusterer-a-solution-to-the-too-many-markers-problem) ",
+    "description": "Google Geo Developers Blog: MarkerClusterer: A Solution to the Too Many Markers Problem"
+  },
+  "Googles style guides": {
+    "scope": "markdown",
+    "prefix": "@@googles-style-guides - Googles style guides",
+    "body": "[${1:Googles style guides}](/googles-style-guides) ",
+    "description": "Googles style guides"
+  },
+  "Handling forgotten passwords": {
+    "scope": "markdown",
+    "prefix": "@@handling-forgotten-passwords - Handling forgotten passwords",
+    "body": "[${1:Handling forgotten passwords}](/handling-forgotten-passwords) ",
+    "description": "Handling forgotten passwords"
+  },
+  "Handling segmentation faults with gdb": {
+    "scope": "markdown",
+    "prefix": "@@handling-segmentation-faults-gdb - Handling segmentation faults with gdb",
+    "body": "[${1:Handling segmentation faults with gdb}](/handling-segmentation-faults-gdb) ",
+    "description": "Handling segmentation faults with gdb"
+  },
+  "Hint user about their password with a graphed hash": {
+    "scope": "markdown",
+    "prefix": "@@password-hash-graphed - Hint user about their password with a graphed hash",
+    "body": "[${1:Hint user about their password with a graphed hash}](/password-hash-graphed) ",
+    "description": "Hint user about their password with a graphed hash"
+  },
+  "How do I edit an incorrect commit message in git - Stack Overflow": {
+    "scope": "markdown",
+    "prefix": "@@how-do-i-edit-an-incorrect-commit-message-in-git-stack-overflow - How do I edit an incorrect commit message in git - Stack Overflow",
+    "body": "[${1:How do I edit an incorrect commit message in git - Stack Overflow}](/how-do-i-edit-an-incorrect-commit-message-in-git-stack-overflow) ",
+    "description": "How do I edit an incorrect commit message in git - Stack Overflow"
+  },
+  "How to Add Search Shortcuts to Google Chrome.": {
+    "scope": "markdown",
+    "prefix": "@@how-to-add-search-shortcuts-to-google-chrome - How to Add Search Shortcuts to Google Chrome.",
+    "body": "[${1:How to Add Search Shortcuts to Google Chrome.}](/how-to-add-search-shortcuts-to-google-chrome) ",
+    "description": "How to Add Search Shortcuts to Google Chrome."
+  },
+  "How to Report Bugs Effectively": {
+    "scope": "markdown",
+    "prefix": "@@how-to-report-bugs-effectively - How to Report Bugs Effectively",
+    "body": "[${1:How to Report Bugs Effectively}](/how-to-report-bugs-effectively) ",
+    "description": "How to Report Bugs Effectively"
+  },
+  "How to design form buttons in one breath": {
+    "scope": "markdown",
+    "prefix": "@@how-to-design-form-buttons-in-one-breath - How to design form buttons in one breath",
+    "body": "[${1:How to design form buttons in one breath}](/how-to-design-form-buttons-in-one-breath) ",
+    "description": "How to design form buttons in one breath"
+  },
+  "How to display correct amount of free memory in Linux": {
+    "scope": "markdown",
+    "prefix": "@@how-to-display-correct-amount-of-free-memory-in-linux - How to display correct amount of free memory in Linux",
+    "body": "[${1:How to display correct amount of free memory in Linux}](/how-to-display-correct-amount-of-free-memory-in-linux) ",
+    "description": "How to display correct amount of free memory in Linux"
+  },
+  "How to revert a \"git rm -r .\"?": {
+    "scope": "markdown",
+    "prefix": "@@how-to-revert-a-git-rm-r - How to revert a \"git rm -r .\"?",
+    "body": "[${1:How to revert a \"git rm -r .\"?}](/how-to-revert-a-git-rm-r) ",
+    "description": "How to revert a \"git rm -r .\"?"
+  },
+  "Import legacy PHP app into ZF with ease": {
+    "scope": "markdown",
+    "prefix": "@@import-legacy-php-app-into-zf-with-ease - Import legacy PHP app into ZF with ease",
+    "body": "[${1:Import legacy PHP app into ZF with ease}](/import-legacy-php-app-into-zf-with-ease) ",
+    "description": "Import legacy PHP app into ZF with ease"
+  },
+  "Installing Redmine on Ubuntu and lighttpd": {
+    "scope": "markdown",
+    "prefix": "@@installing-redmine-on-ubuntu-and-lighttpd - Installing Redmine on Ubuntu and lighttpd",
+    "body": "[${1:Installing Redmine on Ubuntu and lighttpd}](/installing-redmine-on-ubuntu-and-lighttpd) ",
+    "description": "Installing Redmine on Ubuntu and lighttpd"
+  },
+  "Installing Vim = discovering Mac's internals": {
+    "scope": "markdown",
+    "prefix": "@@installing-vim-discovering-macs-internals - Installing Vim = discovering Mac's internals",
+    "body": "[${1:Installing Vim = discovering Mac's internals}](/installing-vim-discovering-macs-internals) ",
+    "description": "Installing Vim = discovering Mac's internals"
+  },
+  "Installing vim with python and ruby support through homebrew": {
+    "scope": "markdown",
+    "prefix": "@@installing-vim-python-ruby-support-homebrew - Installing vim with python and ruby support through homebrew",
+    "body": "[${1:Installing vim with python and ruby support through homebrew}](/installing-vim-python-ruby-support-homebrew) ",
+    "description": "Installing vim with python and ruby support through homebrew"
+  },
+  "Java is so much more interesting now": {
+    "scope": "markdown",
+    "prefix": "@@java-is-so-much-more-interesting-now - Java is so much more interesting now",
+    "body": "[${1:Java is so much more interesting now}](/java-is-so-much-more-interesting-now) ",
+    "description": "Java is so much more interesting now"
+  },
+  "Javascript regex 101: String.test()": {
+    "scope": "markdown",
+    "prefix": "@@javascript-regex-101-string-test - Javascript regex 101: String.test()",
+    "body": "[${1:Javascript regex 101: String.test()}](/javascript-regex-101-string-test) ",
+    "description": "Javascript regex 101: String.test()"
+  },
+  "Keeping track of project files in a large codebase": {
+    "scope": "markdown",
+    "prefix": "@@keeping-track-of-project-files-in-a-large-codebase - Keeping track of project files in a large codebase",
+    "body": "[${1:Keeping track of project files in a large codebase}](/keeping-track-of-project-files-in-a-large-codebase) ",
+    "description": "Keeping track of project files in a large codebase"
+  },
+  "Kick Ass: Kill some time": {
+    "scope": "markdown",
+    "prefix": "@@kick-ass-kill-some-time - Kick Ass: Kill some time",
+    "body": "[${1:Kick Ass: Kill some time}](/kick-ass-kill-some-time) ",
+    "description": "Kick Ass: Kill some time"
+  },
+  "Leaving out (pdf)": {
+    "scope": "markdown",
+    "prefix": "@@leaving-out-pdf - Leaving out (pdf)",
+    "body": "[${1:Leaving out (pdf)}](/leaving-out-pdf) ",
+    "description": "Leaving out (pdf)"
+  },
+  "Less makes wonders for front end development": {
+    "scope": "markdown",
+    "prefix": "@@less-makes-wonders-front-development - Less makes wonders for front end development",
+    "body": "[${1:Less makes wonders for front end development}](/less-makes-wonders-front-development) ",
+    "description": "Less makes wonders for front end development"
+  },
+  "Linux: Change Directory or CD to the Previous Directory / Last Path": {
+    "scope": "markdown",
+    "prefix": "@@linux-change-directory-or-cd-to-the-previous-directory-last-path - Linux: Change Directory or CD to the Previous Directory / Last Path",
+    "body": "[${1:Linux: Change Directory or CD to the Previous Directory / Last Path}](/linux-change-directory-or-cd-to-the-previous-directory-last-path) ",
+    "description": "Linux: Change Directory or CD to the Previous Directory / Last Path"
+  },
+  "Lose the mouse and get faster - meet Alfred": {
+    "scope": "markdown",
+    "prefix": "@@lose-mouse-get-faster-meet-alfred - Lose the mouse and get faster - meet Alfred",
+    "body": "[${1:Lose the mouse and get faster - meet Alfred}](/lose-mouse-get-faster-meet-alfred) ",
+    "description": "Lose the mouse and get faster - meet Alfred"
+  },
+  "MIT OpenCourseWare | Electrical Engineering and Computer Science | 6.189 A Gentle Introduction to Programming Using Python, January IAP 2008 | Lecture Notes": {
+    "scope": "markdown",
+    "prefix": "@@mit-opencourseware-electrical-engineering-and-computer-science-6-189-a-gentle-introduction-to-programming-using-python-january-iap-2008-lecture-notes - MIT OpenCourseWare | Electrical Engineering and Computer Science | 6.189 A Gentle Introduction to Programming Using Python, January IAP 2008 | Lecture Notes",
+    "body": "[${1:MIT OpenCourseWare | Electrical Engineering and Computer Science | 6.189 A Gentle Introduction to Programming Using Python, January IAP 2008 | Lecture Notes}](/mit-opencourseware-electrical-engineering-and-computer-science-6-189-a-gentle-introduction-to-programming-using-python-january-iap-2008-lecture-notes) ",
+    "description": "MIT OpenCourseWare | Electrical Engineering and Computer Science | 6.189 A Gentle Introduction to Programming Using Python, January IAP 2008 | Lecture Notes"
+  },
+  "Mac's apps, what are they?": {
+    "scope": "markdown",
+    "prefix": "@@macs-apps-what-are-they - Mac's apps, what are they?",
+    "body": "[${1:Mac's apps, what are they?}](/macs-apps-what-are-they) ",
+    "description": "Mac's apps, what are they?"
+  },
+  "Mac's got a builtin screen recorder": {
+    "scope": "markdown",
+    "prefix": "@@macs-got-a-builtin-screen-recorder - Mac's got a builtin screen recorder",
+    "body": "[${1:Mac's got a builtin screen recorder}](/macs-got-a-builtin-screen-recorder) ",
+    "description": "Mac's got a builtin screen recorder"
+  },
+  "Mac's got a native FTP client - very easy to use": {
+    "scope": "markdown",
+    "prefix": "@@macs-got-a-native-ftp-client-very-easy-to-use - Mac's got a native FTP client - very easy to use",
+    "body": "[${1:Mac's got a native FTP client - very easy to use}](/macs-got-a-native-ftp-client-very-easy-to-use) ",
+    "description": "Mac's got a native FTP client - very easy to use"
+  },
+  "Make email lists unsubscribable with one click": {
+    "scope": "markdown",
+    "prefix": "@@email-lists-unsubscribable-oneclick - Make email lists unsubscribable with one click",
+    "body": "[${1:Make email lists unsubscribable with one click}](/email-lists-unsubscribable-oneclick) ",
+    "description": "Make email lists unsubscribable with one click"
+  },
+  "Make your Mac sing songs": {
+    "scope": "markdown",
+    "prefix": "@@make-your-mac-sing-songs - Make your Mac sing songs",
+    "body": "[${1:Make your Mac sing songs}](/make-your-mac-sing-songs) ",
+    "description": "Make your Mac sing songs"
+  },
+  "Make your terminal start faster": {
+    "scope": "markdown",
+    "prefix": "@@terminal-start-faster - Make your terminal start faster",
+    "body": "[${1:Make your terminal start faster}](/terminal-start-faster) ",
+    "description": "Make your terminal start faster"
+  },
+  "Making Jenkins work with python's virtualenv": {
+    "scope": "markdown",
+    "prefix": "@@jenkins-python-virtualenv - Making Jenkins work with python's virtualenv",
+    "body": "[${1:Making Jenkins work with python's virtualenv}](/jenkins-python-virtualenv) ",
+    "description": "Making Jenkins work with python's virtualenv"
+  },
+  "Man pages in color, with links": {
+    "scope": "markdown",
+    "prefix": "@@man-pages-in-color-and-links - Man pages in color, with links",
+    "body": "[${1:Man pages in color, with links}](/man-pages-in-color-and-links) ",
+    "description": "Man pages in color, with links"
+  },
+  "Mini project: placeholder image generator in PHP": {
+    "scope": "markdown",
+    "prefix": "@@mini-project-placeholder-image-generator-php - Mini project: placeholder image generator in PHP",
+    "body": "[${1:Mini project: placeholder image generator in PHP}](/mini-project-placeholder-image-generator-php) ",
+    "description": "Mini project: placeholder image generator in PHP"
+  },
+  "Move vi/vim editor temporary swap and backup files to another directory | devdaily.com": {
+    "scope": "markdown",
+    "prefix": "@@move-vivim-editor-temporary-swap-and-backup-files-to-another-directory-devdaily-com - Move vi/vim editor temporary swap and backup files to another directory | devdaily.com",
+    "body": "[${1:Move vi/vim editor temporary swap and backup files to another directory | devdaily.com}](/move-vivim-editor-temporary-swap-and-backup-files-to-another-directory-devdaily-com) ",
+    "description": "Move vi/vim editor temporary swap and backup files to another directory | devdaily.com"
+  },
+  "MySQL's `SUBSTRING()`'s index starts at 1": {
+    "scope": "markdown",
+    "prefix": "@@mysqls-substrings-index-starts-at-1 - MySQL's `SUBSTRING()`'s index starts at 1",
+    "body": "[${1:MySQL's `SUBSTRING()`'s index starts at 1}](/mysqls-substrings-index-starts-at-1) ",
+    "description": "MySQL's `SUBSTRING()`'s index starts at 1"
+  },
+  "Netbeans autocompletion for javascript is pretty amazing": {
+    "scope": "markdown",
+    "prefix": "@@netbeans-autocompletion-javascript-amazing - Netbeans autocompletion for javascript is pretty amazing",
+    "body": "[${1:Netbeans autocompletion for javascript is pretty amazing}](/netbeans-autocompletion-javascript-amazing) ",
+    "description": "Netbeans autocompletion for javascript is pretty amazing"
+  },
+  "New dev area with gitweb": {
+    "scope": "markdown",
+    "prefix": "@@new-dev-area-with-gitweb - New dev area with gitweb",
+    "body": "[${1:New dev area with gitweb}](/new-dev-area-with-gitweb) ",
+    "description": "New dev area with gitweb"
+  },
+  "Nice ORDER BY-syntax: FIELD()": {
+    "scope": "markdown",
+    "prefix": "@@nice-order-by-syntax-field - Nice ORDER BY-syntax: FIELD()",
+    "body": "[${1:Nice ORDER BY-syntax: FIELD()}](/nice-order-by-syntax-field) ",
+    "description": "Nice ORDER BY-syntax: FIELD()"
+  },
+  "Nielsen: Alphabetical Sorting Must (Mostly) Die": {
+    "scope": "markdown",
+    "prefix": "@@nielsen-alphabetical-sorting-must-mostly-die - Nielsen: Alphabetical Sorting Must (Mostly) Die",
+    "body": "[${1:Nielsen: Alphabetical Sorting Must (Mostly) Die}](/nielsen-alphabetical-sorting-must-mostly-die) ",
+    "description": "Nielsen: Alphabetical Sorting Must (Mostly) Die"
+  },
+  "OSXFUSE instead of MacFuse on Lion": {
+    "scope": "markdown",
+    "prefix": "@@osxfuse-macfuse-lion - OSXFUSE instead of MacFuse on Lion",
+    "body": "[${1:OSXFUSE instead of MacFuse on Lion}](/osxfuse-macfuse-lion) ",
+    "description": "OSXFUSE instead of MacFuse on Lion"
+  },
+  "Open file: cmd + down; navigate upwards: cmd + up": {
+    "scope": "markdown",
+    "prefix": "@@open-file-cmd-down-navigate-upwards-cmd-up - Open file: cmd + down; navigate upwards: cmd + up",
+    "body": "[${1:Open file: cmd + down; navigate upwards: cmd + up}](/open-file-cmd-down-navigate-upwards-cmd-up) ",
+    "description": "Open file: cmd + down; navigate upwards: cmd + up"
+  },
+  "Open source project owners: control yourselves!": {
+    "scope": "markdown",
+    "prefix": "@@open-source-project-owners-control-yourselves - Open source project owners: control yourselves!",
+    "body": "[${1:Open source project owners: control yourselves!}](/open-source-project-owners-control-yourselves) ",
+    "description": "Open source project owners: control yourselves!"
+  },
+  "Organizing multiple method arguments without using an arbitrary array": {
+    "scope": "markdown",
+    "prefix": "@@organizing-multiple-method-arguments-without-using-an-arbitrary-array - Organizing multiple method arguments without using an arbitrary array",
+    "body": "[${1:Organizing multiple method arguments without using an arbitrary array}](/organizing-multiple-method-arguments-without-using-an-arbitrary-array) ",
+    "description": "Organizing multiple method arguments without using an arbitrary array"
+  },
+  "PHP Sadness - showcase of PHP's shortcomings": {
+    "scope": "markdown",
+    "prefix": "@@php-sadness-showcase-phps-shortcomings - PHP Sadness - showcase of PHP's shortcomings",
+    "body": "[${1:PHP Sadness - showcase of PHP's shortcomings}](/php-sadness-showcase-phps-shortcomings) ",
+    "description": "PHP Sadness - showcase of PHP's shortcomings"
+  },
+  "Plain English explanation of Big O - Stack Overflow": {
+    "scope": "markdown",
+    "prefix": "@@plain-english-explanation-of-big-o-stack-overflow - Plain English explanation of Big O - Stack Overflow",
+    "body": "[${1:Plain English explanation of Big O - Stack Overflow}](/plain-english-explanation-of-big-o-stack-overflow) ",
+    "description": "Plain English explanation of Big O - Stack Overflow"
+  },
+  "Play/Pause Spotify instead of opening iTunes": {
+    "scope": "markdown",
+    "prefix": "@@playpause-spotify-instead-of-opening-itunes - Play/Pause Spotify instead of opening iTunes",
+    "body": "[${1:Play/Pause Spotify instead of opening iTunes}](/playpause-spotify-instead-of-opening-itunes) ",
+    "description": "Play/Pause Spotify instead of opening iTunes"
+  },
+  "Pokeshadow - a Pokémon guessing game": {
+    "scope": "markdown",
+    "prefix": "@@pokeshadow - Pokeshadow - a Pokémon guessing game",
+    "body": "[${1:Pokeshadow - a Pokémon guessing game}](/pokeshadow) ",
+    "description": "Pokeshadow - a Pokémon guessing game"
+  },
+  "Print screen on Mac": {
+    "scope": "markdown",
+    "prefix": "@@print-screen-on-mac - Print screen on Mac",
+    "body": "[${1:Print screen on Mac}](/print-screen-on-mac) ",
+    "description": "Print screen on Mac"
+  },
+  "Program for yourself": {
+    "scope": "markdown",
+    "prefix": "@@program-for-yourself - Program for yourself",
+    "body": "[${1:Program for yourself}](/program-for-yourself) ",
+    "description": "Program for yourself"
+  },
+  "Programming books on Kindle": {
+    "scope": "markdown",
+    "prefix": "@@programming-books-on-kindle - Programming books on Kindle",
+    "body": "[${1:Programming books on Kindle}](/programming-books-on-kindle) ",
+    "description": "Programming books on Kindle"
+  },
+  "Properly display MySQL result in console": {
+    "scope": "markdown",
+    "prefix": "@@properly-display-mysql-result-console - Properly display MySQL result in console",
+    "body": "[${1:Properly display MySQL result in console}](/properly-display-mysql-result-console) ",
+    "description": "Properly display MySQL result in console"
+  },
+  "Put a tail on that error log": {
+    "scope": "markdown",
+    "prefix": "@@put-a-tail-on-that-error-log - Put a tail on that error log",
+    "body": "[${1:Put a tail on that error log}](/put-a-tail-on-that-error-log) ",
+    "description": "Put a tail on that error log"
+  },
+  "Read headers with curl": {
+    "scope": "markdown",
+    "prefix": "@@read-headers-with-curl - Read headers with curl",
+    "body": "[${1:Read headers with curl}](/read-headers-with-curl) ",
+    "description": "Read headers with curl"
+  },
+  "Readability - JS bookmarklet": {
+    "scope": "markdown",
+    "prefix": "@@readability-js-bookmarklet - Readability - JS bookmarklet",
+    "body": "[${1:Readability - JS bookmarklet}](/readability-js-bookmarklet) ",
+    "description": "Readability - JS bookmarklet"
+  },
+  "Redmine and lighttpd got into a brawl, came out as friends": {
+    "scope": "markdown",
+    "prefix": "@@redmine-and-lighttpd-got-into-a-brawl-came-out-as-friends - Redmine and lighttpd got into a brawl, came out as friends",
+    "body": "[${1:Redmine and lighttpd got into a brawl, came out as friends}](/redmine-and-lighttpd-got-into-a-brawl-came-out-as-friends) ",
+    "description": "Redmine and lighttpd got into a brawl, came out as friends"
+  },
+  "Remap caps-lock to esc in OS X Lion": {
+    "scope": "markdown",
+    "prefix": "@@map-esc-caps-lock-os-lion - Remap caps-lock to esc in OS X Lion",
+    "body": "[${1:Remap caps-lock to esc in OS X Lion}](/map-esc-caps-lock-os-lion) ",
+    "description": "Remap caps-lock to esc in OS X Lion"
+  },
+  "Replacing Jekyll with Go": {
+    "scope": "markdown",
+    "prefix": "@@replacing-Jekyll-with-go - Replacing Jekyll with Go",
+    "body": "[${1:Replacing Jekyll with Go}](/replacing-Jekyll-with-go) ",
+    "description": "Replacing Jekyll with Go"
+  },
+  "Requesting new magic method: `__toBoolean()`": {
+    "scope": "markdown",
+    "prefix": "@@requesting-new-magic-method-__toboolean - Requesting new magic method: `__toBoolean()`",
+    "body": "[${1:Requesting new magic method: `__toBoolean()`}](/requesting-new-magic-method-__toboolean) ",
+    "description": "Requesting new magic method: `__toBoolean()`"
+  },
+  "Reset/set IP address": {
+    "scope": "markdown",
+    "prefix": "@@resetset-ip-address - Reset/set IP address",
+    "body": "[${1:Reset/set IP address}](/resetset-ip-address) ",
+    "description": "Reset/set IP address"
+  },
+  "Retaliation - feedback at its finest": {
+    "scope": "markdown",
+    "prefix": "@@retaliation-feedback-finest - Retaliation - feedback at its finest",
+    "body": "[${1:Retaliation - feedback at its finest}](/retaliation-feedback-finest) ",
+    "description": "Retaliation - feedback at its finest"
+  },
+  "Retrieve removed file from SVN": {
+    "scope": "markdown",
+    "prefix": "@@retrieve-removed-file-from-svn - Retrieve removed file from SVN",
+    "body": "[${1:Retrieve removed file from SVN}](/retrieve-removed-file-from-svn) ",
+    "description": "Retrieve removed file from SVN"
+  },
+  "Roadmap of PHP development - follow it": {
+    "scope": "markdown",
+    "prefix": "@@roadmap-of-php-development-follow-it - Roadmap of PHP development - follow it",
+    "body": "[${1:Roadmap of PHP development - follow it}](/roadmap-of-php-development-follow-it) ",
+    "description": "Roadmap of PHP development - follow it"
+  },
+  "Ruby on Rails: Getting Started \u0026 Action Dispatch": {
+    "scope": "markdown",
+    "prefix": "@@ruby-on-rails-getting-started-action-dispatch - Ruby on Rails: Getting Started \u0026 Action Dispatch",
+    "body": "[${1:Ruby on Rails: Getting Started \u0026 Action Dispatch}](/ruby-on-rails-getting-started-action-dispatch) ",
+    "description": "Ruby on Rails: Getting Started \u0026 Action Dispatch"
+  },
+  "Scope it up": {
+    "scope": "markdown",
+    "prefix": "@@scope-it-up - Scope it up",
+    "body": "[${1:Scope it up}](/scope-it-up) ",
+    "description": "Scope it up"
+  },
+  "Screen": {
+    "scope": "markdown",
+    "prefix": "@@screen - Screen",
+    "body": "[${1:Screen}](/screen) ",
+    "description": "Screen"
+  },
+  "Screen capture from command line": {
+    "scope": "markdown",
+    "prefix": "@@screen-capture-from-command-line - Screen capture from command line",
+    "body": "[${1:Screen capture from command line}](/screen-capture-from-command-line) ",
+    "description": "Screen capture from command line"
+  },
+  "Scrolling in less": {
+    "scope": "markdown",
+    "prefix": "@@scrolling-in-less - Scrolling in less",
+    "body": "[${1:Scrolling in less}](/scrolling-in-less) ",
+    "description": "Scrolling in less"
+  },
+  "Set enviroment variables in Apache": {
+    "scope": "markdown",
+    "prefix": "@@set-enviroment-variables-in-apache - Set enviroment variables in Apache",
+    "body": "[${1:Set enviroment variables in Apache}](/set-enviroment-variables-in-apache) ",
+    "description": "Set enviroment variables in Apache"
+  },
+  "Setting up VirtualBox": {
+    "scope": "markdown",
+    "prefix": "@@setting-up-virtualbox - Setting up VirtualBox",
+    "body": "[${1:Setting up VirtualBox}](/setting-up-virtualbox) ",
+    "description": "Setting up VirtualBox"
+  },
+  "Simple Desktops": {
+    "scope": "markdown",
+    "prefix": "@@simple-desktops - Simple Desktops",
+    "body": "[${1:Simple Desktops}](/simple-desktops) ",
+    "description": "Simple Desktops"
+  },
+  "Something different - administrate Windows 7 through \"God mode\"": {
+    "scope": "markdown",
+    "prefix": "@@something-different-administrate-windows-7-through-god-mode - Something different - administrate Windows 7 through \"God mode\"",
+    "body": "[${1:Something different - administrate Windows 7 through \"God mode\"}](/something-different-administrate-windows-7-through-god-mode) ",
+    "description": "Something different - administrate Windows 7 through \"God mode\""
+  },
+  "SplFileInfo::getExtension()": {
+    "scope": "markdown",
+    "prefix": "@@splfileinfogetextension - SplFileInfo::getExtension()",
+    "body": "[${1:SplFileInfo::getExtension()}](/splfileinfogetextension) ",
+    "description": "SplFileInfo::getExtension()"
+  },
+  "Sshfs, finally": {
+    "scope": "markdown",
+    "prefix": "@@sshfs-finally - Sshfs, finally",
+    "body": "[${1:Sshfs, finally}](/sshfs-finally) ",
+    "description": "Sshfs, finally"
+  },
+  "Supply and demand": {
+    "scope": "markdown",
+    "prefix": "@@supply-and-demand - Supply and demand",
+    "body": "[${1:Supply and demand}](/supply-and-demand) ",
+    "description": "Supply and demand"
+  },
+  "Timing attacks": {
+    "scope": "markdown",
+    "prefix": "@@timing-attacks - Timing attacks",
+    "body": "[${1:Timing attacks}](/timing-attacks) ",
+    "description": "Timing attacks"
+  },
+  "Toggling light/dark color scheme for i3 on Ubuntu": {
+    "scope": "markdown",
+    "prefix": "@@dark-mode-ubuntu-i3 - Toggling light/dark color scheme for i3 on Ubuntu",
+    "body": "[${1:Toggling light/dark color scheme for i3 on Ubuntu}](/dark-mode-ubuntu-i3) ",
+    "description": "Toggling light/dark color scheme for i3 on Ubuntu"
+  },
+  "Trying out closure": {
+    "scope": "markdown",
+    "prefix": "@@trying-out-closure - Trying out closure",
+    "body": "[${1:Trying out closure}](/trying-out-closure) ",
+    "description": "Trying out closure"
+  },
+  "University website": {
+    "scope": "markdown",
+    "prefix": "@@university-website - University website",
+    "body": "[${1:University website}](/university-website) ",
+    "description": "University website"
+  },
+  "Updates in background processes are sweet": {
+    "scope": "markdown",
+    "prefix": "@@updates-in-background-processes-are-sweet - Updates in background processes are sweet",
+    "body": "[${1:Updates in background processes are sweet}](/updates-in-background-processes-are-sweet) ",
+    "description": "Updates in background processes are sweet"
+  },
+  "Updating a forked project on Github": {
+    "scope": "markdown",
+    "prefix": "@@updating-a-forked-project-on-github - Updating a forked project on Github",
+    "body": "[${1:Updating a forked project on Github}](/updating-a-forked-project-on-github) ",
+    "description": "Updating a forked project on Github"
+  },
+  "Upgrading to Ubuntu 24.04": {
+    "scope": "markdown",
+    "prefix": "@@ubuntu-2404 - Upgrading to Ubuntu 24.04",
+    "body": "[${1:Upgrading to Ubuntu 24.04}](/ubuntu-2404) ",
+    "description": "Upgrading to Ubuntu 24.04"
+  },
+  "Useless validation when filing for address change in Sweden": {
+    "scope": "markdown",
+    "prefix": "@@useless-validation-when-filing-for-address-change-in-sweden - Useless validation when filing for address change in Sweden",
+    "body": "[${1:Useless validation when filing for address change in Sweden}](/useless-validation-when-filing-for-address-change-in-sweden) ",
+    "description": "Useless validation when filing for address change in Sweden"
+  },
+  "Uses this - my preferred tools": {
+    "scope": "markdown",
+    "prefix": "@@uses-this - Uses this - my preferred tools",
+    "body": "[${1:Uses this - my preferred tools}](/uses-this) ",
+    "description": "Uses this - my preferred tools"
+  },
+  "Using git init --bare for a slim repository look": {
+    "scope": "markdown",
+    "prefix": "@@using-git-init-bare-for-a-slim-repository-look - Using git init --bare for a slim repository look",
+    "body": "[${1:Using git init --bare for a slim repository look}](/using-git-init-bare-for-a-slim-repository-look) ",
+    "description": "Using git init --bare for a slim repository look"
+  },
+  "VPN from Mac": {
+    "scope": "markdown",
+    "prefix": "@@vpn-from-mac - VPN from Mac",
+    "body": "[${1:VPN from Mac}](/vpn-from-mac) ",
+    "description": "VPN from Mac"
+  },
+  "Video on the Web - Dive Into HTML5": {
+    "scope": "markdown",
+    "prefix": "@@video-on-the-web-dive-into-html5 - Video on the Web - Dive Into HTML5",
+    "body": "[${1:Video on the Web - Dive Into HTML5}](/video-on-the-web-dive-into-html5) ",
+    "description": "Video on the Web - Dive Into HTML5"
+  },
+  "Video showing NetBeans 6.9 tackling ZF": {
+    "scope": "markdown",
+    "prefix": "@@video-showing-netbeans-6-9-tackling-zf - Video showing NetBeans 6.9 tackling ZF",
+    "body": "[${1:Video showing NetBeans 6.9 tackling ZF}](/video-showing-netbeans-6-9-tackling-zf) ",
+    "description": "Video showing NetBeans 6.9 tackling ZF"
+  },
+  "Vimium enables keyboard only navigation for Chrome": {
+    "scope": "markdown",
+    "prefix": "@@vimium-enables-keyboard-navigation-chrome - Vimium enables keyboard only navigation for Chrome",
+    "body": "[${1:Vimium enables keyboard only navigation for Chrome}](/vimium-enables-keyboard-navigation-chrome) ",
+    "description": "Vimium enables keyboard only navigation for Chrome"
+  },
+  "Visor is a system-wide terminal accessible via a hot-key": {
+    "scope": "markdown",
+    "prefix": "@@visor-is-a-system-wide-terminal-accessible-via-a-hot-key - Visor is a system-wide terminal accessible via a hot-key",
+    "body": "[${1:Visor is a system-wide terminal accessible via a hot-key}](/visor-is-a-system-wide-terminal-accessible-via-a-hot-key) ",
+    "description": "Visor is a system-wide terminal accessible via a hot-key"
+  },
+  "What I want from an interface": {
+    "scope": "markdown",
+    "prefix": "@@what_i_want_from_an_api - What I want from an interface",
+    "body": "[${1:What I want from an interface}](/what_i_want_from_an_api) ",
+    "description": "What I want from an interface"
+  },
+  "Which Linux version am I using?": {
+    "scope": "markdown",
+    "prefix": "@@which-linux-version-am-i-using - Which Linux version am I using?",
+    "body": "[${1:Which Linux version am I using?}](/which-linux-version-am-i-using) ",
+    "description": "Which Linux version am I using?"
+  },
+  "Why I left tumblr for posterous": {
+    "scope": "markdown",
+    "prefix": "@@why-i-left-tumblr-for-posterous - Why I left tumblr for posterous",
+    "body": "[${1:Why I left tumblr for posterous}](/why-i-left-tumblr-for-posterous) ",
+    "description": "Why I left tumblr for posterous"
+  },
+  "Wirify instantly shows a webpage's wireframe": {
+    "scope": "markdown",
+    "prefix": "@@wirify-instantly-shows-a-webpages-wireframe - Wirify instantly shows a webpage's wireframe",
+    "body": "[${1:Wirify instantly shows a webpage's wireframe}](/wirify-instantly-shows-a-webpages-wireframe) ",
+    "description": "Wirify instantly shows a webpage's wireframe"
+  },
+  "Word- and linecount in unix": {
+    "scope": "markdown",
+    "prefix": "@@word-and-linecount-in-unix - Word- and linecount in unix",
+    "body": "[${1:Word- and linecount in unix}](/word-and-linecount-in-unix) ",
+    "description": "Word- and linecount in unix"
+  },
+  "Wrapping lines in git diff": {
+    "scope": "markdown",
+    "prefix": "@@wrapping-lines-git-diff - Wrapping lines in git diff",
+    "body": "[${1:Wrapping lines in git diff}](/wrapping-lines-git-diff) ",
+    "description": "Wrapping lines in git diff"
+  },
+  "Yanking in vim": {
+    "scope": "markdown",
+    "prefix": "@@yanking-in-vim - Yanking in vim",
+    "body": "[${1:Yanking in vim}](/yanking-in-vim) ",
+    "description": "Yanking in vim"
+  },
+  "`case` in bash": {
+    "scope": "markdown",
+    "prefix": "@@case - `case` in bash",
+    "body": "[${1:`case` in bash}](/case) ",
+    "description": "`case` in bash"
+  },
+  "bookshelf, aka link roulette": {
+    "scope": "markdown",
+    "prefix": "@@bookshelf-aka-link-roulette - bookshelf, aka link roulette",
+    "body": "[${1:bookshelf, aka link roulette}](/bookshelf-aka-link-roulette) ",
+    "description": "bookshelf, aka link roulette"
+  },
+  "curl -O is wget on mac": {
+    "scope": "markdown",
+    "prefix": "@@curl-o-is-wget-on-mac - curl -O is wget on mac",
+    "body": "[${1:curl -O is wget on mac}](/curl-o-is-wget-on-mac) ",
+    "description": "curl -O is wget on mac"
+  },
+  "dzone.com - Top 20 Programming Lessons I've Learned in 20 Years": {
+    "scope": "markdown",
+    "prefix": "@@dzone-com-top-20-programming-lessons-ive-learned-in-20-years - dzone.com - Top 20 Programming Lessons I've Learned in 20 Years",
+    "body": "[${1:dzone.com - Top 20 Programming Lessons I've Learned in 20 Years}](/dzone-com-top-20-programming-lessons-ive-learned-in-20-years) ",
+    "description": "dzone.com - Top 20 Programming Lessons I've Learned in 20 Years"
+  },
+  "elly - PRs you can act on": {
+    "scope": "markdown",
+    "prefix": "@@elly-keeps-track-of-prs - elly - PRs you can act on",
+    "body": "[${1:elly - PRs you can act on}](/elly-keeps-track-of-prs) ",
+    "description": "elly - PRs you can act on"
+  },
+  "gconf-editor lets Ubuntu users edit keys": {
+    "scope": "markdown",
+    "prefix": "@@gconf-editor-lets-ubuntu-users-edit-keys - gconf-editor lets Ubuntu users edit keys",
+    "body": "[${1:gconf-editor lets Ubuntu users edit keys}](/gconf-editor-lets-ubuntu-users-edit-keys) ",
+    "description": "gconf-editor lets Ubuntu users edit keys"
+  },
+  "getopt in bash": {
+    "scope": "markdown",
+    "prefix": "@@getopt-in-bash - getopt in bash",
+    "body": "[${1:getopt in bash}](/getopt-in-bash) ",
+    "description": "getopt in bash"
+  },
+  "gist.github.com + vim + posterous = true": {
+    "scope": "markdown",
+    "prefix": "@@gist-github-com-vim-posterous-true - gist.github.com + vim + posterous = true",
+    "body": "[${1:gist.github.com + vim + posterous = true}](/gist-github-com-vim-posterous-true) ",
+    "description": "gist.github.com + vim + posterous = true"
+  },
+  "git": {
+    "scope": "markdown",
+    "prefix": "@@git - git",
+    "body": "[${1:git}](/git) ",
+    "description": "git"
+  },
+  "hangman in Python": {
+    "scope": "markdown",
+    "prefix": "@@hangman-in-python - hangman in Python",
+    "body": "[${1:hangman in Python}](/hangman-in-python) ",
+    "description": "hangman in Python"
+  },
+  "i-got-issues: manage project todos on github": {
+    "scope": "markdown",
+    "prefix": "@@i-got-issues-manage-project-todos-github - i-got-issues: manage project todos on github",
+    "body": "[${1:i-got-issues: manage project todos on github}](/i-got-issues-manage-project-todos-github) ",
+    "description": "i-got-issues: manage project todos on github"
+  },
+  "iTunes Genius - not so much": {
+    "scope": "markdown",
+    "prefix": "@@itunes-genius-not-so-much - iTunes Genius - not so much",
+    "body": "[${1:iTunes Genius - not so much}](/itunes-genius-not-so-much) ",
+    "description": "iTunes Genius - not so much"
+  },
+  "image-sorter patches": {
+    "scope": "markdown",
+    "prefix": "@@image-sorter-patches - image-sorter patches",
+    "body": "[${1:image-sorter patches}](/image-sorter-patches) ",
+    "description": "image-sorter patches"
+  },
+  "mkdir -p": {
+    "scope": "markdown",
+    "prefix": "@@mkdir-p - mkdir -p",
+    "body": "[${1:mkdir -p}](/mkdir-p) ",
+    "description": "mkdir -p"
+  },
+  "say-what.rb - trying out Ruby": {
+    "scope": "markdown",
+    "prefix": "@@say-what-rb-ruby - say-what.rb - trying out Ruby",
+    "body": "[${1:say-what.rb - trying out Ruby}](/say-what-rb-ruby) ",
+    "description": "say-what.rb - trying out Ruby"
+  },
+  "scp - where have you been?": {
+    "scope": "markdown",
+    "prefix": "@@scp-where-have-you-been - scp - where have you been?",
+    "body": "[${1:scp - where have you been?}](/scp-where-have-you-been) ",
+    "description": "scp - where have you been?"
+  },
+  "search with ack - \"better than grep\"": {
+    "scope": "markdown",
+    "prefix": "@@search-ack-better-grep - search with ack - \"better than grep\"",
+    "body": "[${1:search with ack - \"better than grep\"}](/search-ack-better-grep) ",
+    "description": "search with ack - \"better than grep\""
+  },
+  "sed quickie, search and replace in files": {
+    "scope": "markdown",
+    "prefix": "@@sed-quickie-search-replace-files - sed quickie, search and replace in files",
+    "body": "[${1:sed quickie, search and replace in files}](/sed-quickie-search-replace-files) ",
+    "description": "sed quickie, search and replace in files"
+  },
+  "site2pdf - save all pages from a domain as a single PDF": {
+    "scope": "markdown",
+    "prefix": "@@site2pdf-save-pages-domain-single-pdf - site2pdf - save all pages from a domain as a single PDF",
+    "body": "[${1:site2pdf - save all pages from a domain as a single PDF}](/site2pdf-save-pages-domain-single-pdf) ",
+    "description": "site2pdf - save all pages from a domain as a single PDF"
+  },
+  "tail -n 0 -f /var/log/...": {
+    "scope": "markdown",
+    "prefix": "@@tail-n-0-f-varlog - tail -n 0 -f /var/log/...",
+    "body": "[${1:tail -n 0 -f /var/log/...}](/tail-n-0-f-varlog) ",
+    "description": "tail -n 0 -f /var/log/..."
+  },
+  "vim \"bug\" while saving git commit message": {
+    "scope": "markdown",
+    "prefix": "@@vim-bug-while-saving-git-commit-message - vim \"bug\" while saving git commit message",
+    "body": "[${1:vim \"bug\" while saving git commit message}](/vim-bug-while-saving-git-commit-message) ",
+    "description": "vim \"bug\" while saving git commit message"
+  },
+  "vsftpd - enabling FTP access on your Ubuntu server": {
+    "scope": "markdown",
+    "prefix": "@@vsftpd-enabling-ftp-access-ubuntu-server - vsftpd - enabling FTP access on your Ubuntu server",
+    "body": "[${1:vsftpd - enabling FTP access on your Ubuntu server}](/vsftpd-enabling-ftp-access-ubuntu-server) ",
+    "description": "vsftpd - enabling FTP access on your Ubuntu server"
+  },
+  "which - saves the day": {
+    "scope": "markdown",
+    "prefix": "@@which-saves-the-day - which - saves the day",
+    "body": "[${1:which - saves the day}](/which-saves-the-day) ",
+    "description": "which - saves the day"
+  },
+  "who displays currently active users": {
+    "scope": "markdown",
+    "prefix": "@@who-displays-currently-active-users - who displays currently active users",
+    "body": "[${1:who displays currently active users}](/who-displays-currently-active-users) ",
+    "description": "who displays currently active users"
+  }
 }

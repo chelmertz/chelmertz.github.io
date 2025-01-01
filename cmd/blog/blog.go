@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"cmp"
 	"encoding/csv"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"html/template"
@@ -121,6 +122,7 @@ func main() {
 	})
 
 	relatedPosts(allPosts)
+	createSnippets(allPosts)
 
 	{
 		// docs/posts
@@ -347,6 +349,60 @@ func relatedPosts(posts []Post) {
 		}
 	}
 }
+
+type Snippet struct {
+	Scope       string `json:"scope"`
+	Prefix      string `json:"prefix"`
+	Body        string `json:"body"`
+	Description string `json:"description"`
+}
+
+func createSnippets(posts []Post) {
+	snippets := make(map[string]Snippet)
+
+	for _, post := range posts {
+		snippets[post.Title] = Snippet{
+			Scope:       "markdown",
+			Prefix:      fmt.Sprintf("@@%s - %s", post.Permalink, post.Title),
+			Body:        fmt.Sprintf("[${1:%s}](/%s) ", post.Title, post.Permalink),
+			Description: post.Title,
+		}
+	}
+
+	asJson, jsonErr := json.MarshalIndent(snippets, "", "  ")
+	if jsonErr != nil {
+		panic(fmt.Sprintf("error marshalling vscode snippets for : %v", jsonErr))
+	}
+	snippetsFile := filepath.Join(".vscode", "posts.code-snippets")
+	writeErr := os.WriteFile(snippetsFile, asJson, 0644)
+
+	if writeErr != nil {
+		panic(fmt.Sprintf("error writing vscode snippets to file %s : %v", snippetsFile, writeErr))
+	}
+}
+
+/*
+This is what vscode generates in the snippets boilerplate:
+
+{
+	// Place your chelmertz.github.io workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+}
+*/
 
 func must(err error) {
 	if err != nil {
