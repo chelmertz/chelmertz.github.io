@@ -25,6 +25,7 @@ import (
 	highlighting "github.com/yuin/goldmark-highlighting/v2"
 	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/parser"
+	"github.com/yuin/goldmark/renderer/html"
 	"go.abhg.dev/goldmark/frontmatter"
 )
 
@@ -63,6 +64,7 @@ func main() {
 	// parse posts
 	md := goldmark.New(
 		goldmark.WithExtensions(&frontmatter.Extender{}, extension.Linkify, extension.Table, highlighting.Highlighting),
+		goldmark.WithRendererOptions(html.WithUnsafe()),
 	)
 
 	indexHtmlData := IndexHtmlData{}
