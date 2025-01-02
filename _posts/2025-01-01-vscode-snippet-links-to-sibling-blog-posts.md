@@ -9,7 +9,9 @@ date: "2025-01-01 23:33"
 
 It lets us spit out one snippet per blog post, by hooking into the generation of our blog. This is the end result:
 
-https://github.com/user-attachments/assets/02d53ef2-d89e-4afd-a720-9662e25ab230
+<video controls>
+  <source src="https://github.com/user-attachments/assets/02d53ef2-d89e-4afd-a720-9662e25ab230" type="video/mp4" />
+</video>
 
 ## VS Code's JSON format
 
