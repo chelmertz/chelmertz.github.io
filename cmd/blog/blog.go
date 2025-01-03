@@ -13,6 +13,8 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"runtime"
+	"runtime/pprof"
 	"slices"
 	"strings"
 	textTemplate "text/template"
@@ -41,9 +43,19 @@ var viewFuncs = template.FuncMap{
 	},
 }
 
-// TODO just for fun, profile this after done
 // hardcoded, idempotent, blunt error handling, not incremental, not parallel, duplicated data in memory
 func main() {
+	if os.Getenv("PROFILE") == "CPU" {
+		cpu := must1(os.Create("cpu.pprof"))
+		defer cpu.Close()
+		must(pprof.StartCPUProfile(cpu))
+		defer pprof.StopCPUProfile()
+	} else if os.Getenv("PROFILE") == "MEM" {
+		mem := must1(os.Create("mem.pprof"))
+		defer mem.Close()
+		runtime.GC()
+		defer pprof.WriteHeapProfile(mem)
+	}
 	// github  pages wants to serve either / or docs/, let's go with docs/
 	must(os.RemoveAll(docs))
 	must(os.Mkdir(docs, 0775))
