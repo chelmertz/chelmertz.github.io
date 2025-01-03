@@ -1,14 +1,17 @@
 Name,Purpose & context,URL
 ansisvg,Capture terminal output into svg for presentations,https://github.com/wader/ansisvg
+broot,Interactive tree/ls/cd,https://github.com/Canop/broot
 dive,Docker image layer introspection,https://github.com/wagoodman/dive
 fq,jq for binary files,https://github.com/wader/fq
 git-absorb,Aids fixups,https://github.com/tummychow/git-absorb
+hwatch,watch alternative that records the history and keeps diffs,https://github.com/blacknon/hwatch
 hyperfine,Benchmarks,https://github.com/sharkdp/hyperfine
 ijq,Interactive version of jq,https://sr.ht/~gpanders/ijq/
 jujutsu,VCS on top of git,https://github.com/martinvonz/jj
 lazydocker,TUI for docker. See _lazygit_,https://github.com/jesseduffield/lazydocker
 pastel,CLI for color palettes,https://github.com/sharkdp/pastel
 plantuml,Diagrams,https://plantuml.com/
+st,Statistics on CLI,https://github.com/nferraz/st
 ugrep,Interactive grep,https://github.com/Genivia/ugrep
 up,Ultimate plumber. Interactive pipelines,https://github.com/akavel/up
 webhook.site,Hosted/one-off webhooks,https://webhook.site/
