@@ -8,6 +8,7 @@ hwatch,watch alternative that records the history and keeps diffs,https://github
 hyperfine,Benchmarks,https://github.com/sharkdp/hyperfine
 ijq,Interactive version of jq,https://sr.ht/~gpanders/ijq/
 jujutsu,VCS on top of git,https://github.com/martinvonz/jj
+kuzudb,Embeddable graph database. Maybe valid alternative to sqlite,https://kuzudb.com/
 lazydocker,TUI for docker. See _lazygit_,https://github.com/jesseduffield/lazydocker
 pastel,CLI for color palettes,https://github.com/sharkdp/pastel
 plantuml,Diagrams,https://plantuml.com/
