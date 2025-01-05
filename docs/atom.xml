@@ -618,6 +618,10 @@ Environment=GTK_USE_PORTAL=1
 <td><a href="https://www.youtube.com/watch?v=TdhXPsDXdAI">How Instagram Scaled to 14 Million Users With Only 3 Engineers </a></td>
 <td>Postgres: pgbouncer, ID strategy for finding correct shard, (stateless) Django, Gearman, etc.</td>
 </tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=3Ea3pkTCYx4">Unix and Google</a></td>
+<td>'Coding at the perimiter', an approach to tackle the n^3 matrix of system ✕ feature ✕ platform. Examplifies with Multics vs UNIX</td>
+</tr>
 </tbody>
 </table>
 ]]>
