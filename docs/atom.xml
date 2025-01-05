@@ -620,7 +620,7 @@ Environment=GTK_USE_PORTAL=1
 </tr>
 <tr>
 <td><a href="https://www.youtube.com/watch?v=3Ea3pkTCYx4">Unix and Google</a></td>
-<td>'Coding at the perimiter', an approach to tackle the n^3 matrix of system ✕ feature ✕ platform. Examplifies with Multics vs UNIX</td>
+<td>'Coding at the perimiter', an approach to tackle the n^3 matrix of system ✕ feature ✕ platform - write programs that work together (pipes, everything-is-a-file, etc.). Examplifies with Multics vs UNIX</td>
 </tr>
 </tbody>
 </table>
