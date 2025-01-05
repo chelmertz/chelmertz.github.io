@@ -35,3 +35,8 @@ video {
     list-style-type: none;
     padding: 0;
 }
+
+a[href*="youtube.com"]::after {
+    content: "🎥";
+}
+
