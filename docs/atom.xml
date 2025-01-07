@@ -141,6 +141,39 @@ Environment=GTK_USE_PORTAL=1
 <li>Gnome Console (kgx) renders an extra symbol for dead keys (like ~ or `) even when &quot;completed&quot;
 <ul>
 <li>Both in the shell and in e.g. vim</li>
+<li>Switched to <a href="https://wezfurlong.org/wezterm/">WezTerm</a> which works well enough.</li>
+</ul>
+</li>
+<li><a href="https://github.com/phillipberndt/autorandr">autorandr</a> seems to be borked:
+<ul>
+<li>journalctl:
+<pre><code>jan 07 19:40:43 gamma autorandr[1909]: /usr/bin/autorandr:210: SyntaxWarning: invalid escape sequence '\s'
+jan 07 19:40:43 gamma autorandr[1909]:   XRANDR_OUTPUT_REGEXP = &quot;&quot;&quot;(?x)
+jan 07 19:40:43 gamma autorandr[1909]: /usr/bin/autorandr:236: SyntaxWarning: invalid escape sequence '\s'
+jan 07 19:40:43 gamma autorandr[1909]:   &quot;&quot;&quot; + XRANDR_PROPERTIES_REGEXP + &quot;&quot;&quot; |                                      # Properties to include in the profile
+jan 07 19:40:43 gamma autorandr[1909]: /usr/bin/autorandr:248: SyntaxWarning: invalid escape sequence '\S'
+jan 07 19:40:43 gamma autorandr[1909]:   XRANDR_OUTPUT_MODES_REGEXP = &quot;&quot;&quot;(?x)
+jan 07 19:40:43 gamma autorandr[1909]: /usr/bin/autorandr:592: SyntaxWarning: invalid escape sequence '\s'
+jan 07 19:40:43 gamma autorandr[1909]:   version = re.search(&quot;xrandr program version\s+([0-9\.]+)&quot;, version_string).group(1)
+jan 07 19:40:43 gamma autorandr[1909]: /usr/bin/autorandr:888: SyntaxWarning: invalid escape sequence '\+'
+jan 07 19:40:43 gamma autorandr[1909]:   match = re.match(&quot;(?P&lt;w&gt;[0-9]+)x(?P&lt;h&gt;[0-9]+)(?:\+(?P&lt;x&gt;[0-9]+))?(?:\+(?P&lt;y&gt;[0-9]+))?.*&quot;, output.options[&quot;panning&quot;])
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Deactivated successfully.
+jan 07 19:40:43 gamma systemd[1]: Finished autorandr.service - autorandr execution hook.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Start request repeated too quickly.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Failed with result 'start-limit-hit'.
+jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr execution hook.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Start request repeated too quickly.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Failed with result 'start-limit-hit'.
+jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr execution hook.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Start request repeated too quickly.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Failed with result 'start-limit-hit'.
+jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr execution hook.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Start request repeated too quickly.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Failed with result 'start-limit-hit'.
+jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr execution hook.
+</code></pre>
+</li>
+<li>When getting power only through my Monitor's USB-C, autorandr prevented the GDM (login screen) to render. Fun times.</li>
 </ul>
 </li>
 </ul>

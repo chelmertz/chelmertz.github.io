@@ -178,6 +178,8 @@ func main() {
 
 	{
 		// docs/atom.xml
+		// TODO this doesn't escape correctly - titles with "&" for example
+		// use encoding/xml instead
 		atomTemplate := textTemplate.Must(textTemplate.New("atom.xml").
 			Funcs(viewFuncs).
 			ParseGlob("cmd/blog/atom.xml"))
