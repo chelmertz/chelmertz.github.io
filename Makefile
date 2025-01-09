@@ -1,6 +1,6 @@
 .PHONY: docs
 docs: blog
-	./blog
+	@./blog
 
 blog: cmd/blog/blog.go cmd/blog/atom.go
 	go build -o blog ./cmd/blog
