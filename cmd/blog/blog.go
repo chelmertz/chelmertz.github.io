@@ -200,10 +200,16 @@ func main() {
 			Posts:       allPosts[:10],
 		}
 		must(atomTemplate.Execute(atomOutFile, atomData))
+
+		// new approach
+		atomContent := must1(atomFeedOfPosts(allPosts))
+		must(os.WriteFile(filepath.Join(docs, "atom2.xml"), atomContent, 0644))
 	}
 
 	// docs/CNAME
 	must(os.WriteFile(filepath.Join(docs, "CNAME"), []byte("iamnearlythere.com"), 0664))
+
+	fmt.Println("Blog built, see the docs/ directory")
 }
 
 type IndexHtmlData struct {

@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>iamnearlythere.com</title>
+  <subtitle>iamnearlythere.com, a blog on software development</subtitle>
+  <id>https://iamnearlythere.com/atom.xml</id>
+  <updated>2025-01-01T23:33:00Z</updated>
+  <link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml"></link>
+  <link href="https://iamnearlythere.com/" rel="alternate" type="text/html"></link>
+  <author>
+    <name>Carl Helmertz</name>
+    <email>helmertz@gmail.com</email>
+  </author>
+  <entry>
+    <title>VS Code snippets for internal blog links</title>
+    <published>2025-01-01T23:33:00Z</published>
+    <updated>2025-01-01T23:33:00Z</updated>
+    <id>https://iamnearlythere.com/vscode-snippets-for-internal-blog-links</id>
+    <link href="https://iamnearlythere.com/vscode-snippets-for-internal-blog-links" rel="alternate" type="text/html" title="VS Code snippets for internal blog links"></link>
+    <summary>Linking to other blog posts is only a few keys away</summary>
+    <content type="html"><![CDATA[<p>I wanted to quickly link between blog posts. Since I use VS Code, we can abuse <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">user defined snippets</a> to support this feature.</p>
+<p>This is the end result:</p>
+<video controls>
+  <source src="https://github.com/user-attachments/assets/02d53ef2-d89e-4afd-a720-9662e25ab230" type="video/mp4" />
+</video>
+<h2>Generating the snippets in VS Code's JSON format</h2>
+<p>After some experimentation, this is the target format:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#000080">&#34;A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;scope&#34;</span>: <span style="color:#d14">&#34;markdown&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;prefix&#34;</span>: <span style="color:#d14">&#34;@@interesting-reads - A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;body&#34;</span>: <span style="color:#d14">&#34;[${1:A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems}](/interesting-reads) &#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;description&#34;</span>: <span style="color:#d14">&#34;A few system design \u0026 architecture experiences, low-level debugging stories and post-mortems&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#000080">&#34;A grep-quickie for the road (or svn, really)&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;scope&#34;</span>: <span style="color:#d14">&#34;markdown&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;prefix&#34;</span>: <span style="color:#d14">&#34;@@a-grep-quickie-for-the-road-or-svn-really - A grep-quickie for the road (or svn, really)&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;body&#34;</span>: <span style="color:#d14">&#34;[${1:A grep-quickie for the road (or svn, really)}](/a-grep-quickie-for-the-road-or-svn-really) &#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#000080">&#34;description&#34;</span>: <span style="color:#d14">&#34;A grep-quickie for the road (or svn, really)&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
+</span></span></code></pre><p>Good ideas:</p>
+<ul>
+<li>Put the generated snippets file in  <code>.vscode/posts.code-snippets</code> of your blog's repository.
+<ul>
+<li>Keeping it local to a git repository keeps everything nice and tidy. No suggestions for your other repositories.</li>
+</ul>
+</li>
+<li>Use a common starting string, <code>@@</code>, for all snippets' <code>&quot;prefix&quot;</code>.
+<ul>
+<li>We want some way to only get suggestions of blog posts.</li>
+</ul>
+</li>
+<li>Spam keywords in <code>&quot;prefix&quot;</code>.
+<ul>
+<li>VS Code's fuzzy auto completion only matches against <code>&quot;prefix&quot;</code>. <code>&quot;description&quot;</code> is decoration only.</li>
+</ul>
+</li>
+<li>Provide a default for the link text (to the blog post title).
+<ul>
+<li>In body text, the link text will almost always be removed, but having a writing prompt is not too shabby.</li>
+<li>VS Code smartly pre-selects the default, so there's no cost of just starting to write something completely different.</li>
+</ul>
+</li>
+<li>Put a trailing space in <code>&quot;body&quot;</code>.
+<ul>
+<li>Allows for quickly continuing to write. If the link is at the end of a sentence, you need to follow up with a backspace. So be it.</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/chelmertz/chelmertz.github.io/commit/9bf5b41ccba352ed91450316b638d2f6a3bda6b9#diff-94984348a77639388f82ce61d30baf29dd5177f404e5a7a22dc3e2945d9ec5e2R360-R382">All it takes is a loop to generate the snippets</a>, which is done while generating the HTML of the blog posts.</p>
+<p>By regenerating the snippets for each build of the blog contents, we make sure
+that the snippets' URLs &amp; titles are up to date.</p>
+<h2>Postscript, on motivation</h2>
+<p>I'm trying to get over my private org mode file usage and &quot;blog&quot; more.  <code>wc</code>
+reports 240k words, in comparison to only three blog posts between 2013 and
+2024.</p>
+<p>One part of this effort was to make the blog engine a bit more lightweight and
+custom, <a href="/replacing-Jekyll-with-go">so I wrote a new one</a>.</p>
+<p>Another part was to find a quick way to refer to sibling blog posts here, when
+writing markdown.</p>
+<p>Zettelkasten (small notes and a giant web of internal links) seems to be super
+popular. There are many plugins supporting this, it sounds a bit like
+<a href="https://vimdoc.sourceforge.net/htmldoc/editing.html#gf"><code>gf</code></a> in vim), but I
+figured that each markdown post's <code>permalink</code> would be unique &amp; stable enough to
+use as a target.</p>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Upgrading to Ubuntu 24.04</title>
+    <published>2024-12-20T00:29:00Z</published>
+    <updated>2024-12-20T00:29:00Z</updated>
+    <id>https://iamnearlythere.com/ubuntu-2404</id>
+    <link href="https://iamnearlythere.com/ubuntu-2404" rel="alternate" type="text/html" title="Upgrading to Ubuntu 24.04"></link>
+    <summary>Not everything went super smoothly</summary>
+    <content type="html"><![CDATA[<p>Some issues I ran into:</p>
+<ul>
+<li><code>man</code> pages were no longer colored.
+<ul>
+<li>Workaround: <a href="https://bbs.archlinux.org/viewtopic.php?id=287185"><code>export GROFF_NO_SGR=1</code></a>.</li>
+</ul>
+</li>
+<li>Switching system theme with <code>gsettings set org.gnome.desktop.interface color-scheme prefer-dark</code> no longer takes effect.
+<ul>
+<li>No workaround as of yet.</li>
+<li>Lot's of <code>xdg-portal</code> related packages installed and configured back and forth, to no avail (yet).</li>
+<li>Adding <code>i3</code> to <code>UseIn=gnome;i3</code> in /usr/share/xdg-desktop-portal/portals/gtk.portal didn't help, reverted.</li>
+<li>Adding <code>org.freedesktop.impl.portal.Settings=gtk</code> in ~/.config/xdg-desktop-portal/portals.conf didn't help, reverted.</li>
+<li><code>XDG_CURRENT_DESKTOP</code> is &quot;i3&quot;, and <code>XDG_DESKTOP_PORTAL</code> is &quot;&quot;</li>
+<li>There's an arch wiki page on <a href="https://wiki.archlinux.org/title/XDG_Desktop_Portal">XDG Desktop Portal</a></li>
+<li>I've got (not sure who owns this change) .config/systemd/user/xdg-desktop-portal.service.d/override.conf
+<pre><code>[Service]
+Environment=GTK_USE_PORTAL=1
+</code></pre>
+<ul>
+<li>Adding <code>Environment=GDK_DEBUG=portals</code> didn't help, reverted.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Running a simple Ansible playbook no longer works.
+<ul>
+<li>No workaround as of yet.</li>
+<li>Missing python package, Ubuntu no longer likes <code>pip3</code>. Good, in a way; especially language-specific packages should not really be installed globally.</li>
+<li>Tried using <code>uv</code> for the first time, didn't find the correct invocation.</li>
+</ul>
+</li>
+<li>Volume up/down buttons didn't work.
+<ul>
+<li>Installing <code>pulseaudio</code> &quot;fixed&quot; it. It was supposed to be a &quot;temporary solution&quot;, it probably will be permanent. I guess <code>pipewire</code> just needs some configuration and things probably work by accident currently.</li>
+</ul>
+</li>
+<li><code>gedit</code> is no longer a thing.
+<ul>
+<li><code>gnome-text-editor</code> is apparently the new thing.</li>
+</ul>
+</li>
+<li>Gnome Console (kgx) renders an extra symbol for dead keys (like ~ or `) even when &quot;completed&quot;
+<ul>
+<li>Both in the shell and in e.g. vim</li>
+<li>Switched to <a href="https://wezfurlong.org/wezterm/">WezTerm</a> which works well enough.</li>
+</ul>
+</li>
+<li><a href="https://github.com/phillipberndt/autorandr">autorandr</a> seems to be borked:
+<ul>
+<li>journalctl:
+<pre><code>jan 07 19:40:43 gamma autorandr[1909]: /usr/bin/autorandr:210: SyntaxWarning: invalid escape sequence '\s'
+jan 07 19:40:43 gamma autorandr[1909]:   XRANDR_OUTPUT_REGEXP = &quot;&quot;&quot;(?x)
+jan 07 19:40:43 gamma autorandr[1909]: /usr/bin/autorandr:236: SyntaxWarning: invalid escape sequence '\s'
+jan 07 19:40:43 gamma autorandr[1909]:   &quot;&quot;&quot; + XRANDR_PROPERTIES_REGEXP + &quot;&quot;&quot; |                                      # Properties to include in the profile
+jan 07 19:40:43 gamma autorandr[1909]: /usr/bin/autorandr:248: SyntaxWarning: invalid escape sequence '\S'
+jan 07 19:40:43 gamma autorandr[1909]:   XRANDR_OUTPUT_MODES_REGEXP = &quot;&quot;&quot;(?x)
+jan 07 19:40:43 gamma autorandr[1909]: /usr/bin/autorandr:592: SyntaxWarning: invalid escape sequence '\s'
+jan 07 19:40:43 gamma autorandr[1909]:   version = re.search(&quot;xrandr program version\s+([0-9\.]+)&quot;, version_string).group(1)
+jan 07 19:40:43 gamma autorandr[1909]: /usr/bin/autorandr:888: SyntaxWarning: invalid escape sequence '\+'
+jan 07 19:40:43 gamma autorandr[1909]:   match = re.match(&quot;(?P&lt;w&gt;[0-9]+)x(?P&lt;h&gt;[0-9]+)(?:\+(?P&lt;x&gt;[0-9]+))?(?:\+(?P&lt;y&gt;[0-9]+))?.*&quot;, output.options[&quot;panning&quot;])
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Deactivated successfully.
+jan 07 19:40:43 gamma systemd[1]: Finished autorandr.service - autorandr execution hook.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Start request repeated too quickly.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Failed with result 'start-limit-hit'.
+jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr execution hook.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Start request repeated too quickly.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Failed with result 'start-limit-hit'.
+jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr execution hook.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Start request repeated too quickly.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Failed with result 'start-limit-hit'.
+jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr execution hook.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Start request repeated too quickly.
+jan 07 19:40:43 gamma systemd[1]: autorandr.service: Failed with result 'start-limit-hit'.
+jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr execution hook.
+</code></pre>
+</li>
+<li>When getting power only through my Monitor's USB-C, autorandr prevented the GDM (login screen) to render. Fun times.</li>
+<li>The changelog of 1.15 says &quot;Several regex literal bug fixes&quot; and my version was 1.14-2 (the latest provided by my default repositories).</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Uses this - my preferred tools</title>
+    <published>2024-12-11T18:00:00Z</published>
+    <updated>2024-12-11T18:00:00Z</updated>
+    <id>https://iamnearlythere.com/uses-this</id>
+    <link href="https://iamnearlythere.com/uses-this" rel="alternate" type="text/html" title="Uses this - my preferred tools"></link>
+    <summary>Tooling that I rely on, using Linux on the desktop as a software engineer</summary>
+    <content type="html"><![CDATA[<p><a href="https://github.com/chelmertz/dotfiles">github.com/chelmertz/dotfiles</a> contains all dotfiles.</p>
+<p><a href="https://github.com/chelmertz/dotfiles/blob/master/ansible-laptop.yml">My ansible file</a> could be used to look for sources &amp; dependencies.</p>
+<h2>Desktop applications</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://christian.amsuess.com/tools/arandr/">Arandr</a></td>
+<td>Configuring multi-monitor setup</td>
+</tr>
+<tr>
+<td><a href="https://gitlab.gnome.org/GNOME/console">Console</a></td>
+<td>A good enough terminal. Supporting dark/light mode is critical</td>
+</tr>
+<tr>
+<td><a href="https://hluk.github.io/CopyQ/">Copyq</a></td>
+<td>Clipboard</td>
+</tr>
+<tr>
+<td><a href="https://github.com/doomemacs/doomemacs">Doom Emacs</a></td>
+<td>Purely as entry point to Org mode/Magit</td>
+</tr>
+<tr>
+<td><a href="https://www.dropbox.com">Dropbox</a></td>
+<td>Sync between mobile and laptop is a must</td>
+</tr>
+<tr>
+<td><a href="https://element.io/">Element</a></td>
+<td>Matrix chat client</td>
+</tr>
+<tr>
+<td><a href="https://github.com/chelmertz/elly">Elly</a></td>
+<td>Github pull request tracker</td>
+</tr>
+<tr>
+<td><a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a></td>
+<td>I hear Chrome is mucking about with adblockers</td>
+</tr>
+<tr>
+<td><a href="https://flameshot.org/">Flameshot</a></td>
+<td>Screenshots with very convenient UI for quick editing</td>
+</tr>
+<tr>
+<td><a href="https://www.jetbrains.com/idea/">Intellij IDEA</a></td>
+<td>Editor for java and grails (don't ask)</td>
+</tr>
+<tr>
+<td><a href="https://www.libreoffice.org/">Libreoffice</a></td>
+<td>Quick &amp; dirty editing of truth tables/decision tables and CSV files</td>
+</tr>
+<tr>
+<td><a href="https://magit.vc/">Magit</a></td>
+<td>The best git client. See <em>lazygit</em></td>
+</tr>
+<tr>
+<td><a href="https://obsidian.md/">Obsidian</a></td>
+<td>Purely as entry point to Excalidraw</td>
+</tr>
+<tr>
+<td><a href="https://orgmode.org/">Org mode</a></td>
+<td>Diary. TODOs.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/phw/peek">Peek</a></td>
+<td>Screen recorder</td>
+</tr>
+<tr>
+<td><a href="https://github.com/davatorium/rofi">Rofi</a></td>
+<td>Launcher. Easy to customize. Like fzf but without a terminal in the foreground</td>
+</tr>
+<tr>
+<td><a href="https://www.thregr.org/wavexx/software/screenkey/">Screenkey</a></td>
+<td>Displays the pressed keys on screen. Useful but not perfect with multiple monitors</td>
+</tr>
+<tr>
+<td><a href="https://code.visualstudio.com/">VS code</a></td>
+<td>Code editor</td>
+</tr>
+<tr>
+<td><a href="https://i3wm.org/">i3</a></td>
+<td>Window manager</td>
+</tr>
+<tr>
+<td><a href="https://github.com/vivien/i3blocks">i3blocks</a></td>
+<td>Task bar for i3</td>
+</tr>
+</tbody>
+</table>
+<h2>Languages &amp; libraries</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://go.dev/">Go</a></td>
+<td>Programming in general</td>
+</tr>
+<tr>
+<td><a href="https://learn.openapis.org/">OpenAPI</a></td>
+<td>REST APIs. Spec first and generate clients/server works really well</td>
+</tr>
+</tbody>
+</table>
+<h2>CLI &amp; TUI</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/sharkdp/bat">bat</a></td>
+<td>Nicer <code>cat</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/AlDanial/cloc">cloc</a></td>
+<td>Counts LoC in codebases</td>
+</tr>
+<tr>
+<td><a href="https://github.com/chelmertz/dotfiles/blob/master/bin/datedate">datedate</a></td>
+<td>Transforms dates &amp; timestamps</td>
+</tr>
+<tr>
+<td><a href="http://duc.zevv.nl/">duc</a></td>
+<td>Another disk usage tool. Sunburst chart</td>
+</tr>
+<tr>
+<td><a href="https://github.com/dunst-project/dunst">dunst</a></td>
+<td>Notifications</td>
+</tr>
+<tr>
+<td><a href="https://github.com/eradman/entr">entr</a></td>
+<td>inotify-like watcher. Execute command when files change</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sharkdp/fd">fd</a></td>
+<td>Less verbose <code>find</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/junegunn/fzf">fzf</a></td>
+<td>Fuzzy finder</td>
+</tr>
+<tr>
+<td><a href="https://github.com/dundee/gdu">gdu</a></td>
+<td>A fast disk usage analyser</td>
+</tr>
+<tr>
+<td><a href="https://cli.github.com/">gh</a></td>
+<td>Github via CLI. Usable for quickly entering TODOs with some attributes and for listing open issues and displaying with i3blocks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/newren/git-filter-repo">git-filter-repo</a></td>
+<td>Can extract directory of git repo to its own repo</td>
+</tr>
+<tr>
+<td><a href="https://github.com/tomnomnom/gron">gron</a></td>
+<td>Turns JSON into grep:able lines of text and back again</td>
+</tr>
+<tr>
+<td><a href="https://htop.dev/">htop</a></td>
+<td>Good enough system monitor</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jgalat/image-sorter/">image-sorter</a></td>
+<td>TUI for quickly moving image files into proper directories</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jesseduffield/lazygit">lazygit</a></td>
+<td>Very similar to Magit. Slightly less intuitive but working in the terminal without all of Emacs is more comfy.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/dbcli/litecli">litecli</a></td>
+<td>Better CLI for sqlite. See <em>mycli</em></td>
+</tr>
+<tr>
+<td><a href="https://github.com/dbcli/mycli">mycli</a></td>
+<td>Better CLI for mysql. See <em>litecli</em></td>
+</tr>
+<tr>
+<td><a href="https://pandoc.org/">pandoc</a></td>
+<td>Document converter</td>
+</tr>
+<tr>
+<td><a href="https://freedesktop.org/software/pulseaudio/pavucontrol/">pavucontrol</a></td>
+<td>Choosing device for sound output</td>
+</tr>
+<tr>
+<td><a href="https://github.com/nik012003/ripdrag">ripdrag</a></td>
+<td>“ripdrag filename” creates a small window with “filename” that you can use for drop-friendly interfaces</td>
+</tr>
+<tr>
+<td><a href="https://github.com/BurntSushi/ripgrep">ripgrep</a></td>
+<td>More ergonomic search than grep</td>
+</tr>
+<tr>
+<td><a href="github.com/chelmertz/serve">serve</a></td>
+<td>Serve directory via HTTP</td>
+</tr>
+<tr>
+<td><a href="https://www.shellcheck.net/">shellcheck</a></td>
+<td>Lints bash scripts</td>
+</tr>
+<tr>
+<td><a href="https://github.com/watchexec/watchexec">watchexec</a></td>
+<td>inotify-like watcher. Execute command when files change. Slightly more complete than <code>entr</code> - might overtake its position</td>
+</tr>
+<tr>
+<td><a href="https://linux.die.net/man/1/wmctrl">wmctrl</a></td>
+<td>API capabilities for X.org</td>
+</tr>
+<tr>
+<td><a href="https://github.com/alols/xcape">xcape</a></td>
+<td>Rebind keys. For example: pressing caps=esc &amp; holding caps=ctrl</td>
+</tr>
+<tr>
+<td><a href="https://github.com/rupa/z">z</a></td>
+<td>Interface to MRU directories when <code>cd</code>:ing around</td>
+</tr>
+<tr>
+<td><a href="https://help.gnome.org/users/zenity/stable/">zenity</a></td>
+<td>Interactive bash scripts. Very useful with i3blocks</td>
+</tr>
+</tbody>
+</table>
+<h2>Web applications &amp; third party services</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://asciinema.org/">Asciinema</a></td>
+<td>Record terminal interactions</td>
+</tr>
+<tr>
+<td><a href="https://app.diagrams.net/">Draw.io</a></td>
+<td>Diagrams</td>
+</tr>
+<tr>
+<td><a href="https://excalidraw.com/">Excalidraw</a></td>
+<td>Diagrams</td>
+</tr>
+<tr>
+<td><a href="https://github.com/brendangregg/FlameGraph">FlameGraph</a></td>
+<td>Hierarchical profile viewer</td>
+</tr>
+<tr>
+<td><a href="https://github.com/features/actions">Github actions</a></td>
+<td>CI/CD</td>
+</tr>
+<tr>
+<td><a href="https://mermaid.js.org/">Mermaid</a></td>
+<td>Diagrams</td>
+</tr>
+<tr>
+<td><a href="https://www.notion.so/">Notion</a></td>
+<td>Wiki</td>
+</tr>
+<tr>
+<td><a href="https://numbr.dev/">Numbr</a></td>
+<td>Adds up numbers in plaintext. Good for splitting costs</td>
+</tr>
+</tbody>
+</table>
+<h2>Browser extensions</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://addons.mozilla.org/en-GB/android/addon/consent-o-matic/">consent-o-matchi</a></td>
+<td>Anti cookie-popups</td>
+</tr>
+<tr>
+<td><a href="https://darkreader.org/">dark reader</a></td>
+<td>Automatic dark mode</td>
+</tr>
+<tr>
+<td><a href="https://addons.mozilla.org/en-US/firefox/addon/grasp/">grasp</a></td>
+<td>Bookmarks current page into an org file</td>
+</tr>
+<tr>
+<td><a href="https://languagetool.org/">languagetool</a></td>
+<td>Effortless spell- &amp; grammar checking everywhere</td>
+</tr>
+<tr>
+<td><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock origin</a></td>
+<td>Blocks ads</td>
+</tr>
+<tr>
+<td><a href="https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/">vimium</a></td>
+<td>Vim bindings when browsing</td>
+</tr>
+</tbody>
+</table>
+<h2>Hardware</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.keychron.com/products/keychron-k8-pro-qmk-via-wireless-mechanical-keyboard?_pos=1&amp;_psq=k8+pro&amp;_ss=e&amp;_v=1.0&amp;variant=40558016757849">Keychron K8 Pro</a></td>
+<td>Very comfortable keyboard</td>
+</tr>
+<tr>
+<td>Logitech G MX518</td>
+<td>So happy when this got revived</td>
+</tr>
+</tbody>
+</table>
+<h2>On the radar</h2>
+<p>Untried but interesting.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose &amp; context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/wader/ansisvg">ansisvg</a></td>
+<td>Capture terminal output into svg for presentations</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Canop/broot">broot</a></td>
+<td>Interactive tree/ls/cd</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wagoodman/dive">dive</a></td>
+<td>Docker image layer introspection</td>
+</tr>
+<tr>
+<td><a href="https://github.com/wader/fq">fq</a></td>
+<td>jq for binary files</td>
+</tr>
+<tr>
+<td><a href="https://github.com/tummychow/git-absorb">git-absorb</a></td>
+<td>Aids fixups</td>
+</tr>
+<tr>
+<td><a href="https://github.com/blacknon/hwatch">hwatch</a></td>
+<td>watch alternative that records the history and keeps diffs</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sharkdp/hyperfine">hyperfine</a></td>
+<td>Benchmarks</td>
+</tr>
+<tr>
+<td><a href="https://sr.ht/~gpanders/ijq/">ijq</a></td>
+<td>Interactive version of jq</td>
+</tr>
+<tr>
+<td><a href="https://github.com/martinvonz/jj">jujutsu</a></td>
+<td>VCS on top of git</td>
+</tr>
+<tr>
+<td><a href="https://kuzudb.com/">kuzudb</a></td>
+<td>Embeddable graph database. Maybe valid alternative to sqlite</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jesseduffield/lazydocker">lazydocker</a></td>
+<td>TUI for docker. See <em>lazygit</em></td>
+</tr>
+<tr>
+<td><a href="https://github.com/sharkdp/pastel">pastel</a></td>
+<td>CLI for color palettes</td>
+</tr>
+<tr>
+<td><a href="https://plantuml.com/">plantuml</a></td>
+<td>Diagrams</td>
+</tr>
+<tr>
+<td><a href="https://github.com/nferraz/st">st</a></td>
+<td>Statistics on CLI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Genivia/ugrep">ugrep</a></td>
+<td>Interactive grep</td>
+</tr>
+<tr>
+<td><a href="https://github.com/akavel/up">up</a></td>
+<td>Ultimate plumber. Interactive pipelines</td>
+</tr>
+<tr>
+<td><a href="https://webhook.site/">webhook.site</a></td>
+<td>Hosted/one-off webhooks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sxyazi/yazi">yazi</a></td>
+<td>File manager TUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/woodruffw/zizmor">zizmor</a></td>
+<td>Audits Github actions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/joehillen/sysz">zsys</a></td>
+<td>fzf TUI for systemctl</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>A few system design &amp; architecture experiences, low-level debugging stories and post-mortems</title>
+    <published>2024-12-04T23:13:00Z</published>
+    <updated>2024-12-04T23:13:00Z</updated>
+    <id>https://iamnearlythere.com/interesting-reads</id>
+    <link href="https://iamnearlythere.com/interesting-reads" rel="alternate" type="text/html" title="A few system design &amp; architecture experiences, low-level debugging stories and post-mortems"></link>
+    <summary>A bunch of different sources one could learn from</summary>
+    <content type="html"><![CDATA[<p>A living document of some nice real life dev experiences, documented elsewhere on the internet:</p>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HruBoinmPBA">How Notion Scaled to 100 Million Users Without Their Database Exploding </a></td>
+<td>Doubling down on Postgres, scaling horizontally using shards and pgbouncer</td>
+</tr>
+<tr>
+<td><a href="https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html">Brendan Gregg: The Speed of Time</a></td>
+<td>Flamegraphs discovers reading current time took longer on Ubuntu than CentOS</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=ahyk7h7qAF4">How Instagram Reduced Web Page Load by 50% </a></td>
+<td>Many optimization patterns for front-end, from HTTP transportation, to asset fetching order, to caching locally (and avoiding conflicts with new state updates)</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=TdhXPsDXdAI">How Instagram Scaled to 14 Million Users With Only 3 Engineers </a></td>
+<td>Postgres: pgbouncer, ID strategy for finding correct shard, (stateless) Django, Gearman, etc.</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=3Ea3pkTCYx4">Unix and Google</a></td>
+<td>'Coding at the perimiter', an approach to tackle the n^3 matrix of system ✕ feature ✕ platform - write programs that work together (pipes, everything-is-a-file, etc.). Examplifies with Multics vs UNIX</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Replacing Jekyll with Go</title>
+    <published>2024-12-01T11:58:00Z</published>
+    <updated>2024-12-01T11:58:00Z</updated>
+    <id>https://iamnearlythere.com/replacing-Jekyll-with-go</id>
+    <link href="https://iamnearlythere.com/replacing-Jekyll-with-go" rel="alternate" type="text/html" title="Replacing Jekyll with Go"></link>
+    <summary>Jekyll was too annoying and now wouldn&#39;t start - replacing it all with Go and a couple of libraries took a couple of hours</summary>
+    <content type="html"><![CDATA[<p>My old dockerized <a href="https://jekyllrb.com/">Jekyll</a> instance started breaking, and
+keeping the blog boring but built in a totally different way seemed like a good
+way to spend some quality time.</p>
+<p>The end result became <a href="https://github.com/chelmertz/chelmertz.github.io/blob/2b54b9fd13b68cba9098929535eb878e1c974056/cmd/blog/blog.go">a Go
+file</a>
+that does things in a simple way - a saving clause from said file: &quot;hardcoded,
+idempotent, blunt error handling, not incremental, not parallel, duplicated data
+in memory&quot;.</p>
+<p>This is a small devlog:</p>
+<ul>
+<li>Github pages &quot;just works&quot; with Jekyll, when moving to non-Jekyll I:
+<ul>
+<li>&quot;Deploy from the <em>main branch</em>&quot;; maintaining separate branches is a personal
+no-no, for a small personal project, <a href="https://trunkbaseddevelopment.com/">trunk-based
+development</a> is king.</li>
+<li>&quot;Deploy from a <em>folder</em>&quot;; pre-generating &amp; checking in things lets you know
+what you get (<a href="https://github.com/chelmertz/serve">just spin up a local HTTP
+server</a>), compared to crossing your
+fingers everytime Github's Jekyll integration takes over.
+<ul>
+<li>I read the docs on <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">DNS
+configuration</a>
+in the middle of the night, while making changes &amp; waiting for TTLs to
+expire, but what finally worked: <em>have a CNAME file in the <code>docs/</code> folder,
+even if you're using A records</em>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/chelmertz/chelmertz.github.io/blob/2b54b9fd13b68cba9098929535eb878e1c974056/cmd/blog/blog.go">The new blog &quot;script&quot;</a> was written iteratively, fixing lots of papercuts along the way.
+<ul>
+<li>As an example: sometime around 2012, my version of Jekyll at the time,
+started to add a <code>date:</code> in the frontmatter, rather than having it as part
+of the filename. There were several such cutoffs (<code>permalink:</code> not always
+being there, ... etc.).
+<ul>
+<li>If I were developing Jekyll, I would instead use a migration strategy to
+bring all files up to date, and then never having to worry about the old
+format again (like.. every RDBMS migration library), but instead Jekyll
+seemed to have kept the complexity of &quot;keep every old version working&quot;
+within their tool. What Jekyll's codebase looks like with that kind of
+approach, I don't want to know.</li>
+</ul>
+</li>
+<li>Fixing one issue at a time, such as &quot;parse publication date from filename
+<em>or</em> frontmatter <code>date:</code>&quot;, let me:
+<ol>
+<li>View a successfully rendered blog quicker.</li>
+<li>Amend the markdown posts with a more complete version of frontmatter
+properties.</li>
+<li><a href="https://github.com/chelmertz/chelmertz.github.io/commit/9908552b27e5ad4b1005afaf514af59a994651d5">Throw out the &quot;reparation&quot; code branches and replace them with a
+validation step</a>.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Go's backwards compatibility story will hopefully prove this right, in a
+couple of years from now.</li>
+<li>I am missing a single feature of jekyll: <a href="https://github.com/jekyll/jekyll/blob/0e4182aefad27c72c6b1c0f0e300e57edefaa0ba/lib/jekyll/excerpt.rb#L98-L145">extracting
+excerpts</a>,
+that are put in the generated HTML's <code>&lt;meta name=&quot;description&quot;/&gt;</code> and the items
+of the Atom feed's <code>&lt;summary&gt;</code>.
+<ul>
+<li>I just put this as a manual thing to write as an optional <code>summary:</code> front
+matter property, which would probably create a much better result in the
+end.</li>
+</ul>
+</li>
+</ul>
+<p>Here are some sed lines for working with frontmatter, notably the &quot;only work
+within the delimiter lines&quot;, which was news to me.</p>
+<p><strong>Removing slashes in <code>permalink:</code></strong></p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>sed -i -e <span style="color:#d14">&#39;/^---$/,/^---$/ {/^\s*permalink: /s/\///g}&#39;</span> _posts/*md
+</span></span></code></pre><p><strong>Removing empty lines in frontmatter:</strong></p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>sed -i <span style="color:#d14">&#39;/^---$/,/^---$/ {/^\s*$/d}&#39;</span> _posts/*md
+</span></span></code></pre><p><strong>Removing a frontmatter property:</strong></p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>sed -i <span style="color:#d14">&#39;/^---$/,/^---$/ {/^\s*comments:/d}&#39;</span> _posts/*md
+</span></span></code></pre><p>And here's a paper trail of what broke the camel's back:</p>
+<pre><code>...
+Error reading file /srv/Jekyll/_layouts/post.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/post.html 
+Error reading file /srv/Jekyll/_layouts/default.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/default.html 
+Error reading file /srv/Jekyll/_layouts/page.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/page.html 
+Error reading file /srv/Jekyll/_layouts/home.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/home.html
+</code></pre>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>image-sorter patches</title>
+    <published>2024-09-08T15:37:00Z</published>
+    <updated>2024-09-08T15:37:00Z</updated>
+    <id>https://iamnearlythere.com/image-sorter-patches</id>
+    <link href="https://iamnearlythere.com/image-sorter-patches" rel="alternate" type="text/html" title="image-sorter patches"></link>
+    <summary>Contributing to image-sorter, that helps manual categorization of images</summary>
+    <content type="html"><![CDATA[<p><a href="https://github.com/jgalat/image-sorter/">image-sorter</a> is a smart program that
+lets you organize your images.</p>
+<p>You give it a couple of directories to look for images in, and some alternative
+directories those images should move to. When viewing a &quot;to be moved&quot; image
+inside the program window, you press a shortcut for the best matching output
+directory, and move on to the next image.</p>
+<p>Besides having a smart way of configuring the bindings to the output
+directories, it also persists the &quot;move&quot; commands in a shell file, for you to
+inspect before executing it. This is <a href="https://en.wikipedia.org/wiki/Dry_run_(testing)">dry
+run</a> being builtin and the
+default, and it's so smart to me.</p>
+<p>I tried adding a couple of patches, and luckily for me, the author was very
+friendly and accepted them:</p>
+<ul>
+<li><a href="https://github.com/jgalat/image-sorter/commit/40ac1649abee3384c9149de8e694d8210c391ba2">fix: Guarantee key mapping sort order</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/0b79ab2051db057ff1433b87cce3c5c8e23ad972">fix(path): Expand ~ (tilde) in target paths</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/d72c98decb7b52f299d8ddd64980fe5f2b832c64">feat(delete): Delete an image with backspace</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/ccfb588400386fbde6a70bbd38f77ce23e55f579">feat: Recurse into target paths if -r is given</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/1ac60977a2a1444d66c439766dfb723398fc6318">chore: Decorate errors with useful information</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/1532584003acce3d30f4f6f8034bb6debae60c03">fix(filetype): infer after checking file ext</a></li>
+<li><a href="https://github.com/jgalat/image-sorter/commit/cbfb4033c787bbd19c38deaf74162e805f41f0f7">feat: Try to shorten directory to fit into preview</a></li>
+</ul>
+<p>Besides some very small contributions at work, these are the first patches I've
+written in Rust. Last time I tried writing rust with vscode-out-of-the-box
+settings, the process was very slow (auto completion and type checking took
+very much time, not ideal when coding). For this size of project, the tooling
+was super quick, so I could just enjoy the nice things about Rust.</p>
+<p>Some things to keep in mind for the next excursion with Rust:</p>
+<ul>
+<li>Don't overuse the catch-all <code>_</code> in pattern matching. When adding new (for
+example) enum cases, you want to get compiler errors to fix.</li>
+<li>Use linters. <code>cargo fmt --all -- --check</code> and <code>cargo clippy --all-targets --all-features -- -D warnings</code> were used in this project, and they offer good
+hints à la &quot;yes, your code compiles but <em>this</em> is more semantic&quot;.</li>
+<li><a href="https://docs.rs/structopt/latest/structopt/">structopt</a> was nice for CLI
+parsing, I'm sure <a href="https://docs.rs/clap/latest/clap/">clap</a> is good, too.</li>
+<li>The dependencies in rust are so many and so small (and I added more of them
+🙈).</li>
+</ul>
+<hr>
+<p>And also, a debugging experience:</p>
+<p>I wanted to add a feature for looking through folders recursively for images.
+Once the code was written, and I tested it, the program just died. This was due
+to the alignment of some nice error conditions:</p>
+<ol>
+<li>&quot;Is it an image or not&quot; was checked by file type and nothing else.</li>
+<li>The directory being looked through, contained node_modules somewhere in the
+file tree. One of those node_modules contained an invalid image file
+(basically <code>echo hello&gt;a.jpg</code>) as a test case. Because, of course, having a
+dependency in node means importing the whole repository.</li>
+<li>The TUI library code swallowed error messages, in order to control what's
+rendered by the client.</li>
+</ol>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Pokeshadow - a Pokémon guessing game</title>
+    <published>2024-07-31T23:00:00Z</published>
+    <updated>2024-07-31T23:00:00Z</updated>
+    <id>https://iamnearlythere.com/pokeshadow</id>
+    <link href="https://iamnearlythere.com/pokeshadow" rel="alternate" type="text/html" title="Pokeshadow - a Pokémon guessing game"></link>
+    <content type="html"><![CDATA[<p><em>Pokeshadow</em> is a small guessing game. You identify random Pokémon by their silhouette.</p>
+<p>When starting a round game, it looks like this:</p>
+<p><img src="/assets/pokeshadow-new-game.png" alt="pokeshadow"></p>
+<p>And when finished:</p>
+<p><img src="/assets/pokeshadow-guessed.png" alt="pokeshadow"></p>
+<p>There's a simple point system in place, which could be extended for giving out hints.</p>
+<p>The code is hosted at <a href="https://github.com/chelmertz/pokeshadow">https://github.com/chelmertz/pokeshadow</a>. Nothing notable, simple javascript without dependencies and a github action that deploys the game to itch: <a href="https://wonderwizard.itch.io/pokeshadow">https://wonderwizard.itch.io/pokeshadow</a> as an HTML5 artifact.</p>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Toggling light/dark color scheme for i3 on Ubuntu</title>
+    <published>2024-07-16T00:30:00Z</published>
+    <updated>2024-07-16T00:30:00Z</updated>
+    <id>https://iamnearlythere.com/dark-mode-ubuntu-i3</id>
+    <link href="https://iamnearlythere.com/dark-mode-ubuntu-i3" rel="alternate" type="text/html" title="Toggling light/dark color scheme for i3 on Ubuntu"></link>
+    <content type="html"><![CDATA[<p>I didn't find an easy way to switch between light and dark mode in
+<a href="https://i3wm.org">i3</a> on Ubuntu using Gnome.  I really prefer light schemes in
+a well-lit office, and a darker screen when sitting at night. On that note, I
+really appreciate <a href="https://github.com/jonls/redshift">redshift</a>.</p>
+<p>This is how I approached <strong>easily changing between light and dark mode</strong>:</p>
+<ul>
+<li>Figure out how to toggle the light/dark preference programmatically</li>
+<li>Make sure all software reacts to it
+<ul>
+<li>Preferably: supporting the system settings</li>
+<li>Fallback: hook into the toggling and adapt the specific programs one-by-one
+to change themes etc.</li>
+</ul>
+</li>
+</ul>
+<h2>Changing theme programmatically</h2>
+<p>Creating a clickable button in the
+<a href="https://github.com/vivien/i3blocks">i3blocks</a> menu is easy:</p>
+<pre><code># in ~/.i3blocks.conf
+
+[colorscheme]
+# font awesome sun (f185)
+full_text=
+command=~/bin/color-scheme&gt;/dev/null
+</code></pre>
+<p>A left click toggles between light and dark, here's the <a href="https://github.com/chelmertz/dotfiles/tree/master/bin/color-scheme"><code>~/bin/color-scheme</code> script</a>:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#008080">current</span><span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">$(</span>gsettings get org.gnome.desktop.interface color-scheme<span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">[</span> <span style="color:#008080">$?</span> -ne <span style="color:#099">0</span> <span style="color:#000;font-weight:bold">]</span>; <span style="color:#000;font-weight:bold">then</span> <span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;Could not fetch current color-scheme&#34;</span> &gt;&amp;2; <span style="color:#0086b3">exit</span> 1; <span style="color:#000;font-weight:bold">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;Current color-scheme: </span><span style="color:#008080">$current</span><span style="color:#d14">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">case</span> <span style="color:#d14">&#34;</span><span style="color:#008080">$current</span><span style="color:#d14">&#34;</span> in
+</span></span><span style="display:flex;"><span>	<span style="color:#d14">&#34;&#39;prefer-dark&#39;&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#008080">new_color_scheme</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;prefer-light&#34;</span> ;;
+</span></span><span style="display:flex;"><span>	<span style="color:#d14">&#34;&#39;prefer-light&#39;&#34;</span>|<span style="color:#d14">&#34;&#39;default&#39;&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#008080">new_color_scheme</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;prefer-dark&#34;</span> ;;
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">esac</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;New color-scheme: </span><span style="color:#008080">$new_color_scheme</span><span style="color:#d14">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">if</span> ! <span style="color:#000;font-weight:bold">$(</span>gsettings <span style="color:#0086b3">set</span> org.gnome.desktop.interface color-scheme <span style="color:#d14">&#34;</span><span style="color:#008080">$new_color_scheme</span><span style="color:#d14">&#34;</span><span style="color:#000;font-weight:bold">)</span>; <span style="color:#000;font-weight:bold">then</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;Could not set new color-scheme&#34;</span> &gt;&amp;<span style="color:#099">2</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#0086b3">exit</span> <span style="color:#099">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">fi</span>
+</span></span></code></pre><h2>Make software react to the system setting</h2>
+<p>Software that can be configured to adapt to the system wide settings:</p>
+<ul>
+<li>Firefox</li>
+<li><a href="https://gitlab.gnome.org/GNOME/console">gnome-console</a>
+<ul>
+<li>The default terminal, gnome-terminal, doesn't support listening in on the system wide color scheme.</li>
+<li>The apt package is called <code>gnome-console</code> but the terminal's program is called <code>kgx</code>.</li>
+<li>After installing it, do a <code>sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kgx 1</code> and <code>sudo update-alternatives --set x-terminal-emulator /usr/bin/kgx</code>, to make it the default terminal.</li>
+<li>Also: since I'm using i3 and it doesn't have kgx in its allowlist in /usr/bin/i3-sensible-terminal, I also <code>export TERMINAL=kgx</code> in my .zshrc</li>
+</ul>
+</li>
+<li><a href="https://github.com/sharkdp/bat">bat</a>
+<ul>
+<li>Use the <code>base16</code> or <code>ansi</code> theme (either in a configuration file, or <code>alias bat=&quot;bat --theme=base16&quot;</code>)</li>
+</ul>
+</li>
+<li><a href="https://github.com/doomemacs/doomemacs">doom emacs</a>
+<ul>
+<li>Using the <a href="https://github.com/LionyxML/auto-dark-emacs">auto-dark-emacs</a> plugin, <a href="https://github.com/chelmertz/dotfiles/commit/21944f4daa5fb185e5724020748f20b5e7d1b603">configured with a few lines</a></li>
+</ul>
+</li>
+<li>Slack</li>
+<li><a href="https://element.io/">element</a>, a matrix chat client</li>
+<li><a href="https://github.com/chelmertz/elly">elly</a>, my tool for keeping track of Github pull requests (yes, this is a shameless plug; no, it doesn't need to be configured, because media queries)</li>
+<li>VS Code
+<ul>
+<li>Searching for &quot;preferred&quot; in settings, allows you to apply these settings (ends up in ~/.config/Code/User/settings.json):
+<pre><code>&quot;workbench.preferredDarkColorTheme&quot;: &quot;No Happiness in Colors Theme&quot;,
+&quot;workbench.preferredLightColorTheme&quot;: &quot;Subtle Monochrome (Light)&quot;,
+&quot;window.autoDetectColorScheme&quot;: true
+</code></pre>
+</li>
+<li>I've found that using monochrome themes makes me skip less of the code when reading it. So far, <a href="https://vscodethemes.com/e/notoroszbig.theme-nohappinessincolors/no-happiness-in-colors-theme">No happiness in Colors</a> is a great dark theme, and <a href="https://github.com/anotherglitchinthematrix/monochrome/">Subtle Monochrome (light)</a> is great as a light theme. Don't forget to also <a href="https://github.com/chelmertz/dotfiles/commit/cf68bf6163e9f8b639eba06e56f9175b4728fd0e">turn off rainbow bracket colors</a>.</li>
+</ul>
+</li>
+</ul>
+<p>Left to fix:</p>
+<ul>
+<li>Firefox' <a href="https://github.com/darkreader/darkreader">dark reader extension</a>
+<ul>
+<li>It has a &quot;Use system color scheme&quot; but toggling the system scheme doesn't make dark reader toggle the plugin's status</li>
+</ul>
+</li>
+<li>IDEA
+<ul>
+<li><a href="https://youtrack.jetbrains.com/issue/IJPL-54591/Implement-IDE-theme-sync-with-OS-on-Linux">Not supported yet on Linux</a> and the linked plugin doesn't do it for me
+<ul>
+<li><a href="https://github.com/abrookins/kant">kant</a> is one of few monochromatic color schemes available</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Previous attempt: &quot;signal-lamp&quot;</h2>
+<p>I tried, and failed, to solve this problem previously, in <a href="https://github.com/chelmertz/signal-lamp">https://github.com/chelmertz/signal-lamp</a>.</p>
+<p>I tried to take ownership of the current state/scheme myself, which would require hooks/APIs for every program I'd like to change.</p>
+<p>A particularly bad example: I never found a way to change the theme of all open gnome-terminal windows, so I used <a href="https://linux.die.net/man/1/wmctrl">wmctrl</a> and <a href="https://linux.die.net/man/1/wmctrl">xdotool</a> in a loop 🙈 It turned out super buggy and the code wasn't even pretty to read. A do-over was necessary.</p>
+<h2>Elsewhere: <code>darkman</code></h2>
+<p>I just found Darkman (<a href="https://whynothugo.nl/journal/2022/02/25/introducing-darkman-v1.0.0/">intro</a>, <a href="https://gitlab.com/WhyNotHugo/darkman">repo</a>) but it is a bit intrusive. I like the dbus parts but having a separate service for this, and the scripts for every application, is a bit like the &quot;signal-lamp&quot; attempt and rubs me the wrong way (configuration rabbit hole).</p>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>elly - PRs you can act on</title>
+    <published>2023-08-02T16:34:00Z</published>
+    <updated>2023-08-02T16:34:00Z</updated>
+    <id>https://iamnearlythere.com/elly-keeps-track-of-prs</id>
+    <link href="https://iamnearlythere.com/elly-keeps-track-of-prs" rel="alternate" type="text/html" title="elly - PRs you can act on"></link>
+    <content type="html"><![CDATA[<p><a href="https://github.com/chelmertz/elly">elly</a> shows you all of the pull requests you
+can take action on, by periodically pulling data from Github.</p>
+<p><strong>You should deal with the PRs in order, they're ranked by actionability.</strong></p>
+<p>For example, if a PR gets approved, <em>elly</em> shows the PR in the top - just merge it.</p>
+<p>If there's a new comment, <em>elly</em> bumps that PR up.</p>
+<p>If you just responded to someone's comment, but kept the comment thread open instead of resolving it, <em>elly</em> knows you're waiting for a reply and places the PR lower in the list.</p>
+<p>This is what it looks like:</p>
+<p><img src="/assets/elly_gui.png" alt="gui"></p>
+<p><img src="/assets/elly_about.png" alt="about"></p>
+<h2>Installation instructions</h2>
+<p>You'll find up to date <a href="https://github.com/chelmertz/elly">installation instructions in the project's README</a>.</p>
+<h2>System design</h2>
+<p><img src="/assets/elly_architecture.png" alt="architecture"></p>
+<h2>A small retrospective</h2>
+<ul>
+<li><a href="https://go.dev/security/fuzz/">Go fuzz testing</a>
+<ul>
+<li>A <a href="https://github.com/chelmertz/elly/commit/4bd771bb32ded27cd048d168034d860ae2bf77ba">single test found 3 bugs</a></li>
+<li>Inspired by re-reading <a href="https://danluu.com/testing/">Dan Luu on testing</a> for
+the fiftieth time. Finally something that unblocked me, after having read
+countless &quot;reversing things twice&quot; or &quot;encoding/decoding is commutative&quot;
+example. Writing longer test method bodies are fine.</li>
+<li>Going from one-off unit tests, to <a href="https://dave.cheney.net/2019/05/07/prefer-table-driven-tests">table driven tests</a>,
+to fuzzying, seems like a path I want to go down.</li>
+</ul>
+</li>
+<li>Writing <a href="https://adr.github.io/">ADR</a>s (architectural decision record) helped
+even for such a small project (see the <code>/decisions</code> folder)
+<ul>
+<li>Feels nice to not having to go back on certain decisions, since they're
+spelled out and reasoned about. For example: KISS, with a JSON file rather
+than an SQLite DB, felt better after articulating it in text.</li>
+<li>Went back and edited them a lot. They should probably have the <em>draft</em> or
+<em>suggestion</em> status for a while.</li>
+<li>The relation between retrospective items and ADRs almost feel 1:1. Using
+these methods, or something else, that triggers thinking about design
+before/during/after implementation is gold.</li>
+</ul>
+</li>
+<li><a href="https://graphql.org/">GraphQL</a>
+<ul>
+<li>First time querying against it. Using headers for auth, getting proper
+response codes back, and having the query in plain text is pleasant.</li>
+<li>Github specific:
+<ul>
+<li>Good <a href="https://docs.github.com/en/graphql/overview/explorer">API explorer</a>,
+especially with the search box. I guess that the explorer is standard,
+through some framework.</li>
+<li>Trying to extract enough comments (below pull requests, below repositories,
+below search results) is weird - should I traverse that paginated
+sub-sub-sub resource? The &quot;a single query that reaches everywhere&quot;
+paradigm breaks down a bit, to me.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Front end
+<ul>
+<li>Making a <a href="https://stackoverflow.com/questions/4575826/how-to-push-a-footer-to-the-bottom-of-page-when-content-is-short-or-missing">footer really sticky</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"><code>&lt;dialog/&gt;</code></a>.
+Amazing that this now exists. No deps/configuration needed, and <code>::backdrop</code>
+is a perfect partner.</li>
+<li><a href="https://developer.chrome.com/docs/devtools/css/flexbox/">Chrome dev tool's flexbox editor</a>
+<ul>
+<li>Never noticed this before, it's makes for a very quick feedback cycle.</li>
+</ul>
+</li>
+<li>Color scheme inspired by (and butchered, I'm no designer) <a href="https://www.gameuidatabase.com/gameData.php?id=441">Wolfenstein</a></li>
+</ul>
+</li>
+<li><a href="https://i3wm.org/">i3</a> status bar integration (via <a href="https://github.com/vivien/i3blocks">i3blocks</a>)</li>
+<li><a href="https://wiki.archlinux.org/title/systemd">systemd</a> integration</li>
+</ul>
+<p>Prior art: Gitlab variant (<a href="https://gitlab.com/chelmertz/gitlab-mr-bot/">gitlab-mr-bot</a>)</p>
+<ul>
+<li>I made this while at my previous employer who self-hosted Gitlab, where it worked fine.</li>
+<li>Gitlab's API for threads/comments on PRs is much easier to deal with
+(<em>elly</em> needs to guess if there are unanswered comments, since that
+schema is paginated in a nested way).</li>
+<li><code>gitlab-mr-bot</code> was used as a one-off script, storing state in SQLite, for
+others to query.
+<ul>
+<li>I'm leaning towards &quot;hiding things behind an API is friendler&quot;, especially
+if one wants to host things remotely. The transparency/hackability of
+having SQLite is very nice though.</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Man pages in color, with links</title>
+    <published>2018-03-15T00:24:00Z</published>
+    <updated>2018-03-15T00:24:00Z</updated>
+    <id>https://iamnearlythere.com/man-pages-in-color-and-links</id>
+    <link href="https://iamnearlythere.com/man-pages-in-color-and-links" rel="alternate" type="text/html" title="Man pages in color, with links"></link>
+    <content type="html"><![CDATA[<p>Update 2024-12-22:</p>
+<p>I am using regular less now, with these lines in my zshrc:</p>
+<pre><code>export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+# the above worked in Ubuntu 22.04 but something broke &quot;in&quot; 24.04 and this workaround does it for me
+# also see https://github.com/jedsoft/most/issues/18
+export GROFF_NO_SGR=1
+</code></pre>
+<hr>
+<p>Old post:</p>
+<p><a href="https://neovim.io/">Neovim</a> has builtin support for colorizing man pages, making them easier to read. It also lets you follow links to other man pages, by pressing <kbd>K</kbd> while hovering any term that has a man page.</p>
+<p>To set up Neovim as the default reader for when you invoke <code>man apropos</code> etc., place the following code in your ~/.bashrc or such:</p>
+<pre><code>export MANPAGER=&quot;nvim -c 'set ft=man' -&quot;
+</code></pre>
+<p>There are some more pointers in the short and readable section of the <a href="https://github.com/neovim/neovim/blob/5ce8158a5d462043306ee67a3261794f169bdb17/runtime/doc/filetype.txt#L509">Neovim manual on viewing man pages</a>.</p>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+</feed>

@@ -1,6 +1,9 @@
 .PHONY: docs
-docs:
-	go run cmd/blog/blog.go
+docs: blog
+	./blog
+
+blog: cmd/blog/blog.go cmd/blog/atom.go
+	go build -o blog ./cmd/blog
 
 .PHONY: watch
 watch:
