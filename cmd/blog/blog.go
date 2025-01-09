@@ -17,7 +17,6 @@ import (
 	"runtime/pprof"
 	"slices"
 	"strings"
-	textTemplate "text/template"
 	"time"
 
 	tfidf "github.com/dkgv/go-tf-idf"
@@ -178,32 +177,8 @@ func main() {
 
 	{
 		// docs/atom.xml
-		// TODO this doesn't escape correctly - titles with "&" for example
-		// use encoding/xml instead.. see https://git.icyphox.sh/vite/blob/master/atom/feed.go
-		atomTemplate := textTemplate.Must(textTemplate.New("atom.xml").
-			Funcs(viewFuncs).
-			ParseGlob("cmd/blog/atom.xml"))
-		atomOutFile := must1(os.Create(filepath.Join(docs, "atom.xml")))
-		slices.SortFunc(allPosts, func(i, j Post) int {
-			// sort by date, descending
-			asc := i.PublishedAt.Compare(j.PublishedAt)
-			switch asc {
-			case -1:
-				return 1
-			case 1:
-				return -1
-			}
-			return 0
-		})
-		atomData := AtomData{
-			FeedUpdated: allPosts[0].PublishedAt,
-			Posts:       allPosts[:10],
-		}
-		must(atomTemplate.Execute(atomOutFile, atomData))
-
-		// new approach
 		atomContent := must1(atomFeedOfPosts(allPosts))
-		must(os.WriteFile(filepath.Join(docs, "atom2.xml"), atomContent, 0644))
+		must(os.WriteFile(filepath.Join(docs, "atom.xml"), atomContent, 0644))
 	}
 
 	// docs/CNAME

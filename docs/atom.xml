@@ -1,22 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" >
-<link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml" />
-<link href="https://iamnearlythere.com/" rel="alternate" type="text/html" />
-<updated>2025-01-01T23:33:00Z</updated>
-<id>https://iamnearlythere.com/atom.xml</id>
-<title type="html">iamnearlythere.com</title>
-<subtitle>iamnearlythere.com, a blog on software development</subtitle>
-<author><name>Carl Helmertz</name></author>
-
-<entry>
-  <title type="html">VS Code snippets for internal blog links</title>
-  <link href="https://iamnearlythere.com/vscode-snippets-for-internal-blog-links/" rel="alternate" type="text/html" title="VS Code snippets for internal blog links" />
-  <published>2025-01-01T23:33:00Z</published>
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>iamnearlythere.com</title>
+  <subtitle>iamnearlythere.com, a blog on software development</subtitle>
+  <id>https://iamnearlythere.com/atom.xml</id>
   <updated>2025-01-01T23:33:00Z</updated>
-  <id>https://iamnearlythere.com/vscode-snippets-for-internal-blog-links</id>
-  <summary>Linking to other blog posts is only a few keys away</summary>
-  <content type="html" xml:base="https://iamnearlythere.com/vscode-snippets-for-internal-blog-links/">
-  <![CDATA[<p>I wanted to quickly link between blog posts. Since I use VS Code, we can abuse <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">user defined snippets</a> to support this feature.</p>
+  <link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml"></link>
+  <link href="https://iamnearlythere.com/" rel="alternate" type="text/html"></link>
+  <author>
+    <name>Carl Helmertz</name>
+    <email>helmertz@gmail.com</email>
+  </author>
+  <entry>
+    <title>VS Code snippets for internal blog links</title>
+    <published>2025-01-01T23:33:00Z</published>
+    <updated>2025-01-01T23:33:00Z</updated>
+    <id>https://iamnearlythere.com/vscode-snippets-for-internal-blog-links</id>
+    <link href="https://iamnearlythere.com/vscode-snippets-for-internal-blog-links" rel="alternate" type="text/html" title="VS Code snippets for internal blog links"></link>
+    <summary>Linking to other blog posts is only a few keys away</summary>
+    <content type="html"><![CDATA[<p>I wanted to quickly link between blog posts. Since I use VS Code, we can abuse <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">user defined snippets</a> to support this feature.</p>
 <p>This is the end result:</p>
 <video controls>
   <source src="https://github.com/user-attachments/assets/02d53ef2-d89e-4afd-a720-9662e25ab230" type="video/mp4" />
@@ -83,20 +84,20 @@ popular. There are many plugins supporting this, it sounds a bit like
 <a href="https://vimdoc.sourceforge.net/htmldoc/editing.html#gf"><code>gf</code></a> in vim), but I
 figured that each markdown post's <code>permalink</code> would be unique &amp; stable enough to
 use as a target.</p>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">Upgrading to Ubuntu 24.04</title>
-  <link href="https://iamnearlythere.com/ubuntu-2404/" rel="alternate" type="text/html" title="Upgrading to Ubuntu 24.04" />
-  <published>2024-12-20T00:29:00Z</published>
-  <updated>2024-12-20T00:29:00Z</updated>
-  <id>https://iamnearlythere.com/ubuntu-2404</id>
-  <summary>Not everything went super smoothly</summary>
-  <content type="html" xml:base="https://iamnearlythere.com/ubuntu-2404/">
-  <![CDATA[<p>Some issues I ran into:</p>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Upgrading to Ubuntu 24.04</title>
+    <published>2024-12-20T00:29:00Z</published>
+    <updated>2024-12-20T00:29:00Z</updated>
+    <id>https://iamnearlythere.com/ubuntu-2404</id>
+    <link href="https://iamnearlythere.com/ubuntu-2404" rel="alternate" type="text/html" title="Upgrading to Ubuntu 24.04"></link>
+    <summary>Not everything went super smoothly</summary>
+    <content type="html"><![CDATA[<p>Some issues I ran into:</p>
 <ul>
 <li><code>man</code> pages were no longer colored.
 <ul>
@@ -178,20 +179,20 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 </ul>
 </li>
 </ul>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">Uses this - my preferred tools</title>
-  <link href="https://iamnearlythere.com/uses-this/" rel="alternate" type="text/html" title="Uses this - my preferred tools" />
-  <published>2024-12-11T18:00:00Z</published>
-  <updated>2024-12-11T18:00:00Z</updated>
-  <id>https://iamnearlythere.com/uses-this</id>
-  <summary>Tooling that I rely on, using Linux on the desktop as a software engineer</summary>
-  <content type="html" xml:base="https://iamnearlythere.com/uses-this/">
-  <![CDATA[<p><a href="https://github.com/chelmertz/dotfiles">github.com/chelmertz/dotfiles</a> contains all dotfiles.</p>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Uses this - my preferred tools</title>
+    <published>2024-12-11T18:00:00Z</published>
+    <updated>2024-12-11T18:00:00Z</updated>
+    <id>https://iamnearlythere.com/uses-this</id>
+    <link href="https://iamnearlythere.com/uses-this" rel="alternate" type="text/html" title="Uses this - my preferred tools"></link>
+    <summary>Tooling that I rely on, using Linux on the desktop as a software engineer</summary>
+    <content type="html"><![CDATA[<p><a href="https://github.com/chelmertz/dotfiles">github.com/chelmertz/dotfiles</a> contains all dotfiles.</p>
 <p><a href="https://github.com/chelmertz/dotfiles/blob/master/ansible-laptop.yml">My ansible file</a> could be used to look for sources &amp; dependencies.</p>
 <h2>Desktop applications</h2>
 <table>
@@ -615,20 +616,20 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 </tr>
 </tbody>
 </table>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">A few system design & architecture experiences, low-level debugging stories and post-mortems</title>
-  <link href="https://iamnearlythere.com/interesting-reads/" rel="alternate" type="text/html" title="A few system design & architecture experiences, low-level debugging stories and post-mortems" />
-  <published>2024-12-04T23:13:00Z</published>
-  <updated>2024-12-04T23:13:00Z</updated>
-  <id>https://iamnearlythere.com/interesting-reads</id>
-  <summary>A bunch of different sources one could learn from</summary>
-  <content type="html" xml:base="https://iamnearlythere.com/interesting-reads/">
-  <![CDATA[<p>A living document of some nice real life dev experiences, documented elsewhere on the internet:</p>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>A few system design &amp; architecture experiences, low-level debugging stories and post-mortems</title>
+    <published>2024-12-04T23:13:00Z</published>
+    <updated>2024-12-04T23:13:00Z</updated>
+    <id>https://iamnearlythere.com/interesting-reads</id>
+    <link href="https://iamnearlythere.com/interesting-reads" rel="alternate" type="text/html" title="A few system design &amp; architecture experiences, low-level debugging stories and post-mortems"></link>
+    <summary>A bunch of different sources one could learn from</summary>
+    <content type="html"><![CDATA[<p>A living document of some nice real life dev experiences, documented elsewhere on the internet:</p>
 <table>
 <thead>
 <tr>
@@ -659,20 +660,20 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 </tr>
 </tbody>
 </table>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">Replacing Jekyll with Go</title>
-  <link href="https://iamnearlythere.com/replacing-Jekyll-with-go/" rel="alternate" type="text/html" title="Replacing Jekyll with Go" />
-  <published>2024-12-01T11:58:00Z</published>
-  <updated>2024-12-01T11:58:00Z</updated>
-  <id>https://iamnearlythere.com/replacing-Jekyll-with-go</id>
-  <summary>Jekyll was too annoying and now wouldn't start - replacing it all with Go and a couple of libraries took a couple of hours</summary>
-  <content type="html" xml:base="https://iamnearlythere.com/replacing-Jekyll-with-go/">
-  <![CDATA[<p>My old dockerized <a href="https://jekyllrb.com/">Jekyll</a> instance started breaking, and
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Replacing Jekyll with Go</title>
+    <published>2024-12-01T11:58:00Z</published>
+    <updated>2024-12-01T11:58:00Z</updated>
+    <id>https://iamnearlythere.com/replacing-Jekyll-with-go</id>
+    <link href="https://iamnearlythere.com/replacing-Jekyll-with-go" rel="alternate" type="text/html" title="Replacing Jekyll with Go"></link>
+    <summary>Jekyll was too annoying and now wouldn&#39;t start - replacing it all with Go and a couple of libraries took a couple of hours</summary>
+    <content type="html"><![CDATA[<p>My old dockerized <a href="https://jekyllrb.com/">Jekyll</a> instance started breaking, and
 keeping the blog boring but built in a totally different way seemed like a good
 way to spend some quality time.</p>
 <p>The end result became <a href="https://github.com/chelmertz/chelmertz.github.io/blob/2b54b9fd13b68cba9098929535eb878e1c974056/cmd/blog/blog.go">a Go
@@ -756,20 +757,20 @@ Error reading file /srv/Jekyll/_layouts/default.html: No such file or directory 
 Error reading file /srv/Jekyll/_layouts/page.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/page.html 
 Error reading file /srv/Jekyll/_layouts/home.html: No such file or directory @ rb_sysopen - /srv/jekyll/my_site/srv/jekyll/_layouts/home.html
 </code></pre>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">image-sorter patches</title>
-  <link href="https://iamnearlythere.com/image-sorter-patches/" rel="alternate" type="text/html" title="image-sorter patches" />
-  <published>2024-09-08T15:37:00Z</published>
-  <updated>2024-09-08T15:37:00Z</updated>
-  <id>https://iamnearlythere.com/image-sorter-patches</id>
-  <summary>Contributing to image-sorter, that helps manual categorization of images</summary>
-  <content type="html" xml:base="https://iamnearlythere.com/image-sorter-patches/">
-  <![CDATA[<p><a href="https://github.com/jgalat/image-sorter/">image-sorter</a> is a smart program that
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>image-sorter patches</title>
+    <published>2024-09-08T15:37:00Z</published>
+    <updated>2024-09-08T15:37:00Z</updated>
+    <id>https://iamnearlythere.com/image-sorter-patches</id>
+    <link href="https://iamnearlythere.com/image-sorter-patches" rel="alternate" type="text/html" title="image-sorter patches"></link>
+    <summary>Contributing to image-sorter, that helps manual categorization of images</summary>
+    <content type="html"><![CDATA[<p><a href="https://github.com/jgalat/image-sorter/">image-sorter</a> is a smart program that
 lets you organize your images.</p>
 <p>You give it a couple of directories to look for images in, and some alternative
 directories those images should move to. When viewing a &quot;to be moved&quot; image
@@ -821,38 +822,38 @@ dependency in node means importing the whole repository.</li>
 <li>The TUI library code swallowed error messages, in order to control what's
 rendered by the client.</li>
 </ol>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">Pokeshadow - a Pokémon guessing game</title>
-  <link href="https://iamnearlythere.com/pokeshadow/" rel="alternate" type="text/html" title="Pokeshadow - a Pokémon guessing game" />
-  <published>2024-07-31T23:00:00Z</published>
-  <updated>2024-07-31T23:00:00Z</updated>
-  <id>https://iamnearlythere.com/pokeshadow</id>
-  <content type="html" xml:base="https://iamnearlythere.com/pokeshadow/">
-  <![CDATA[<p><em>Pokeshadow</em> is a small guessing game. You identify random Pokémon by their silhouette.</p>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Pokeshadow - a Pokémon guessing game</title>
+    <published>2024-07-31T23:00:00Z</published>
+    <updated>2024-07-31T23:00:00Z</updated>
+    <id>https://iamnearlythere.com/pokeshadow</id>
+    <link href="https://iamnearlythere.com/pokeshadow" rel="alternate" type="text/html" title="Pokeshadow - a Pokémon guessing game"></link>
+    <content type="html"><![CDATA[<p><em>Pokeshadow</em> is a small guessing game. You identify random Pokémon by their silhouette.</p>
 <p>When starting a round game, it looks like this:</p>
 <p><img src="/assets/pokeshadow-new-game.png" alt="pokeshadow"></p>
 <p>And when finished:</p>
 <p><img src="/assets/pokeshadow-guessed.png" alt="pokeshadow"></p>
 <p>There's a simple point system in place, which could be extended for giving out hints.</p>
 <p>The code is hosted at <a href="https://github.com/chelmertz/pokeshadow">https://github.com/chelmertz/pokeshadow</a>. Nothing notable, simple javascript without dependencies and a github action that deploys the game to itch: <a href="https://wonderwizard.itch.io/pokeshadow">https://wonderwizard.itch.io/pokeshadow</a> as an HTML5 artifact.</p>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">Toggling light/dark color scheme for i3 on Ubuntu</title>
-  <link href="https://iamnearlythere.com/dark-mode-ubuntu-i3/" rel="alternate" type="text/html" title="Toggling light/dark color scheme for i3 on Ubuntu" />
-  <published>2024-07-16T00:30:00Z</published>
-  <updated>2024-07-16T00:30:00Z</updated>
-  <id>https://iamnearlythere.com/dark-mode-ubuntu-i3</id>
-  <content type="html" xml:base="https://iamnearlythere.com/dark-mode-ubuntu-i3/">
-  <![CDATA[<p>I didn't find an easy way to switch between light and dark mode in
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Toggling light/dark color scheme for i3 on Ubuntu</title>
+    <published>2024-07-16T00:30:00Z</published>
+    <updated>2024-07-16T00:30:00Z</updated>
+    <id>https://iamnearlythere.com/dark-mode-ubuntu-i3</id>
+    <link href="https://iamnearlythere.com/dark-mode-ubuntu-i3" rel="alternate" type="text/html" title="Toggling light/dark color scheme for i3 on Ubuntu"></link>
+    <content type="html"><![CDATA[<p>I didn't find an easy way to switch between light and dark mode in
 <a href="https://i3wm.org">i3</a> on Ubuntu using Gnome.  I really prefer light schemes in
 a well-lit office, and a darker screen when sitting at night. On that note, I
 really appreciate <a href="https://github.com/jonls/redshift">redshift</a>.</p>
@@ -955,19 +956,19 @@ command=~/bin/color-scheme&gt;/dev/null
 <p>A particularly bad example: I never found a way to change the theme of all open gnome-terminal windows, so I used <a href="https://linux.die.net/man/1/wmctrl">wmctrl</a> and <a href="https://linux.die.net/man/1/wmctrl">xdotool</a> in a loop 🙈 It turned out super buggy and the code wasn't even pretty to read. A do-over was necessary.</p>
 <h2>Elsewhere: <code>darkman</code></h2>
 <p>I just found Darkman (<a href="https://whynothugo.nl/journal/2022/02/25/introducing-darkman-v1.0.0/">intro</a>, <a href="https://gitlab.com/WhyNotHugo/darkman">repo</a>) but it is a bit intrusive. I like the dbus parts but having a separate service for this, and the scripts for every application, is a bit like the &quot;signal-lamp&quot; attempt and rubs me the wrong way (configuration rabbit hole).</p>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">elly - PRs you can act on</title>
-  <link href="https://iamnearlythere.com/elly-keeps-track-of-prs/" rel="alternate" type="text/html" title="elly - PRs you can act on" />
-  <published>2023-08-02T16:34:00Z</published>
-  <updated>2023-08-02T16:34:00Z</updated>
-  <id>https://iamnearlythere.com/elly-keeps-track-of-prs</id>
-  <content type="html" xml:base="https://iamnearlythere.com/elly-keeps-track-of-prs/">
-  <![CDATA[<p><a href="https://github.com/chelmertz/elly">elly</a> shows you all of the pull requests you
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>elly - PRs you can act on</title>
+    <published>2023-08-02T16:34:00Z</published>
+    <updated>2023-08-02T16:34:00Z</updated>
+    <id>https://iamnearlythere.com/elly-keeps-track-of-prs</id>
+    <link href="https://iamnearlythere.com/elly-keeps-track-of-prs" rel="alternate" type="text/html" title="elly - PRs you can act on"></link>
+    <content type="html"><![CDATA[<p><a href="https://github.com/chelmertz/elly">elly</a> shows you all of the pull requests you
 can take action on, by periodically pulling data from Github.</p>
 <p><strong>You should deal with the PRs in order, they're ranked by actionability.</strong></p>
 <p>For example, if a PR gets approved, <em>elly</em> shows the PR in the top - just merge it.</p>
@@ -1055,19 +1056,19 @@ having SQLite is very nice though.</li>
 </ul>
 </li>
 </ul>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
-<entry>
-  <title type="html">Man pages in color, with links</title>
-  <link href="https://iamnearlythere.com/man-pages-in-color-and-links/" rel="alternate" type="text/html" title="Man pages in color, with links" />
-  <published>2018-03-15T00:24:00Z</published>
-  <updated>2018-03-15T00:24:00Z</updated>
-  <id>https://iamnearlythere.com/man-pages-in-color-and-links</id>
-  <content type="html" xml:base="https://iamnearlythere.com/man-pages-in-color-and-links/">
-  <![CDATA[<p>Update 2024-12-22:</p>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
+  <entry>
+    <title>Man pages in color, with links</title>
+    <published>2018-03-15T00:24:00Z</published>
+    <updated>2018-03-15T00:24:00Z</updated>
+    <id>https://iamnearlythere.com/man-pages-in-color-and-links</id>
+    <link href="https://iamnearlythere.com/man-pages-in-color-and-links" rel="alternate" type="text/html" title="Man pages in color, with links"></link>
+    <content type="html"><![CDATA[<p>Update 2024-12-22:</p>
 <p>I am using regular less now, with these lines in my zshrc:</p>
 <pre><code>export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
@@ -1087,9 +1088,10 @@ export GROFF_NO_SGR=1
 <pre><code>export MANPAGER=&quot;nvim -c 'set ft=man' -&quot;
 </code></pre>
 <p>There are some more pointers in the short and readable section of the <a href="https://github.com/neovim/neovim/blob/5ce8158a5d462043306ee67a3261794f169bdb17/runtime/doc/filetype.txt#L509">Neovim manual on viewing man pages</a>.</p>
-]]>
-  </content>
-  <author><name>Carl Helmertz</name></author>
-</entry>
-
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
 </feed>
