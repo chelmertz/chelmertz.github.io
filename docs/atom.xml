@@ -191,7 +191,8 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
   <id>https://iamnearlythere.com/uses-this</id>
   <summary>Tooling that I rely on, using Linux on the desktop as a software engineer</summary>
   <content type="html" xml:base="https://iamnearlythere.com/uses-this/">
-  <![CDATA[<p><a href="https://github.com/chelmertz/dotfiles/blob/master/ansible-laptop.yml">My ansible file</a> could be used to look for sources &amp; dependencies.</p>
+  <![CDATA[<p><a href="https://github.com/chelmertz/dotfiles">github.com/chelmertz/dotfiles</a> contains all dotfiles.</p>
+<p><a href="https://github.com/chelmertz/dotfiles/blob/master/ansible-laptop.yml">My ansible file</a> could be used to look for sources &amp; dependencies.</p>
 <h2>Desktop applications</h2>
 <table>
 <thead>
