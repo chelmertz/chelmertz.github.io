@@ -83,3 +83,7 @@ ol {
 pre > code {
     width: inherit; /* tufte set this to 52.5%, unsure why, it's ugly */
 }
+
+body {
+    font-family: "noto serif", baskerville, georgia, palatino, bookman, serif;
+}
