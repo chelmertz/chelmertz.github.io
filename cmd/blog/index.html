@@ -32,11 +32,9 @@
           <li><strong>pokeshadow</strong> — guess pokemon based on silhouette (<a href="https://wonderwizard.itch.io/pokeshadow">pokeshadow on itch.io</a>, <a href="https://iamnearlythere.com/pokeshadow/">blog post</a>, <a href="https://github.com/chelmertz/pokeshadow">source</a>)</li>
           <li><strong>picture-this</strong> — generates image placeholders (<a href="/mini-project-placeholder-image-generator-php">blog post</a>, <a href="https://github.com/chelmertz/picture-this">source</a>)</li>
           <li><strong>i-got-issues</strong> — display your submitted issues in your own projects, a.k.a. todos (<a href="/i-got-issues-manage-project-todos-github">blog post</a>, <a href="https://github.com/chelmertz/i-got-issues">source</a>)</li>
-        </ul>
+        </ul>{{range .Years}}
 
-        <h2>posts</h2>{{range .Years}}
-
-        <h3>{{.}}</h3>
+        <h3 class="year">{{.}}</h3>
         <ul class="post-list">{{range index $.PostsByYear .}}
           <li>
             <a class="post-link" href="/{{.Permalink}}/">{{.Title}}</a>

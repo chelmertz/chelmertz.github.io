@@ -123,6 +123,21 @@ footer {
     padding: 4px 0;
 }
 
+.year {
+    display: table;
+    white-space: nowrap;
+    &:before, &:after {
+      border-top: 1px solid var(--accent);
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.5em;
+      width: 50%;
+    }
+    &:before { right: 1.5%; }
+    &:after { left: 1.5%; }
+}
+
 
 /* tufte... urgh */
 pre > code {
