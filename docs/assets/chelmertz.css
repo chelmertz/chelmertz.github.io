@@ -14,6 +14,7 @@ table {
 
     td {
         padding: 4px;
+        vertical-align: top;
     }
 }
 
@@ -31,7 +32,7 @@ video {
     font-style: italic;
 }
 
-.post-list {
+.post-list, .related-posts ul {
     list-style-type: none;
     padding: 0;
 }
@@ -40,3 +41,45 @@ a[href*="youtube.com"]::after {
     content: "🎥";
 }
 
+a:link, .tufte-underline, .hover-tufte-underline:hover {
+    background: none; /* tufte uses background for bottom border, and it sometimes clips if two lines are two tight */
+    text-decoration: none;
+
+
+    font-weight: bold;
+
+    font-variant: small-caps;
+}
+
+a::after {
+    content: " ◈";
+    opacity: 0.3;
+}
+
+a:hover::after {
+    opacity: 1;
+}
+
+/* undo all supercool styles */
+h2 a::after {
+    content: "";
+}
+h2 a:link {
+    font-variant: inherit;
+}
+
+/* from https://www.w3.org/TR/predefined-counter-styles/#circled-decimal */
+@counter-style circled-decimal {
+    system: fixed 0;
+    symbols: '\24EA' '\2460' '\2461' '\2462' '\2463' '\2464' '\2465' '\2466' '\2467' '\2468' '\2469' '\246A' '\246B' '\246C' '\246D' '\246E' '\246F' '\2470' '\2471' '\2472' '\2473' '\3251' '\3252' '\3253' '\3254' '\3255' '\3256' '\3257' '\3258' '\3259' '\325a' '\325b' '\325c' '\325d' '\325e' '\325f' '\32b1' '\32b2' '\32b3' '\32b4' '\32b5' '\32b6' '\32b7' '\32b8' '\32b9' '\32ba' '\32bb' '\32bc' '\32bd' '\32be' '\32bf';
+    /* symbols: '⓪' '①' '②' '③' '④' '⑤' '⑥' '⑦' '⑧' '⑨' '⑩' '⑪' '⑫' '⑬' '⑭' '⑮' '⑯' '⑰' '⑱' '⑲' '⑳' '㉑' '㉒' '㉓' '㉔' '㉕' '㉖' '㉗' '㉘' '㉙' '㉚' '㉛' '㉜' '㉝' '㉞' '㉟' '㊱' '㊲' '㊳' '㊴' '㊵' '㊶' '㊷' '㊸' '㊹' '㊺' '㊻' '㊼' '㊽' '㊾' '㊿'; */
+    suffix: ' ';
+}
+
+ol {
+    list-style-type: circled-decimal;
+}
+
+pre > code {
+    width: inherit; /* tufte set this to 52.5%, unsure why, it's ugly */
+}
