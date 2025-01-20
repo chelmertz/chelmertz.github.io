@@ -13,6 +13,7 @@ lazydocker,TUI for docker. See _lazygit_,https://github.com/jesseduffield/lazydo
 pastel,CLI for color palettes,https://github.com/sharkdp/pastel
 plantuml,Diagrams,https://plantuml.com/
 st,Statistics on CLI,https://github.com/nferraz/st
+sqids,Short youtube-like IDs that you could spell out,https://sqids.org/
 ugrep,Interactive grep,https://github.com/Genivia/ugrep
 up,Ultimate plumber. Interactive pipelines,https://github.com/akavel/up
 webhook.site,Hosted/one-off webhooks,https://webhook.site/

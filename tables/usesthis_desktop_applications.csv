@@ -5,6 +5,7 @@ Copyq,Clipboard,https://hluk.github.io/CopyQ/
 Doom Emacs,Purely as entry point to Org mode/Magit,https://github.com/doomemacs/doomemacs
 Dropbox,Sync between mobile and laptop is a must,https://www.dropbox.com
 Element,Matrix chat client,https://element.io/
+Espanso,Snippet expander,https://espanso.org
 Elly,Github pull request tracker,https://github.com/chelmertz/elly
 Firefox,I hear Chrome is mucking about with adblockers,https://www.mozilla.org/en-US/firefox/new/
 Flameshot,Screenshots with very convenient UI for quick editing,https://flameshot.org/
@@ -14,6 +15,7 @@ Magit,The best git client. See _lazygit_,https://magit.vc/
 Obsidian,Purely as entry point to Excalidraw,https://obsidian.md/
 Org mode,Diary. TODOs.,https://orgmode.org/
 Peek,Screen recorder,https://github.com/phw/peek
+Redshift,Adjusts color temperature of screen,https://github.com/jonls/redshift
 Rofi,Launcher. Easy to customize. Like fzf but without a terminal in the foreground,https://github.com/davatorium/rofi
 Screenkey,Displays the pressed keys on screen. Useful but not perfect with multiple monitors,https://www.thregr.org/wavexx/software/screenkey/
 VS code,Code editor,https://code.visualstudio.com/

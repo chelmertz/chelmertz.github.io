@@ -228,6 +228,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td>Matrix chat client</td>
 </tr>
 <tr>
+<td><a href="https://espanso.org">Espanso</a></td>
+<td>Snippet expander</td>
+</tr>
+<tr>
 <td><a href="https://github.com/chelmertz/elly">Elly</a></td>
 <td>Github pull request tracker</td>
 </tr>
@@ -264,6 +268,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td>Screen recorder</td>
 </tr>
 <tr>
+<td><a href="https://github.com/jonls/redshift">Redshift</a></td>
+<td>Adjusts color temperature of screen</td>
+</tr>
+<tr>
 <td><a href="https://github.com/davatorium/rofi">Rofi</a></td>
 <td>Launcher. Easy to customize. Like fzf but without a terminal in the foreground</td>
 </tr>
@@ -297,6 +305,14 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <tr>
 <td><a href="https://go.dev/">Go</a></td>
 <td>Programming in general</td>
+</tr>
+<tr>
+<td><a href="https://github.com/looplab/fsm">fsm</a></td>
+<td>Go package for encoding state machines. Exports mermaid diagrams.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/oapi-codegen/oapi-codegen">oapi-codegen</a></td>
+<td>Go package enabling spec-first OpenAPI-development</td>
 </tr>
 <tr>
 <td><a href="https://learn.openapis.org/">OpenAPI</a></td>
@@ -589,6 +605,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <tr>
 <td><a href="https://github.com/nferraz/st">st</a></td>
 <td>Statistics on CLI</td>
+</tr>
+<tr>
+<td><a href="https://sqids.org/">sqids</a></td>
+<td>Short youtube-like IDs that you could spell out</td>
 </tr>
 <tr>
 <td><a href="https://github.com/Genivia/ugrep">ugrep</a></td>

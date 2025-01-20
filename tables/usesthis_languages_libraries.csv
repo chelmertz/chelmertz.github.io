@@ -1,3 +1,5 @@
 Name,Purpose & context,URL
 Go,Programming in general,https://go.dev/
+fsm,Go package for encoding state machines. Exports mermaid diagrams. ,https://github.com/looplab/fsm
+oapi-codegen,Go package enabling spec-first OpenAPI-development,https://github.com/oapi-codegen/oapi-codegen
 OpenAPI,REST APIs. Spec first and generate clients/server works really well,https://learn.openapis.org/
