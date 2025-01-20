@@ -40,7 +40,7 @@ You'll find up to date [installation instructions in the project's README](https
     example. Writing longer test method bodies are fine.
   - Going from one-off unit tests, to [table driven tests](https://dave.cheney.net/2019/05/07/prefer-table-driven-tests),
     to fuzzying, seems like a path I want to go down.
-- Writing [ADR](https://adr.github.io/)s (architectural decision record) helped
+- Writing [ADRs](https://adr.github.io/) (architectural decision record) helped
   even for such a small project (see the `/decisions` folder)
   - Feels nice to not having to go back on certain decisions, since they're
     spelled out and reasoned about. For example: KISS, with a JSON file rather
@@ -66,13 +66,11 @@ You'll find up to date [installation instructions in the project's README](https
   - [`<dialog/>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog).
     Amazing that this now exists. No deps/configuration needed, and `::backdrop`
     is a perfect partner.
-  - [Chrome dev tool's flexbox editor](https://developer.chrome.com/docs/devtools/css/flexbox/)
-    - Never noticed this before, it's makes for a very quick feedback cycle.
-  - Color scheme inspired by (and butchered, I'm no designer) [Wolfenstein](https://www.gameuidatabase.com/gameData.php?id=441)
+  - [Chrome dev tool's flexbox editor](https://developer.chrome.com/docs/devtools/css/flexbox/). Never noticed this before, it's makes for a very quick feedback cycle.
 - [i3](https://i3wm.org/) status bar integration (via [i3blocks](https://github.com/vivien/i3blocks))
 - [systemd](https://wiki.archlinux.org/title/systemd) integration
 
-Prior art: Gitlab variant ([gitlab-mr-bot](https://gitlab.com/chelmertz/gitlab-mr-bot/))
+- Prior art: Gitlab variant ([gitlab-mr-bot](https://gitlab.com/chelmertz/gitlab-mr-bot/))
   - I made this while at my previous employer who self-hosted Gitlab, where it worked fine.
   - Gitlab's API for threads/comments on PRs is much easier to deal with
     (_elly_ needs to guess if there are unanswered comments, since that
@@ -82,10 +80,3 @@ Prior art: Gitlab variant ([gitlab-mr-bot](https://gitlab.com/chelmertz/gitlab-m
     - I'm leaning towards "hiding things behind an API is friendler", especially
       if one wants to host things remotely. The transparency/hackability of
       having SQLite is very nice though.
-
-
-
-
-
-
-
