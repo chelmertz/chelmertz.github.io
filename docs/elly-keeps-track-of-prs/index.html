@@ -24,8 +24,7 @@
           <p class="post-meta"><time datetime="2023-08-02T16:34:00Z" itemprop="datePublished">Aug 2, 2023</time></p>
         </header>
         <div class="post-content" itemprop="articleBody">
-          <section>
-            <p><a href="https://github.com/chelmertz/elly">elly</a> shows you all of the pull requests you
+          <p><a href="https://github.com/chelmertz/elly">elly</a> shows you all of the pull requests you
 can take action on, by periodically pulling data from Github.</p>
 <p><strong>You should deal with the PRs in order, they're ranked by actionability.</strong></p>
 <p>For example, if a PR gets approved, <em>elly</em> shows the PR in the top - just merge it.</p>
@@ -40,7 +39,8 @@ can take action on, by periodically pulling data from Github.</p>
 <p><img src="/assets/elly_architecture.png" alt="architecture"></p>
 <h2>A small retrospective</h2>
 <ul>
-<li><a href="https://go.dev/security/fuzz/">Go fuzz testing</a>
+<li>
+<p><a href="https://go.dev/security/fuzz/">Go fuzz testing</a></p>
 <ul>
 <li>A <a href="https://github.com/chelmertz/elly/commit/4bd771bb32ded27cd048d168034d860ae2bf77ba">single test found 3 bugs</a></li>
 <li>Inspired by re-reading <a href="https://danluu.com/testing/">Dan Luu on testing</a> for
@@ -51,8 +51,9 @@ example. Writing longer test method bodies are fine.</li>
 to fuzzying, seems like a path I want to go down.</li>
 </ul>
 </li>
-<li>Writing <a href="https://adr.github.io/">ADR</a>s (architectural decision record) helped
-even for such a small project (see the <code>/decisions</code> folder)
+<li>
+<p>Writing <a href="https://adr.github.io/">ADRs</a> (architectural decision record) helped
+even for such a small project (see the <code>/decisions</code> folder)</p>
 <ul>
 <li>Feels nice to not having to go back on certain decisions, since they're
 spelled out and reasoned about. For example: KISS, with a JSON file rather
@@ -64,7 +65,8 @@ these methods, or something else, that triggers thinking about design
 before/during/after implementation is gold.</li>
 </ul>
 </li>
-<li><a href="https://graphql.org/">GraphQL</a>
+<li>
+<p><a href="https://graphql.org/">GraphQL</a></p>
 <ul>
 <li>First time querying against it. Using headers for auth, getting proper
 response codes back, and having the query in plain text is pleasant.</li>
@@ -81,23 +83,23 @@ paradigm breaks down a bit, to me.</li>
 </li>
 </ul>
 </li>
-<li>Front end
+<li>
+<p>Front end</p>
 <ul>
 <li>Making a <a href="https://stackoverflow.com/questions/4575826/how-to-push-a-footer-to-the-bottom-of-page-when-content-is-short-or-missing">footer really sticky</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"><code>&lt;dialog/&gt;</code></a>.
 Amazing that this now exists. No deps/configuration needed, and <code>::backdrop</code>
 is a perfect partner.</li>
-<li><a href="https://developer.chrome.com/docs/devtools/css/flexbox/">Chrome dev tool's flexbox editor</a>
-<ul>
-<li>Never noticed this before, it's makes for a very quick feedback cycle.</li>
+<li><a href="https://developer.chrome.com/docs/devtools/css/flexbox/">Chrome dev tool's flexbox editor</a>. Never noticed this before, it's makes for a very quick feedback cycle.</li>
 </ul>
 </li>
-<li>Color scheme inspired by (and butchered, I'm no designer) <a href="https://www.gameuidatabase.com/gameData.php?id=441">Wolfenstein</a></li>
-</ul>
+<li>
+<p><a href="https://i3wm.org/">i3</a> status bar integration (via <a href="https://github.com/vivien/i3blocks">i3blocks</a>)</p>
 </li>
-<li><a href="https://i3wm.org/">i3</a> status bar integration (via <a href="https://github.com/vivien/i3blocks">i3blocks</a>)</li>
-<li><a href="https://wiki.archlinux.org/title/systemd">systemd</a> integration</li>
-</ul>
+<li>
+<p><a href="https://wiki.archlinux.org/title/systemd">systemd</a> integration</p>
+</li>
+<li>
 <p>Prior art: Gitlab variant (<a href="https://gitlab.com/chelmertz/gitlab-mr-bot/">gitlab-mr-bot</a>)</p>
 <ul>
 <li>I made this while at my previous employer who self-hosted Gitlab, where it worked fine.</li>
@@ -113,8 +115,9 @@ having SQLite is very nice though.</li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
 
-          </section>
         </div>
       </article>
       <section class="related-posts">
@@ -128,11 +131,8 @@ having SQLite is very nice though.</li>
         </ul>
       </section>
     </main>
-    <footer class="site-footer">
-      <p> by Carl Helmertz,<br/>
-      <a href="mailto:helmertz@gmail.com">helmertz@gmail.com</a> <a href="https://helmertz.com">https://helmertz.com</a>
-      <a href="https://github.com/chelmertz" style="white-space: nowrap"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg> chelmertz</a>
-      </p>
+    <footer>
+      <p>by Carl Helmertz — <a href="mailto:helmertz@gmail.com">helmertz@gmail.com</a><br/><a href="https://helmertz.com">https://helmertz.com</a> <a href="https://github.com/chelmertz">github.com/chelmertz</a></p>
     </footer>
   </body>
 </html>

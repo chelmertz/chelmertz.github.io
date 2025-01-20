@@ -1003,7 +1003,8 @@ can take action on, by periodically pulling data from Github.</p>
 <p><img src="/assets/elly_architecture.png" alt="architecture"></p>
 <h2>A small retrospective</h2>
 <ul>
-<li><a href="https://go.dev/security/fuzz/">Go fuzz testing</a>
+<li>
+<p><a href="https://go.dev/security/fuzz/">Go fuzz testing</a></p>
 <ul>
 <li>A <a href="https://github.com/chelmertz/elly/commit/4bd771bb32ded27cd048d168034d860ae2bf77ba">single test found 3 bugs</a></li>
 <li>Inspired by re-reading <a href="https://danluu.com/testing/">Dan Luu on testing</a> for
@@ -1014,8 +1015,9 @@ example. Writing longer test method bodies are fine.</li>
 to fuzzying, seems like a path I want to go down.</li>
 </ul>
 </li>
-<li>Writing <a href="https://adr.github.io/">ADR</a>s (architectural decision record) helped
-even for such a small project (see the <code>/decisions</code> folder)
+<li>
+<p>Writing <a href="https://adr.github.io/">ADRs</a> (architectural decision record) helped
+even for such a small project (see the <code>/decisions</code> folder)</p>
 <ul>
 <li>Feels nice to not having to go back on certain decisions, since they're
 spelled out and reasoned about. For example: KISS, with a JSON file rather
@@ -1027,7 +1029,8 @@ these methods, or something else, that triggers thinking about design
 before/during/after implementation is gold.</li>
 </ul>
 </li>
-<li><a href="https://graphql.org/">GraphQL</a>
+<li>
+<p><a href="https://graphql.org/">GraphQL</a></p>
 <ul>
 <li>First time querying against it. Using headers for auth, getting proper
 response codes back, and having the query in plain text is pleasant.</li>
@@ -1044,23 +1047,23 @@ paradigm breaks down a bit, to me.</li>
 </li>
 </ul>
 </li>
-<li>Front end
+<li>
+<p>Front end</p>
 <ul>
 <li>Making a <a href="https://stackoverflow.com/questions/4575826/how-to-push-a-footer-to-the-bottom-of-page-when-content-is-short-or-missing">footer really sticky</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"><code>&lt;dialog/&gt;</code></a>.
 Amazing that this now exists. No deps/configuration needed, and <code>::backdrop</code>
 is a perfect partner.</li>
-<li><a href="https://developer.chrome.com/docs/devtools/css/flexbox/">Chrome dev tool's flexbox editor</a>
-<ul>
-<li>Never noticed this before, it's makes for a very quick feedback cycle.</li>
+<li><a href="https://developer.chrome.com/docs/devtools/css/flexbox/">Chrome dev tool's flexbox editor</a>. Never noticed this before, it's makes for a very quick feedback cycle.</li>
 </ul>
 </li>
-<li>Color scheme inspired by (and butchered, I'm no designer) <a href="https://www.gameuidatabase.com/gameData.php?id=441">Wolfenstein</a></li>
-</ul>
+<li>
+<p><a href="https://i3wm.org/">i3</a> status bar integration (via <a href="https://github.com/vivien/i3blocks">i3blocks</a>)</p>
 </li>
-<li><a href="https://i3wm.org/">i3</a> status bar integration (via <a href="https://github.com/vivien/i3blocks">i3blocks</a>)</li>
-<li><a href="https://wiki.archlinux.org/title/systemd">systemd</a> integration</li>
-</ul>
+<li>
+<p><a href="https://wiki.archlinux.org/title/systemd">systemd</a> integration</p>
+</li>
+<li>
 <p>Prior art: Gitlab variant (<a href="https://gitlab.com/chelmertz/gitlab-mr-bot/">gitlab-mr-bot</a>)</p>
 <ul>
 <li>I made this while at my previous employer who self-hosted Gitlab, where it worked fine.</li>
@@ -1073,6 +1076,8 @@ others to query.
 <li>I'm leaning towards &quot;hiding things behind an API is friendler&quot;, especially
 if one wants to host things remotely. The transparency/hackability of
 having SQLite is very nice though.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

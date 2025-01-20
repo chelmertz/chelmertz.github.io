@@ -6,6 +6,7 @@ table {
     border: solid var(--accent);
     border-width: 4px 0 4px;
     border-collapse: collapse;
+    width: 100%;
 
     thead tr th {
         border-bottom: 1px solid var(--accent);
@@ -37,6 +38,26 @@ video {
     padding: 0;
 }
 
+ul {
+    padding-left: 1em;
+    ul, li {
+        /* I use too many nested lists. render list items as paragraphs instead, to avoid a vertical breakout-pattern */
+        padding-left: 0;
+    }
+}
+
+li {
+    margin-bottom: 1em;
+    >ul {
+        margin-top: 1em;
+        /* I use too many nested lists. render list items as paragraphs instead, to avoid a vertical breakout-pattern */
+        list-style-type: none;
+    }
+    >ol {
+        margin-top: 1em;
+    }
+}
+
 a[href*="youtube.com"]::after {
     content: "🎥";
 }
@@ -45,9 +66,7 @@ a:link, .tufte-underline, .hover-tufte-underline:hover {
     background: none; /* tufte uses background for bottom border, and it sometimes clips if two lines are two tight */
     text-decoration: none;
 
-
     font-weight: bold;
-
     font-variant: small-caps;
 }
 
@@ -80,10 +99,40 @@ ol {
     list-style-type: circled-decimal;
 }
 
+
+body {
+    font-family: georgia, "bitstream charter", "noto serif", baskerville, palatino, bookman, serif;
+    hyphens: auto;
+    border-top: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+
+    /* undo tufte */
+    margin: 0;
+    width: initial;
+    padding: 0;
+}
+
+main, header, footer>p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+footer {
+    margin-top: 2em;
+    padding: 4px 0;
+}
+
+
+/* tufte... urgh */
 pre > code {
     width: inherit; /* tufte set this to 52.5%, unsure why, it's ugly */
 }
 
-body {
-    font-family: "noto serif", baskerville, georgia, palatino, bookman, serif;
+section > ul {
+    width: inherit; /* tufte set this to 50%, unsure why, it's ugly */
+}
+
+article {
+    padding: 0;
 }
