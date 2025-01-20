@@ -9,7 +9,7 @@ Update 2024-12-22:
 
 I am using regular less now, with these lines in my zshrc:
 
-```
+```shell
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
 export LESS_TERMCAP_me=$'\e[0m'

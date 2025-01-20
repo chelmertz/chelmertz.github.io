@@ -1090,18 +1090,17 @@ having SQLite is very nice though.</li>
     <link href="https://iamnearlythere.com/man-pages-in-color-and-links" rel="alternate" type="text/html" title="Man pages in color, with links"></link>
     <content type="html"><![CDATA[<p>Update 2024-12-22:</p>
 <p>I am using regular less now, with these lines in my zshrc:</p>
-<pre><code>export LESS_TERMCAP_mb=$'\e[1;32m'
-export LESS_TERMCAP_md=$'\e[1;32m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;33m'
-export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;4;31m'
-# the above worked in Ubuntu 22.04 but something broke &quot;in&quot; 24.04 and this workaround does it for me
-# also see https://github.com/jedsoft/most/issues/18
-export GROFF_NO_SGR=1
-</code></pre>
-<hr>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_mb</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[1;32m&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_md</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[1;32m&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_me</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[0m&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_se</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[0m&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_so</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[01;33m&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_ue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[0m&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_us</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[1;4;31m&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># the above worked in Ubuntu 22.04 but something broke &#34;in&#34; 24.04 and this workaround does it for me</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># also see https://github.com/jedsoft/most/issues/18</span>
+</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">GROFF_NO_SGR</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span>
+</span></span></code></pre><hr>
 <p>Old post:</p>
 <p><a href="https://neovim.io/">Neovim</a> has builtin support for colorizing man pages, making them easier to read. It also lets you follow links to other man pages, by pressing <kbd>K</kbd> while hovering any term that has a man page.</p>
 <p>To set up Neovim as the default reader for when you invoke <code>man apropos</code> etc., place the following code in your ~/.bashrc or such:</p>
