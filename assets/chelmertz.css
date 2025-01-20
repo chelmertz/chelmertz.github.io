@@ -103,8 +103,6 @@ ol {
 body {
     font-family: georgia, "bitstream charter", "noto serif", baskerville, palatino, bookman, serif;
     hyphens: auto;
-    border-top: 2px solid var(--accent);
-    border-bottom: 2px solid var(--accent);
 
     /* undo tufte */
     margin: 0;
