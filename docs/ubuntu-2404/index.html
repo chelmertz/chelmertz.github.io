@@ -52,9 +52,9 @@ Environment=GTK_USE_PORTAL=1
 </li>
 <li>Running a simple Ansible playbook no longer works.
 <ul>
-<li>No workaround as of yet.</li>
 <li>Missing python package, Ubuntu no longer likes <code>pip3</code>. Good, in a way; especially language-specific packages should not really be installed globally.</li>
 <li>Tried using <code>uv</code> for the first time, didn't find the correct invocation.</li>
+<li><code>ansible-galaxy collection install community.general</code> solved a snap error, unsure what other tries contributed to it working.</li>
 </ul>
 </li>
 <li>Volume up/down buttons didn't work.
