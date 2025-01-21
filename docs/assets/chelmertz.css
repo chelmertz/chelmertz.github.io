@@ -107,6 +107,7 @@ body {
     /* undo tufte */
     margin: 0;
     width: initial;
+    max-width: initial;
     padding: 0;
 }
 
