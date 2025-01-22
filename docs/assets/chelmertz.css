@@ -133,8 +133,6 @@ footer {
       top: 0.5em;
       width: 50%;
     }
-    &:before { right: 1.5%; }
-    &:after { left: 1.5%; }
 }
 
 
