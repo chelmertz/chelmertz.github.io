@@ -16,6 +16,7 @@ st,Statistics on CLI,https://github.com/nferraz/st
 sqids,Short youtube-like IDs that you could spell out,https://sqids.org/
 ugrep,Interactive grep,https://github.com/Genivia/ugrep
 up,Ultimate plumber. Interactive pipelines,https://github.com/akavel/up
+uppy,"Javascript library for uploads, including screencast on the fly or Dropbox et al.", https://uppy.io/
 webhook.site,Hosted/one-off webhooks,https://webhook.site/
 yazi,File manager TUI,https://github.com/sxyazi/yazi
 zizmor,Audits Github actions,https://github.com/woodruffw/zizmor
