@@ -49,6 +49,10 @@
 <h2>Discard parts of a diff</h2>
 <pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git checkout -p
 </span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># is hunk too big? &#39;s&#39; to split it</span>
+</span></span></code></pre><h2>Find common ancestor of different branches</h2>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git merge-base my-feature-branch origin/main
+</span></span></code></pre><p>Useful to, for example, find all files we touched in the feature branch, à la:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git diff --stat <span style="color:#000;font-weight:bold">$(</span>git merge-base my-feature-branch origin/main<span style="color:#000;font-weight:bold">)</span>
 </span></span></code></pre><h2>Merge commits</h2>
 <p>If you want to add some changes that you'd want included in the previous un-pushed commit</p>
 <pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>git commit -am <span style="color:#d14">&#34;just a commit&#34;</span>
