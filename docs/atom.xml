@@ -3,13 +3,49 @@
   <title>iamnearlythere.com</title>
   <subtitle>iamnearlythere.com, a blog on software development</subtitle>
   <id>https://iamnearlythere.com/atom.xml</id>
-  <updated>2025-01-01T23:33:00Z</updated>
+  <updated>2025-02-06T11:57:00Z</updated>
   <link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml"></link>
   <link href="https://iamnearlythere.com/" rel="alternate" type="text/html"></link>
   <author>
     <name>Carl Helmertz</name>
     <email>helmertz@gmail.com</email>
   </author>
+  <entry>
+    <title>Getting Cursor to start on Ubuntu 24.04</title>
+    <published>2025-02-06T11:57:00Z</published>
+    <updated>2025-02-06T11:57:00Z</updated>
+    <id>https://iamnearlythere.com/cursor-ubuntu-2404</id>
+    <link href="https://iamnearlythere.com/cursor-ubuntu-2404" rel="alternate" type="text/html" title="Getting Cursor to start on Ubuntu 24.04"></link>
+    <summary>Modify apparmor rules a bit</summary>
+    <content type="html"><![CDATA[<p>There seems to be a problem with appimages including electron on Ubuntu 24.04. When starting cursor (0.45.8),  you get error messages like this:</p>
+<pre><code>feb 06 11:37:24 gamma kernel: audit: type=1400 audit(1738838244.309:315): apparmor=&quot;AUDIT&quot; operation=&quot;userns_create&quot; class=&quot;namespace&quot; info=&quot;Userns create - transitioning profile&quot; profile=&quot;unconfined&quot; pid=28305 comm=&quot;cursor&quot; requested=&quot;userns_create&quot; target=&quot;unprivileged_userns&quot;
+feb 06 11:37:24 gamma kernel: audit: type=1400 audit(1738838244.310:316): apparmor=&quot;DENIED&quot; operation=&quot;capable&quot; class=&quot;cap&quot; profile=&quot;unprivileged_userns&quot; pid=28316 comm=&quot;cursor&quot; capability=21  capname=&quot;sys_admin&quot;
+feb 06 11:37:24 gamma /usr/libexec/gdm-x-session[28305]: [28305:0206/113724.318413:FATAL:setuid_sandbox_host.cc(163)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /tmp/.mount_cursorbCLhGT/chrome-sandbox is owned by root and has mode 4755.
+feb 06 11:37:24 gamma kernel: traps: cursor[28305] trap int3 ip:5d79fb77726c sp:7fffe2cdbd60 error:0 in cursor[5d79f77ea000+8974000]
+feb 06 11:37:24 gamma /usr/libexec/gdm-x-session[28304]: Trace/breakpoint trap (core dumped)
+feb 06 11:37:24 gamma systemd[1]: tmp-.mount_cursorbCLhGT.mount: Deactivated successfully.
+</code></pre>
+<p>To get around this, I created /etc/apparmor.d/cursor with this content:</p>
+<pre><code>abi &lt;abi/4.0&gt;,
+include &lt;tunables/global&gt;
+
+profile cursor /usr/bin/cursor flags=(unconfined) {
+    userns,
+
+    # Site-specific additions and overrides. See local/README for details.
+    include if exists &lt;local/cursor&gt;
+}
+</code></pre>
+<p>Note that I renamed the appimage file to /usr/bin/cursor, and <code>chmod +x</code> it.</p>
+<p>After reloading the apparmor configuration with</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>sudo apparmor_parser -r /etc/apparmor.d/cursor
+</span></span></code></pre><p>I could start cursor properly.</p>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
   <entry>
     <title>VS Code snippets for internal blog links</title>
     <published>2025-01-01T23:33:00Z</published>
@@ -1085,37 +1121,6 @@ having SQLite is very nice though.</li>
 </ul>
 </li>
 </ul>
-]]></content>
-    <author>
-      <name>Carl Helmertz</name>
-      <email>helmertz@gmail.com</email>
-    </author>
-  </entry>
-  <entry>
-    <title>Man pages in color, with links</title>
-    <published>2018-03-15T00:24:00Z</published>
-    <updated>2018-03-15T00:24:00Z</updated>
-    <id>https://iamnearlythere.com/man-pages-in-color-and-links</id>
-    <link href="https://iamnearlythere.com/man-pages-in-color-and-links" rel="alternate" type="text/html" title="Man pages in color, with links"></link>
-    <content type="html"><![CDATA[<p>Update 2024-12-22:</p>
-<p>I am using regular less now, with these lines in my zshrc:</p>
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_mb</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[1;32m&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_md</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[1;32m&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_me</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[0m&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_se</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[0m&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_so</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[01;33m&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_ue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[0m&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">LESS_TERMCAP_us</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">$&#39;\e[1;4;31m&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># the above worked in Ubuntu 22.04 but something broke &#34;in&#34; 24.04 and this workaround does it for me</span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># also see https://github.com/jedsoft/most/issues/18</span>
-</span></span><span style="display:flex;"><span><span style="color:#0086b3">export</span> <span style="color:#008080">GROFF_NO_SGR</span><span style="color:#000;font-weight:bold">=</span><span style="color:#099">1</span>
-</span></span></code></pre><hr>
-<p>Old post:</p>
-<p><a href="https://neovim.io/">Neovim</a> has builtin support for colorizing man pages, making them easier to read. It also lets you follow links to other man pages, by pressing <kbd>K</kbd> while hovering any term that has a man page.</p>
-<p>To set up Neovim as the default reader for when you invoke <code>man apropos</code> etc., place the following code in your ~/.bashrc or such:</p>
-<pre><code>export MANPAGER=&quot;nvim -c 'set ft=man' -&quot;
-</code></pre>
-<p>There are some more pointers in the short and readable section of the <a href="https://github.com/neovim/neovim/blob/5ce8158a5d462043306ee67a3261794f169bdb17/runtime/doc/filetype.txt#L509">Neovim manual on viewing man pages</a>.</p>
 ]]></content>
     <author>
       <name>Carl Helmertz</name>

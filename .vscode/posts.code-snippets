@@ -221,6 +221,12 @@
     "body": "[${1:From Youtube to mp3}](/from-youtube-to-mp3) ",
     "description": "From Youtube to mp3"
   },
+  "Getting Cursor to start on Ubuntu 24.04": {
+    "scope": "markdown",
+    "prefix": "@@cursor-ubuntu-2404 - Getting Cursor to start on Ubuntu 24.04",
+    "body": "[${1:Getting Cursor to start on Ubuntu 24.04}](/cursor-ubuntu-2404) ",
+    "description": "Getting Cursor to start on Ubuntu 24.04"
+  },
   "Getting started with Hudson": {
     "scope": "markdown",
     "prefix": "@@getting-started-with-hudson-hints-and-kinks - Getting started with Hudson",
