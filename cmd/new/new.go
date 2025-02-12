@@ -1,6 +1,8 @@
 package main
 
 import (
+	"crypto/rand"
+	"encoding/hex"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -18,9 +20,18 @@ date: "{{.Now}}"
 this is some content
 `
 
+func randomSuffix() string {
+	b := make([]byte, 10)
+	if _, err := rand.Read(b); err != nil {
+		return ""
+	}
+	return hex.EncodeToString(b)
+}
+
 func main() {
 	filedate := time.Now().Format("2006-01-02")
-	path := filepath.Join("_posts", filedate+"-todo.md")
+
+	path := filepath.Join("_posts", filedate+"-todo-"+randomSuffix()+".md")
 	outfile, createErr := os.Create(path)
 	if createErr != nil {
 		panic(fmt.Sprintf("error creating temp post file: %v", createErr))
@@ -33,4 +44,5 @@ func main() {
 	if templateErr != nil {
 		panic(fmt.Sprintf("error executing template: %v", templateErr))
 	}
+	fmt.Printf("created %s\n", path)
 }
