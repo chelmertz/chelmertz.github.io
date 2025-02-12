@@ -467,6 +467,12 @@
     "body": "[${1:Move vi/vim editor temporary swap and backup files to another directory | devdaily.com}](/move-vivim-editor-temporary-swap-and-backup-files-to-another-directory-devdaily-com) ",
     "description": "Move vi/vim editor temporary swap and backup files to another directory | devdaily.com"
   },
+  "My slideshow presentation checklist": {
+    "scope": "markdown",
+    "prefix": "@@slideshow-presentation-checklist - My slideshow presentation checklist",
+    "body": "[${1:My slideshow presentation checklist}](/slideshow-presentation-checklist) ",
+    "description": "My slideshow presentation checklist"
+  },
   "MySQL's `SUBSTRING()`'s index starts at 1": {
     "scope": "markdown",
     "prefix": "@@mysqls-substrings-index-starts-at-1 - MySQL's `SUBSTRING()`'s index starts at 1",

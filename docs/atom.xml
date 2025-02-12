@@ -3,13 +3,87 @@
   <title>iamnearlythere.com</title>
   <subtitle>iamnearlythere.com, a blog on software development</subtitle>
   <id>https://iamnearlythere.com/atom.xml</id>
-  <updated>2025-02-06T11:57:00Z</updated>
+  <updated>2025-02-12T16:09:00Z</updated>
   <link href="https://iamnearlythere.com/atom.xml" rel="self" type="application/atom+xml"></link>
   <link href="https://iamnearlythere.com/" rel="alternate" type="text/html"></link>
   <author>
     <name>Carl Helmertz</name>
     <email>helmertz@gmail.com</email>
   </author>
+  <entry>
+    <title>My slideshow presentation checklist</title>
+    <published>2025-02-12T16:09:00Z</published>
+    <updated>2025-02-12T16:09:00Z</updated>
+    <id>https://iamnearlythere.com/slideshow-presentation-checklist</id>
+    <link href="https://iamnearlythere.com/slideshow-presentation-checklist" rel="alternate" type="text/html" title="My slideshow presentation checklist"></link>
+    <summary>A living document of things that helped me make a better presentation</summary>
+    <content type="html"><![CDATA[<p>Some weeks ago, I presented something that didn't generate as much feedback as I wished for. Did I really manage reach out? Probably not.</p>
+<p>To fix this, instead of doing some ad-hoc screensharing of editor, alt-tab to code examples and browser windows; I figured I should self-organize myself a bit and write down some criteria, benchmark them, and refine after presentations.</p>
+<h2>Checklist</h2>
+<ul>
+<li>Use a proper slideshow tool.
+<ul>
+<li>Everyone is familiar with the concept. Seeing &quot;pagination&quot; progression is helpful.</li>
+<li>Answering questions &amp; discussions during the presentation is super simple, since we get right back into the presentation where we left off.</li>
+</ul>
+</li>
+<li>Few takeaways per slide.
+<ul>
+<li>No lists/multiple paragraphs at a time. Or, bring in one bullet at a time on the same page.
+<ul>
+<li>Avoid lists, everyone is on different points and it is hard to read and listen at the same time.</li>
+</ul>
+</li>
+<li>Avoid a reading audience, better to write a few words and focus on talking.</li>
+</ul>
+</li>
+<li>Red thread, from start to end. Control the arc.
+<ul>
+<li>What's the general message, who are you presenting for.
+<ul>
+<li>It's easiest to avoid audiences of too broad backgrounds, to be able to zoom in on a topic and create a discourse.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sell a need, and then your solution to it.
+<ul>
+<li>Compare the past and the golden future.</li>
+<li>No need to explore every non-chosen path, but be prepared for questions.</li>
+</ul>
+</li>
+<li>Large font size (helps small monitors, poor eyesight, crappy resolutions in large crowds), few words per page (helps balance reading vs listening).</li>
+<li>Clear path forward in real life, next steps to take action on.
+<ul>
+<li>Also helps validate the idea.</li>
+<li>Could be written first.</li>
+</ul>
+</li>
+<li>Repeat takeaways.
+<ul>
+<li>What's the one thing the audience show bring with them?</li>
+<li>Copy &amp; paste problem statement slide with checkboxes for each sub-problem</li>
+</ul>
+</li>
+<li>Give credits where credits are due.</li>
+</ul>
+<h2>Actual example</h2>
+<p>Today, I held another presentation, using the above points, and it was much better received. The actual slides came out like this:</p>
+<ol>
+<li>Title</li>
+<li>Problems now: 1 .., 2 .., 3 ..</li>
+<li>Solution: x</li>
+<li>Demo screenrecording</li>
+<li>Explain what we just saw, in detail</li>
+<li>Rehash problems from 2., with solutions</li>
+<li>Next steps/outro/questions/credits</li>
+</ol>
+]]></content>
+    <author>
+      <name>Carl Helmertz</name>
+      <email>helmertz@gmail.com</email>
+    </author>
+  </entry>
   <entry>
     <title>Getting Cursor to start on Ubuntu 24.04</title>
     <published>2025-02-06T11:57:00Z</published>
@@ -1016,111 +1090,6 @@ command=~/bin/color-scheme&gt;/dev/null
 <p>A particularly bad example: I never found a way to change the theme of all open gnome-terminal windows, so I used <a href="https://linux.die.net/man/1/wmctrl">wmctrl</a> and <a href="https://linux.die.net/man/1/wmctrl">xdotool</a> in a loop 🙈 It turned out super buggy and the code wasn't even pretty to read. A do-over was necessary.</p>
 <h2>Elsewhere: <code>darkman</code></h2>
 <p>I just found Darkman (<a href="https://whynothugo.nl/journal/2022/02/25/introducing-darkman-v1.0.0/">intro</a>, <a href="https://gitlab.com/WhyNotHugo/darkman">repo</a>) but it is a bit intrusive. I like the dbus parts but having a separate service for this, and the scripts for every application, is a bit like the &quot;signal-lamp&quot; attempt and rubs me the wrong way (configuration rabbit hole).</p>
-]]></content>
-    <author>
-      <name>Carl Helmertz</name>
-      <email>helmertz@gmail.com</email>
-    </author>
-  </entry>
-  <entry>
-    <title>elly - PRs you can act on</title>
-    <published>2023-08-02T16:34:00Z</published>
-    <updated>2023-08-02T16:34:00Z</updated>
-    <id>https://iamnearlythere.com/elly-keeps-track-of-prs</id>
-    <link href="https://iamnearlythere.com/elly-keeps-track-of-prs" rel="alternate" type="text/html" title="elly - PRs you can act on"></link>
-    <content type="html"><![CDATA[<p><a href="https://github.com/chelmertz/elly">elly</a> shows you all of the pull requests you
-can take action on, by periodically pulling data from Github.</p>
-<p><strong>You should deal with the PRs in order, they're ranked by actionability.</strong></p>
-<p>For example, if a PR gets approved, <em>elly</em> shows the PR in the top - just merge it.</p>
-<p>If there's a new comment, <em>elly</em> bumps that PR up.</p>
-<p>If you just responded to someone's comment, but kept the comment thread open instead of resolving it, <em>elly</em> knows you're waiting for a reply and places the PR lower in the list.</p>
-<p>This is what it looks like:</p>
-<p><img src="/assets/elly_gui.png" alt="gui"></p>
-<p><img src="/assets/elly_about.png" alt="about"></p>
-<h2>Installation instructions</h2>
-<p>You'll find up to date <a href="https://github.com/chelmertz/elly">installation instructions in the project's README</a>.</p>
-<h2>System design</h2>
-<p><img src="/assets/elly_architecture.png" alt="architecture"></p>
-<h2>A small retrospective</h2>
-<ul>
-<li>
-<p><a href="https://go.dev/security/fuzz/">Go fuzz testing</a></p>
-<ul>
-<li>A <a href="https://github.com/chelmertz/elly/commit/4bd771bb32ded27cd048d168034d860ae2bf77ba">single test found 3 bugs</a></li>
-<li>Inspired by re-reading <a href="https://danluu.com/testing/">Dan Luu on testing</a> for
-the fiftieth time. Finally something that unblocked me, after having read
-countless &quot;reversing things twice&quot; or &quot;encoding/decoding is commutative&quot;
-example. Writing longer test method bodies are fine.</li>
-<li>Going from one-off unit tests, to <a href="https://dave.cheney.net/2019/05/07/prefer-table-driven-tests">table driven tests</a>,
-to fuzzying, seems like a path I want to go down.</li>
-</ul>
-</li>
-<li>
-<p>Writing <a href="https://adr.github.io/">ADRs</a> (architectural decision record) helped
-even for such a small project (see the <code>/decisions</code> folder)</p>
-<ul>
-<li>Feels nice to not having to go back on certain decisions, since they're
-spelled out and reasoned about. For example: KISS, with a JSON file rather
-than an SQLite DB, felt better after articulating it in text.</li>
-<li>Went back and edited them a lot. They should probably have the <em>draft</em> or
-<em>suggestion</em> status for a while.</li>
-<li>The relation between retrospective items and ADRs almost feel 1:1. Using
-these methods, or something else, that triggers thinking about design
-before/during/after implementation is gold.</li>
-</ul>
-</li>
-<li>
-<p><a href="https://graphql.org/">GraphQL</a></p>
-<ul>
-<li>First time querying against it. Using headers for auth, getting proper
-response codes back, and having the query in plain text is pleasant.</li>
-<li>Github specific:
-<ul>
-<li>Good <a href="https://docs.github.com/en/graphql/overview/explorer">API explorer</a>,
-especially with the search box. I guess that the explorer is standard,
-through some framework.</li>
-<li>Trying to extract enough comments (below pull requests, below repositories,
-below search results) is weird - should I traverse that paginated
-sub-sub-sub resource? The &quot;a single query that reaches everywhere&quot;
-paradigm breaks down a bit, to me.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Front end</p>
-<ul>
-<li>Making a <a href="https://stackoverflow.com/questions/4575826/how-to-push-a-footer-to-the-bottom-of-page-when-content-is-short-or-missing">footer really sticky</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"><code>&lt;dialog/&gt;</code></a>.
-Amazing that this now exists. No deps/configuration needed, and <code>::backdrop</code>
-is a perfect partner.</li>
-<li><a href="https://developer.chrome.com/docs/devtools/css/flexbox/">Chrome dev tool's flexbox editor</a>. Never noticed this before, it's makes for a very quick feedback cycle.</li>
-</ul>
-</li>
-<li>
-<p><a href="https://i3wm.org/">i3</a> status bar integration (via <a href="https://github.com/vivien/i3blocks">i3blocks</a>)</p>
-</li>
-<li>
-<p><a href="https://wiki.archlinux.org/title/systemd">systemd</a> integration</p>
-</li>
-<li>
-<p>Prior art: Gitlab variant (<a href="https://gitlab.com/chelmertz/gitlab-mr-bot/">gitlab-mr-bot</a>)</p>
-<ul>
-<li>I made this while at my previous employer who self-hosted Gitlab, where it worked fine.</li>
-<li>Gitlab's API for threads/comments on PRs is much easier to deal with
-(<em>elly</em> needs to guess if there are unanswered comments, since that
-schema is paginated in a nested way).</li>
-<li><code>gitlab-mr-bot</code> was used as a one-off script, storing state in SQLite, for
-others to query.
-<ul>
-<li>I'm leaning towards &quot;hiding things behind an API is friendler&quot;, especially
-if one wants to host things remotely. The transparency/hackability of
-having SQLite is very nice though.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 ]]></content>
     <author>
       <name>Carl Helmertz</name>
