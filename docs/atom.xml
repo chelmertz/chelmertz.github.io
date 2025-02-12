@@ -17,14 +17,23 @@
     <id>https://iamnearlythere.com/slideshow-presentation-checklist</id>
     <link href="https://iamnearlythere.com/slideshow-presentation-checklist" rel="alternate" type="text/html" title="My slideshow presentation checklist"></link>
     <summary>A living document of things that helped me make a better presentation</summary>
-    <content type="html"><![CDATA[<p>Some weeks ago, I presented something that didn't generate as much feedback as I wished for. Did I really manage reach out? Probably not.</p>
-<p>To fix this, instead of doing some ad-hoc screensharing of editor, alt-tab to code examples and browser windows; I figured I should self-organize myself a bit and write down some criteria, benchmark them, and refine after presentations.</p>
+    <content type="html"><![CDATA[<p>A couple of weeks ago, I presented how we could use a <a href="https://github.com/looplab/fsm">tool</a>, but failed to trigger any real discussion. Did I really reach out? Probably not.</p>
+<p>To address this — instead of doing some ad-hoc screensharing of editor, alt-tab to code examples and browser windows — I figured I should self-organize a bit. Write down some criteria, and refine them after having tested them.</p>
 <h2>Checklist</h2>
 <ul>
-<li>Use a proper slideshow tool.
+<li>Sell a need, and then your solution to it.
 <ul>
-<li>Everyone is familiar with the concept. Seeing &quot;pagination&quot; progression is helpful.</li>
-<li>Answering questions &amp; discussions during the presentation is super simple, since we get right back into the presentation where we left off.</li>
+<li>Compare the past and the golden future.</li>
+<li>No need to explore every non-chosen path, but be prepared for questions.</li>
+</ul>
+</li>
+<li>Red thread, from start to end. Control the arc.
+<ul>
+<li>What's the general message, who are you presenting for.
+<ul>
+<li>It's easiest to avoid audiences of too broad backgrounds, to be able to zoom in on a topic and create a discourse.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Few takeaways per slide.
@@ -37,19 +46,10 @@
 <li>Avoid a reading audience, better to write a few words and focus on talking.</li>
 </ul>
 </li>
-<li>Red thread, from start to end. Control the arc.
+<li>Use a proper slideshow tool.
 <ul>
-<li>What's the general message, who are you presenting for.
-<ul>
-<li>It's easiest to avoid audiences of too broad backgrounds, to be able to zoom in on a topic and create a discourse.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Sell a need, and then your solution to it.
-<ul>
-<li>Compare the past and the golden future.</li>
-<li>No need to explore every non-chosen path, but be prepared for questions.</li>
+<li>Everyone is familiar with the concept. Seeing &quot;pagination&quot; progression is helpful.</li>
+<li>Answering questions &amp; discussions during the presentation is super simple, since we get right back into the presentation where we left off.</li>
 </ul>
 </li>
 <li>Large font size (helps small monitors, poor eyesight, crappy resolutions in large crowds), few words per page (helps balance reading vs listening).</li>
@@ -68,7 +68,8 @@
 <li>Give credits where credits are due.</li>
 </ul>
 <h2>Actual example</h2>
-<p>Today, I held another presentation, using the above points, and it was much better received. The actual slides came out like this:</p>
+<p>Today, I held another presentation (on ephemeral dev. envs). I prepared using the above points, and it was much better received - lots of questions timed together with the topic of the current slide, etc.</p>
+<p>The actual slides came out like this:</p>
 <ol>
 <li>Title</li>
 <li>Problems now: 1 .., 2 .., 3 ..</li>

@@ -5,25 +5,25 @@ summary: "A living document of things that helped me make a better presentation"
 date: "2025-02-12 16:09"
 ---
 
-Some weeks ago, I presented something that didn't generate as much feedback as I wished for. Did I really manage reach out? Probably not.
+A couple of weeks ago, I presented how we could use a [tool](https://github.com/looplab/fsm), but failed to trigger any real discussion. Did I really reach out? Probably not.
 
-To fix this, instead of doing some ad-hoc screensharing of editor, alt-tab to code examples and browser windows; I figured I should self-organize myself a bit and write down some criteria, benchmark them, and refine after presentations.
+To address this — instead of doing some ad-hoc screensharing of editor, alt-tab to code examples and browser windows — I figured I should self-organize a bit. Write down some criteria, and refine them after having tested them.
 
 ## Checklist
 
-- Use a proper slideshow tool.
-  - Everyone is familiar with the concept. Seeing "pagination" progression is helpful.
-  - Answering questions & discussions during the presentation is super simple, since we get right back into the presentation where we left off.
+- Sell a need, and then your solution to it.
+  - Compare the past and the golden future.
+  - No need to explore every non-chosen path, but be prepared for questions.
+- Red thread, from start to end. Control the arc.
+  - What's the general message, who are you presenting for.
+    - It's easiest to avoid audiences of too broad backgrounds, to be able to zoom in on a topic and create a discourse.
 - Few takeaways per slide.
   - No lists/multiple paragraphs at a time. Or, bring in one bullet at a time on the same page.
     - Avoid lists, everyone is on different points and it is hard to read and listen at the same time.
   - Avoid a reading audience, better to write a few words and focus on talking.
-- Red thread, from start to end. Control the arc.
-  - What's the general message, who are you presenting for.
-    - It's easiest to avoid audiences of too broad backgrounds, to be able to zoom in on a topic and create a discourse.
-- Sell a need, and then your solution to it.
-  - Compare the past and the golden future.
-  - No need to explore every non-chosen path, but be prepared for questions.
+- Use a proper slideshow tool.
+  - Everyone is familiar with the concept. Seeing "pagination" progression is helpful.
+  - Answering questions & discussions during the presentation is super simple, since we get right back into the presentation where we left off.
 - Large font size (helps small monitors, poor eyesight, crappy resolutions in large crowds), few words per page (helps balance reading vs listening).
 - Clear path forward in real life, next steps to take action on.
   - Also helps validate the idea.
@@ -35,7 +35,9 @@ To fix this, instead of doing some ad-hoc screensharing of editor, alt-tab to co
 
 ## Actual example
 
-Today, I held another presentation, using the above points, and it was much better received. The actual slides came out like this:
+Today, I held another presentation (on ephemeral dev. envs). I prepared using the above points, and it was much better received - lots of questions timed together with the topic of the current slide, etc.
+
+The actual slides came out like this:
 
 1. Title
 2. Problems now: 1 .., 2 .., 3 ..
