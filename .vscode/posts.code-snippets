@@ -767,6 +767,12 @@
     "body": "[${1:Uses this - my preferred tools}](/uses-this) ",
     "description": "Uses this - my preferred tools"
   },
+  "Using Github issues for TODOs": {
+    "scope": "markdown",
+    "prefix": "@@using-github-for-todos - Using Github issues for TODOs",
+    "body": "[${1:Using Github issues for TODOs}](/using-github-for-todos) ",
+    "description": "Using Github issues for TODOs"
+  },
   "Using git init --bare for a slim repository look": {
     "scope": "markdown",
     "prefix": "@@using-git-init-bare-for-a-slim-repository-look - Using git init --bare for a slim repository look",
