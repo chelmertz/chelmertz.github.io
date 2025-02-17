@@ -4,7 +4,7 @@ broot,Interactive tree/ls/cd,https://github.com/Canop/broot
 dive,Docker image layer introspection,https://github.com/wagoodman/dive
 fq,jq for binary files,https://github.com/wader/fq
 git-absorb,Aids fixups,https://github.com/tummychow/git-absorb
-hwatch,watch alternative that records the history and keeps diffs,https://github.com/blacknon/hwatch
+hwatch,"hwatch, watch alternative that records the history and keeps diffs",https://github.com/blacknon/hwatch
 hyperfine,Benchmarks,https://github.com/sharkdp/hyperfine
 ijq,Interactive version of jq,https://sr.ht/~gpanders/ijq/
 jujutsu,VCS on top of git,https://github.com/martinvonz/jj
@@ -12,8 +12,10 @@ kuzudb,Embeddable graph database. Maybe valid alternative to sqlite,https://kuzu
 lazydocker,TUI for docker. See _lazygit_,https://github.com/jesseduffield/lazydocker
 pastel,CLI for color palettes,https://github.com/sharkdp/pastel
 plantuml,Diagrams,https://plantuml.com/
+podman,"Podman, docker alternative",https://podman.io/
 st,Statistics on CLI,https://github.com/nferraz/st
 sqids,Short youtube-like IDs that you could spell out,https://sqids.org/
+sqldef,SQL migration tool for sqlite et al.,https://github.com/sqldef/sqldef
 ugrep,Interactive grep,https://github.com/Genivia/ugrep
 up,Ultimate plumber. Interactive pipelines,https://github.com/akavel/up
 uppy,"Javascript library for uploads, including screencast on the fly or Dropbox et al.", https://uppy.io/
