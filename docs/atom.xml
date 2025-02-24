@@ -868,8 +868,20 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td>Postgres: pgbouncer, ID strategy for finding correct shard, (stateless) Django, Gearman, etc.</td>
 </tr>
 <tr>
+<td><a href="https://garciat.com/posts/java-adt/">Java Pattern: Algebraic Data Types</a></td>
+<td>Using the visitor pattern to mimic ADT in a relatively readable manner, despite Java™</td>
+</tr>
+<tr>
 <td><a href="https://www.youtube.com/watch?v=3Ea3pkTCYx4">Unix and Google</a></td>
 <td>'Coding at the perimiter', an approach to tackle the n^3 matrix of system ✕ feature ✕ platform - write programs that work together (pipes, everything-is-a-file, etc.). Examplifies with Multics vs UNIX</td>
+</tr>
+<tr>
+<td><a href="https://www.perfecttableplan.com/html/genetic_algorithm.html">Using A Genetic Algorithm For Table Seating</a></td>
+<td>A solver with an interesting UI: choose between a timeout or a certain number of generations</td>
+</tr>
+<tr>
+<td><a href="https://rachelbythebay.com/w/2025/02/22/war/">War rooms vs. deep investigations</a></td>
+<td>A debugging journey lasting a couple of weeks, of a Facebook crash</td>
 </tr>
 </tbody>
 </table>

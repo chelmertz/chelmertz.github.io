@@ -3,4 +3,7 @@ How Notion Scaled to 100 Million Users Without Their Database Exploding ,"Doubli
 Brendan Gregg: The Speed of Time,Flamegraphs discovers reading current time took longer on Ubuntu than CentOS,https://www.brendangregg.com/blog/2021-09-26/the-speed-of-time.html
 How Instagram Reduced Web Page Load by 50% ,"Many optimization patterns for front-end, from HTTP transportation, to asset fetching order, to caching locally (and avoiding conflicts with new state updates)",https://www.youtube.com/watch?v=ahyk7h7qAF4
 How Instagram Scaled to 14 Million Users With Only 3 Engineers ,"Postgres: pgbouncer, ID strategy for finding correct shard, (stateless) Django, Gearman, etc.",https://www.youtube.com/watch?v=TdhXPsDXdAI
+Java Pattern: Algebraic Data Types,"Using the visitor pattern to mimic ADT in a relatively readable manner, despite Java™",https://garciat.com/posts/java-adt/
 Unix and Google,"'Coding at the perimiter', an approach to tackle the n^3 matrix of system ✕ feature ✕ platform - write programs that work together (pipes, everything-is-a-file, etc.). Examplifies with Multics vs UNIX",https://www.youtube.com/watch?v=3Ea3pkTCYx4
+Using A Genetic Algorithm For Table Seating,A solver with an interesting UI: choose between a timeout or a certain number of generations,https://www.perfecttableplan.com/html/genetic_algorithm.html
+War rooms vs. deep investigations,"A debugging journey lasting a couple of weeks, of a Facebook crash",https://rachelbythebay.com/w/2025/02/22/war/
