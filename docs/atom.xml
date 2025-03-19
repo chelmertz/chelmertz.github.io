@@ -647,6 +647,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td>Can extract directory of git repo to its own repo</td>
 </tr>
 <tr>
+<td><a href="https://github.com/charmbracelet/glow">glow</a></td>
+<td>Markdown viewer</td>
+</tr>
+<tr>
 <td><a href="https://github.com/tomnomnom/gron">gron</a></td>
 <td>Turns JSON into grep:able lines of text and back again</td>
 </tr>
@@ -689,10 +693,6 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <tr>
 <td><a href="github.com/chelmertz/serve">serve</a></td>
 <td>Serve directory via HTTP</td>
-</tr>
-<tr>
-<td><a href="https://www.shellcheck.net/">shellcheck</a></td>
-<td>Lints bash scripts</td>
 </tr>
 <tr>
 <td><a href="https://github.com/watchexec/watchexec">watchexec</a></td>
@@ -756,6 +756,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <tr>
 <td><a href="https://numbr.dev/">Numbr</a></td>
 <td>Adds up numbers in plaintext. Good for splitting costs</td>
+</tr>
+<tr>
+<td><a href="https://www.shellcheck.net/">Shellcheck</a></td>
+<td>Lints bash scripts</td>
 </tr>
 </tbody>
 </table>
@@ -910,6 +914,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <tr>
 <td><a href="https://github.com/sxyazi/yazi">yazi</a></td>
 <td>File manager TUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/red-data-tools/YouPlot">youplot</a></td>
+<td>Plotting library for CLI</td>
 </tr>
 <tr>
 <td><a href="https://github.com/woodruffw/zizmor">zizmor</a></td>

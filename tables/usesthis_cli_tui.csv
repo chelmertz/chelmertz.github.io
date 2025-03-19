@@ -10,6 +10,7 @@ fzf,Fuzzy finder,https://github.com/junegunn/fzf
 gdu,A fast disk usage analyser,https://github.com/dundee/gdu
 gh,Github via CLI. Usable for quickly entering TODOs with some attributes and for listing open issues and displaying with i3blocks,https://cli.github.com/
 git-filter-repo,Can extract directory of git repo to its own repo,https://github.com/newren/git-filter-repo
+glow,Markdown viewer,https://github.com/charmbracelet/glow
 gron,Turns JSON into grep:able lines of text and back again,https://github.com/tomnomnom/gron
 htop,Good enough system monitor,https://htop.dev/
 image-sorter,TUI for quickly moving image files into proper directories,https://github.com/jgalat/image-sorter/
@@ -21,7 +22,6 @@ pavucontrol,Choosing device for sound output,https://freedesktop.org/software/pu
 ripdrag,“ripdrag filename” creates a small window with “filename” that you can use for drop-friendly interfaces,https://github.com/nik012003/ripdrag
 ripgrep,More ergonomic search than grep,https://github.com/BurntSushi/ripgrep
 serve,Serve directory via HTTP,github.com/chelmertz/serve
-shellcheck,Lints bash scripts,https://www.shellcheck.net/
 watchexec,inotify-like watcher. Execute command when files change. Slightly more complete than `entr` - might overtake its position,https://github.com/watchexec/watchexec
 wmctrl,API capabilities for X.org,https://linux.die.net/man/1/wmctrl
 xcape,Rebind keys. For example: pressing caps=esc & holding caps=ctrl,https://github.com/alols/xcape
