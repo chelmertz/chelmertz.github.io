@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" value="Replacing HTML with a hardcoded list of replacements actually is useful">
+
+  <title>Bookmarklet for translating AWS account numbers to actual accounts</title>
+
+  <link rel="canonical" href="https://iamnearlythere.com/bookmarklet-aws-account/">
+  <link rel="alternate" type="application/rss+xml" title="iamnearlythere.com" href="/atom.xml">
+
+  <link rel="stylesheet" href="/assets/tufte.css" />
+  <link rel="stylesheet" href="/assets/chelmertz.css" />
+
+</head>
+<body>
+  <script data-goatcounter="https://quepasa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <header role="banner"><h2><a href="/">iamnearlythere.com</a></h2></header>
+    <main aria-label="Content">
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">Bookmarklet for translating AWS account numbers to actual accounts</h1>
+          <p class="post-meta"><time datetime="2025-03-19T22:20:00Z" itemprop="datePublished">Mar 19, 2025</time></p>
+        </header>
+        <div class="post-content" itemprop="articleBody">
+          <p>I'm notoriously bad at remembering IP addresses, accounts, things like that, in my head. One thing that's recurring all over our systems at $WORK is AWS account numbers. They are referred to in logs, AWS' own interfaces, monitoring systems, docs/wikis etc. Since it's all web interfaces, we can create a simple solution for that!</p>
+<p>This little bookmarklet crudely <em>replaces an account number with its hardcoded name</em>. This all happens locally, no risk of leakage. Hopefully, your AWS accounts doesn't change too often so that maintaining this hardcoded list of account numbers ↔ names, becomes a hassle.</p>
+<p>Before clicking the bookmarklet:</p>
+<p><img src="/assets/bookmarklet_aws_before.png" alt="AWS account selection menu, listing account numbers"></p>
+<p>And after:</p>
+<p><img src="/assets/bookmarklet_aws_after.png" alt="AWS account selection menu, having replaced account numbers with account names"></p>
+<p>Here's the snippet:</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span>javascript<span style="color:#000;font-weight:bold">:</span>(<span style="color:#000;font-weight:bold">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">const</span> bodyClass <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;__awsified&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">if</span> (<span style="color:#0086b3">document</span>.body.classList.contains(bodyClass)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#0086b3">document</span>.body.classList.add(bodyClass);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">const</span> accounts <span style="color:#000;font-weight:bold">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#d14">&#34;123445945445&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;SWIMSUIT_FACTORY_PROD&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#d14">&#34;456454354545&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;SWIMSUIT_FACTORY_TEST&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#d14">&#34;425642694242&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;ZERO_COOL&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#d14">&#34;312857138111&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;THE_PLAGUE&#34;</span>,
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">const</span> ids <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">Object</span>.keys(accounts).join(<span style="color:#d14">&#39;|&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">const</span> re <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">new</span> <span style="color:#0086b3">RegExp</span>(<span style="color:#d14">`\\b(</span><span style="color:#d14">${</span>ids<span style="color:#d14">}</span><span style="color:#d14">)\\b`</span>, <span style="color:#d14">&#39;g&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">const</span> spanStyle <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;font-weight: bold; background-color: yellow; color: black;&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">function</span> wrapMatchesInTextNode(textNode) {
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">const</span> text <span style="color:#000;font-weight:bold">=</span> textNode.textContent;
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">const</span> matches <span style="color:#000;font-weight:bold">=</span> [...text.matchAll(re)];
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">if</span> (matches.length <span style="color:#000;font-weight:bold">===</span> <span style="color:#099">0</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">return</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">const</span> frag <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">document</span>.createDocumentFragment();
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">let</span> lastIndex <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        matches.forEach(match =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">const</span> [matchedText] <span style="color:#000;font-weight:bold">=</span> match;
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">const</span> index <span style="color:#000;font-weight:bold">=</span> match.index;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">if</span> (index <span style="color:#000;font-weight:bold">&gt;</span> lastIndex) {
+</span></span><span style="display:flex;"><span>                frag.appendChild(<span style="color:#0086b3">document</span>.createTextNode(text.slice(lastIndex, index)));
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">const</span> span <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">document</span>.createElement(<span style="color:#d14">&#39;span&#39;</span>);
+</span></span><span style="display:flex;"><span>            span.textContent <span style="color:#000;font-weight:bold">=</span> accounts[matchedText];
+</span></span><span style="display:flex;"><span>            span.setAttribute(<span style="color:#d14">&#39;title&#39;</span>, <span style="color:#d14">`Account ID: </span><span style="color:#d14">${</span>matchedText<span style="color:#d14">}</span><span style="color:#d14">`</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">if</span> (<span style="color:#0086b3">document</span>.body.classList.contains(bodyClass)) {
+</span></span><span style="display:flex;"><span>                span.setAttribute(<span style="color:#d14">&#39;style&#39;</span>, spanStyle);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            frag.appendChild(span);
+</span></span><span style="display:flex;"><span>            lastIndex <span style="color:#000;font-weight:bold">=</span> index <span style="color:#000;font-weight:bold">+</span> matchedText.length;
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">if</span> (lastIndex <span style="color:#000;font-weight:bold">&lt;</span> text.length) {
+</span></span><span style="display:flex;"><span>            frag.appendChild(<span style="color:#0086b3">document</span>.createTextNode(text.slice(lastIndex)));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        textNode.parentNode.replaceChild(frag, textNode);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">function</span> walkDOM(node) {
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">if</span> (node.nodeType <span style="color:#000;font-weight:bold">===</span> Node.TEXT_NODE) {
+</span></span><span style="display:flex;"><span>            wrapMatchesInTextNode(node);
+</span></span><span style="display:flex;"><span>        } <span style="color:#000;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">if</span> (node.nodeType <span style="color:#000;font-weight:bold">===</span> Node.ELEMENT_NODE) {
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">const</span> tag <span style="color:#000;font-weight:bold">=</span> node.tagName.toLowerCase();
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">if</span> ([<span style="color:#d14">&#39;script&#39;</span>, <span style="color:#d14">&#39;style&#39;</span>, <span style="color:#d14">&#39;textarea&#39;</span>, <span style="color:#d14">&#39;input&#39;</span>, <span style="color:#d14">&#39;select&#39;</span>].includes(tag)) {
+</span></span><span style="display:flex;"><span>                <span style="color:#000;font-weight:bold">return</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">for</span> (<span style="color:#000;font-weight:bold">let</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">&lt;</span> node.childNodes.length; i<span style="color:#000;font-weight:bold">++</span>) {
+</span></span><span style="display:flex;"><span>                walkDOM(node.childNodes[i]);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    walkDOM(<span style="color:#0086b3">document</span>.body);
+</span></span><span style="display:flex;"><span>})();
+</span></span></code></pre>
+        </div>
+      </article>
+      <section class="related-posts">
+        <h2>Possibly related posts</h2>
+        <ul>
+          <li><a href="/requesting-new-magic-method-__toboolean">Requesting new magic method: `__toBoolean()`</a></li>
+          <li><a href="/javascript-regex-101-string-test">Javascript regex 101: String.test()</a></li>
+          <li><a href="/roadmap-of-php-development-follow-it">Roadmap of PHP development - follow it</a></li>
+          <li><a href="/gitweb-on-osx">Gitweb on OSX</a></li>
+          <li><a href="/debugging-some-php">Debugging some php..</a></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>by Carl Helmertz — <a href="mailto:helmertz@gmail.com">helmertz@gmail.com</a><br/><a href="https://helmertz.com">https://helmertz.com</a> <a href="https://github.com/chelmertz">github.com/chelmertz</a></p>
+    </footer>
+  </body>
+</html>

@@ -83,6 +83,12 @@
     "body": "[${1:Binding shortcut to Spotlight}](/binding-shortcut-to-spotlight) ",
     "description": "Binding shortcut to Spotlight"
   },
+  "Bookmarklet for translating AWS account numbers to actual accounts": {
+    "scope": "markdown",
+    "prefix": "@@bookmarklet-aws-account - Bookmarklet for translating AWS account numbers to actual accounts",
+    "body": "[${1:Bookmarklet for translating AWS account numbers to actual accounts}](/bookmarklet-aws-account) ",
+    "description": "Bookmarklet for translating AWS account numbers to actual accounts"
+  },
   "Bookmarklets really should open in a new window": {
     "scope": "markdown",
     "prefix": "@@bookmarklet-really-should-be-in-a-new-window - Bookmarklets really should open in a new window",
