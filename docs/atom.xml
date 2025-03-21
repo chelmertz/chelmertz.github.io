@@ -746,6 +746,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td>CI/CD</td>
 </tr>
 <tr>
+<td><a href="https://ilograph.com/">Ilograph</a></td>
+<td>Great alternative to mermaid, draw.io, excalidraw; much better concepts like multiple perspectives of a single source</td>
+</tr>
+<tr>
 <td><a href="https://mermaid.js.org/">Mermaid</a></td>
 <td>Diagrams</td>
 </tr>
