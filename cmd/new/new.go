@@ -44,5 +44,5 @@ func main() {
 	if templateErr != nil {
 		panic(fmt.Sprintf("error executing template: %v", templateErr))
 	}
-	fmt.Printf("created %s\n", path)
+	fmt.Printf("%s\n", path)
 }

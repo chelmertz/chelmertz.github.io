@@ -15,7 +15,13 @@ serve: docs
 
 .PHONY: new
 new:
-	go run cmd/new/new.go
+# @ so that the output is only the filename, so that we can do `vim $(make new)`
+	@go run cmd/new/new.go
+
+.PHONY: latest
+latest:
+# so that `vim $(make latest)` saves me from tabbing a lot
+	@echo "_posts/$(shell ls -t _posts | head -n1)"
 
 .PHONY: lint
 lint:
