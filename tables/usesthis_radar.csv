@@ -4,9 +4,12 @@ broot,Interactive tree/ls/cd,https://github.com/Canop/broot
 dive,Docker image layer introspection,https://github.com/wagoodman/dive
 fq,jq for binary files,https://github.com/wader/fq
 git-absorb,Aids fixups,https://github.com/tummychow/git-absorb
+grist,Next generation Spreadsheet (probably like Airtable),https://github.com/gristlabs/grist-core
 hwatch,"hwatch, watch alternative that records the history and keeps diffs",https://github.com/blacknon/hwatch
 hyperfine,Benchmarks,https://github.com/sharkdp/hyperfine
 ijq,Interactive version of jq,https://sr.ht/~gpanders/ijq/
+immich,Self-hosted Google Photos alternative,https://immich.app/
+isd,TUI for systemd,https://github.com/isd-project/isd
 jujutsu,VCS on top of git,https://github.com/martinvonz/jj
 kuzudb,Embeddable graph database. Maybe valid alternative to sqlite,https://kuzudb.com/
 lazydocker,TUI for docker. See _lazygit_,https://github.com/jesseduffield/lazydocker
@@ -14,6 +17,7 @@ open policy agent,Policy engine,https://www.openpolicyagent.org/
 pastel,CLI for color palettes,https://github.com/sharkdp/pastel
 plantuml,Diagrams,https://plantuml.com/
 podman,"Podman, docker alternative",https://podman.io/
+pushover,Push notifications to a personal device for $5 for a lifetime,https://pushover.net/
 st,Statistics on CLI,https://github.com/nferraz/st
 sqids,Short youtube-like IDs that you could spell out,https://sqids.org/
 sqldef,SQL migration tool for sqlite et al.,https://github.com/sqldef/sqldef

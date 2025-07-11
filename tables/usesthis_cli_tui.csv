@@ -16,12 +16,14 @@ htop,Good enough system monitor,https://htop.dev/
 image-sorter,TUI for quickly moving image files into proper directories,https://github.com/jgalat/image-sorter/
 lazygit,Very similar to Magit. Slightly less intuitive but working in the terminal without all of Emacs is more comfy.,https://github.com/jesseduffield/lazygit
 litecli,Better CLI for sqlite. See _mycli_,https://github.com/dbcli/litecli
+moreutils,"sponge, vipe, ts are proper CLI tools",https://joeyh.name/code/moreutils/
 mycli,Better CLI for mysql. See _litecli_,https://github.com/dbcli/mycli
 pandoc,Document converter,https://pandoc.org/
 pavucontrol,Choosing device for sound output,https://freedesktop.org/software/pulseaudio/pavucontrol/
 ripdrag,“ripdrag filename” creates a small window with “filename” that you can use for drop-friendly interfaces,https://github.com/nik012003/ripdrag
 ripgrep,More ergonomic search than grep,https://github.com/BurntSushi/ripgrep
-serve,Serve directory via HTTP,github.com/chelmertz/serve
+serve,Serve directory via HTTP,https://github.com/chelmertz/serve
+up,Pipe commands dynamically,https://github.com/akavel/up
 watchexec,inotify-like watcher. Execute command when files change. Slightly more complete than `entr` - might overtake its position,https://github.com/watchexec/watchexec
 wmctrl,API capabilities for X.org,https://linux.die.net/man/1/wmctrl
 xcape,Rebind keys. For example: pressing caps=esc & holding caps=ctrl,https://github.com/alols/xcape
