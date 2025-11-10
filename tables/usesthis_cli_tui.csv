@@ -20,6 +20,7 @@ moreutils,"sponge, vipe, ts are proper CLI tools",https://joeyh.name/code/moreut
 mycli,Better CLI for mysql. See _litecli_,https://github.com/dbcli/mycli
 pandoc,Document converter,https://pandoc.org/
 pavucontrol,Choosing device for sound output,https://freedesktop.org/software/pulseaudio/pavucontrol/
+pspg,Pager for tabular content like `psql` or CSV files,https://github.com/loveencounterflow/pspg
 ripdrag,“ripdrag filename” creates a small window with “filename” that you can use for drop-friendly interfaces,https://github.com/nik012003/ripdrag
 ripgrep,More ergonomic search than grep,https://github.com/BurntSushi/ripgrep
 serve,Serve directory via HTTP,https://github.com/chelmertz/serve

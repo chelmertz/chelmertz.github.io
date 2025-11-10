@@ -1,5 +1,6 @@
 Name,Purpose & context,URL
 ansisvg,Capture terminal output into svg for presentations,https://github.com/wader/ansisvg
+apisnip,Concise overview of endpoints in an OpenAPI specification,https://github.com/Tuurlijk/apisnip
 broot,Interactive tree/ls/cd,https://github.com/Canop/broot
 dive,Docker image layer introspection,https://github.com/wagoodman/dive
 firenvim,vim in browser textareas,https://github.com/glacambre/firenvim
@@ -16,6 +17,8 @@ isd,TUI for systemd,https://github.com/isd-project/isd
 jujutsu,VCS on top of git,https://github.com/martinvonz/jj
 kuzudb,Embeddable graph database. Maybe valid alternative to sqlite,https://kuzudb.com/
 lazydocker,TUI for docker. See _lazygit_,https://github.com/jesseduffield/lazydocker
+mailpit,Fake SMTP server with web interface,https://github.com/axllent/mailpit
+modsecurity,Open source WAF,https://modsecurity.org/
 open policy agent,Policy engine,https://www.openpolicyagent.org/
 opensnitch,Application firewall,https://github.com/evilsocket/opensnitch
 pastel,CLI for color palettes,https://github.com/sharkdp/pastel
@@ -28,6 +31,7 @@ sqldef,SQL migration tool for sqlite et al.,https://github.com/sqldef/sqldef
 st,Statistics on CLI,https://github.com/nferraz/st
 svg-term-cli,Record terminal session as svg + css,https://github.com/marionebl/svg-term-cli
 syncthing,Dropbox alternative,https://github.com/syncthing/syncthing
+temporal,Distributed computing with error handling,https://learn.temporal.io/getting_started/go/first_program_in_go/
 ugrep,Interactive grep,https://github.com/Genivia/ugrep
 up,Ultimate plumber. Interactive pipelines,https://github.com/akavel/up
 uppy,"Javascript library for uploads, including screencast on the fly or Dropbox et al.", https://uppy.io/
@@ -36,3 +40,6 @@ yazi,File manager TUI,https://github.com/sxyazi/yazi
 youplot,Plotting library for CLI,https://github.com/red-data-tools/YouPlot
 zizmor,Audits Github actions,https://github.com/woodruffw/zizmor
 zsys,fzf TUI for systemctl,https://github.com/joehillen/sysz
+tantivy,Search engine - alternative to Elasticsearch or Solr,https://github.com/quickwit-oss/tantivy
+prr,Review Github PRs locally,https://doc.dxuuu.xyz/prr/tutorial.html
+xan,CSV editor/viewer,https://github.com/medialab/xan
