@@ -30,3 +30,4 @@ wmctrl,API capabilities for X.org,https://linux.die.net/man/1/wmctrl
 xcape,Rebind keys. For example: pressing caps=esc & holding caps=ctrl,https://github.com/alols/xcape
 z,Interface to MRU directories when `cd`:ing around,https://github.com/rupa/z
 zenity,Interactive bash scripts. Very useful with i3blocks,https://help.gnome.org/users/zenity/stable/
+treemd,TUI markdown navigator,https://github.com/epistates/treemd

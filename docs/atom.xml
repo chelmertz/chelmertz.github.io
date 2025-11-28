@@ -596,8 +596,8 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td>Go package enabling spec-first OpenAPI-development</td>
 </tr>
 <tr>
-<td><a href="https://learn.openapis.org/">OpenAPI</a></td>
-<td>REST APIs. Spec first and generate clients/server works really well</td>
+<td><a href="https://github.com/pressly/goose">goose</a></td>
+<td>DB migration in golang</td>
 </tr>
 </tbody>
 </table>
@@ -733,6 +733,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <tr>
 <td><a href="https://help.gnome.org/users/zenity/stable/">zenity</a></td>
 <td>Interactive bash scripts. Very useful with i3blocks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/epistates/treemd">treemd</a></td>
+<td>TUI markdown navigator</td>
 </tr>
 </tbody>
 </table>
