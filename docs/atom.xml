@@ -599,6 +599,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td><a href="https://github.com/pressly/goose">goose</a></td>
 <td>DB migration in golang</td>
 </tr>
+<tr>
+<td><a href="https://github.com/testcontainers/testcontainers-go">Testcontainers</a></td>
+<td>Handles ephemeral environments of otherwise tricky dependencies (i.e. temporary postgres instances)</td>
+</tr>
 </tbody>
 </table>
 <h2>CLI &amp; TUI</h2>
@@ -737,6 +741,18 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <tr>
 <td><a href="https://github.com/epistates/treemd">treemd</a></td>
 <td>TUI markdown navigator</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ddworken/hishtory">Hishtory</a></td>
+<td>Shell history with better ctrl+r and an actual design</td>
+</tr>
+<tr>
+<td><a href="https://runme.dev/">runme</a></td>
+<td>Executes runbooks defined in markdown</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hadolint/hadolint">hadolint</a></td>
+<td>Dockerfile linter</td>
 </tr>
 </tbody>
 </table>
@@ -1106,6 +1122,14 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <tr>
 <td><a href="https://rachelbythebay.com/w/2025/02/22/war/">War rooms vs. deep investigations</a></td>
 <td>A debugging journey lasting a couple of weeks, of a Facebook crash</td>
+</tr>
+<tr>
+<td><a href="https://buttondown.com/hillelwayne/archive/edge-case-poisoning/">Edge Case Poisoning</a></td>
+<td>Formalizing recipes is hard</td>
+</tr>
+<tr>
+<td><a href="https://roscidus.com/blog/blog/categories/0install/">0install move to OCaml from Python</a></td>
+<td>Comparison of a lot of languages</td>
 </tr>
 </tbody>
 </table>

@@ -11,3 +11,6 @@ Rich Already Answered That!,"Rich Hickey discusses the design of Clojure in dept
 Unix and Google,"'Coding at the perimiter', an approach to tackle the n^3 matrix of system ✕ feature ✕ platform - write programs that work together (pipes, everything-is-a-file, etc.). Examplifies with Multics vs UNIX",https://www.youtube.com/watch?v=3Ea3pkTCYx4
 Using A Genetic Algorithm For Table Seating,A solver with an interesting UI: choose between a timeout or a certain number of generations,https://www.perfecttableplan.com/html/genetic_algorithm.html
 War rooms vs. deep investigations,"A debugging journey lasting a couple of weeks, of a Facebook crash",https://rachelbythebay.com/w/2025/02/22/war/
+Edge Case Poisoning,Formalizing recipes is hard,https://buttondown.com/hillelwayne/archive/edge-case-poisoning/
+0install move to OCaml from Python,Comparison of a lot of languages,https://roscidus.com/blog/blog/categories/0install/
+How uv got so fast,The design of a package manager,https://nesbitt.io/2025/12/26/how-uv-got-so-fast.html

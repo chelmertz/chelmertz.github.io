@@ -31,3 +31,6 @@ xcape,Rebind keys. For example: pressing caps=esc & holding caps=ctrl,https://gi
 z,Interface to MRU directories when `cd`:ing around,https://github.com/rupa/z
 zenity,Interactive bash scripts. Very useful with i3blocks,https://help.gnome.org/users/zenity/stable/
 treemd,TUI markdown navigator,https://github.com/epistates/treemd
+Hishtory,Shell history with better ctrl+r and an actual design,https://github.com/ddworken/hishtory
+runme,Executes runbooks defined in markdown,https://runme.dev/
+hadolint,Dockerfile linter,https://github.com/hadolint/hadolint
