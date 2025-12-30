@@ -1131,6 +1131,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td><a href="https://roscidus.com/blog/blog/categories/0install/">0install move to OCaml from Python</a></td>
 <td>Comparison of a lot of languages</td>
 </tr>
+<tr>
+<td><a href="https://nesbitt.io/2025/12/26/how-uv-got-so-fast.html">How uv got so fast</a></td>
+<td>The design of a package manager</td>
+</tr>
 </tbody>
 </table>
 ]]></content>
