@@ -135,6 +135,13 @@ footer {
     }
 }
 
+ins {
+    text-decoration: none;
+    &:before {
+        content: attr(datetime)": ";
+    }
+}
+
 
 /* tufte... urgh */
 pre > code {
