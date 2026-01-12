@@ -809,6 +809,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td><a href="https://uptime.kuma.pet/">Uptime Kuma</a></td>
 <td>Simple monitoring tool</td>
 </tr>
+<tr>
+<td><a href="https://pagefind.app/">Pagefind</a></td>
+<td>Embeddable search engine (with index)</td>
+</tr>
 </tbody>
 </table>
 <h2>Browser extensions</h2>
