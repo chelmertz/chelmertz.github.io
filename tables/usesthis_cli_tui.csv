@@ -34,3 +34,4 @@ treemd,TUI markdown navigator,https://github.com/epistates/treemd
 Hishtory,Shell history with better ctrl+r and an actual design,https://github.com/ddworken/hishtory
 runme,Executes runbooks defined in markdown,https://runme.dev/
 hadolint,Dockerfile linter,https://github.com/hadolint/hadolint
+wttr.in,Weather report,https://github.com/chubin/wttr.in

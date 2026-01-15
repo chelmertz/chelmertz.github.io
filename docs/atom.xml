@@ -754,6 +754,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td><a href="https://github.com/hadolint/hadolint">hadolint</a></td>
 <td>Dockerfile linter</td>
 </tr>
+<tr>
+<td><a href="https://github.com/chubin/wttr.in">wttr.in</a></td>
+<td>Weather report</td>
+</tr>
 </tbody>
 </table>
 <h2>Web applications &amp; third party services</h2>
