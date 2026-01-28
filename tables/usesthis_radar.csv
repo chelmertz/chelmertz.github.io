@@ -43,3 +43,4 @@ zsys,fzf TUI for systemctl,https://github.com/joehillen/sysz
 tantivy,Search engine - alternative to Elasticsearch or Solr,https://github.com/quickwit-oss/tantivy
 prr,Review Github PRs locally,https://doc.dxuuu.xyz/prr/tutorial.html
 xan,CSV editor/viewer,https://github.com/medialab/xan
+t,Language that replaces awk/cut/sed...,https://github.com/alecthomas/t
