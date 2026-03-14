@@ -1071,6 +1071,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td><a href="https://github.com/abenz1267/walker">walker</a></td>
 <td>rofi alternative (launcher)</td>
 </tr>
+<tr>
+<td><a href="https://kdl.dev/">KDL</a></td>
+<td>Config language</td>
+</tr>
 </tbody>
 </table>
 ]]></content>
