@@ -47,3 +47,4 @@ t,Language that replaces awk/cut/sed...,https://github.com/alecthomas/t
 gromit-mpx,Draw on screen,https://github.com/bk138/gromit-mpx
 walker,rofi alternative (launcher),https://github.com/abenz1267/walker
 KDL,Config language,https://kdl.dev/
+bubblewrap,sandbox processes,https://github.com/containers/bubblewrap
