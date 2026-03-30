@@ -48,3 +48,4 @@ gromit-mpx,Draw on screen,https://github.com/bk138/gromit-mpx
 walker,rofi alternative (launcher),https://github.com/abenz1267/walker
 KDL,Config language,https://kdl.dev/
 bubblewrap,sandbox processes,https://github.com/containers/bubblewrap
+Dagger,Local orchestration for building and testing,https://dagger.io/

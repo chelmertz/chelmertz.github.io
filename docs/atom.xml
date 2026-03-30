@@ -1079,6 +1079,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td><a href="https://github.com/containers/bubblewrap">bubblewrap</a></td>
 <td>sandbox processes</td>
 </tr>
+<tr>
+<td><a href="https://dagger.io/">Dagger</a></td>
+<td>Local orchestration for building and testing</td>
+</tr>
 </tbody>
 </table>
 ]]></content>
