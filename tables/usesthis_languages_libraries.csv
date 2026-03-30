@@ -6,3 +6,4 @@ oapi-codegen,Go package enabling spec-first OpenAPI-development,https://github.c
 goose,DB migration in golang,https://github.com/pressly/goose
 Testcontainers,Handles ephemeral environments of otherwise tricky dependencies (i.e. temporary postgres instances),https://github.com/testcontainers/testcontainers-go
 connectrpc,grpc and protobuf bridge for json,https://connectrpc.com/
+GoCD,CD worth trying out. Github actions is not my favorite,https://www.gocd.org/

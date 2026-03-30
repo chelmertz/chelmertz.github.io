@@ -607,6 +607,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td><a href="https://connectrpc.com/">connectrpc</a></td>
 <td>grpc and protobuf bridge for json</td>
 </tr>
+<tr>
+<td><a href="https://www.gocd.org/">GoCD</a></td>
+<td>CD worth trying out. Github actions is not my favorite</td>
+</tr>
 </tbody>
 </table>
 <h2>CLI &amp; TUI</h2>
