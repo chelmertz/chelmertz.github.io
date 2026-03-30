@@ -603,6 +603,10 @@ jan 07 19:40:43 gamma systemd[1]: Failed to start autorandr.service - autorandr 
 <td><a href="https://github.com/testcontainers/testcontainers-go">Testcontainers</a></td>
 <td>Handles ephemeral environments of otherwise tricky dependencies (i.e. temporary postgres instances)</td>
 </tr>
+<tr>
+<td><a href="https://connectrpc.com/">connectrpc</a></td>
+<td>grpc and protobuf bridge for json</td>
+</tr>
 </tbody>
 </table>
 <h2>CLI &amp; TUI</h2>
