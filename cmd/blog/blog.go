@@ -55,13 +55,13 @@ func main() {
 		runtime.GC()
 		defer pprof.WriteHeapProfile(mem)
 	}
-	// github  pages wants to serve either / or docs/, let's go with docs/
+	// github pages wants to serve either / or docs/, let's go with docs/
 	must(os.RemoveAll(docs))
 	must(os.Mkdir(docs, 0775))
 
 	// docs/assets
 	must(os.Mkdir(filepath.Join(docs, "assets"), 0775))
-	filepath.WalkDir("assets", func(path string, d os.DirEntry, err error) error {
+	must(filepath.WalkDir("assets", func(path string, d os.DirEntry, err error) error {
 		if d.IsDir() {
 			must(os.MkdirAll(filepath.Join(docs, path), 0775))
 			return nil
@@ -70,7 +70,20 @@ func main() {
 		dst := must1(os.Create(filepath.Join(docs, path)))
 		_ = must1(io.Copy(dst, src))
 		return nil
-	})
+	}))
+
+	// docs/wander
+	must(os.Mkdir(filepath.Join(docs, "wander"), 0775))
+	must(filepath.WalkDir("wander", func(path string, d os.DirEntry, err error) error {
+		if d.IsDir() {
+			must(os.MkdirAll(filepath.Join(docs, path), 0775))
+			return nil
+		}
+		src := must1(os.Open(path))
+		dst := must1(os.Create(filepath.Join(docs, path)))
+		_ = must1(io.Copy(dst, src))
+		return nil
+	}))
 
 	// parse posts
 	md := goldmark.New(
