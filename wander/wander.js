@@ -15,6 +15,7 @@ const wander = {
     'https://apenwarr.ca/log/',
     'https://tonsky.me/',
     'https://jvns.ca/',
+    'https://softwaremaniacs.org/blog/en/',
   ],
 
   // Websites and consoles to ignore.  My console will never fetch

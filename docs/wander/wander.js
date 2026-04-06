@@ -1,7 +1,6 @@
 const wander = {
   // Other Wander consoles that visitors can reach from my console.
   consoles: [
-    'https://susam.net/wander/',
   ],
 
   // My favourite websites and pages I recommend to the Wander community.
@@ -14,6 +13,9 @@ const wander = {
     'https://www.jwz.org/blog/',
     'https://prog21.dadgum.com/',
     'https://apenwarr.ca/log/',
+    'https://tonsky.me/',
+    'https://jvns.ca/',
+    'https://softwaremaniacs.org/blog/en/',
   ],
 
   // Websites and consoles to ignore.  My console will never fetch
