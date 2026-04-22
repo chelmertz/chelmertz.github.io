@@ -16,6 +16,14 @@ const wander = {
     'https://tonsky.me/',
     'https://jvns.ca/',
     'https://softwaremaniacs.org/blog/en/',
+    'https://qntm.org/',
+    'https://eli.li/',
+    'https://www.wezm.net/v2/posts/',
+    'https://tratt.net/laurie/blog/',
+    'https://udidahan.com/first-time-here',
+    'https://matklad.github.io/',
+    'https://tigerbeetle.com/blog/',
+    'https://www.tedinski.com/archive/',
   ],
 
   // Websites and consoles to ignore.  My console will never fetch
